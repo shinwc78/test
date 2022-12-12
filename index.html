@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+
+    <title>시기능훈련 고객관리</title>
+
+    <link rel="stylesheet" href="CSS/MainStyle.css"/>
+    <link rel="stylesheet" href="CSS/main.css"/>
+
+  </head>
+  <body>
+    <!-- ========== main-wrapper start ========= -->
+    <main>
+      <header>
+        <div class="">
+          <div class="">
+            <div class="">
+              <div class="">
+                <div class="">
+                  <img src="Image/Logo_VTS_TEXT.png"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </main>
+    <header>
+      <input type="hidden" name="ReqMenu" value="양안시평가">
+        <table width="1535px" name="Header_Firstline">
+          <tbody>
+            <tr>
+              <td bgcolor="#fff8dc">
+                <table width="100%">
+                  <tbody>
+                    <tr>
+                      <td width="300" height="50">
+                        <img src="Image/Logo_VTS_TEXT.png" width="150">
+                      </td>
+                      <td >
+                        <input type="button" class="Form_MainBtn" id="Btn_Test" onclick="document.location.href='VT_Solution_ver1.php?id=Main_Body_Test_ver1';" value="시기능평가"/>
+                      </td>
+                          <td >
+                            <input type="button" class="Form_MainBtn" id="Btn_Therapy" onclick="document.location.href='VT_Solution_ver1.php?id=Main_Body_VT_ver1';" value="시기능훈련"/>
+                          <td>
+                          <input type="button" class="Form_MainBtn" id="Btn_Customer" value="고객관리(준비중)"/>
+                          </td>
+                          <td>
+                            <input type="button" class="Form_MainBtn" id="Btn_Statistics" value="각종통계(준비중)"/>
+                          </td>
+
+                          <td width="25">&nbsp;</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table width="1535px" height="30px" name="Header_Secondline">
+              <tbody>
+                <tr>
+                  <td width="1240" background="Image/BG_SubMenu.gif">
+                    <table width="1240">
+                      <tbody>
+                        <tr>
+                          <td width="400">&nbsp;</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+    </header>
+    <tbody include-html="Main_Body_Test_ver1.php" style="overflow:auto; width:1535px; height:500px;"></tbody>
+    <table>
+      <tr>
+        <td>
+
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
