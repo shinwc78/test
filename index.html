@@ -12,22 +12,32 @@
 
   </head>
   <body>
+
     <!-- ========== main-wrapper start ========= -->
-    <main>
-      <header>
-        <div class="">
-          <div class="">
-            <div class="">
-              <div class="">
-                <div class="">
-                  <img src="Image/Logo_VTS_TEXT.png"/>
-                </div>
-              </div>
-            </div>
+    <main class="main-wrapper">
+      <!-- ========== header-wrapper start ========= -->
+      <header class="header">
+        <div class="flex-container">
+          <div class="header-img-main">
+            <img src="Image/Logo_VTS_TEXT.png" width="150"/>
+          </div>
+          <div class="header-btn-test">
+            <button type="button" name="button">시기능평가</button>
+          </div>
+          <div class="header-btn-vt">
+            <button type="button" sname="button">시기능훈련</button>
+          </div>
+          <div class="header-btn-customer">
+            <button type="button" name="button">고객관리(준비중)</button>
+          </div>
+          <div class="header-btn-total">
+            <button type="button" name="button">각종통계(준비중)</button>
           </div>
         </div>
       </header>
     </main>
+
+<!-- ==========
     <header>
       <input type="hidden" name="ReqMenu" value="양안시평가">
         <table width="1535px" name="Header_Firstline">
@@ -78,6 +88,8 @@
             </table>
 
     </header>
+
+  -->
     <tbody include-html="Main_Body_Test_ver1.php" style="overflow:auto; width:1535px; height:500px;"></tbody>
     <table>
       <tr>
