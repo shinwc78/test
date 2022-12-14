@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS/main.css">
+    <title>시기능훈련 고객관리</title>
+    <style media="screen">
+      /*-- ====== header css ======= */
+      .Header {
+        }
+        .Main_Btn {
+        width: 180px;
+        height: 50px;
+        border-radius: 10px 3px 10px 3px;
+        font-size: 20px;
+        font-weight: bold;
+        color : #ffffff;
+        text-shadow: 1px 1px #777;
+        text-align: center;
+        vertical-align: middle;
+        background-color: #4682b4;
+        }
+
+      .Form_Sub {
+        background-color: #f4ffff;
+        border: 1 solid black;
+        border-radius: 5px;
+        width: 1535px;
+        height: 600px;
+        padding: 10px;
+        valign: top;
+      }
+
+      .Form_SubBtn{
+        width: 200px;
+        height: 50px;
+        border-radius: 5px 5px 5px 5px;
+        font-size: 20px;
+        font-weight: bold;
+        color : #e0e0e0;
+        text-shadow: 1px 1px #777;
+        text-align: center;
+        vertical-align: middle;
+        background-color: #7cb342;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+      }
+
+      .Form_CusInp {
+        background-color: #dcdcdc;
+        border-radius: 5px;
+        text-align: center;
+
+      #Name {
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow: 1px 1px #777;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      }
+
+       .Form_VT {
+         background-color: #dcdcdc;
+         border-radius: 5px;
+
+       }
+
+        .Form_Space {
+          width:30px;
+          writing-mode:tb-rl;
+          letter-spacing: 20px;
+          text-align:center;
+          font-weight:bold;
+          background:#bdbdbd;
+          border-radius:5px;
+          padding: 10px;
+        }
+
+       .Main_item {
+         width: 330px;
+         height: 30px;
+          border-radius: 5px;
+       }
+
+       .Sub_item {
+         width: 200px;
+         height: 30px;
+          border-radius: 5px;
+       }
+
+       .Action_item {
+         width: 330px;
+         height: 30px;
+          border-radius: 5px;
+          border: 1px solid black;
+       }
+
+       .Result_item {
+         width: 70px;
+         height: 50px;
+          border-radius: 5px;
+       }
+
+       .Form_Result {
+         text-align: center;
+         vertical-align: top;
+         background-color: #d2d2d2;
+         font-size: 15px;
+         border-radius: 5px;
+
+
+       }
+
+       .Form_Ment {
+         background-color: #f5f5f5;
+         width: 900px;
+         height: 25px;
+         border: none;
+          border-radius: 5px;
+       }
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- ======= Header start ======= -->
+      <table width="1535px" name="Header_Firstline">
+        <tbody>
+          <tr>
+            <td bgcolor="#fff8dc">
+              <table width="100%">
+                <tbody>
+                  <tr>
+                    <td width="300" height="50">
+                      <img src="Image/Logo_VTS_TEXT.png" width="150">
+                    </td>
+                    <td >
+                      <input type="button" class="Header Main_Btn" id="Btn_Test" onclick="document.location.href='index.html';" value="시기능평가"/>
+                    </td>
+                    <td >
+                      <input type="button" class="Header Main_Btn" id="Btn_Therapy" onclick="document.location.href='VT_page.html';" value="시기능훈련"/>
+                    <td>
+                      <input type="button" class="Header Main_Btn" id="Btn_Customer" onclick="document.location.href='manager_page.html';" value="고객관리(준비중)"/>
+                    </td>
+                    <td>
+                      <input type="button" class="Header Main_Btn" id="Btn_Statistics" onclick="document.location.href='statistics_page.html';" value="각종통계(준비중)"/>
+                    </td>
+                    <td width="25">&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table width="1535px" height="30px" name="Header_Secondline">
+        <tbody>
+          <tr>
+            <td width="1240" background="Image/BG_SubMenu.gif">
+              <table width="1240">
+                <tbody>
+                  <tr>
+                    <td width="400">&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- ======= Header end ======= -->
+    </header>
+
+    <!-- ======= Maiin Body start ======= -->
+    <form method="post" name="winForm" action="">
+    <tbody>
+      <table class="Form_Sub">
+        <tr>
+          <td class="Form_CusInp" width="250">
+            <table>
+              <tr>
+                <td>
+                  <table >
+                    <tr>
+                      <td style="text-align:center; width:400px;">
+                        <input type="date" id="currentDate"  style="font-size: 20px; font-weight: bold; background: #dcdcdc; text-align:center; width:200px; height:40px; border-radius:5px; border:none;">
+                        <script>
+                          document.getElementById('currentDate').value = new Date().toISOString().substring(0, 10);;
+                        </script>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="height:50px;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" id="Cus_Name" name="Cus_Name" style="width: 150px; height: 40px; border:2px solid rgb(135,135,135); border-radius: 5px 5px 5px 5px; background-color:rgb(255,255,255);">님
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="100px">휴대폰번호</td>
+                      <td>
+                        <input type="text" id="txt_CMobile1" name="CMobile1" value="010" maxlength="3" class="Form_CusInp" style="width:35px;">
+                        <input type="text" id="txt_CMobile2" name="CMobile2" value="" maxlength="9" class="Form_CusInp" style="width:100px;">
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="button" class="Form_SubBtn" id="Btn_Log" onclick="btn_test()" value="훈련일지(준비중)"/>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="button" class="Form_SubBtn" id="Btn_Status" onclick="btn_test()" value="전체진행현황(준비중)"/>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <table width="300" style="margin-Top:5px;">
+                    <tbody>
+                      <tr>
+                        <td width="130" class="Box_Title">훈련기록</td>
+                      </tr>
+                      <tr>
+                        <td class="Box">
+                          <table width="280">
+                            <tbody>
+                              <tr>
+                                <td width="90">
+                                  <a href="javascript:showVisitList('VisitList');">
+                                    <input type="button" id="divVisitList" value="방문일자">
+                                  </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div id="divVisitList" style="display:; width:300px; height:160px; overflow-x:hidden; overflow-y:scroll;">
+                            <table width="230" class="Table_List"> </table>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td width="10px">&nbsp;</td>
+          <td>
+            <table>
+              <tr>
+                <td>
+                  <table>
+                    <tr>
+                      <td class="Form_VT">
+                        <table>
+                          <tr>
+                            <td class="Form_Space">CENTER</td>
+                            <td width="900px">
+                              <table>
+                                <tr>
+                                  <td class="Sell_empty" width="10px">1.</td>
+                                  <td>
+                                    <select class="Main_item" onChange="Program_change1(this)" name="cat1_1">
+                                      <option>-카테고리 선택-</option>
+                                      <option value='1'>1단계:자기중심과 신체중심 발달</option>
+                                      <option value='2'>2단계:중심와주시 및 약시교정</option>
+                                      <option value='3'>3단계:단안시 상태에서 조절, 안구운동발달</option>
+                                      <option value='4'>4단계:양안개방 단안의 조절과 안구운동,버전스발달</option>
+                                      <option value='5'>5단계:양안시상태 조절,버전스,안구운동발달</option>
+                                      <option value='6'>6단계:시지각, 시각정보처리 발달</option>
+                                      <option value='7'>시기능발달평가</option>
+                                    </select>
+
+
+                                  </td>
+                                  <td class="Sell_empty" width="10px"></td>
+                                  <td>
+                                    <select class="Sub_item" id="program1" name="cat2_1">
+                                      <option>-VT항목 선택-</option>
+                                    </select>
+                                  </td>
+                                  <td class="Sell_empty" width="10px"></td>
+                                  <td>
+                                    <input type="text" class="Action_item" name="cat3_1" placeholder="수행내용입력">
+
+                                  </td>
+                                  <td class="Sell_empty" width="10px"></td>
+                                </tr>
+                                <tr>
+                                  <td class="Sell_empty" width="10px"></td>
+                                  <td  colspan="5">
+                                    <input type="text" class="Form_Ment" name="cat4_1" placeholder="특이사항">
+                                  </td>
+                                  <td class="Sell_empty">&nbsp</td>
+                                  <td class="Sell_empty">&nbsp</td>
+                                  <td class="Sell_empty">&nbsp</td>
+                                  <td class="Sell_empty">&nbsp</td>
+                                </tr>
+                                <tr>
+                                    <td class="Sell_empty" width="10px"></td>
+                                </tr>
+                                <tr>
+                                  <td class="Sell_empty" width="10px">2.</td>
+                                  <td>
+                                    <select class="Main_item" onChange="Program_change2(this)" name="cat1_2">
+                                      <option>-카테고리 선택-</option>
+                                      <option value='1'>1단계:자기중심과 신체중심 발달</option>
+                                      <option value='2'>2단계:중심와주시 및 약시교정</option>
+                                      <option value='3'>3단계:단안시 상태에서 조절, 안구운동발달</option>
+                                      <option value='4'>4단계:양안개방 단안의 조절과 안구운동,버전스발달</option>
+                                      <option value='5'>5단계:양안시상태 조절,버전스,안구운동발달</option>
+                                      <option value='6'>6단계:시지각, 시각정보처리 발달</option>
+
+                                    </select>
+
+
+                                  </td>
+                                  <td class="Sell_empty" width="10px"></td>
+                                  <td>
+                                    <select class="Sub_item" id="program2" name="cat2_2">
+                                      <option>-VT항목 선택-</option>
+                                    </select>
+                                  </td>
+                                  <td class="Sell_empty" width="10px"></td>
+                                  <td>
+                                    <input type="text" class="Action_item" name="cat3_2" placeholder="수행내용입력">
+
+                                  </td>
+                                  <td class="Sell_empty" width="10px"></td>
+                                </tr>
+                                <tr>
+                                  <td class="Sell_empty" width="10px"></td>
+                                  <td  colspan="5">
+                                    <input type="text" class="Form_Ment" name="cat4_2" placeholder="특이사항">
+                                  </td>
+                                  <td class="Sell_empty">&nbsp</td>
+                                  <td class="Sell_empty">&nbsp</td>
+                                  <td class="Sell_empty">&nbsp</td>
+                                  <td class="Sell_empty">&nbsp</td>
+                                </tr>
+                                <tr>
+                                  <td class="Sell_empty" width="10px"></td>
+                                </tr>
+                                <tr>
+                                  <td class="Sell_empty" width="10px">3.</td>
+                                  <td>
+                                    <select class="Main_item" onChange="Program_change3(this)" name="cat1_3">
+                                      <option>-카테고리 선택-</option>
+                                      <option value='1'>1단계:자기중심과 신체중심 발달</option>
+                                      <option value='2'>2단계:중심와주시 및 약시교정</option>
+                                      <option value='3'>3단계:단안시 상태에서 조절, 안구운동발달</option>
+                                      <option value='4'>4단계:양안개방 단안의 조절과 안구운동,버전스발달</option>
+                                      <option value='5'>5단계:양안시상태 조절,버전스,안구운동발달</option>
+                                      <option value='6'>6단계:시지각, 시각정보처리 발달</option>
+
+                                    </select>
+
+
+                                  </td>
+                                  <td class="Sell_empty" width="10px"></td>
+                                  <td>
+                                    <select class="Sub_item" id="program3" name="cat2_3">
+                                      <option>-VT항목 선택-</option>
+                                    </select>
+                                  </td>
+                                  <td class="Sell_empty" width="10px"></td>
+                                  <td>
+                                    <input type="text" class="Action_item" name="cat3_3" placeholder="수행내용입력">
+
+                                  </td>
+                                  <td class="Sell_empty" width="10px"></td>
+                                </tr>
+                                <tr>
+                                  <td class="Sell_empty" width="10px"></td>
+                                  <td  colspan="5">
+                                    <input type="text" class="Form_Ment" name="cat4_3" placeholder="특이사항">
+                                  </td>
+                                  <td class="Sell_empty">&nbsp</td>
+                                  <td class="Sell_empty">&nbsp</td>
+                                  <td class="Sell_empty">&nbsp</td>
+                                  <td class="Sell_empty">&nbsp</td>
+                                </tr>
+                                <tr>
+                                  <td class="Sell_empty" width="10px"></td>
+                                </tr>
+                                <tr>
+                                  <td class="Sell_empty" width="10px">4.</td>
+                                  <td>
+                                    <select class="Main_item" onChange="Program_change4(this)" name="cat1_4">
+                                      <option>-카테고리 선택-</option>
+                                      <option value='1'>1단계:자기중심과 신체중심 발달</option>
+                                      <option value='2'>2단계:중심와주시 및 약시교정</option>
+                                      <option value='3'>3단계:단안시 상태에서 조절, 안구운동발달</option>
+                                      <option value='4'>4단계:양안개방 단안의 조절과 안구운동,버전스발달</option>
+                                      <option value='5'>5단계:양안시상태 조절,버전스,안구운동발달</option>
+                                      <option value='6'>6단계:시지각, 시각정보처리 발달</option>
+
+                                    </select>
+
+
+                                  </td>
+                                  <td class="Sell_empty" width="10px"></td>
+                                  <td>
+                                    <select class="Sub_item" id="program4" name="cat2_4">
+                                      <option>-VT항목 선택-</option>
+                                    </select>
+                                  </td>
+                                  <td class="Sell_empty" width="10px"></td>
+                                  <td>
+                                    <input type="text" class="Action_item" name="cat3_4" placeholder="수행내용입력">
+
+                                  </td>
+                                  <td class="Sell_empty" width="10px"></td>
+                                </tr>
+                                <tr>
+                                  <td class="Sell_empty" width="10px"></td>
+                                  <td  colspan="5">
+                                    <input type="text" class="Form_Ment" name="cat4_4" placeholder="특이사항">
+                                  </td>
+                                  <td class="Sell_empty">&nbsp</td>
+                                  <td class="Sell_empty">&nbsp</td>
+                                  <td class="Sell_empty">&nbsp</td>
+                                  <td class="Sell_empty">&nbsp</td>
+                                </tr>
+                                <tr>
+                                  <td class="Sell_empty" width="10px"></td>
+                                </tr>
+                                <tr>
+                                  <td class="Sell_empty" width="10px">5.</td>
+                                  <td>
+                                    <select class="Main_item" onChange="Program_change5(this)" name="cat1_5">
+                                      <option>-카테고리 선택-</option>
+                                      <option value='1'>1단계:자기중심과 신체중심 발달</option>
+                                      <option value='2'>2단계:중심와주시 및 약시교정</option>
+                                      <option value='3'>3단계:단안시 상태에서 조절, 안구운동발달</option>
+                                      <option value='4'>4단계:양안개방 단안의 조절과 안구운동,버전스발달</option>
+                                      <option value='5'>5단계:양안시상태 조절,버전스,안구운동발달</option>
+                                      <option value='6'>6단계:시지각, 시각정보처리 발달</option>
+
+                                    </select>
+
+
+                                  </td>
+                                  <td class="Sell_empty" width="10px"></td>
+                                  <td>
+                                    <select class="Sub_item" id="program5" name="cat2_5">
+                                      <option>-VT항목 선택-</option>
+                                    </select>
+                                  </td>
+                                  <td class="Sell_empty" width="10px"></td>
+                                  <td>
+                                    <input type="text" class="Action_item" name="cat3_5" placeholder="수행내용입력">
+
+                                  </td>
+                                  <td class="Sell_empty" width="10px"></td>
+                                </tr>
+                                <tr>
+                                  <td class="Sell_empty" width="10px"></td>
+                                  <td  colspan="5">
+                                    <input type="text" class="Form_Ment" name="cat4_5" placeholder="특이사항">
+                                  </td>
+                                  <td class="Sell_empty">&nbsp</td>
+                                  <td class="Sell_empty">&nbsp</td>
+                                  <td class="Sell_empty">&nbsp</td>
+                                  <td class="Sell_empty">&nbsp</td>
+                                </tr>
+                                <tr>
+                                  <td class="Sell_empty" width="10px"></td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td class="Form_Result" >
+                        <table>
+                          <tr>
+                            <td>
+                              <table>
+                                <tr>
+                                  <td value="" style="text-align:center; font-weight:bold; font-size:15px; width:200px; border-radius:5px;">훈련성과</td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <select class="Result_item" name="VT_result">
+                                      <option value="">우수함</option>
+                                      <option value="">양호함</option>
+                                      <option value="">다소부족</option>
+                                      <option value="">저조함</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td rowspan="11">
+                              <table>
+                                <tr>
+                                  <td style="text-align: center; font-weight:bold; font-size: 15px; width:150px;">붙임기호</td>
+                                </tr>
+                                <tr>
+                                  <td style="text-align: center; font-weight:bold; font-size: 15px; width:150px;">± × ÷ ≠ ≤ ≥ ∞ ※ <br>\n ☆ ★ ○ ● ◎ ◇ ◆ □ ■ △ ▲ ▽ ▼ → ← ↑ ↓ ↔ ♤ ♠ ♡ ♥ ♧ ♣ ◉ ◈ Ⅰ Ⅱ Ⅲ Ⅳ Ⅴ Ⅵ Ⅶ Ⅷ Ⅸ Ⅹ Ⅺ Ⅻ </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr name="home">
+                      <td  class="Form_VT">
+                        <table>
+                          <tr>
+                            <td  class="Form_Space">HOME</td>
+                          <td>
+                            <table>
+                              <tr>
+                                <td class="Sell_empty" width="10px">1.</td>
+                                <td>
+                                  <select class="Main_item" onChange="Program_change6(this)" name="cat1_6">
+                                    <option>-카테고리 선택-</option>
+                                    <option value='1'>1단계:자기중심과 신체중심 발달</option>
+                                    <option value='2'>2단계:중심와주시 및 약시교정</option>
+                                    <option value='3'>3단계:단안시 상태에서 조절, 안구운동발달</option>
+                                    <option value='4'>4단계:양안개방 단안의 조절과 안구운동,버전스발달</option>
+                                    <option value='5'>5단계:양안시상태 조절,버전스,안구운동발달</option>
+                                    <option value='6'>6단계:시지각, 시각정보처리 발달</option>
+
+                                  </select>
+
+
+                                </td>
+                                <td class="Sell_empty" width="10px"></td>
+                                <td>
+                                  <select class="Sub_item" id="program6" name="cat2_6">
+                                    <option>-VT항목 선택-</option>
+                                  </select>
+                                </td>
+                                <td class="Sell_empty" width="10px"></td>
+                                <td>
+                                  <input type="text" class="Action_item" name="cat3_6" placeholder="수행내용입력">
+
+                                </td>
+                                <td class="Sell_empty" width="10px"></td>
+                              </tr>
+                              <tr>
+                                <td class="Sell_empty" width="10px"></td>
+                                <td  colspan="5">
+                                  <input type="text" class="Form_Ment" name="cat4_6" placeholder="특이사항">
+                                </td>
+                                <td class="Sell_empty">&nbsp</td>
+                                <td class="Sell_empty">&nbsp</td>
+                                <td class="Sell_empty">&nbsp</td>
+                                <td class="Sell_empty">&nbsp</td>
+                              </tr>
+                              <tr>
+                                <td class="Sell_empty" width="10px"></td>
+                              </tr>
+                              <tr>
+                                <td class="Sell_empty" width="10px">2.</td>
+                                <td>
+                                  <select class="Main_item" onChange="Program_change7(this)" name="cat1_7">
+                                    <option>-카테고리 선택-</option>
+                                    <option value='1'>1단계:자기중심과 신체중심 발달</option>
+                                    <option value='2'>2단계:중심와주시 및 약시교정</option>
+                                    <option value='3'>3단계:단안시 상태에서 조절, 안구운동발달</option>
+                                    <option value='4'>4단계:양안개방 단안의 조절과 안구운동,버전스발달</option>
+                                    <option value='5'>5단계:양안시상태 조절,버전스,안구운동발달</option>
+                                    <option value='6'>6단계:시지각, 시각정보처리 발달</option>
+
+                                  </select>
+
+
+                                </td>
+                                <td class="Sell_empty" width="10px"></td>
+                                <td>
+                                  <select class="Sub_item" id="program7" name="cat2_7">
+                                    <option>-VT항목 선택-</option>
+                                  </select>
+                                </td>
+                                <td class="Sell_empty" width="10px"></td>
+                                <td>
+                                  <input type="text" class="Action_item" name="cat3_7" placeholder="수행내용입력">
+
+                                </td>
+                                <td class="Sell_empty" width="10px"></td>
+                              </tr>
+                              <tr>
+                                <td class="Sell_empty" width="10px"></td>
+                                <td  colspan="5">
+                                  <input type="text" class="Form_Ment" name="cat4_7" placeholder="특이사항">
+                                </td>
+                                <td class="Sell_empty">&nbsp</td>
+                                <td class="Sell_empty">&nbsp</td>
+                                <td class="Sell_empty">&nbsp</td>
+                                <td class="Sell_empty">&nbsp</td>
+                              </tr>
+                              <tr>
+                                <td class="Sell_empty" width="10px"></td>
+                              </tr>
+                              <tr>
+                                <td class="Sell_empty" width="10px">3.</td>
+                                <td>
+                                  <select class="Main_item" onChange="Program_change8(this)" name="cat1_8">
+                                    <option>-카테고리 선택-</option>
+                                    <option value='1'>1단계:자기중심과 신체중심 발달</option>
+                                    <option value='2'>2단계:중심와주시 및 약시교정</option>
+                                    <option value='3'>3단계:단안시 상태에서 조절, 안구운동발달</option>
+                                    <option value='4'>4단계:양안개방 단안의 조절과 안구운동,버전스발달</option>
+                                    <option value='5'>5단계:양안시상태 조절,버전스,안구운동발달</option>
+                                    <option value='6'>6단계:시지각, 시각정보처리 발달</option>
+
+                                  </select>
+
+
+                                </td>
+                                <td class="Sell_empty" width="10px"></td>
+                                <td>
+                                  <select class="Sub_item" id="program8" name="cat2_8">
+                                    <option>-VT항목 선택-</option>
+                                  </select>
+                                </td>
+                                <td class="Sell_empty" width="10px"></td>
+                                <td>
+                                  <input type="text" class="Action_item" name="cat3_8" placeholder="수행내용입력">
+
+                                </td>
+                                <td class="Sell_empty" width="10px"></td>
+                              </tr>
+                              <tr>
+                                <td class="Sell_empty" width="10px"></td>
+                                <td  colspan="5">
+                                  <input type="text" class="Form_Ment" name="cat4_8" placeholder="특이사항">
+                                </td>
+                                <td class="Sell_empty">&nbsp</td>
+                                <td class="Sell_empty">&nbsp</td>
+                                <td class="Sell_empty">&nbsp</td>
+                                <td class="Sell_empty">&nbsp</td>
+                              </tr>
+                              <tr>
+                                <td class="Sell_empty" width="10px"></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  <td>
+                    <input type="submit" style="width:100px; height:150px; background-color: yellow; border:1 solid black" name="save" value="저장하기 " formaction="/VisionTherapy_supporter/therapydata/therapysave.php">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <script language=javascript>
+
+
+
+  var pro1 = ['Angel in the Snow','Balance Board','Line Walk','Jumping Jacks','Directional Arrow','Basic Body Procedures','Infinity Walk','SUNY Visual Motor','Bimanual Chalkboard Activity','Ball Bounce','Bean Bag Toss','Rail Road Activity','Rail Road Activity','Trampoline'];
+  var pro2 = ['MIT','After Image Generator','Red/Green Technique','MFBF','Eye-Hand activity','Pointer in Straw','Fixation worksheet','Binasal Occlusion/Penalization','Russell Rings','Anaglyphic Tracing','Lens Rock & Vectogram','Groffman Tracing','Anaglyphic Wayne Fixator','Space Matching','Form Tracing'];
+  var pro3 = ['Hart Chart','Marsden Ball','Loose Prism Rock','MIT','Wayne Fixator','Pegboard Rotator','Space Fixtor','Vertical Dissociating Prism','Four Corner','Kraskin Bifocal Rock','Lens Sorting','Loose Lens Rock','Flipper Lens'];
+  var pro4 = ['Flashlight Tag','Pegboard Rotator red/green','After Image Fixation & Pursuit','Squinchel Technique','Kraskin Bi-Ocular Rock','Vectogram Spiral R/L',];
+  var pro5 = ['Pencil Push-ups','Brock String','Vectogram','Aperture Ruler','Lifesaver Card','Prism Rock','Eccentric Circle','VO Star','HTS'];
+  var pro6 = ['Parquetry Blocks','BDPQ Chart','Maples Magic Eraser','Perseptual Work Book','Perseptual Program:VIPS/PTS/SVI','Geoboard Work Book','Carl Hiller Cube Activity','Beth Cards','Visualization','Attribute Block','Visual Memory & Discimination','Maze Work Book'];
+  var pro7 = ['양안시기능평가','TVPS-3','TVPS-4','Beery VMI','DEM','WACS']
+
+ function Program_change1(e) {
+ 		var target = document.getElementById("program1");
+
+ 	if(e.value == "1") var d = pro1;
+ 	else if(e.value == "2") var d = pro2;
+ 	else if(e.value == "3") var d = pro3;
+  else if(e.value == "4") var d = pro4;
+  else if(e.value == "5") var d = pro5;
+  else if(e.value == "6") var d = pro6;
+  else if(e.value == "7") var d = pro7;
+
+ 	target.options.length = 0;
+
+ 	for (x in d) {
+ 		var opt = document.createElement("option");
+ 		opt.value = d[x];
+ 		opt.innerHTML = d[x];
+ 		target.appendChild(opt);
+ 	}
+ }
+
+ function Program_change2(e) {
+     var target = document.getElementById("program2");
+
+   if(e.value == "1") var d = pro1;
+   else if(e.value == "2") var d = pro2;
+   else if(e.value == "3") var d = pro3;
+  else if(e.value == "4") var d = pro4;
+  else if(e.value == "5") var d = pro5;
+  else if(e.value == "6") var d = pro6;
+  else if(e.value == "7") var d = pro7;
+
+   target.options.length = 0;
+
+   for (x in d) {
+     var opt = document.createElement("option");
+     opt.value = d[x];
+     opt.innerHTML = d[x];
+     target.appendChild(opt);
+   }
+ }
+
+ function Program_change3(e) {
+     var target = document.getElementById("program3");
+
+   if(e.value == "1") var d = pro1;
+   else if(e.value == "2") var d = pro2;
+   else if(e.value == "3") var d = pro3;
+  else if(e.value == "4") var d = pro4;
+  else if(e.value == "5") var d = pro5;
+  else if(e.value == "6") var d = pro6;
+  else if(e.value == "7") var d = pro7;
+
+   target.options.length = 0;
+
+   for (x in d) {
+     var opt = document.createElement("option");
+     opt.value = d[x];
+     opt.innerHTML = d[x];
+     target.appendChild(opt);
+   }
+ }
+
+ function Program_change4(e) {
+     var target = document.getElementById("program4");
+
+   if(e.value == "1") var d = pro1;
+   else if(e.value == "2") var d = pro2;
+   else if(e.value == "3") var d = pro3;
+  else if(e.value == "4") var d = pro4;
+  else if(e.value == "5") var d = pro5;
+  else if(e.value == "6") var d = pro6;
+  else if(e.value == "7") var d = pro7;
+
+   target.options.length = 0;
+
+   for (x in d) {
+     var opt = document.createElement("option");
+     opt.value = d[x];
+     opt.innerHTML = d[x];
+     target.appendChild(opt);
+   }
+ }
+
+ function Program_change5(e) {
+     var target = document.getElementById("program5");
+
+   if(e.value == "1") var d = pro1;
+   else if(e.value == "2") var d = pro2;
+   else if(e.value == "3") var d = pro3;
+  else if(e.value == "4") var d = pro4;
+  else if(e.value == "5") var d = pro5;
+  else if(e.value == "6") var d = pro6;
+  else if(e.value == "7") var d = pro7;
+
+   target.options.length = 0;
+
+   for (x in d) {
+     var opt = document.createElement("option");
+     opt.value = d[x];
+     opt.innerHTML = d[x];
+     target.appendChild(opt);
+   }
+ }
+
+ function Program_change6(e) {
+     var target = document.getElementById("program6");
+
+   if(e.value == "1") var d = pro1;
+   else if(e.value == "2") var d = pro2;
+   else if(e.value == "3") var d = pro3;
+  else if(e.value == "4") var d = pro4;
+  else if(e.value == "5") var d = pro5;
+  else if(e.value == "6") var d = pro6;
+
+   target.options.length = 0;
+
+   for (x in d) {
+     var opt = document.createElement("option");
+     opt.value = d[x];
+     opt.innerHTML = d[x];
+     target.appendChild(opt);
+   }
+ }
+
+ function Program_change7(e) {
+     var target = document.getElementById("program7");
+
+   if(e.value == "1") var d = pro1;
+   else if(e.value == "2") var d = pro2;
+   else if(e.value == "3") var d = pro3;
+  else if(e.value == "4") var d = pro4;
+  else if(e.value == "5") var d = pro5;
+  else if(e.value == "6") var d = pro6;
+
+   target.options.length = 0;
+
+   for (x in d) {
+     var opt = document.createElement("option");
+     opt.value = d[x];
+     opt.innerHTML = d[x];
+     target.appendChild(opt);
+   }
+ }
+
+ function Program_change8(e) {
+     var target = document.getElementById("program8");
+
+   if(e.value == "1") var d = pro1;
+   else if(e.value == "2") var d = pro2;
+   else if(e.value == "3") var d = pro3;
+  else if(e.value == "4") var d = pro4;
+  else if(e.value == "5") var d = pro5;
+  else if(e.value == "6") var d = pro6;
+
+   target.options.length = 0;
+
+   for (x in d) {
+     var opt = document.createElement("option");
+     opt.value = d[x];
+     opt.innerHTML = d[x];
+     target.appendChild(opt);
+   }
+ }
+
+</script>
+</tbody>
+</form>
+
+    <!-- ======= Maiin Body end ======= -->
+  </body>
+</html>
