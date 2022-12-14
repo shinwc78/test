@@ -23,140 +23,16 @@ body {
 
 
 
-<!-- ============= QOL문진 ============ -->
-
-.QOL_head_item {
-  height: 30px;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.QOL_header_item1 {
-  border: 2px solid black;
-  background-color: rgb(122, 124, 127);
-  color: rgb(255, 255, 255);
-  font-size: 10px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.QOL_header_item {
-  border: 2px solid black;
-  background-color: rgb(1, 103, 181);
-  color: rgb(255, 255, 255);
-  font-size: 12px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.QOL_Form_Item {
-  height: 30px;
-  border: 2px solid black;
-  background-color: rgb(211, 234, 252);
-  font-size: 10px;
-  font-weight: bold;
-  text-align: left;
-  padding-left: 10px;
-}
-
-.QOL_Form_Sell {
-  height: 25px;
-  border: 1px solid black;
-  font-size: 10px;
-  text-align: center;
-}
-
-.Empty_Box {
-  width: 50px;
-  padding-bottom: 15px;
-  padding-top: 10px;
-}
-
-
-
-
-
-
-
-<!-- ========== 접기열기 ========== -->
-
-details {
-  margin: 5px 0 10px;
-}
-
-details>summary {
-  background: #444;
-  color: #fff;
-  padding: 10px;
-  outline: 0;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.5s;
-  text-align: left;
-  box-shadow: 1px 1px 2px gray;
-}
-
-details>summary::-webkit-details-marker {
-  background: #444;
-  color: #fff;
-  background-size: contain;
-  transform: rotate3d(0, 0, 1, 90deg);
-  transition: transform 0.25s;
-}
-
-details[open]>summary::-webkit-details-marker {
-  transform: rotate3d(0, 0, 1, 180deg);
-}
-
-details[open]>summary {
-  background: #444;
-}
-
-details[open]>summary~* {
-  animation: reveal 0.5s;
-}
-
-.tpt {
-  background: #444;
-  color: #fff;
-  margin: 5px 0 10px;
-  padding: 5px 10px;
-  line-height: 25px;
-  border-radius: 5px;
-  box-shadow: 1px 1px 2px gray;
-}
-
-@keyframes reveal {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -30px, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-
-// Header css
-
-
-
-
-
-
-
-
-
-
-
 #Customer_Result {
   border: 1px black solid;
 }
 
-.Form_MainBtn {
+
+
+/*-- ====== header css ======= */
+.Header {
+  }
+  .Main_Btn {
   width: 180px;
   height: 50px;
   border-radius: 10px 3px 10px 3px;
@@ -167,783 +43,616 @@ details[open]>summary~* {
   text-align: center;
   vertical-align: middle;
   background-color: #4682b4;
-}
+  }
 
-.BT_Form {
-  width: 145px;
-  height: 45px;
-  background-color: #cce1ff;
-  border: 1px black solid;
-  border-radius: 5px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  display: inline-block;
-  vertical-align: middle;
-}
+/*====== Customer Information css ===========*/
 
-.Empty_Box {
-  background: "#ffffff"
-}
-
-
-
-
-
-
-
-
-
-
-
-#Head_line {
-  background-color: #fdf5e6;
-}
-
-#Second_line {
-  background-color: #d29953;
-}
-
-
-
-#Customer_Information {
-  background-color: #d0d0d0;
-}
-
-
-
-
-
-
-
-
-    .Sell_TestItem {
-      font-size: 25px;
-
-      font-weight: bold;
-      text-align: center;
-    }
-
-    .Btn_Test {
-      width: 100px;
-      height: 30px;
-      font-size: 15px;
-      font-weight: bold;
-      text-align: center;
-      vertical-align: middle;
-      border-radius: 10px;
-    }
-
-    .Sell_test_header {
-      font-size: 20px;
-      font-weight: bold;
-      text-align: left;
-      border-radius: 10px;
-    }
-
-    .Form_Item {
-       border:2px black solid;
-       border-radius: 10px;
-    }
-
-    /////////////////////////
-
-    .Form_CustHead{
-      height: 25px;
-      border: none;
-      font-size: 12px;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-
-    }
-
-    .object{
-      width: 500;
-      height: 60;
-      background-color: #4682b4;
-      color: #ffffff;
-      font-size: 18px;
-      border: 1px solid rgb(6,30,115);
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-      border-bottom-left-radius: 15px;
-      border-bottom-right-radius: 15px;
-    }
-
-    //history
-
-
-
-    .history_head_item{
-      height: 30px;
-      font-size: 14px;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    .history_header_item1 {
-      border:2px solid black;
-      background-color : rgb(122,124,127);
-      color: rgb(255,255,255);
-      font-size: 10px;
-      font-weight: bold;
-      text-align: center;
-
-    }
-
-    .history_header_item {
-      border:2px solid black;
-      background-color : rgb(1,103,181);
-      color: rgb(255,255,255);
-      font-size: 12px;
-      font-weight: bold;
-      text-align: center;
-
-    }
-
-
-    .history_Form_Item {
-      height:30px;
-      border:2px solid black;
-      background-color :rgb(211,234,252);
-      font-size: 10px;
-      font-weight: bold;
-      text-align: center;
-      padding-left: 10px;
-
-    }
-
-
-
-    .history_Form_Sell {
-      height: 25px;
-      font-size : 10px;
-      text-align: left;
-    }
-
-    .history_Form_Sellbox {
-      height: 25px;
-      border:2px solid black;
-      font-size : 10px;
-      text-align: center;
-    }
-
-    .history_input{
-      text-align: center;
-      font-size: 10px;
-      top:1px;
-      left:1px;
-      right: 0.5px;
-      bottom: 0.5px;
-      padding: 0.2em 0.1em;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-    .history_Empty_Box {
-      width: 30px;
-      padding-bottom: 15px;
-      padding-top: 10px;
-    }
-
-
-
-
-
-    // Evaluation
-
-    .Evaluation_title{
-      text-align: center;
-      background-color: #616161;
-      color:white;
-      font-size: 12px;
-      border: 2px solid black;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-    .Evaluation_item{
-      text-align: center;
-      background-color: rgb(190,204,232);
-      color: rgb(28,55,109);
-      font-size: 11px;
-      font-weight: bold;
-      border: 2px solid black;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-    .Evaluation_result{
-      text-align: left;
-      font-size: 10px;
-      background-color: white;
-      border: 2px solid #d2d2d2;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-      padding-left: 15px;
-    }
-
-    .Evaluation_button{
-      text-align: center;
-      font-size: 10px;
-      top:1px;
-      left:1px;
-      right: 0.5px;
-      bottom: 0.5px;
-      padding: 0.2em 0.1em;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-
-    }
-
-    .Evaluation_reference{
-      text-align: center;
-      font-size: 10px;
-      background-color: rgb(241,253,200);
-      border: 1px solid #d2d2d2;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-    .Evaluation_input{
-      text-align: center;
-      font-size: 10px;
-      top:1px;
-      left:1px;
-      right: 0.5px;
-      bottom: 0.5px;
-      padding: 0.2em 0.1em;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-    .Evaluation_sel{
-      text-align: center;
-      height: 20px;
-      font-size: 10px;
-      border: 2px solid black;
-      padding: 0.2em 0.1em;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-    .Evaluation_analy{
-      height: 30px;
-      text-align: center;
-      font-size: 12px;
-      background-color: rgb(219,254,250);
-      border: 1px solid #d2d2d2;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-
-    // TVPS
-
-    .TVPS_head{
-      border:2px solid black;
-      background-color : #b91a4d;
-      font-size: 12px;
-      color: #ffffff;
-      text-align: center;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-    .TVPS_menu{
-      border : 1px solid black;
-      font-size : 10px;
-      font-weight: bold;
-      text-align: center;
-      background-color: #dcdcdc;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-    .TVPS_score{
-      height: 40px;
-      font-size: 10px;
-      text-align: left;
-      background-color: white;
-      border: 2px solid #d2d2d2;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-      padding-left: 15px;
-    }
-
-
-    //VMI
-
-    .VMI_head{
-      border:2px solid rgb(21,64,1);
-      background-color : rgb(138,193,112);
-      color: rgb(3,33,108);
-      font-size: 12px;
-      text-align: center;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-    .VMI_menu{
-      border : 1px solid black;
-      font-size : 10px;
-      font-weight: bold;
-      text-align: center;
-      background-color: #dcdcdc;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-    .VMI_score{
-      height: 40px;
-      text-align: left;
-      font-size: 10px;
-      background-color: white;
-      border: 2px solid #d2d2d2;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-      padding-left: 15px;
-    }
-
-
-    //DEM
-
-    .DEM_head{
-      width:120px;
-      border:2px solid rgb(59,2,39);
-      background-color : rgb(234,220,254);
-      color: rgb(3,33,108);
-      text-align: center;
-      font-size: 12px;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-    .DEM_Menu{
-      width:120px;
-      border : 1px solid black;
-      font-size : 10px;
-      font-weight: bold;
-      text-align: center;
-      background-color: #dcdcdc;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-    .DEM_score{
-      width:120px;
-      height: 40px;
-      text-align: left;
-      font-size: 10px;
-      background-color: white;
-      border: 2px solid #d2d2d2;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-      padding-left: 15px;
-    }
-
-
-    //WACS
-
-    .WACS_head{
-      border:2px solid rgb(103,72,3);
-      background-color : rgb(254,235,194);
-      color: rgb(3,33,108);
-      font-size: 12px;
-      text-align: center;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-    .WACS_Menu{
-      border : 1px solid black;
-      font-size : 10px;
-      font-weight: bold;
-      text-align: center;
-      background-color: #dcdcdc;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-    .WACS_score{
-      height: 40px;
-      text-align: left;
-      font-size: 10px;
-      background-color: white;
-      border: 2px solid #d2d2d2;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-      padding-left: 15px;
-    }
-
-    .submit {
-      width: 200px;
-      height: 50px;
-      border-radius: 10px 10px 10px 10px;
-      font-size: 20px;
-      font-weight: bold;
-      color : #ffffff;
-      text-shadow: 1px 1px #777;
-      text-align: center;
-      vertical-align: middle;
-      background-color: #4682b4;
-    }
-
-
-
-
-
-<!-- ======== DEM css =========== -->
-.Title_Main {
-  width:880px;
-  height: 50px;
-  text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 10px;
-
-}
-
-.Form_Menu_head {
-  width: 210px;
-  height: 50px;
-  border:2px solid black;
-  background-color : #b91a4d;
-  color: #ffffff;
-  text-align: center;
-}
-
-.Form_Menu_Sec {
-height: 40px;
-border: 2px solid black;
-background-color: #d75689;
-color : #ffffff;
-text-align: center;
-}
-
-.Form_Sell {
-  border : 1px solid black;
-  width: 210px;
-  height: 40px;
-
-}
-
-
-.Box_Title {
-  width: 880px;
-  text-align:center;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.ChronoAge {
-  width: 100px;
-  border: none;
-  border-bottom: solid 1px black
-
-}
-
-.Result {
-  width: 880px;
-
-}
-
-.Translate {
-  width: 880px;
-  font-size: 12px;
-
-}
-
-<!-- ======== Evalution css =========== -->
-
-.FormTest_header {
-  border: 2px solid black;
-  background-color: #beefff;
-  font-weight: bold;
-  text-align: center;
-}
-
-.FormTest_result {
-  height: 30;
-  border: 1 black solid;
-  background-color: #fdf5e6;
-  font-weight: bold;
-  font-size: 12;
-  text-align: center;
-}
-
-.Title_result {
-
+  .CI_Box_Title {
   background-color: #9399a7;
   color: #fff;
-  font-size: 20;
   text-align: center;
   font-weight: bold;
   text-shadow: 1px 1px #777;
+  height: 32px;
+  border-radius: 5px;
+  }
 
-  border-radius: 2px 2px 0px 0px;
+  .CI_title_R {
+    color: #000000;
+    font-size: 8;
+    text-align: right;
+    letter-spacing: -1px;
+    padding-right: 4px;
+    height: 27px;
+    text-shadow: 1px 1px #fff;
+  }
+
+  .CI_td_Form {
+    height: 40px;
+    text-align: left;
+  }
+
+  .CI_Form_CusInp {
+    height: 35px;
+    margin: 1px;
+    font-size: 15px;
+    border-radius: 5px;
+  }
+
+  #Customer_Information {
+    background-color: #d0d0d08a;
+    margin: 0;
+    border-radius: 5px;
+  }
+
+  #Head_line {
+    background-color: #fdf5e6;
+  }
+
+  #Second_line {
+    background-color: #d29953;
+  }
+
+/* ======== Test css ======== */
+.Test_Form {
+display:;
+overflow-x:hidden;
+overflow-y:scroll;
 }
 
 
-<!-- ========= TVPS css =========== -->
-.Title_Main {
-  width:1200px;
-  height: 50px;
-  text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 10px;
-
+.object_history_bg_color{
+background-color: #ffffff;
+border-radius: 5px;
+}
+.object_QOL_bg_color{
+background-color: #ffffff;
+border-radius: 5px;
+}
+.object_Evalution_bg_color{
+background-color: #ffffff;
+border-radius: 5px;
+}
+.object_CrossEye_bg_color{
+background-color: #ffffff;
+border-radius: 5px;
+}
+.object_TVPS_bg_color{
+background-color: #ffffff;
+border-radius: 5px;
+}
+.object_VMI_bg_color{
+background-color: #ffffff;
+border-radius: 5px;
+}
+.object_DEM_bg_color{
+background-color: #ffffff;
+border-radius: 5px;
+}
+.object_WACS_bg_color{
+background-color: #ffffff;
+border-radius: 5px;
 }
 
 
-.Form_CustHead{
-  height: 25px;
-  border: none;
-  background-color: #d2d2d2;
-
-  text-align : center;
+/* ======= Test date ======= */
+.Test_Form_date_bg {
+border:5px;
+border-radius: 10px 10px 10px 10px;
+background-color:#d0d0d08a;
 }
 
-.Form_Menu_head {
-
-  border:2px solid black;
-  background-color : #b91a4d;
-  color: #ffffff;
-}
-
-.Form_Menu_head_VMI {
-  border:2px solid black;
-  background-color : #b91a4d;
-  color: #ffffff;
-}
-
-.Form_Menu_Sec {
-  width: 140px;
-  height: 30px;
-  border : 1px solid black;
-  font-size : 12px;
-  font-weight: bold;
-  text-align: center;
-  background-color: #dcdcdc;
-}
-
-.Form_Sell {
-  width: 100px;
-  height: 25px;
-  border : 1px solid black;
-  font-size : 10px;
-  text-align: center;
-
-}
-
-.Form_CusResult {
-  border:1px solid black;
-}
-
-.Empty_Box {
-  border-style: none;
-  border-bottom: 2px double black;
-}
-
-.Box_Title {
-
-  text-align:center;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.bad {
-  font-weight: bold;
-  color: red;
-}
-
-.observer {
-  font-weight: bold;
-  color:rgb(0,0,255) ;
-}
-
-<!-- ========= VMI css =========== -->
-
-.Title_Main {
-  width:1200px;
-  height: 50px;
-  text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 10px;
-
-}
-
-
-.Form_CustHead{
-  height: 25px;
-  border: none;
-  background-color: blue;
-  text-align : center;
-}
-
-.Form_Menu_head {
-
-  border:2px solid black;
-  background-color : #b91a4d;
-  color: #ffffff;
-}
-
-.Form_Menu_Sec {
-  width: 140px;
-  height: 30px;
-  border : 1px solid black;
-  font-size : 12px;
-  font-weight: bold;
-  text-align: center;
-
-}
-
-.Form_Sell {
-  width: 100px;
-  height: 25px;
-  border : 1px solid black;
-  font-size : 10px;
-  text-align: center;
-
-}
-
-.Form_CusResult {
-  border:1px solid black;
+.Test_Form_date_td{
+height: 20px;
+border: none;
+font-size: 12px;
+border-radius: 5px;
 }
 
 .Empty_Box {
-  border-style: none;
-  border-bottom: 2px double black;
+background: "#ffffff"
 }
 
-.Box_Title {
+/* ========== 접기열기 ========== */
 
-  text-align:center;
-  font-size: 30px;
-  font-weight: bold;
+details {
+margin: 5px 0 10px;
 }
 
-.bad {
-  font-weight: bold;
-  color: red;
+details>summary {
+background: #444;
+color: #fff;
+padding: 10px;
+outline: 0;
+border-radius: 5px;
+cursor: pointer;
+transition: background 0.5s;
+text-align: left;
+box-shadow: 1px 1px 2px gray;
 }
 
-.observer {
-  font-weight: bold;
-  color:rgb(0,0,255) ;
+details>summary::-webkit-details-marker {
+background: #444;
+color: #fff;
+background-size: contain;
+transform: rotate3d(0, 0, 1, 90deg);
+transition: transform 0.25s;
+}
+
+details[open]>summary::-webkit-details-marker {
+transform: rotate3d(0, 0, 1, 180deg);
+}
+
+details[open]>summary {
+background: #444;
+}
+
+details[open]>summary~* {
+animation: reveal 0.5s;
+}
+
+.tpt {
+background: #444;
+color: #fff;
+margin: 5px 0 10px;
+padding: 5px 10px;
+line-height: 25px;
+border-radius: 5px;
+box-shadow: 1px 1px 2px gray;
+}
+
+@keyframes reveal {
+from {
+opacity: 0;
+transform: translate3d(0, -30px, 0);
+}
+
+to {
+opacity: 1;
+transform: translate3d(0, 0, 0);
+}
+}
+
+
+/* ======= Test history ======= */
+.Test_Form_history_bg {
+border:5px;
+text-align: center;
+border-radius: 10px 10px 10px 10px;
 }
 
 
 
-<!-- ========= WACS css =========== -->
 
-.Title_Main {
-  width:880px;
-  height: 50px;
-  text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 10px;
-
-}
-
-.Form_Menu_head {
-  width: 210px;
-  height: 50px;
-  border:2px solid black;
-  background-color : #b91a4d;
-  color: #ffffff;
-  text-align: center;
-}
-
-.Form_Menu_Sec {
-height: 40px;
-border: 2px solid black;
-background-color: #d75689;
-color : #ffffff;
+.history_header_item1 {
+height: 50px;
+border:2px solid black;
+background-color : rgb(69,111,175);
+color: rgb(255,255,255);
+font-size: 14px;
+font-weight: bold;
 text-align: center;
 }
 
-.Form_Sell {
-  border : 1px solid black;
-  width: 210px;
-  height: 40px;
+
+.history_header_item {
+border:2px solid black;
+background-color : rgb(1,103,181);
+color: rgb(255,255,255);
+font-size: 12px;
+font-weight: bold;
+text-align: center;
+}
+
+.history_Form_Item {
+height:30px;
+border:2px solid black;
+background-color :rgb(255,252,236);
+font-size: 14px;
+font-weight: bold;
+text-align: center;
+padding-left: 10px;
+}
+
+.history_Form_Sell {
+height: 25px;
+font-size : 12px;
+text-align: left;
+border-collapse: collapse;
 
 }
 
-
-.Box_Title {
-  width: 880px;
-  text-align:center;
-  font-size: 30px;
-  font-weight: bold;
+.history_head_item{
+height: 30px;
+font-size: 14px;
+font-weight: bold;
+text-align: center;
 }
 
-.ChronoAge {
-  width: 100px;
-  border: none;
-  border-bottom: solid 1px black
+.history_Form_Sellbox {
+height: 25px;
+border:2px solid black;
+font-size : 10px;
+text-align: center;
+}
+
+.history_input{
+text-align: center;
+font-size: 10px;
+top:1px;
+left:1px;
+right: 0.5px;
+bottom: 0.5px;
+padding: 0.2em 0.1em;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.history_Empty_Box {
+width: 30px;
+padding-bottom: 15px;
+padding-top: 10px;
+}
+
+
+/* ============= QOL문진 ============ */
+
+.QOL_head_item {
+height: 30px;
+font-size: 16px;
+font-weight: bold;
+text-align: center;
+}
+
+.QOL_header_item1 {
+height: 50px;
+border:2px solid black;
+background-color : rgb(69,111,175);
+color: rgb(255,255,255);
+font-size: 14px;
+font-weight: bold;
+text-align: center;
+}
+
+.QOL_header_item {
+border: 2px solid black;
+background-color: rgb(1, 103, 181);
+color: rgb(255, 255, 255);
+font-size: 14px;
+font-weight: bold;
+text-align: center;
+}
+
+.QOL_Form_Item {
+height: 30px;
+border: 2px solid black;
+background-color: rgb(211, 234, 252);
+font-size: 14px;
+font-weight: bold;
+text-align: left;
+padding-left: 10px;
+}
+
+.QOL_Form_Sell {
+height: 35px;
+border: 1px solid black;
+font-size: 12px;
+text-align: center;
+}
+
+.Empty_Box {
+width: 50px;
+padding-bottom: 15px;
+padding-top: 10px;
+}
+
+/* ====== Evaluation =======*/
+
+.object{
+width: 500;
+height: 60;
+background-color: #4682b4;
+color: #ffffff;
+font-size: 18px;
+border: 1px solid rgb(6,30,115);
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+}
+
+.object-title {
+font-weight:bold;
+font-size: 30;
+text-align: center;
+}
+
+.Evaluation_bg {
+border:5px;
+border-radius: 10px 10px 10px 10px;
+background-color:#d2d2d2;
+}
+
+.Evaluation_title{
+height: 35px;
+text-align: center;
+background-color: #616161;
+color:white;
+font-size: 14px;
+border: 2px solid black;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.Evaluation_item{
+height: 35px;
+text-align: center;
+background-color: rgb(190,204,232);
+color: rgb(28,55,109);
+font-size: 14px;
+font-weight: bold;
+border: 2px solid black;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.Evaluation_result{
+text-align: left;
+font-size: 12px;
+background-color: white;
+border: 2px solid #d2d2d2;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+padding-left: 15px;
+}
+
+.Evaluation_button{
+text-align: center;
+font-size: 10px;
+top:1px;
+left:1px;
+right: 0.5px;
+bottom: 0.5px;
+padding: 0.2em 0.1em;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
 
 }
 
-.Result {
-  width: 880px;
-
+.Evaluation_reference{
+text-align: center;
+font-size: 10px;
+background-color: rgb(241,253,200);
+border: 1px solid #d2d2d2;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
 }
 
-.Translate {
-  width: 880px;
-  font-size: 12px;
+.Evaluation_input{
+text-align: center;
+font-size: 10px;
+top:1px;
+left:1px;
+right: 0.5px;
+bottom: 0.5px;
+padding: 0.2em 0.1em;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
 
+.Evaluation_sel{
+text-align: center;
+height: 20px;
+font-size: 10px;
+border: 2px solid black;
+padding: 0.2em 0.1em;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.Evaluation_analy{
+height: 30px;
+text-align: center;
+font-size: 12px;
+background-color: rgb(219,254,250);
+border: 1px solid #d2d2d2;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+
+/* ======= TVPS ======= */
+
+.TVPS_head{
+border:2px solid black;
+background-color : #b91a4d;
+font-size: 14px;
+color: #ffffff;
+font-weight: bold;
+text-align: center;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.TVPS_menu{
+border : 1px solid black;
+font-size : 14px;
+font-weight: bold;
+text-align: center;
+background-color: #dcdcdc;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.TVPS_score{
+height: 40px;
+font-size: 12px;
+text-align: left;
+background-color: white;
+border: 2px solid #d2d2d2;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+padding-left: 15px;
+}
+
+
+/* =======  VMI  =======*/
+
+.VMI_head{
+border:2px solid rgb(21,64,1);
+background-color : rgb(138,193,112);
+color: rgb(3,33,108);
+font-size: 14px;
+font-weight: bold;
+text-align: center;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.VMI_menu{
+border : 1px solid black;
+font-size : 14px;
+font-weight: bold;
+text-align: center;
+background-color: #dcdcdc;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.VMI_score{
+height: 40px;
+text-align: left;
+font-size: 12px;
+background-color: white;
+border: 2px solid #d2d2d2;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+padding-left: 15px;
+}
+
+
+/* ======= DEM ======= */
+
+.DEM_head{
+width:120px;
+border:2px solid rgb(59,2,39);
+background-color : rgb(234,220,254);
+color: rgb(3,33,108);
+text-align: center;
+font-size: 14px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.DEM_Menu{
+width:120px;
+border : 1px solid black;
+font-size : 14px;
+font-weight: bold;
+text-align: center;
+background-color: #dcdcdc;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.DEM_score{
+width:120px;
+height: 40px;
+text-align: left;
+font-size: 12px;
+background-color: white;
+border: 2px solid #d2d2d2;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+padding-left: 15px;
+}
+
+
+/* ======= WACS ======= */
+
+.WACS_head{
+border:2px solid rgb(103,72,3);
+background-color : rgb(254,235,194);
+color: rgb(3,33,108);
+font-size: 14px;
+font-weight: bold;
+text-align: center;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.WACS_Menu{
+border : 1px solid black;
+font-size : 14px;
+font-weight: bold;
+text-align: center;
+background-color: #dcdcdc;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.WACS_score{
+height: 40px;
+text-align: left;
+font-size: 12px;
+background-color: white;
+border: 2px solid #d2d2d2;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+padding-left: 15px;
+}
+
+.submit {
+width: 200px;
+height: 50px;
+border-radius: 10px 10px 10px 10px;
+font-size: 20px;
+font-weight: bold;
+color : #ffffff;
+text-shadow: 1px 1px #777;
+text-align: center;
+vertical-align: middle;
+background-color: #4682b4;
 }
