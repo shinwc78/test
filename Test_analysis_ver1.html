@@ -8,6 +8,9 @@
     <script type="text/javascript" src="js/analysis_VMI.js"></script>
     <script type="text/javascript" src="js/analysis_DEM.js"></script>
     <script type="text/javascript" src="js/analysis_WACS.js"></script>
+    <script type="text/javascript" src="js/mychart.js"></script>
+    <script type="text/javascript" src="js/analysis_chart.js"></script>
+
 
     <style media="screen">
 
@@ -18,6 +21,13 @@
     .observer {
       font-weight: bold;
       color:rgb(0,0,255) ;
+    }
+
+    .chart_style {
+      border: 1px solid black;
+      border-radius: 10px;
+      width: 100%;
+      height:300px;
     }
 
     .TVPS_Menu_head {
@@ -480,8 +490,9 @@
                     <td style="height:15px;">&nbsp;</td>
                   </tr>
                   <tr>
-                    <td class="Box_Title" colspan="6" style="width:700px;">TVPS-4 분석결과</td>
+                    <td id="TVPS_chart" colspan="6" class="chart_style"></td>
                   </tr>
+
                   <tr>
                     <td style="height:10px;">&nbsp;</td>
                   </tr>
@@ -684,8 +695,9 @@
                 <td style="height:15px;">&nbsp;</td>
               </tr>
               <tr>
-                <td class="Box_Title" style="width:700px;" colspan="4">시각운동통합기술(VMI) 분석결과</td>
+                <td id="VMI_chart" colspan="4" class="chart_style"></td>
               </tr>
+
               <tr>
                 <td style="height:10px;">&nbsp;</td>
               </tr>
@@ -854,15 +866,15 @@
                         document.write(DEM_RATIO_PER+"%");
                       }
                       </script>
-
                     </td>
                   </tr>
                   <tr>
                     <td style="height:15px;">&nbsp;</td>
                   </tr>
-                      <tr>
-                        <td class="Box_Title" style="width:700px;" colspan="5">안구운동발달(DEM) 분석결과</td>
-                      </tr>
+                  <tr>
+                    <td id="DEM_chart" colspan="5" class="chart_style"></td>
+                  </tr>
+                      
                       <tr>
                         <td style="width:280px; text-align:right; border: none; font-size:10px;" colspan="5">분석나이기준 :
                           <script>
@@ -1060,9 +1072,13 @@
                 <tr>
                   <td height="20px">&nbsp;</td>
                 </tr>
-                      <tr>
-                        <td class="Box_Title" style="width:700px;"  colspan="4">시각공간방향기술(WACS) 분석결과</td>
-                      </tr>
+                <tr>
+                  <td id="WACS_chart" colspan="4" class="chart_style"></td>
+                </tr>
+                <tr>
+                  <td height="20px">&nbsp;</td>
+                </tr>
+
                       <tr>
                         <td style="width:280px; text-align:right; border: none; font-size:10px;" colspan="4">분석나이기준 :
                           <script>
