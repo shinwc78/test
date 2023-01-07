@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -694,6 +695,9 @@ details[open]>summary~* {
     </header>
 
     <!-- ======= Maiin Body start ======= -->
+    <form id="Main_test" method="post" action="Test_analysis_ver1.html">
+
+
     <table width="1535px">
       <tbody  style=" width:1535px; height:500px;">
       <tr>
@@ -723,8 +727,8 @@ details[open]>summary~* {
                                   </a>
                                 </td>
                                 <td class="CI_td_Form_Form">
-                                  <select class="CI_Form_CusInp" id="CSex" name="CSex" tabindex="2" style="width:45px;">
-                                    <option value="남" selected>남</option>
+                                  <select class="CI_Form_CusInp" id="Cus_sex" name="Cus_sex" tabindex="2" style="width:45px;">
+                                    <option value="남">남</option>
                                     <option value="여">여</option>
                                   </select>
                                 </td>
@@ -736,15 +740,15 @@ details[open]>summary~* {
                       <tr>
                         <td class="CI_title_R">전화번호</td>
                         <td class="CI_td_Form_Form">
-                          <input type="text" id="CTell1" name="CTell1" value="033" tabindex="3" maxlength="3" class="CI_Form_CusInp" style="width:35px;">
-                          <input type="text" id="CTell2" name="CTell2" value="" tabindex="4" maxlength="8" class="CI_Form_CusInp" style="width:117px;">
+                          <input type="text" id="Cus_tell1" name="Cus_tell1" value="" tabindex="3" maxlength="3" class="CI_Form_CusInp" style="width:35px;">
+                          <input type="text" id="Cus_tell2" name="Cus_tell2" value="" tabindex="4" maxlength="8" class="CI_Form_CusInp" style="width:117px;">
                         </td>
                       </tr>
                       <tr>
                         <td class="CI_title_R">휴대폰번호</td>
                         <td class="CI_td_Form_Form">
-                          <input type="text" id="txt_CMobile1" name="CMobile1" value="010" tabindex="5" maxlength="3" class="CI_Form_CusInp" style="width:35px;">
-                          <input type="text" id="txt_CMobile2" name="CMobile2" value="" tabindex="6" maxlength="9" class="CI_Form_CusInp" style="width:117px;">
+                          <input type="text" id="Cus_mobile1" name="Cus_mobile1" value="" tabindex="5" maxlength="3" class="CI_Form_CusInp" style="width:35px;">
+                          <input type="text" id="Cus_mobile2" name="Cus_mobile2" value="" tabindex="6" maxlength="9" class="CI_Form_CusInp" style="width:117px;">
                         </td>
                       </tr>
                       <tr>
@@ -753,7 +757,7 @@ details[open]>summary~* {
                           <input type="text" id="Birth_y" name="Birth_y" tabindex="7" maxlength="4" class="CI_Form_CusInp" style="width:40px;" placeholder="yyyy" onchange="age()">
                           <input type="text" id="Birth_m" name="Birth_m" tabindex="8" maxlength="2" class="CI_Form_CusInp" style="width:25px;" placeholder="mm" onchange="age()">
                           <input type="text" id="Birth_d" name="Birth_d" tabindex="9" maxlength="4" class="CI_Form_CusInp" style="width:25px;" placeholder="dd"onchange="age()">
-                          <select class="CI_Form_CusInp" name="CustBirth" tabindex="10" style="width:48px;">
+                          <select id="Birth_sel" name="CustBirth" tabindex="10" class="CI_Form_CusInp" style="width:48px;">
                             <option value="양" selected>양</option>
                             <option value="음">음</option>
                           </select>
@@ -775,13 +779,13 @@ details[open]>summary~* {
                       <tr>
                         <td class="CI_title_R">거주지역</td>
                         <td class="CI_td_Form_Form">
-                          <input type="text" name="txt_CCity" value="" tabindex="11" class="CI_Form_CusInp" style="width:170px;">
+                          <input type="text" id="txt_CCity" name="txt_CCity" value="" tabindex="11" class="CI_Form_CusInp" style="width:170px;">
                         </td>
                       </tr>
                       <tr>
                         <td class="CI_title_R">주증상</td>
                         <td class="CI_td_Form_Form">
-                          <select class="CI_Form_CusInp" name="Diagnosis1" tabindex="12" style="width:170px; height">
+                          <select class="CI_Form_CusInp" id="Diagnosis1" name="Diagnosis1" tabindex="12" style="width:170px; height">
                             <option value="진단선택" selected>진단선택</option>
                             <option value="눈모임부족">눈모임부족</option>
                             <option value="눈모임과다">눈모임과다</option>
@@ -818,7 +822,7 @@ details[open]>summary~* {
                       <tr>
                         <td class="CI_title_R">보조증상</td>
                         <td class="CI_td_Form_Form">
-                          <select class="CI_Form_CusInp" name="Diagnosis2" tabindex="13" style="width:170px;">
+                          <select class="CI_Form_CusInp" id="Diagnosis2" name="Diagnosis2" tabindex="13" style="width:170px;">
                             <option value="진단선택" selected>진단선택</option>
                             <option value="눈모임부족">눈모임부족</option>
                             <option value="눈모임과다">눈모임과다</option>
@@ -855,11 +859,11 @@ details[open]>summary~* {
                       <tr>
                         <td class="CI_title_R">훈련일정</td>
                         <td class="CI_td_Form_Form">
-                          <select class="CI_Form_CusInp" name="reserv_count" tabindex="14" style="width:60px;">
+                          <select class="CI_Form_CusInp" id="reserv_count" name="reserv_count" tabindex="14" style="width:60px;">
                             <option value="주1회" selected>주1회</option>
                             <option value="주2회">주2회</option>
                           </select>
-                          <select class="CI_Form_CusInp" name="reserv_day1" tabindex="15" style="width:50px;">
+                          <select class="CI_Form_CusInp" id="reserv_day1" name="reserv_day1" tabindex="15" style="width:50px;">
                             <option value="월" selected>월</option>
                             <option value="화">화</option>
                             <option value="수">수</option>
@@ -868,7 +872,7 @@ details[open]>summary~* {
                             <option value="토">토</option>
                             <option value="일">일</option>
                           </select>
-                          <select class="CI_Form_CusInp" name="reserv_day2" tabindex="16" style="width:50px;">
+                          <select class="CI_Form_CusInp" id="reserv_day2" name="reserv_day2" tabindex="16" style="width:50px;">
                             <option value="none">none</option>
                             <option value="월">월</option>
                             <option value="화">화</option>
@@ -989,35 +993,35 @@ details[open]>summary~* {
                                   <table>
                                     <tr>
                                       <td class="history_Form_Sell" width="200px">
-                                        <input type="checkbox" name="che_visit[]" value="정기적인 시기능평가">정기적인 시기능평가
+                                        <input type="checkbox" name="che_visit" value="정기적인 시기능평가">정기적인 시기능평가
                                       </td>
                                       <td class="history_Form_Sell" width="200px">
-                                        <input type="checkbox" name="che_visit[]" value="학습장애">학습장애
+                                        <input type="checkbox" name="che_visit" value="학습장애">학습장애관련 평가
                                       </td>
                                       <td class="history_Form_Sell" width="200px">
-                                        <input type="checkbox" name="che_visit[]" value="스트레스관련">스트레스관련
+                                        <input type="checkbox" name="che_visit" value="스트레스관련">스트레스관련 평가
                                       </td>
                                     </tr>
                                     <tr>
                                       <td class="history_Form_Sell">
-                                        <input type="checkbox" name="che_visit[]" value="시기능발달평가">시기능발달평가
+                                        <input type="checkbox" name="che_visit" value="시기능발달평가">시기능발달평가
                                       </td>
                                       <td class="history_Form_Sell">
-                                        <input type="checkbox" name="che_visit[]" value="발달지연">발달지연
+                                        <input type="checkbox" name="che_visit" value="발달지연">발달지연관련 평가
                                       </td>
                                       <td class="history_Form_Sell">
-                                        <input type="checkbox" name="che_visit[]" value="뇌손상">뇌손상
+                                        <input type="checkbox" name="che_visit" value="뇌손상">뇌손상관련 평가
                                       </td>
                                     </tr>
                                     <tr>
                                       <td class="history_Form_Sell">
-                                        <input type="checkbox" name="che_visit[]" value="안경원/안과 추천/의뢰">안경원/안과 추천/의뢰
+                                        <input type="checkbox" name="che_request" value="안경원/안과 추천/의뢰">안경원/안과 추천/의뢰
                                       </td>
                                       <td class="history_Form_Sell">
-                                        <input type="checkbox" name="che_visit[]" value="학교 추천/의뢰">학교 추천/의뢰
+                                        <input type="checkbox" name="che_request" value="학교 추천/의뢰">학교 추천/의뢰
                                       </td>
                                       <td class="history_Form_Sell">
-                                        <input type="checkbox" name="che_visit[]" value="인터넷검색">인터넷검색
+                                        <input type="checkbox" name="che_request" value="인터넷검색">인터넷검색
                                       </td>
                                     </tr>
                                   </table>
@@ -1029,13 +1033,13 @@ details[open]>summary~* {
                                   <table>
                                     <tr>
                                       <td class="history_Form_Sell" width="200px">의뢰기관명(지역):
-                                        <input type="text" name="text_request1" class="history_input" style="width:80px;" value="">
+                                        <input type="text" id="text_request1" name="text_request1" class="history_input" style="width:80px;" value="">
                                       </td>
                                       <td class="history_Form_Sell" width="200px">의뢰자성명:
-                                        <input type="text" name="text_request2" class="history_input" style="width:80px;" value="">
+                                        <input type="text" id="text_request2" name="text_request2" class="history_input" style="width:80px;" value="">
                                       </td>
                                       <td class="history_Form_Sell" width="200px">연락처:
-                                        <input type="text" name="text_request3" class="history_input" style="width:80px;" value="">
+                                        <input type="text" id="text_request3" name="text_request3" class="history_input" style="width:80px;" value="">
                                       </td>
                                     </tr>
                                   </table>
@@ -1051,47 +1055,44 @@ details[open]>summary~* {
                                         <input type="radio" name="radio_cl" value="yes">유
                                       </td>
                                       <td class="history_Form_Sell" width="200px">안경/CL 착용시기
-                                        <input type="text" name="text_record1" class="history_input" style="width:90px;" value="">
+                                        <input type="text" id="text_glasscl" name="text_record1" class="history_input" style="width:90px;" value="">
                                       </td>
                                       <td class="history_Form_Sell" width="200px">최종검사일
-                                        <input type="text" name="text_record2" class="history_input" style="width:90px;" value="">
+                                        <input type="text" id="text_lasttest" name="text_record2" class="history_input" style="width:90px;" value="">
                                       </td>
                                     </tr>
                                   </table>
                                   <table>
                                     <tr>
                                       <td class="history_Form_Sell" width="100px">
-                                        <input type="checkbox" name="che_record1[]" value="녹내장">녹내장
+                                        <input type="checkbox" name="che_eye_disease_self" value="녹내장">녹내장
                                       </td>
                                       <td class="history_Form_Sell" width="100px">
-                                        <input type="checkbox" name="che_record1[]" value="백내장">백내장
+                                        <input type="checkbox" name="che_eye_disease_self" value="백내장">백내장
                                       </td>
                                       <td class="history_Form_Sell" width="100px">
-                                        <input type="checkbox" name="che_record1[]" value="망막질환">망막질환
+                                        <input type="checkbox" name="che_eye_disease_self" value="망막질환">망막질환
                                       </td>
                                       <td class="history_Form_Sell" width="100px">
-                                        <input type="checkbox" name="che_record1[]" value="사시">사시
+                                        <input type="checkbox" name="che_eye_disease_self" value="사시">사시
                                       </td>
                                       <td class="history_Form_Sell" width="100px">
-                                        <input type="checkbox" name="che_record1[]" value="약시">약시
+                                        <input type="checkbox" name="che_eye_disease_self" value="약시">약시
                                       </td>
                                     </tr>
                                   </table>
                                   <table>
                                     <tr>
                                       <td class="history_Form_Sell" width="150px">
-                                        <input type="checkbox" name="che_record1[]" value="비사시성 양안시이상">비사시성 양안시이상
+                                        <input type="checkbox" name="che_eye_disease_self" value="비사시성 양안시이상">비사시성 양안시이상
                                       </td>
                                       <td class="history_Form_Sell" width="150px">기타 안과질환
-                                        <input type="text" name="text_record3" class="history_input" style="width:90px;" value="">
+                                        <input type="text" id="text_eye_disease_self" name="text_record3" class="history_input" style="width:90px;" value="">
                                       </td>
                                       <td class="history_Form_Sell" width="150px">안과수술력:
                                         <input type="radio" name="radio_surgery1" value="no">무
                                         <input type="radio" name="radio_surgery1" value="yes">유
-                                        <input type="text" name="text_surgery1" class="history_input" style="width:90px;" value="">
-                                      </td>
-                                      <td class="history_Form_Sell" width="150px">
-                                        <input type="checkbox" name="che_record1[]" value="비사시성 양안시이상">특이사항 없음
+                                        <input type="text" id="text_surgery1" name="text_surgery1" class="history_input" style="width:90px;" value="">
                                       </td>
                                     </tr>
                                   </table>
@@ -1103,40 +1104,40 @@ details[open]>summary~* {
                                   <table>
                                     <tr>
                                       <td class="history_Form_Sell" width="85px">
-                                        <input type="checkbox" name="che_record2[]" value="고도근시">고도근시
+                                        <input type="checkbox" name="che_eye_disease_family" value="고도근시">고도근시
                                       </td>
                                       <td class="history_Form_Sell" width="85px">
-                                        <input type="checkbox" name="che_record2[]" value="고도원시">고도원시
+                                        <input type="checkbox" name="che_eye_disease_family" value="고도원시">고도원시
                                       </td>
                                       <td class="history_Form_Sell" width="85px">
-                                        <input type="checkbox" name="che_record2[]" value="고도난시">고도난시
+                                        <input type="checkbox" name="che_eye_disease_family" value="고도난시">고도난시
                                       </td>
                                       <td class="history_Form_Sell" width="85px">
-                                        <input type="checkbox" name="che_record2[]" value="부동시">부동시
+                                        <input type="checkbox" name="che_eye_disease_family" value="부동시">부동시
                                       </td>
                                       <td class="history_Form_Sell" width="85px">
-                                        <input type="checkbox" name="che_record2[]" value="사시">사시
+                                        <input type="checkbox" name="che_eye_disease_family" value="사시">사시
                                       </td>
                                       <td class="history_Form_Sell" width="85px">
-                                        <input type="checkbox" name="che_record2[]" value="약시">약시
+                                        <input type="checkbox" name="che_eye_disease_family" value="약시">약시
                                       </td>
                                       <td class="history_Form_Sell" width="85px">
-                                        <input type="checkbox" name="che_record2[]" value="녹내장">녹내장
+                                        <input type="checkbox" name="che_eye_disease_family" value="녹내장">녹내장
                                       </td>
                                     </tr>
                                   </table>
                                   <table>
                                     <tr>
                                       <td class="history_Form_Sell" width="200px">
-                                        <input type="checkbox" name="che_record2[]" value="비사시성 양안시이상">비사시성 양안시이상
+                                        <input type="checkbox" name="che_eye_disease_family" value="비사시성 양안시이상">비사시성 양안시이상
                                       </td>
                                       <td class="history_Form_Sell" width="200px">기타 안과질환
-                                        <input type="text" name="text_record4" class="history_input" style="width:90px;" value="">
+                                        <input type="text" id="text_eye_disease_family" name="text_record4" class="history_input" style="width:90px;" value="">
                                       </td>
                                       <td class="history_Form_Sell"width="200px">안과수술력:
                                         <input type="radio" name="radio_surgery2" value="no">무
                                         <input type="radio" name="radio_surgery2" value="yes">유
-                                        <input type="text" name="text_surgery2" class="history_input" style="width:90px;" value="">
+                                        <input type="text" id="text_surgery2" name="text_surgery2" class="history_input" style="width:90px;" value="">
                                       </td>
                                     </tr>
                                   </table>
@@ -1148,37 +1149,37 @@ details[open]>summary~* {
                                   <table>
                                     <tr>
                                       <td class="history_Form_Sell" width="100px">
-                                        <input type="checkbox" name="che_record3[]" value="알러지">알러지
+                                        <input type="checkbox" name="che_body_disease_self" value="알러지">알러지
                                       </td>
                                       <td class="history_Form_Sell" width="100px">
-                                        <input type="checkbox" name="che_record3[]" value="천식">천식
+                                        <input type="checkbox" name="che_body_disease_self" value="천식">천식
                                       </td>
                                       <td class="history_Form_Sell" width="100px">
-                                        <input type="checkbox" name="che_record3[]" value="위장장애">위장장애
+                                        <input type="checkbox" name="che_body_disease_self" value="위장장애">위장장애
                                       </td>
                                       <td class="history_Form_Sell" width="100px">
-                                        <input type="checkbox" name="che_record3[]" value="중이염">중이염
+                                        <input type="checkbox" name="che_body_disease_self" value="중이염">중이염
                                       </td>
                                       <td class="history_Form_Sell" width="100px">
-                                        <input type="checkbox" name="che_record3[]" value="고혈압">고혈압
+                                        <input type="checkbox" name="che_body_disease_self" value="고혈압">고혈압
                                       </td>
                                       <td class="history_Form_Sell" width="100px">
-                                        <input type="checkbox" name="che_record3[]" value="당뇨">당뇨
+                                        <input type="checkbox" name="che_body_disease_self" value="당뇨">당뇨
                                       </td>
                                     </tr>
                                   </table>
                                   <table>
                                     <tr>
                                       <td class="history_Form_Sell" width="200px">기타:
-                                        <input type="text" name="text_record5" class="history_input" value="">
+                                        <input type="text" id="text_body_disease_self" name="text_body_disease_self" class="history_input" value="">
                                       </td>
                                       <td class="history_Form_Sell" width="250px">수술력:
                                         <input type="radio" name="radio_surgery3" value="no">무
                                         <input type="radio" name="radio_surgery3" value="yes">유
-                                        <input type="text" name="text_surgery3" class="history_input" style="width:90px;" value="">
+                                        <input type="text" id="text_surgery3" name="text_surgery3" class="history_input" style="width:90px;" value="">
                                       </td>
                                       <td class="history_Form_Sell" width="200px">최종검사:
-                                        <input type="text" name="text_record7" class="history_input" style="width:90px;" value="">
+                                        <input type="text" id="text_body_lasttest_self" name="text_record7" class="history_input" style="width:90px;" value="">
                                       </td>
                                     </tr>
                                   </table>
@@ -1190,18 +1191,18 @@ details[open]>summary~* {
                                   <table>
                                     <tr>
                                       <td class="history_Form_Sell" width="100px">
-                                        <input type="checkbox" name="che_record4[]" value="고혈압">고혈압
+                                        <input type="checkbox" name="che_body_disease_family" value="고혈압">고혈압
                                       </td>
                                       <td class="history_Form_Sell" width="100px">
-                                        <input type="checkbox" name="che_record4[]" value="당뇨">당뇨
+                                        <input type="checkbox" name="che_body_disease_family" value="당뇨">당뇨
                                       </td>
                                       <td class="history_Form_Sell" width="200px">기타:
-                                        <input type="text" name="text_record8" class="history_input" style="width:90px;" value="">
+                                        <input type="text" id="text_body_disease_family" name="text_body_disease_family" class="history_input" style="width:90px;" value="">
                                       </td>
                                       <td class="history_Form_Sell" width="200px">수술력:
                                         <input type="radio" name="radio_surgery4" value="no">무
                                         <input type="radio" name="radio_surgery4" value="yes">유
-                                        <input type="text" name="text_surgery4" class="history_input" style="width:90px;" value="">
+                                        <input type="text" id="text_surgery4" name="text_surgery4" class="history_input" style="width:90px;" value="">
                                       </td>
                                     </tr>
                                   </table>
@@ -1217,10 +1218,10 @@ details[open]>summary~* {
                                         <input type="radio" name="radio_drug" value="yes">예
                                       </td>
                                       <td class="history_Form_Sell" width="250px">질환명:
-                                        <input type="text" name="text_disease" class="history_input" style="width:150px;" value="">
+                                        <input type="text" id="text_disease_name" name="text_disease_name" class="history_input" style="width:150px;" value="">
                                       </td>
                                       <td class="history_Form_Sell" width="250px">약물종류:
-                                        <input type="text" name="text_drug" class="history_input" style="width:150px;" value="">
+                                        <input type="text" id="text_drug" name="text_drug" class="history_input" style="width:150px;" value="">
                                       </td>
                                     </tr>
                                   </table>
@@ -1235,46 +1236,46 @@ details[open]>summary~* {
                                         <table>
                                           <tr>
                                             <td class="history_Form_Sell" width="200px">
-                                              <input type="checkbox" name="che_school[]" value="개별학급/특수학급">개별학급/특수학급
+                                              <input type="checkbox" name="che_school_prob" value="개별학급/특수학급">개별학급/특수학급
                                             </td>
                                             <td class="history_Form_Sell" width="200px">
-                                              <input type="checkbox" name="che_school[]" value="잦은 병결">잦은 병결
+                                              <input type="checkbox" name="che_school_prob" value="잦은 병결">잦은 병결
                                             </td>
                                             <td class="history_Form_Sell" width="200px">
-                                              <input type="checkbox" name="che_school[]" value="잦은 전학">잦은 전학
+                                              <input type="checkbox" name="che_school_prob" value="잦은 전학">잦은 전학
                                             </td>
                                           </tr>
                                           <tr>
                                             <td class="history_Form_Sell">
-                                              <input type="checkbox" name="che_school[]" value="읽기에 어려움">읽기에 어려움
+                                              <input type="checkbox" name="che_school_prob" value="읽기에 어려움">읽기에 어려움
                                             </td>
                                             <td class="history_Form_Sell">
-                                              <input type="checkbox" name="che_school[]" value="한글 익히는데 어려움">한글 익히는데 어려움
+                                              <input type="checkbox" name="che_school_prob" value="한글 익히는데 어려움">한글 익히는데 어려움
                                             </td>
                                             <td class="history_Form_Sell">
-                                              <input type="checkbox" name="che_school[]" value="수학개념 익히는데 어려움">수학개념 익히는데 어려움
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td class="history_Form_Sell">
-                                              <input type="checkbox" name="che_school[]" value="좌우방향 혼동">좌우방향 혼동
-                                            </td>
-                                            <td class="history_Form_Sell">
-                                              <input type="checkbox" name="che_school[]" value="글자,숫자,단어를 거꾸로 쓰거나 읽음">글자,숫자,단어를 거꾸로 쓰거나 읽음
-                                            </td>
-                                            <td class="history_Form_Sell">
-                                              <input type="checkbox" name="che_school[]" value="과제를 마치는데 어려움">과제를 마치는데 어려움
+                                              <input type="checkbox" name="che_school_prob" value="수학개념 익히는데 어려움">수학개념 익히는데 어려움
                                             </td>
                                           </tr>
                                           <tr>
                                             <td class="history_Form_Sell">
-                                              <input type="checkbox" name="che_school[]" value="정보기억에 어려움">정보기억에 어려움
+                                              <input type="checkbox" name="che_school_prob" value="좌우방향 혼동">좌우방향 혼동
                                             </td>
                                             <td class="history_Form_Sell">
-                                              <input type="checkbox" name="che_school[]" value="구두지시를 따르는데 어려움">구두지시를 따르는데 어려움
+                                              <input type="checkbox" name="che_school_prob" value="글자,숫자,단어를 거꾸로 쓰거나 읽음">글자,숫자,단어를 거꾸로 쓰거나 읽음
                                             </td>
                                             <td class="history_Form_Sell">
-                                              <input type="checkbox" name="che_school[]" value="서면지시를 따르는데 어려움">서면지시를 따르는데 어려움
+                                              <input type="checkbox" name="che_school_prob" value="과제를 마치는데 어려움">과제를 마치는데 어려움
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td class="history_Form_Sell">
+                                              <input type="checkbox" name="che_school_prob" value="정보기억에 어려움">정보기억에 어려움
+                                            </td>
+                                            <td class="history_Form_Sell">
+                                              <input type="checkbox" name="che_school_prob" value="구두지시를 따르는데 어려움">구두지시를 따르는데 어려움
+                                            </td>
+                                            <td class="history_Form_Sell">
+                                              <input type="checkbox" name="che_school_prob" value="서면지시를 따르는데 어려움">서면지시를 따르는데 어려움
                                             </td>
                                           </tr>
                                         </table>
@@ -1309,7 +1310,7 @@ details[open]>summary~* {
                                     </tr>
                                     <tr>
                                       <td class="history_Form_Sell" style="text-align:left; padding-top:10px;"> 학교생활에 어려움이 있다면 설명하세요
-                                        <textarea name="text_school" style="width:100%;" rows="2" cols="80"></textarea>
+                                        <textarea id="text_school_prob" name="text_school" style="width:100%;" rows="2" cols="80"></textarea>
                                       </td>
                                     </tr>
                                   </table>
@@ -1327,7 +1328,7 @@ details[open]>summary~* {
                                             <td class="history_Form_Sell" width="500px">
                                               <input type="radio" name="radio_mother_health" value="good">양호
                                               <input type="radio" name="radio_mother_health" value="bad">불량(합병증)
-                                              <input type="text" name="text_mother_health" class="history_input" style="width:150px;" value="">
+                                              <input type="text" id="text_mother_health" name="text_mother_health" class="history_input" style="width:150px;" value="">
                                             </td>
                                           </tr>
                                         </table>
@@ -1346,14 +1347,14 @@ details[open]>summary~* {
                                                     <input type="radio" name="radio_delivery1" value="자연분만">자연분만
                                                   </td>
                                                   <td class="history_Form_Sell">산과기록(특별사항)
-                                                    <input type="text" name="text_delivery1" class="history_input" style="width:80px;" value="">
+                                                    <input type="text" id="text_delivery1" name="text_delivery1" class="history_input" style="width:80px;" value="">
                                                   </td>
                                                 </tr>
                                                 <tr>
                                                   <td class="history_Form_Sell">
                                                     <input type="radio" name="radio_delivery2" value="full">만삭출산
                                                     <input type="radio" name="radio_delivery2" value="early">조산(몇개월)
-                                                    <input type="text" name="text_delivery2" class="history_input" style="width:80px;" value="">
+                                                    <input type="text" id="text_delivery2" name="text_delivery2" class="history_input" style="width:80px;" value="">
                                                   </td>
                                                 </tr>
                                               </table>
@@ -1379,7 +1380,7 @@ details[open]>summary~* {
                                             </td>
                                             <td width="10px;">&nbsp;</td>
                                             <td class="history_Form_Sell">언제 :
-                                              <input type="text" name="text_crawl" class="history_input" style="width:80px;" value="">개월
+                                              <input type="text" id="text_crawl" name="text_crawl" class="history_input" style="width:80px;" value="">개월
                                             </td>
                                           </tr>
                                         </table>
@@ -1395,7 +1396,7 @@ details[open]>summary~* {
                                             </td>
                                             <td width="10px;">&nbsp;</td>
                                             <td class="history_Form_Sell">언제 :
-                                              <input type="text" name="text_creeping" class="history_input" style="width:80px;" value="">개월
+                                              <input type="text" id="text_creeping" name="text_creeping" class="history_input" style="width:80px;" value="">개월
                                             </td>
                                           </tr>
                                         </table>
@@ -1406,7 +1407,7 @@ details[open]>summary~* {
                                         <table>
                                           <tr>
                                             <td class="history_Form_Sell">자녀가 언제 독립적으로 걸었나요?
-                                              <input type="text" name="text_walk" class="history_input" style="width:80px;" value="">개월
+                                              <input type="text" id="text_walk" name="text_walk" class="history_input" style="width:80px;" value="">개월
                                             </td>
                                           </tr>
                                         </table>
@@ -1422,7 +1423,7 @@ details[open]>summary~* {
                                             </td>
                                             <td width="10px;">&nbsp;</td>
                                             <td class="history_Form_Sell">느린이유 :
-                                              <input type="text" name="text_run" class="history_input" style="width:80px;" value="">
+                                              <input type="text" id="text_run" name="text_run" class="history_input" style="width:80px;" value="">
                                             </td>
                                           </tr>
                                         </table>
@@ -1438,7 +1439,7 @@ details[open]>summary~* {
                                             </td>
                                             <td width="10px;">&nbsp;</td>
                                             <td class="history_Form_Sell">이유 :
-                                              <input type="text" name="text_pitch" class="history_input" style="width:80px;" value="">
+                                              <input type="text" id="text_pitch" name="text_pitch" class="history_input" style="width:80px;" value="">
                                             </td>
                                           </tr>
                                         </table>
@@ -1454,7 +1455,7 @@ details[open]>summary~* {
                                             </td>
                                             <td width="10px;">&nbsp;</td>
                                             <td class="history_Form_Sell">이유 :
-                                              <input type="text" name="text_micactiv" class="history_input" style="width:80px;" value="">
+                                              <input type="text" id="text_micactiv" name="text_micactiv" class="history_input" style="width:80px;" value="">
                                             </td>
                                           </tr>
                                         </table>
@@ -1470,7 +1471,7 @@ details[open]>summary~* {
                                             </td>
                                             <td width="10px;">&nbsp;</td>
                                             <td class="history_Form_Sell">이유 :
-                                              <input type="text" name="text_dress" class="history_input" style="width:80px;" value="">
+                                              <input type="text" id="text_dress" name="text_dress" class="history_input" style="width:80px;" value="">
                                             </td>
                                           </tr>
                                         </table>
@@ -1486,7 +1487,7 @@ details[open]>summary~* {
                                             </td>
                                             <td width="10px;">&nbsp;</td>
                                             <td class="history_Form_Sell">이유 :
-                                              <input type="text" name="text_zipper" class="history_input" style="width:80px;" value="">
+                                              <input type="text" id="text_zipper" name="text_zipper" class="history_input" style="width:80px;" value="">
                                             </td>
                                           </tr>
                                         </table>
@@ -1502,7 +1503,7 @@ details[open]>summary~* {
                                             </td>
                                             <td width="10px;">&nbsp;</td>
                                             <td class="history_Form_Sell">이유 :
-                                              <input type="text" name="text_bicycle" class="history_input" style="width:80px;" value="">
+                                              <input type="text" id="text_bicycle" name="text_bicycle" class="history_input" style="width:80px;" value="">
                                             </td>
                                           </tr>
                                         </table>
@@ -1518,7 +1519,7 @@ details[open]>summary~* {
                                             </td>
                                             <td width="10px;">&nbsp;</td>
                                             <td class="history_Form_Sell">특히 어떤 운동을 어려워하나요? :
-                                              <input type="text" name="text_play" class="history_input" style="width:80px;" value="">
+                                              <input type="text" id="text_play" name="text_play" class="history_input" style="width:80px;" value="">
                                             </td>
                                           </tr>
                                         </table>
@@ -1529,12 +1530,12 @@ details[open]>summary~* {
                                         <table>
                                           <tr>
                                             <td class="history_Form_Sell">자녀가 피곤하면 어떤 반응을 보이나요?
-                                              <input type="checkbox" name="che_tired[]" value="축처짐">축처짐
-                                              <input type="checkbox" name="che_tired[]" value="짜증냄">짜증냄
+                                              <input type="checkbox" name="che_tired" value="축처짐">축처짐
+                                              <input type="checkbox" name="che_tired" value="짜증냄">짜증냄
                                             </td>
                                             <td width="10px;">&nbsp;</td>
                                             <td class="history_Form_Sell">기타 :
-                                              <input type="text" name="text_tired" class="history_input" style="width:80px;" value="">
+                                              <input type="text" id="text_tired" name="text_tired" class="history_input" style="width:80px;" value="">
                                             </td>
                                           </tr>
                                         </table>
@@ -1548,19 +1549,19 @@ details[open]>summary~* {
                                           </tr>
                                           <tr>
                                             <td class="history_Form_Sell" width="100px">
-                                              <input type="checkbox" name="che_nervous[]" value="손톱 물어뜯기">손톱 물어뜯기
+                                              <input type="checkbox" name="che_nervous" value="손톱 물어뜯기">손톱 물어뜯기
                                             </td>
                                             <td class="history_Form_Sell" width="100px">
-                                              <input type="checkbox" name="che_nervous[]" value="엄지손가락 빨기">엄지손가락 빨기
+                                              <input type="checkbox" name="che_nervous" value="엄지손가락 빨기">엄지손가락 빨기
                                             </td>
                                             <td class="history_Form_Sell" width="100px">
-                                              <input type="checkbox" name="che_nervous[]" value="숨참기">숨참기
+                                              <input type="checkbox" name="che_nervous" value="숨참기">숨참기
                                             </td>
                                             <td class="history_Form_Sell" width="100px">
-                                              <input type="checkbox" name="che_nervous[]" value="신체경직">신체경직
+                                              <input type="checkbox" name="che_nervous" value="신체경직">신체경직
                                             </td>
                                             <td class="history_Form_Sell">기타 :
-                                              <input type="text" name="text_nervous" class="history_input" style="width:80px;" value="">
+                                              <input type="text" id="text_nervous" name="text_nervous" class="history_input" style="width:80px;" value="">
                                             </td>
                                           </tr>
                                         </table>
@@ -1576,7 +1577,7 @@ details[open]>summary~* {
                                             </td>
                                             <td width="10px;">&nbsp;</td>
                                             <td class="history_Form_Sell">이유 :
-                                              <input type="text" name="text_langs" class="history_input" style="width:80px;" value="">
+                                              <input type="text" id="text_langs" name="text_langs" class="history_input" style="width:80px;" value="">
                                             </td>
                                           </tr>
                                         </table>
@@ -1584,7 +1585,7 @@ details[open]>summary~* {
                                     </tr>
                                     <tr>
                                       <td class="history_Form_Sell">자녀의 성격 :
-                                        <input type="text" name="text_character" class="history_input" style="width:150px;" value="">
+                                        <input type="text" id="text_character" name="text_character" class="history_input" style="width:150px;" value="">
                                       </td>
                                     </tr>
                                   </table>
@@ -1596,40 +1597,40 @@ details[open]>summary~* {
                                   <table>
                                     <tr>
                                       <td class="history_Form_Sell" width="200px">
-                                        <input type="checkbox" name="che_motor_coordi[]" value="전반적인 신체협응 저조">전반적인 신체협응 저조
+                                        <input type="checkbox" name="che_motor_coordi" value="전반적인 신체협응 저조">전반적인 신체협응 저조
                                       </td>
                                       <td class="history_Form_Sell" width="200px">
-                                        <input type="checkbox" name="che_motor_coordi[]" value="벽에 손을 대고 걸음">벽에 손을 대고 걸음
+                                        <input type="checkbox" name="che_motor_coordi" value="벽에 손을 대고 걸음">벽에 손을 대고 걸음
                                       </td>
                                       <td class="history_Form_Sell" width="200px">
-                                        <input type="checkbox" name="che_motor_coordi[]" value="동작이 어둔함">동작이 어둔함
+                                        <input type="checkbox" name="che_motor_coordi" value="동작이 어둔함">동작이 어둔함
                                       </td>
                                     </tr>
                                     <tr>
                                       <td class="history_Form_Sell">
-                                        <input type="checkbox" name="che_motor_coordi[]" value="잘 엎지르고 쏟음">잘 엎지르고 쏟음
+                                        <input type="checkbox" name="che_motor_coordi" value="잘 엎지르고 쏟음">잘 엎지르고 쏟음
                                       </td>
                                       <td class="history_Form_Sell">
-                                        <input type="checkbox" name="che_motor_coordi[]" value="종종 넘어지거나 발목부상">종종 넘어지거나 발목부상
+                                        <input type="checkbox" name="che_motor_coordi" value="종종 넘어지거나 발목부상">종종 넘어지거나 발목부상
                                       </td>
                                       <td class="history_Form_Sell">
-                                        <input type="checkbox" name="che_motor_coordi[]" value="물건에 잘 부딪힘">물건에 잘 부딪힘
+                                        <input type="checkbox" name="che_motor_coordi" value="물건에 잘 부딪힘">물건에 잘 부딪힘
                                       </td>
                                     </tr>
                                     <tr>
                                       <td class="history_Form_Sell">
-                                        <input type="checkbox" name="che_motor_coordi[]" value="리듬감 저조">리듬감 저조
+                                        <input type="checkbox" name="che_motor_coordi" value="리듬감 저조">리듬감 저조
                                       </td>
                                       <td class="history_Form_Sell">
-                                        <input type="checkbox" name="che_motor_coordi[]" value="발끝으로 걸음(까치발)">발끝으로 걸음(까치발)
+                                        <input type="checkbox" name="che_motor_coordi" value="발끝으로 걸음(까치발)">발끝으로 걸음(까치발)
                                       </td>
                                       <td class="history_Form_Sell">
-                                        <input type="checkbox" name="che_motor_coordi[]" value="방향을 확인하지 않고 걸음">방향을 확인하지 않고 걸음
+                                        <input type="checkbox" name="che_motor_coordi" value="방향을 확인하지 않고 걸음">방향을 확인하지 않고 걸음
                                       </td>
                                     </tr>
                                     <tr>
                                       <td class="history_Form_Sell" colspan="2">
-                                        <input type="checkbox" name="che_motor_coordi[]" value="발끝을 안으로 모으거나 밖으로 벌려 걸음">발끝을 안으로 모으거나 밖으로 벌려 걸음
+                                        <input type="checkbox" name="che_motor_coordi" value="발끝을 안으로 모으거나 밖으로 벌려 걸음">발끝을 안으로 모으거나 밖으로 벌려 걸음
                                       </td>
                                     </tr>
                                   </table>
@@ -1641,34 +1642,34 @@ details[open]>summary~* {
                                   <table>
                                     <tr>
                                       <td class="history_Form_Sell" width="300px">
-                                        <input type="checkbox" name="che_touch[]" value="신체접촉이나 안는 것을 싫어함">신체접촉이나 안는 것을 싫어함
+                                        <input type="checkbox" name="che_touch" value="신체접촉이나 안는 것을 싫어함">신체접촉이나 안는 것을 싫어함
                                       </td>
                                       <td class="history_Form_Sell" width="300px">
-                                        <input type="checkbox" name="che_touch[]" value="신체접촉을 갈망함">신체접촉을 갈망함
+                                        <input type="checkbox" name="che_touch" value="신체접촉을 갈망함">신체접촉을 갈망함
                                       </td>
                                     </tr>
                                     <tr>
                                       <td class="history_Form_Sell">
-                                        <input type="checkbox" name="che_touch[]" value="머리 빗거나 양치하는 것을 싫어함">머리 빗거나 양치하는 것을 싫어함
+                                        <input type="checkbox" name="che_touch" value="머리 빗거나 양치하는 것을 싫어함">머리 빗거나 양치하는 것을 싫어함
                                       </td>
                                       <td class="history_Form_Sell">
-                                        <input type="checkbox" name="che_touch[]" value="사람이나 사물을 만져서 탐험하려함">사람이나 사물을 만져서 탐험하려함
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td class="history_Form_Sell">
-                                        <input type="checkbox" name="che_touch[]" value="특정한 질감이나 특정한 화장품을 회피함">특정한 질감이나 특정한 화장품을 회피함
-                                      </td>
-                                      <td class="history_Form_Sell">
-                                        <input type="checkbox" name="che_touch[]" value="옷을 끊임없이 잡아당김">옷을 끊임없이 잡아당김
+                                        <input type="checkbox" name="che_touch" value="사람이나 사물을 만져서 탐험하려함">사람이나 사물을 만져서 탐험하려함
                                       </td>
                                     </tr>
                                     <tr>
                                       <td class="history_Form_Sell">
-                                        <input type="checkbox" name="che_touch[]" value="손으로 물체를 지나치게 단단히 움켜쥠">손으로 물체를 지나치게 단단히 움켜쥠
+                                        <input type="checkbox" name="che_touch" value="특정한 질감이나 특정한 화장품을 회피함">특정한 질감이나 특정한 화장품을 회피함
                                       </td>
                                       <td class="history_Form_Sell">
-                                        <input type="checkbox" name="che_touch[]" value="손의 힘이 약함">손의 힘이 약함
+                                        <input type="checkbox" name="che_touch" value="옷을 끊임없이 잡아당김">옷을 끊임없이 잡아당김
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="history_Form_Sell">
+                                        <input type="checkbox" name="che_touch" value="손으로 물체를 지나치게 단단히 움켜쥠">손으로 물체를 지나치게 단단히 움켜쥠
+                                      </td>
+                                      <td class="history_Form_Sell">
+                                        <input type="checkbox" name="che_touch" value="손의 힘이 약함">손의 힘이 약함
                                       </td>
                                     </tr>
                                   </table>
@@ -1683,7 +1684,7 @@ details[open]>summary~* {
                                         <table>
                                           <tr>
                                             <td class="history_Form_Sell">평일 하루 평균 TV 시청이나 컴퓨터(스마트폰)을 하는 시간은?
-                                              <input type="text" name="text_weekday" class="history_input" style="width:80px;" value="">시간
+                                              <input type="text" id="text_weekday" name="text_weekday" class="history_input" style="width:80px;" value="">시간
                                             </td>
                                           </tr>
                                         </table>
@@ -1694,7 +1695,7 @@ details[open]>summary~* {
                                         <table>
                                           <tr>
                                             <td class="history_Form_Sell">주말 하루 평균 TV 시청이나 컴퓨터(스마트폰)을 하는 시간은?
-                                              <input type="text" name="text_weekend1" class="history_input" style="width:80px;" value="">시간
+                                              <input type="text" id="text_weekend1" name="text_weekend1" class="history_input" style="width:80px;" value="">시간
                                             </td>
                                           </tr>
                                         </table>
@@ -1705,7 +1706,7 @@ details[open]>summary~* {
                                         <table>
                                           <tr>
                                             <td class="history_Form_Sell">자녀가 주말에 주로 하는 활동은?
-                                              <input type="text" name="text_weekend2" class="history_input" style="width:80px;" value="">
+                                              <input type="text" id="text_weekend2"  name="text_weekend2" class="history_input" style="width:80px;" value="">
                                             </td>
                                           </tr>
                                         </table>
@@ -1716,7 +1717,7 @@ details[open]>summary~* {
                                         <table>
                                           <tr>
                                             <td class="history_Form_Sell">자녀가 좋아하는 활동은?
-                                              <input type="text" name="text_activity" class="history_input" style="width:80px;" value="">
+                                              <input type="text" id="text_activity" name="text_activity" class="history_input" style="width:80px;" value="">
                                             </td>
                                           </tr>
                                         </table>
@@ -1727,7 +1728,7 @@ details[open]>summary~* {
                                         <table>
                                           <tr>
                                             <td class="history_Form_Sell">자녀의 장점이나 특기는?
-                                              <input type="text" name="text_specialty" class="history_input" style="width:80px;" value="">
+                                              <input type="text" id="text_specialty" name="text_specialty" class="history_input" style="width:80px;" value="">
                                             </td>
                                           </tr>
                                         </table>
@@ -1747,7 +1748,7 @@ details[open]>summary~* {
                                         <input type="radio" name="radio_parents" value="bad">잦은 트러블
                                       </td>
                                       <td class="history_Form_Sell">기타
-                                        <input type="text" name="text_parents" class="history_input" style="width:80px;" value="">
+                                        <input type="text" id="text_parents" name="text_parents" class="history_input" style="width:80px;" value="">
                                       </td>
                                     </tr>
                                     <tr>
@@ -1757,7 +1758,7 @@ details[open]>summary~* {
                                         <input type="radio" name="radio_friends" value="bad">잦은 트러블
                                       </td>
                                       <td class="history_Form_Sell">기타
-                                        <input type="text" name="text_friends" class="history_input" style="width:80px;" value="">
+                                        <input type="text" id="text_friends" name="text_friends" class="history_input" style="width:80px;" value="">
                                       </td>
                                     </tr>
                                   </table>
@@ -1769,7 +1770,7 @@ details[open]>summary~* {
                                   <table>
                                     <tr>
                                       <td class="history_Form_Sell" width="300px">
-                                        <textarea name="text_memory" rows="4" cols="80"></textarea>
+                                        <textarea id="text_memory" name="text_memory" rows="4" cols="80"></textarea>
                                       </td>
                                     </tr>
                                   </table>
@@ -1809,343 +1810,343 @@ details[open]>summary~* {
                                 <tr>
                                   <td class="QOL_Form_Item">책을 읽거나 공부를 할 때 머리가 아프다</td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_1" value="0" >
+                                    <input type="radio" name="QOL_score1" value="0" >
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_1" value="1">
+                                    <input type="radio" name="QOL_score1" value="1">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_1" value="2">
+                                    <input type="radio" name="QOL_score1" value="2">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_1" value="3">
+                                    <input type="radio" name="QOL_score1" value="3">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_1" value="4">
+                                    <input type="radio" name="QOL_score1" value="4">
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="QOL_Form_Item">책을 읽을 때 글자가 겹쳐 보인다</td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_2" value="0">
+                                    <input type="radio" name="QOL_score2" value="0">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_2" value="1">
+                                    <input type="radio" name="QOL_score2" value="1">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_2" value="2">
+                                    <input type="radio" name="QOL_score2" value="2">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_2" value="3">
+                                    <input type="radio" name="QOL_score2" value="3">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_2" value="4">
+                                    <input type="radio" name="QOL_score2" value="4">
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="QOL_Form_Item">눈이 가렵거나 화끈거리고 눈물이 고인다</td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_3" value="0">
+                                    <input type="radio" name="QOL_score3" value="0">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_3" value="1">
+                                    <input type="radio" name="QOL_score3" value="1">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_3" value="2">
+                                    <input type="radio" name="QOL_score3" value="2">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_3" value="3">
+                                    <input type="radio" name="QOL_score3" value="3">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_3" value="4">
+                                    <input type="radio" name="QOL_score3" value="4">
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="QOL_Form_Item">책을 읽을 때 줄을 건너뛰거나 같은 줄을 반복해서 읽는다</td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_4" value="0">
+                                    <input type="radio" name="QOL_score4" value="0">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_4" value="1">
+                                    <input type="radio" name="QOL_score4" value="1">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_4" value="2">
+                                    <input type="radio" name="QOL_score4" value="2">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_4" value="3">
+                                    <input type="radio" name="QOL_score4" value="3">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_4" value="4">
+                                    <input type="radio" name="QOL_score4" value="4">
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="QOL_Form_Item">책을 읽을 때 머리를 기울이거나 한쪽 눈을 감는다</td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_5" value="0">
+                                    <input type="radio" name="QOL_score5" value="0">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_5" value="1">
+                                    <input type="radio" name="QOL_score5" value="1">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_5" value="2">
+                                    <input type="radio" name="QOL_score5" value="2">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_5" value="3">
+                                    <input type="radio" name="QOL_score5" value="3">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_5" value="4">
+                                    <input type="radio" name="QOL_score5" value="4">
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="QOL_Form_Item">칠판의 것을 베껴 쓰기 어렵다</td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_6" value="0">
+                                    <input type="radio" name="QOL_score6" value="0">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_6" value="1">
+                                    <input type="radio" name="QOL_score6" value="1">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_6" value="2">
+                                    <input type="radio" name="QOL_score6" value="2">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_6" value="3">
+                                    <input type="radio" name="QOL_score6" value="3">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_6" value="4">
+                                    <input type="radio" name="QOL_score6" value="4">
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="QOL_Form_Item">독서나 공부를 안하려한다</td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_7" value="0">
+                                    <input type="radio" name="QOL_score7" value="0">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_7" value="1">
+                                    <input type="radio" name="QOL_score7" value="1">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_7" value="2">
+                                    <input type="radio" name="QOL_score7" value="2">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_7" value="3">
+                                    <input type="radio" name="QOL_score7" value="3">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_7" value="4">
+                                    <input type="radio" name="QOL_score7" value="4">
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="QOL_Form_Item">책을 읽을때 단어를 빠뜨리고 읽는다</td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_8" value="0">
+                                    <input type="radio" name="QOL_score8" value="0">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_8" value="1">
+                                    <input type="radio" name="QOL_score8" value="1">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_8" value="2">
+                                    <input type="radio" name="QOL_score8" value="2">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_8" value="3">
+                                    <input type="radio" name="QOL_score8" value="3">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_8" value="4">
+                                    <input type="radio" name="QOL_score8" value="4">
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="QOL_Form_Item">글자를 쓸때 위아래로 오르락 내리락 한다</td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_9" value="0">
+                                    <input type="radio" name="QOL_score9" value="0">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_9" value="1">
+                                    <input type="radio" name="QOL_score9" value="1">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_9" value="2">
+                                    <input type="radio" name="QOL_score9" value="2">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_9" value="3">
+                                    <input type="radio" name="QOL_score9" value="3">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_9" value="4">
+                                    <input type="radio" name="QOL_score9" value="4">
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="QOL_Form_Item">숫자를 쓸때 일직선으로 정렬해서 내려쓰지 못한다</td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_10" value="0">
+                                    <input type="radio" name="QOL_score10" value="0">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_10" value="1">
+                                    <input type="radio" name="QOL_score10" value="1">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_10" value="2">
+                                    <input type="radio" name="QOL_score10" value="2">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_10" value="3">
+                                    <input type="radio" name="QOL_score10" value="3">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_10" value="4">
+                                    <input type="radio" name="QOL_score10" value="4">
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="QOL_Form_Item">독해력(내용이해력)이 떨어진다</td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_11" value="0">
+                                    <input type="radio" name="QOL_score11" value="0">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_11" value="1">
+                                    <input type="radio" name="QOL_score11" value="1">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_11" value="2">
+                                    <input type="radio" name="QOL_score11" value="2">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_11" value="3">
+                                    <input type="radio" name="QOL_score11" value="3">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_11" value="4">
+                                    <input type="radio" name="QOL_score11" value="4">
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="QOL_Form_Item">책을 너무 가까이 잡는다(평균:35~40cm)</td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_12" value="0">
+                                    <input type="radio" name="QOL_score12" value="0">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_12" value="1">
+                                    <input type="radio" name="QOL_score12" value="1">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_12" value="2">
+                                    <input type="radio" name="QOL_score12" value="2">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_12" value="3">
+                                    <input type="radio" name="QOL_score12" value="3">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_12" value="4">
+                                    <input type="radio" name="QOL_score12" value="4">
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="QOL_Form_Item">책을 읽을때 집중하지 못한다</td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_13" value="0">
+                                    <input type="radio" name="QOL_score13" value="0">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_13" value="1">
+                                    <input type="radio" name="QOL_score13" value="1">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_13" value="2">
+                                    <input type="radio" name="QOL_score13" value="2">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_13" value="3">
+                                    <input type="radio" name="QOL_score13" value="3">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_13" value="4">
+                                    <input type="radio" name="QOL_score13" value="4">
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="QOL_Form_Item">주어진 과제를 제시간에 마치지 못한다</td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_14" value="0">
+                                    <input type="radio" name="QOL_score14" value="0">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_14" value="1">
+                                    <input type="radio" name="QOL_score14" value="1">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_14" value="2">
+                                    <input type="radio" name="QOL_score14" value="2">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_14" value="3">
+                                    <input type="radio" name="QOL_score14" value="3">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_14" value="4">
+                                    <input type="radio" name="QOL_score14" value="4">
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="QOL_Form_Item">시도도 하기전에 항상 '나는 할 수 없어'라고 한다(쉽게 일을 포기하는 경향아 있다)</td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_15" value="0">
+                                    <input type="radio" name="QOL_score15" value="0">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_15" value="1">
+                                    <input type="radio" name="QOL_score15" value="1">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_15" value="2">
+                                    <input type="radio" name="QOL_score15" value="2">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_15" value="3">
+                                    <input type="radio" name="QOL_score15" value="3">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_15" value="4">
+                                    <input type="radio" name="QOL_score15" value="4">
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="QOL_Form_Item">말이나 동작이 서툴 때가 있고, 물건을 잘 넘어뜨린다</td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_16" value="0">
+                                    <input type="radio" name="QOL_score16" value="0">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_16" value="1">
+                                    <input type="radio" name="QOL_score16" value="1">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_16" value="2">
+                                    <input type="radio" name="QOL_score16" value="2">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_16" value="3">
+                                    <input type="radio" name="QOL_score16" value="3">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_16" value="4">
+                                    <input type="radio" name="QOL_score16" value="4">
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="QOL_Form_Item">시간을 잘 이용하지 못한다</td>
                                   <td class="Form_Sell">
-                                    <input type="radio" name="QOL_score_17" value="0">
+                                    <input type="radio" name="QOL_score17" value="0">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_17" value="1">
+                                    <input type="radio" name="QOL_score17" value="1">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_17" value="2">
+                                    <input type="radio" name="QOL_score17" value="2">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_17" value="3">
+                                    <input type="radio" name="QOL_score17" value="3">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_17" value="4">
+                                    <input type="radio" name="QOL_score17" value="4">
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="QOL_Form_Item">자신의 소지품을 잘 잃어버린다</td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_18" value="0">
+                                    <input type="radio" name="QOL_score18" value="0">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_18" value="1">
+                                    <input type="radio" name="QOL_score18" value="1">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_18" value="2">
+                                    <input type="radio" name="QOL_score18" value="2">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_18" value="3">
+                                    <input type="radio" name="QOL_score18" value="3">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_18" value="4">
+                                    <input type="radio" name="QOL_score18" value="4">
                                   </td>
                                 </tr>
                                 <tr>
                                   <td class="QOL_Form_Item">잘 잊거나 기억력이 떨어진다</td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_19" value="0">
+                                    <input type="radio" name="QOL_score19" value="0">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_19" value="1">
+                                    <input type="radio" name="QOL_score19" value="1">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_19" value="2">
+                                    <input type="radio" name="QOL_score19" value="2">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_19" value="3">
+                                    <input type="radio" name="QOL_score19" value="3">
                                   </td>
                                   <td class="QOL_Form_Sell">
-                                    <input type="radio" name="QOL_score_19" value="4">
+                                    <input type="radio" name="QOL_score19" value="4">
                                   </td>
                                 </tr>
                               </table>
@@ -2217,8 +2218,8 @@ details[open]>summary~* {
                                       <table style="width:200px;">
                                         <tr style="text-align:right;">
                                           <td style="width:130px;">
-                                            <select class="Evaluation_sel" id="Vision1" name="sel_vision1">
-                                              <option value="나안" selected>나안</option>
+                                            <select class="Evaluation_sel" id="sel_glass1" name="sel_glass1">
+                                              <option value="나안">나안</option>
                                               <option value="상용안경">상용안경</option>
                                             </select>
                                           </td>
@@ -2271,16 +2272,16 @@ details[open]>summary~* {
                                       <table>
                                         <tr>
                                           <td width="50">OD : </td>
-                                          <td> Sph <input type="text" name="TxtRSph" class="Evaluation_input" style="width:40px" value="">
+                                          <td> Sph <input type="text" id="TxtRSph" name="TxtRSph" class="Evaluation_input" style="width:40px" value="">
                                           </td>
                                           <td class="Sell_Unit" width="20px">D</td>
-                                          <td> Cyl <input type="text" name="TxtRCyl" class="Evaluation_input" style="width:40px" value="">
+                                          <td> Cyl <input type="text" id="TxtRCyl" name="TxtRCyl" class="Evaluation_input" style="width:40px" value="">
                                           </td>
                                           <td class="Sell_Unit" width="20px">D</td>
-                                          <td> Axis <input type="text" name="TxtRAxis" class="Evaluation_input" style="width:40px" value="">
+                                          <td> Axis <input type="text" id="TxtRAxis" name="TxtRAxis" class="Evaluation_input" style="width:40px" value="">
                                           </td>
                                           <td class="Sell_Unit" width="20px">°</td>
-                                          <td> 가입도 <input type="text" name="TxtRAdd" class="Evaluation_input" style="width:40px" value="">
+                                          <td> 가입도 <input type="text" id="TxtRAdd" name="TxtRAdd" class="Evaluation_input" style="width:40px" value="">
                                           <td class="Sell_Unit" width="20px">&nbsp;</td>
                                           </td>
                                         </tr>
@@ -2294,16 +2295,16 @@ details[open]>summary~* {
                                       <table>
                                         <tr>
                                           <td width="50">OS : </td>
-                                          <td> Sph <input type="text" name="TxtLSph" class="Evaluation_input" style="width:40px" value="">
+                                          <td> Sph <input type="text" id="TxtLSph" name="TxtLSph" class="Evaluation_input" style="width:40px" value="">
                                           </td>
                                           <td class="Sell_Unit" width="20px">D</td>
-                                          <td> Cyl <input type="text" name="TxtLCyl" class="Evaluation_input" style="width:40px" value="">
+                                          <td> Cyl <input type="text" id="TxtLCyl" name="TxtLCyl" class="Evaluation_input" style="width:40px" value="">
                                           </td>
                                           <td class="Sell_Unit" width="20px">D</td>
-                                          <td> Axis <input type="text" name="TxtLAxis" class="Evaluation_input" style="width:40px" value="">
+                                          <td> Axis <input type="text" id="TxtLAxis" name="TxtLAxis" class="Evaluation_input" style="width:40px" value="">
                                           </td>
                                           <td class="Sell_Unit" width="20px">°</td>
-                                          <td> 가입도 <input type="text" name="TxtLAdd" class="Evaluation_input" style="width:40px" value="">
+                                          <td> 가입도 <input type="text" id="TxtLAdd" name="TxtLAdd" class="Evaluation_input" style="width:40px" value="">
                                           <td class="Sell_Unit" width="20px">&nbsp;</td>
                                           </td>
                                         </tr>
@@ -2357,7 +2358,7 @@ details[open]>summary~* {
                                   <td class="Evaluation_item">균형검사</td>
                                   <td class="Evaluation_result">
                                     <select style="width:120px" id="Balance" name="Balance" class="Evaluation_sel" onchange="sel_Balance(this)">
-                                      <option value="none" selected>평가하지않음</option>
+                                      <option value="none">평가하지않음</option>
                                       <option value="good">균형</option>
                                       <option value="bad">불균형</option>
                                     </select>
@@ -2370,18 +2371,51 @@ details[open]>summary~* {
                                 <tr class="EvaItem_result">
                                   <td class="Evaluation_item">W4D</td>
                                   <td class="Evaluation_result">
-                                    <select style="width:120px" id="W4D" name="W4D" class="Evaluation_sel" onchange="Change_W4d(this)">
-                                      <option value="none" selected>평가하지않음</option>
-                                      <option value="4">4개</option>
-                                      <option value="2">2개</option>
-                                      <option value="3">3개</option>
-                                      <option value="51">5개이상(교차성)</option>
-                                      <option value="52">5개이상(동측성)</option>
-                                    </select>
+                                    <table>
+                                      <tr>
+                                        <td> 원거리 :
+                                          <select style="width:120px" id="D_W4D" name="D_W4D" class="Evaluation_sel" onchange="Change_D_W4d(this)">
+                                            <option value="none">평가하지않음</option>
+                                            <option value="2">2개</option>
+                                            <option value="3">3개</option>
+                                            <option value="4">4개</option>
+                                            <option value="51">5개이상(교차성)</option>
+                                            <option value="52">5개이상(동측성)</option>
+                                            <option value="53">5개이상(수직성)</option>
+                                            <option value="54">5개이상(교차성), 수직동반</option>
+                                            <option value="55">5개이상(동측성), 수직동반</option>
+                                          </select>
+                                        </td>
+                                        <td class="Sell_Unit" width"20">&nbsp;</td>
+                                        <td> 근거리 :
+                                          <select style="width:120px" id="N_W4D" name="N_W4D" class="Evaluation_sel" onchange="Change_N_W4d(this)">
+                                            <option value="none">평가하지않음</option>
+                                            <option value="2">2개</option>
+                                            <option value="3">3개</option>
+                                            <option value="4">4개</option>
+                                            <option value="51">5개이상(교차성)</option>
+                                            <option value="52">5개이상(동측성)</option>
+                                            <option value="53">5개이상(수직성)</option>
+                                            <option value="54">5개이상(교차성), 수직동반</option>
+                                            <option value="55">5개이상(동측성), 수직동반</option>
+                                          </select>
+                                        </td>
+                                      </tr>
+                                    </table>
                                   </td>
                                   <td class="Evaluation_reference">4개</td>
                                   <td class="Evaluation_analy">
-                                    <div id="result_W4D" />
+                                    <table>
+                                      <tr>
+                                        <td width="45">
+                                          <div id="result_D_W4D" />
+                                        </td>
+                                        <td width="10">/</td>
+                                        <td width="45">
+                                          <div id="result_N_W4D" />
+                                        </td>
+                                      </tr>
+                                    </table>
                                   </td>
                                 </tr>
                                 <tr class="EvaItem_result">
@@ -2497,30 +2531,32 @@ details[open]>summary~* {
                                   <td width="100" class="Evaluation_analy" id="result_NVer"></td>
                                 </tr>
                                 <tr class="EvaItem_result">
-                                  <td width="200" class="Evaluation_item">따라보기/홱보기</td>
+                                  <td width="200" class="Evaluation_item">따라보기</td>
                                   <td width="550" class="Evaluation_result">
                                     <table>
                                       <tr>
-                                        <td> 따라보기 : <select style="width:100px" id="BroadH" name="BroadH" class="Evaluation_sel" onchange="Change_BroadH(this)">
+                                        <td> 안구움직임 : <select style="width:100px" id="bro_eye_movement" name="bro_eye_movement" class="Evaluation_sel" onchange="Change_BroadH(this)">
                                             <option value="none" selected>평가하지않음</option>
                                             <option value="good">Smooth&Full</option>
                                             <option value="jurky">격동움직임</option>
                                             <option value="overshoot">과다한 움직임</option>
                                             <option value="undershoot">저조한 움직임</option>
-                                            <option value="jur_over">격동, 과다한 움직임</option>
-                                            <option value="jur_under">격동, 저조한 움직임</option>
+                                            <option value="nystagmus">안구진탕</option>
+                                            <option value="unsteady">주시불안</option>
                                           </select>
                                         </td>
                                         <td class="Sell_Unit" width"20">&nbsp;</td>
-                                        <td> 홱보기 : <select style="width:100px" id="sacadic" name="sacadic" class="Evaluation_sel" onchange="Change_Saccadic(this)">
+                                        <td> 머리돌림/기울임 : <select style="width:100px" id="bro_head_turn" name="bro_head_turn" class="Evaluation_sel" onchange="Change_BroadH(this)">
                                             <option value="none" selected>평가하지않음</option>
-                                            <option value="good">빠르고 정확함</option>
-                                            <option value="jurky">격동움직임</option>
-                                            <option value="overshoot">과다한 움직임</option>
-                                            <option value="undershoot">저조한 움직임</option>
-                                            <option value="jur_under">격동, 저조한 움직임</option>
-                                            <option value="jur_over">격동, 과다한 움직임</option>
-                                            <option value="headturn">머리돌림,기울임</option>
+                                            <option value="good">머리돌림/기울임없음</option>
+                                            <option value="hr">오른쪽 머리돌림</option>
+                                            <option value="hl">왼쪽 머리돌림</option>
+                                            <option value="htr">오른쪽 기울임</option>
+                                            <option value="htl">왼쪽 기울임</option>
+                                            <option value="hru">오른쪽위 머리돌림/기울임</option>
+                                            <option value="hrd">오른쪽아래 머리돌림/기울임</option>
+                                            <option value="hlu">왼쪽위 머리돌림/기울임</option>
+                                            <option value="hld">왼쪽아래 머리돌림/기울임</option>
                                           </select>
                                         </td>
                                       </tr>
@@ -2533,7 +2569,46 @@ details[open]>summary~* {
                                         <td width="45">
                                           <div id="result_BroadH" />
                                         </td>
-                                        <td width="10">/</td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr class="EvaItem_result">
+                                  <td width="200" class="Evaluation_item">홱보기</td>
+                                  <td width="550" class="Evaluation_result">
+                                    <table>
+                                      <tr>
+                                        <td> 안구움직임 : <select style="width:100px" id="sacca_eye_movement" name="sacca_eye_movement" class="Evaluation_sel" onchange="Change_Saccadic(this)">
+                                            <option value="none" selected>평가하지않음</option>
+                                            <option value="good">Smooth&Full</option>
+                                            <option value="jurky">격동움직임</option>
+                                            <option value="overshoot">과다한 움직임</option>
+                                            <option value="undershoot">저조한 움직임</option>
+                                            <option value="nystagmus">안구진탕</option>
+                                            <option value="unsteady">주시불안</option>
+                                          </select>
+                                        </td>
+                                        <td class="Sell_Unit" width"20">&nbsp;</td>
+                                        <td> 머리돌림/기울임 : <select style="width:100px" id="sacca_head_turn" name="sacca_head_turn" class="Evaluation_sel" onchange="Change_Saccadic(this)">
+                                            <option value="none" selected>평가하지않음</option>
+                                            <option value="good">머리돌림/기울임없음</option>
+                                            <option value="hr">오른쪽 머리돌림</option>
+                                            <option value="hl">왼쪽 머리돌림</option>
+                                            <option value="htr">오른쪽 기울임</option>
+                                            <option value="htl">왼쪽 기울임</option>
+                                            <option value="hru">오른쪽위 머리돌림/기울임</option>
+                                            <option value="hrd">오른쪽아래 머리돌림/기울임</option>
+                                            <option value="hlu">왼쪽위 머리돌림/기울임</option>
+                                            <option value="hld">왼쪽아래 머리돌림/기울임</option>
+                                          </select>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                  <td width="150" class="Evaluation_reference">Smooth&Full</td>
+                                  <td width="100" class="Evaluation_analy">
+                                    <table>
+                                      <tr>
                                         <td width="45">
                                           <div id="result_Saccadic" />
                                         </td>
@@ -3058,7 +3133,7 @@ details[open]>summary~* {
                                   <td width="550" class="Evaluation_result">
                                     <table>
                                       <tr>
-                                        <td id="D_agree" name="D_agree" onchange="D_agree(event)">
+                                        <td id="D_agree" name="D_agree" onchange="D_agree()">
                                           <input type="radio" name="D_agree" value="agree" />일치
                                           <input type="radio" name="D_agree" value="discord" />불일치
                                         </td>
@@ -3068,7 +3143,7 @@ details[open]>summary~* {
                                         </td>
                                         <td>&nbsp;</td>
                                         <td>
-                                          <select style="width:85px" id="DHor_BIBO" name="DHor_BIBO" class="Evaluation_sel" onchange="radio_DBIBO(this)">
+                                          <select style="width:85px" id="DHor_BIBO" name="DHor_BIBO" class="Evaluation_sel" onchange="D_agree()">
                                             <option value="Chois" selected>편위방향</option>
                                             <option value="BI">BI</option>
                                             <option value="BO">BO</option>
@@ -3080,7 +3155,7 @@ details[open]>summary~* {
                                           수직:<input type="text" id="DVer_maddox" name="DVer_maddox" class="Evaluation_input" style="width:25px">
                                         </td>
                                         <td>
-                                          <select style="width:85px" id="DVer_BIBO" name="DVer_BIBO" class="Evaluation_sel" onchange="radio_DBIBO(this)">
+                                          <select style="width:85px" id="DVer_BIBO" name="DVer_BIBO" class="Evaluation_sel" onchange="D_agree()">
                                             <option value="Chois" selected>편위방향</option>
                                             <option value="ODBU">OD BU</option>
                                             <option value="OSBU">OS BU</option>
@@ -3106,7 +3181,7 @@ details[open]>summary~* {
                                   <td width="550" class="Evaluation_result">
                                     <table>
                                       <tr>
-                                        <td id="N_agree" name="N_agree" onchange="N_agree(event)">
+                                        <td id="N_agree" name="N_agree" onchange="N_agree()">
                                           <input type="radio" name="N_agree" value="agree" />일치
                                           <input type="radio" name="N_agree" value="discord" />불일치
                                         </td>
@@ -3116,7 +3191,7 @@ details[open]>summary~* {
                                         </td>
                                         <td>&nbsp;</td>
                                         <td>
-                                          <select style="width:85px" id="NHor_BIBO" name="NHor_BIBO" class="Evaluation_sel" onchange="N_BIBO(event)">
+                                          <select style="width:85px" id="NHor_BIBO" name="NHor_BIBO" class="Evaluation_sel" onchange="NN_agree()">
                                             <option value="Chois" selected>편위방향</option>
                                             <option value="BI">BI</option>
                                             <option value="BO">BO</option>
@@ -3128,7 +3203,7 @@ details[open]>summary~* {
                                           수직:<input type="text" id="NVer_maddox" name="NVer_maddox" class="Evaluation_input" style="width:25px">
                                         </td>
                                         <td>
-                                          <select style="width:85px" id="NVer_BIBO" name="NVer_BIBO" class="Evaluation_sel" onchange="radio_NBIBO(this)">
+                                          <select style="width:85px" id="NVer_BIBO" name="NVer_BIBO" class="Evaluation_sel" onchange="N_agree()">
                                             <option value="Chois" selected>편위방향</option>
                                             <option value="ODBU">OD BU</option>
                                             <option value="OSBU">OS BU</option>
@@ -3213,15 +3288,15 @@ details[open]>summary~* {
                                   <tr>
                                     <td width="200px" class="Evaluation_item" >발생한 시점</td>
                                     <td width="550px" class="Evaluation_result">
-                                      <input type="radio" name="month6" value="early">생후 6개월 이전
-                                      <input type="radio" name="month6" value="later">생후 6개월 이후
+                                      <input type="radio" name="radio_month6" value="early">생후 6개월 이전
+                                      <input type="radio" name="radio_month6" value="later">생후 6개월 이후
                                     </td>
                                   </tr>
                                   <tr>
                                     <td width="200px" class="Evaluation_item" >발생한 시점의 특성</td>
                                     <td width="550px" class="Evaluation_result">
-                                      <input type="radio" name="exami" value="sudden">갑자기
-                                      <input type="radio" name="exami" value="slow">서서히
+                                      <input type="radio" name="radio_exami" value="sudden">갑자기
+                                      <input type="radio" name="radio_exami" value="slow">서서히
                                     </td>
                                   </tr>
                                   <tr>
@@ -3234,36 +3309,36 @@ details[open]>summary~* {
                                   <tr>
                                     <td width="200px" class="Evaluation_item" >편위량의 변화 유무</td>
                                     <td width="550px" class="Evaluation_result">
-                                      <input type="radio" name="change_ver" value="yes">있다
-                                      <input type="radio" name="change_ver" value="no">없다
+                                      <input type="radio" name="radio_change_ver" value="yes">있다
+                                      <input type="radio" name="radio_change_ver" value="no">없다
                                     </td>
                                   </tr>
                                   <tr>
                                     <td width="200px" class="Evaluation_item" >편측성 또는 교대성</td>
                                     <td width="550px" class="Evaluation_result">
-                                      <input type="radio" name="splitting" value="unilater">편측성
-                                      <input type="radio" name="splitting" value="alter">교대성
+                                      <input type="radio" name="radio_splitting" value="unilater">편측성
+                                      <input type="radio" name="radio_splitting" value="alter">교대성
                                     </td>
                                   </tr>
                                   <tr>
                                     <td width="200px" class="Evaluation_item" >복시</td>
                                     <td width="550px" class="Evaluation_result">
-                                      <input type="radio" name="double_vi" value="yes">있다
-                                      <input type="radio" name="double_vi" value="no">없다
+                                      <input type="radio" name="radio_double_vi" value="yes">있다
+                                      <input type="radio" name="radio_double_vi" value="no">없다
                                     </td>
                                   </tr>
                                   <tr>
                                     <td width="200px" class="Evaluation_item" >약시</td>
                                     <td width="550px" class="Evaluation_result">
-                                      <input type="radio" name="amblyopia" value="yes">있다
-                                      <input type="radio" name="amblyopia" value="no">없다
+                                      <input type="radio" name="radio_amblyopia" value="yes">있다
+                                      <input type="radio" name="radio_amblyopia" value="no">없다
                                     </td>
                                   </tr>
                                   <tr>
                                     <td width="200px" class="Evaluation_item" >안구운동의 제한적 움직임</td>
                                     <td width="550px" class="Evaluation_result">
-                                      <input type="radio" name="eye_movement" value="yes">있다
-                                      <input type="radio" name="eye_movement" value="no">없다
+                                      <input type="radio" name="radio_eye_movement" value="yes">있다
+                                      <input type="radio" name="radio_eye_movement" value="no">없다
                                     </td>
                                   </tr>
                                 </table>
@@ -3317,7 +3392,7 @@ details[open]>summary~* {
                                     <td>&nbsp;</td>
                                     <td class="TVPS_menu" name="Dis_Sub">1.Visual Discrimination (DIS)</td>
                                     <td class="TVPS_score">
-                                      <input width="100" style="border:none; text-align: center;" type="text" name="RAW_SCORE_DIS" placeholder="점수입력">
+                                      <input width="100" style="border:none; text-align: center;"id="RAW_SCORE_DIS" type="text" name="RAW_SCORE_DIS" placeholder="점수입력">
                                     </td>
                                     <td>&nbsp;</td>
                                   </tr>
@@ -3325,7 +3400,7 @@ details[open]>summary~* {
                                     <td>&nbsp;</td>
                                     <td class="TVPS_menu" name="Dis_Sub">2.Visual Memory (MEM)</td>
                                     <td class="TVPS_score">
-                                      <input width="100" style="border:none; text-align: center;" type="text" name="RAW_SCORE_MEM" placeholder="점수입력">
+                                      <input width="100" style="border:none; text-align: center;" id="RAW_SCORE_MEM" type="text" name="RAW_SCORE_MEM" placeholder="점수입력">
                                     </td>
                                     <td>&nbsp;</td>
                                   </tr>
@@ -3333,7 +3408,7 @@ details[open]>summary~* {
                                     <td>&nbsp;</td>
                                     <td class="TVPS_menu" name="Dis_Sub">3.Spatial Relationships (SPA)</td>
                                     <td class="TVPS_score">
-                                      <input width="100" style="border:none; text-align: center;" type="text" name="RAW_SCORE_SPA" placeholder="점수입력">
+                                      <input width="100" style="border:none; text-align: center;" id="RAW_SCORE_SPA" type="text" name="RAW_SCORE_SPA" placeholder="점수입력">
                                     </td>
                                     <td>&nbsp;</td>
                                   </tr>
@@ -3341,7 +3416,7 @@ details[open]>summary~* {
                                     <td>&nbsp;</td>
                                     <td class="TVPS_menu" name="Dis_Sub">4.Form Constancy (CON)</td>
                                     <td class="TVPS_score">
-                                      <input width="100" style="border:none; text-align: center;" type="text" name="RAW_SCORE_CON" placeholder="점수입력">
+                                      <input width="100" style="border:none; text-align: center;" id="RAW_SCORE_CON" type="text" name="RAW_SCORE_CON" placeholder="점수입력">
                                     </td>
                                     <td>&nbsp;</td>
                                   </tr>
@@ -3349,7 +3424,7 @@ details[open]>summary~* {
                                     <td>&nbsp;</td>
                                     <td class="TVPS_menu" name="Dis_Sub">5.Sequential Memory (SEQ)</td>
                                     <td class="TVPS_score">
-                                      <input width="100" style="border:none; text-align: center;" type="text" name="RAW_SCORE_SEQ" placeholder="점수입력">
+                                      <input width="100" style="border:none; text-align: center;" id="RAW_SCORE_SEQ" type="text" name="RAW_SCORE_SEQ" placeholder="점수입력">
                                     </td>
                                     <td>&nbsp;</td>
                                   </tr>
@@ -3357,7 +3432,7 @@ details[open]>summary~* {
                                     <td>&nbsp;</td>
                                     <td class="TVPS_menu" name="Dis_Sub">6.Visual Figure-Ground (FGR)</td>
                                     <td class="TVPS_score">
-                                      <input width="100" style="border:none; text-align: center;" type="text" name="RAW_SCORE_FGR" placeholder="점수입력">
+                                      <input width="100" style="border:none; text-align: center;" id="RAW_SCORE_FGR" type="text" name="RAW_SCORE_FGR" placeholder="점수입력">
                                     </td>
                                     <td>&nbsp;</td>
                                   </tr>
@@ -3365,7 +3440,7 @@ details[open]>summary~* {
                                     <td>&nbsp;</td>
                                     <td class="TVPS_menu" name="Dis_Sub">7.Visual Closure (CLO)</td>
                                     <td class="TVPS_score">
-                                      <input width="100" style="border:none; text-align: center;" type="text" name="RAW_SCORE_CLO" placeholder="점수입력">
+                                      <input width="100" style="border:none; text-align: center;" id="RAW_SCORE_CLO" type="text" name="RAW_SCORE_CLO" placeholder="점수입력">
                                     </td>
                                     <td>&nbsp;</td>
                                   </tr>
@@ -3422,13 +3497,13 @@ details[open]>summary~* {
                                       <td>&nbsp;</td>
                                       <td class="VMI_menu" height="30px" style="font-weight:bold; text-align:center; background-color: #dcdcdc;">미가공점수</td>
                                       <td class="VMI_score">
-                                        <input width="200" height="30px" style="border:none; text-align: center;" type="text" name="Raw_vmi" placeholder="점수입력">
+                                        <input width="200" height="30px" style="border:none; text-align: center;" id="Raw_vmi" type="text" name="Raw_vmi" placeholder="점수입력">
                                       </td>
                                       <td class="VMI_score">
-                                        <input width="200" height="30px" style="border:none; text-align: center;" type="text" name="Raw_visual" placeholder="점수입력">
+                                        <input width="200" height="30px" style="border:none; text-align: center;" id="Raw_visual" type="text" name="Raw_visual" placeholder="점수입력">
                                       </td>
                                       <td class="VMI_score">
-                                        <input width="200" height="30px" style="border:none; text-align: center;" type="text" name="Raw_motor" placeholder="점수입력">
+                                        <input width="200" height="30px" style="border:none; text-align: center;" id="Raw_motor" type="text" name="Raw_motor" placeholder="점수입력">
                                       </td>
                                       <td>&nbsp;</td>
                                     </tr>
@@ -3489,19 +3564,19 @@ details[open]>summary~* {
                                       <td>&nbsp;</td>
                                       <td class="DEM_Menu" height="30px" style="font-weight:bold; text-align:center;">수직검사(A+B)</td>
                                       <td class="DEM_score">
-                                        <input style="border:none; text-align: center;" type="text" name="DEM_VER" placeholder="점수입력">
+                                        <input style="border:none; text-align: center;" id="DEM_VER" type="text" name="DEM_VER" placeholder="점수입력">
                                       </td>
                                       <td class="DEM_score">
-                                        <input style="border:none; text-align: center;" type="text" name="VER_ERR_S" placeholder="점수입력">
+                                        <input style="border:none; text-align: center;" id="VER_ERR_S" type="text" name="VER_ERR_S" placeholder="점수입력">
                                       </td>
                                       <td class="DEM_score">
-                                        <input style="border:none; text-align: center;" type="text" name="VER_ERR_O" placeholder="점수입력">
+                                        <input style="border:none; text-align: center;" id="VER_ERR_O" type="text" name="VER_ERR_O" placeholder="점수입력">
                                       </td>
                                       <td class="DEM_score">
-                                        <input style="border:none; text-align: center;" type="text" name="VER_ERR_A" placeholder="점수입력">
+                                        <input style="border:none; text-align: center;" id="VER_ERR_A" type="text" name="VER_ERR_A" placeholder="점수입력">
                                       </td>
                                       <td class="DEM_score">
-                                        <input style="border:none; text-align: center;" type="text" name="VER_ERR_T" placeholder="점수입력">
+                                        <input style="border:none; text-align: center;" id="VER_ERR_T" type="text" name="VER_ERR_T" placeholder="점수입력">
                                       </td>
                                       <td>&nbsp;</td>
                                     </tr>
@@ -3509,19 +3584,19 @@ details[open]>summary~* {
                                       <td>&nbsp;</td>
                                       <td class="DEM_Menu" width="120" height="30px" style="font-weight:bold; text-align:center;">수평검사(C)</td>
                                       <td class="DEM_score">
-                                        <input style="border:none; text-align: center;" type="text" name="DEM_HOR" placeholder="점수입력">
+                                        <input style="border:none; text-align: center;" id="DEM_HOR" type="text" name="DEM_HOR" placeholder="점수입력">
                                       </td>
                                       <td class="DEM_score">
-                                        <input style="border:none; text-align: center;" type="text" name="HOR_ERR_S" placeholder="점수입력">
+                                        <input style="border:none; text-align: center;" id="HOR_ERR_S" type="text" name="HOR_ERR_S" placeholder="점수입력">
                                       </td>
                                       <td class="DEM_score">
-                                        <input style="border:none; text-align: center;" type="text" name="HOR_ERR_O" placeholder="점수입력">
+                                        <input style="border:none; text-align: center;" id="HOR_ERR_O" type="text" name="HOR_ERR_O" placeholder="점수입력">
                                       </td>
                                       <td class="DEM_score">
-                                        <input style="border:none; text-align: center;" type="text" name="HOR_ERR_A" placeholder="점수입력">
+                                        <input style="border:none; text-align: center;" id="HOR_ERR_A" type="text" name="HOR_ERR_A" placeholder="점수입력">
                                       </td>
                                       <td class="DEM_score">
-                                        <input style="border:none; text-align: center;" type="text" name="HOR_ERR_T" placeholder="점수입력">
+                                        <input style="border:none; text-align: center;" id="HOR_ERR_T" type="text" name="HOR_ERR_T" placeholder="점수입력">
                                       </td>
                                       <td>&nbsp;</td>
                                     </tr>
@@ -3578,16 +3653,16 @@ details[open]>summary~* {
                                   <td>&nbsp;</td>
                                   <td class="WACS_Menu" height="30px" style="font-weight:bold; text-align:center;">미가공점수</td>
                                   <td class="WACS_score">
-                                    <input width="200" height="30px" style="border:none; text-align: center;" type="text" name="WACS_RAW_T1" placeholder="점수입력">
+                                    <input width="200" height="30px" style="border:none; text-align: center;" id="WACS_RAW_T1" type="text" name="WACS_RAW_T1" placeholder="점수입력">
                                   </td>
                                   <td class="WACS_score">
-                                    <input width="200" height="30px" style="border:none; text-align: center;" type="text" name="WACS_RAW_T2" placeholder="점수입력">
+                                    <input width="200" height="30px" style="border:none; text-align: center;" id="WACS_RAW_T2" type="text" name="WACS_RAW_T2" placeholder="점수입력">
                                   </td>
                                   <td class="WACS_score">
-                                    <input width="200" height="30px" style="border:none; text-align: center;" type="text" name="WACS_RAW_T3" placeholder="점수입력">
+                                    <input width="200" height="30px" style="border:none; text-align: center;" id="WACS_RAW_T3" type="text" name="WACS_RAW_T3" placeholder="점수입력">
                                   </td>
                                   <td class="WACS_score">
-                                    <input width="200" height="30px" style="border:none; text-align: center;" type="text" name="WACS_RAW_T4" placeholder="점수입력">
+                                    <input width="200" height="30px" style="border:none; text-align: center;" id="WACS_RAW_T4" type="text" name="WACS_RAW_T4" placeholder="점수입력">
                                   </td>
                                   <td>&nbsp;</td>
                                 </tr>
@@ -3613,11 +3688,11 @@ details[open]>summary~* {
                     </td>
                     <td width="200px">&nbsp</td>
                     <td style="text-align:center;">
-                      <input type="submit" class="submit" name="save" value="저장하기 " formaction="/VisionTherapy_supporter/visualData/Visualsave.php">
+                      <input type="submit" class="submit" name="save" value="저장하기(준비중)" >
                     </td>
                     <td width="200px">&nbsp</td>
                     <td style="text-align:center;">
-                      <input type="submit" class="submit" name="update" value="수정하기 ">
+                      <input type="submit" class="submit" name="update" value="수정하기(준비중)">
                     </td>
                     <td width="200px">&nbsp</td>
                   </tr>
@@ -3630,6 +3705,7 @@ details[open]>summary~* {
           </tr>
         </table>
       </table>
+      </form>
     <script>
 
       // 생년월일을 나이로 환산
@@ -3674,7 +3750,7 @@ details[open]>summary~* {
             document.getElementById('ChAge_m_test').innerText = (test_m + 11) - birthDate.getMonth() + "개월";
           }
         }
-        const Age = parseInt(document.getElementById('Age_y').innerHTML, 10);
+        var Age = parseInt(document.getElementById('Age_y').innerHTML, 10);
         var Accomage = 15 - (0.25 * Age);
 
         document.getElementById('accom_stand').innerText = Age + "세 최소조절력" + Accomage + "D";
@@ -3711,7 +3787,7 @@ details[open]>summary~* {
 
       // 원거리 나안/교정시력
       function DVision() {
-        const Vision1 = document.getElementById('Vision1').value;
+        const sel_glass1 = document.getElementById('sel_glass1').value;
         const RDVision = document.getElementById('RDVision').value;
         const LDVision = document.getElementById('LDVision').value;
         const OUDVision = document.getElementById('OUDVision').value;
@@ -3726,7 +3802,7 @@ details[open]>summary~* {
 
       // 근거리 나안/교정시력
       function NVision() {
-        const Vision1 = document.getElementById('Vision1').value;
+        const sel_glass1 = document.getElementById('sel_glass1').value;
         const RNVision = document.getElementById('RNVision').value;
         const LNVision = document.getElementById('LNVision').value;
         const OUNVision = document.getElementById('OUNVision').value;
@@ -3780,21 +3856,51 @@ details[open]>summary~* {
         }
       }
 
-      // W4D
-      function Change_W4d(event) {
-        const str_w4d = event.value;
-        if (str_w4d == "4") {
-          document.getElementById('result_W4D').innerText = "양호";
-        } else if (str_w4d == "3") {
-          document.getElementById('result_W4D').innerText = "불량";
-        } else if (str_w4d == "2") {
-          document.getElementById('result_W4D').innerText = "불량";
-        } else if (str_w4d == "51") {
-          document.getElementById('result_W4D').innerText = "불량";
-        } else if (str_w4d == "52") {
-          document.getElementById('result_W4D').innerText = "불량";
-        } else if (str_w4d == "none") {
-          document.getElementById('result_W4D').innerText = "관찰요망";
+      // W4D 원거리
+      function Change_D_W4d(event) {
+        const str_Dw4d = event.value;
+        if (str_Dw4d == "4") {
+          document.getElementById('result_D_W4D').innerText = "양호";
+        } else if (str_Dw4d == "3") {
+          document.getElementById('result_D_W4D').innerText = "불량";
+        } else if (str_Dw4d == "2") {
+          document.getElementById('result_D_W4D').innerText = "불량";
+        } else if (str_Dw4d == "51") {
+          document.getElementById('result_D_W4D').innerText = "불량";
+        } else if (str_Dw4d == "52") {
+          document.getElementById('result_D_W4D').innerText = "불량";
+        } else if (str_Dw4d == "53") {
+          document.getElementById('result_D_W4D').innerText = "불량";
+        } else if (str_Dw4d == "54") {
+          document.getElementById('result_D_W4D').innerText = "불량";
+        } else if (str_Dw4d == "55") {
+          document.getElementById('result_D_W4D').innerText = "불량";
+        } else if (str_Dw4d == "none") {
+          document.getElementById('result_D_W4D').innerText = "관찰요망";
+        }
+      }
+
+      // W4D 근거리
+      function Change_N_W4d(event) {
+        const str_Nw4d = event.value;
+        if (str_Nw4d == "4") {
+          document.getElementById('result_N_W4D').innerText = "양호";
+        } else if (str_Nw4d == "3") {
+          document.getElementById('result_N_W4D').innerText = "불량";
+        } else if (str_Nw4d == "2") {
+          document.getElementById('result_N_W4D').innerText = "불량";
+        } else if (str_Nw4d == "51") {
+          document.getElementById('result_N_W4D').innerText = "불량";
+        } else if (str_Nw4d == "52") {
+          document.getElementById('result_N_W4D').innerText = "불량";
+        } else if (str_Nw4d == "53") {
+          document.getElementById('result_N_W4D').innerText = "불량";
+        } else if (str_Nw4d == "54") {
+          document.getElementById('result_N_W4D').innerText = "불량";
+        } else if (str_Nw4d == "55") {
+          document.getElementById('result_N_W4D').innerText = "불량";
+        } else if (str_Nw4d == "none") {
+          document.getElementById('result_N_W4D').innerText = "관찰요망";
         }
       }
 
@@ -3832,7 +3938,7 @@ details[open]>summary~* {
 
       // 조절근점
       function accom() {
-        const Age = parseInt(document.getElementById('Age_y').innerHTML, 10);
+        var Age = parseInt(document.getElementById('Age_y').innerHTML, 10);
         var Accomage = 15 - (0.25 * Age);
         const RAccom = document.getElementById('R_accom').value;
         const LAccom = document.getElementById('L_accom').value;
@@ -3967,9 +4073,9 @@ details[open]>summary~* {
           document.getElementById('result_BroadH').innerText = "불량";
         } else if (str_BroadH == 'undershoot') {
           document.getElementById('result_BroadH').innerText = "불량";
-        } else if (str_BroadH == 'jur_over') {
+        } else if (str_BroadH == 'nystagmus') {
           document.getElementById('result_BroadH').innerText = "불량";
-        } else if (str_BroadH == 'jur_under') {
+        } else if (str_BroadH == 'unsteady') {
           document.getElementById('result_BroadH').innerText = "불량";
         }
       }
@@ -3987,7 +4093,7 @@ details[open]>summary~* {
           document.getElementById('result_Saccadic').innerText = "불량";
         } else if (str_Saccadic == 'jur_over') {
           document.getElementById('result_Saccadic').innerText = "불량";
-        } else if (str_Saccadic == 'jur_under') {
+        } else if (str_Saccadic == 'unsteady') {
           document.getElementById('result_Saccadic').innerText = "불량";
         } else if (str_Saccadic == 'headturn') {
           document.getElementById('result_Saccadic').innerText = "불량";
@@ -4293,22 +4399,50 @@ details[open]>summary~* {
       }
 
       //마독스로드_원거리
-      function D_agree(event) {
-        const D_agree = event.target.value;
+      function D_agree() {
+        const D_agree = document.getElementById('D_agree').value;
         if (D_agree == 'agree') {
           document.getElementById('result_DMaddox').innerText = "(양호)";
         } else if (D_agree == 'discord') {
-          document.getElementById('result_DMaddox').innerText = "(불량)";
+          const DHor_maddox = document.getElementById('DHor_maddox').value;
+          const DHor_BIBO = document.getElementById('DHor_BIBO').value;
+          const DVer_maddox = document.getElementById('DVer_maddox').value;
+          const DVer_BIBO = document.getElementById('DVer_BIBO').value;
+          if ((DHor_maddox > 3 && DHor_BIBO == "BI") || (DHor_maddox > 1 && DHor_BIBO == "BO")){
+            if (DVer_maddox > 0 || DVer_maddox == "") {
+              document.getElementById('result_DMaddox').innerText = "(불량)";
+            } else {
+              document.getElementById('result_DMaddox').innerText = "(불량)";
+            }
+          } else {
+            document.getElementById('result_DMaddox').innerText = "(양호)";
+          }
+        } else if (D_agree == ""){
+
         }
       }
 
       //마독스로드_근거리
-      function N_agree(event) {
-        const N_agree = event.target.value;
+      function N_agree() {
+        const N_agree = document.getElementById('N_agree').value;
         if (N_agree == 'agree') {
           document.getElementById('result_NMaddox').innerText = "(양호)";
         } else if (N_agree == 'discord') {
-          document.getElementById('result_NMaddox').innerText = "(불량)";
+          const NHor_maddox = document.getElementById('NHor_maddox').value;
+          const NHor_BIBO = document.getElementById('NHor_BIBO').value;
+          const NVer_maddox = document.getElementById('NVer_maddox').value;
+          const NVer_BIBO = document.getElementById('NVer_BIBO').value;
+          if ((NHor_maddox > 6 && NHor_BIBO == "BI") || (NHor_maddox > 0 && NHor_BIBO == "BO")){
+            if (NVer_maddox > 0 || NVer_maddox == "") {
+              document.getElementById('result_NMaddox').innerText = "(불량)";
+            } else {
+              document.getElementById('result_NMaddox').innerText = "(불량)";
+            }
+          } else {
+            document.getElementById('result_NMaddox').innerText = "(양호)";
+          }
+        } else if (N_agree == ""){
+
         }
       }
 
@@ -4334,7 +4468,7 @@ details[open]>summary~* {
         }
       }
 
-
+      /*
       function sub_analysis() {
         var win = window.open("Test_analysis_ver1.php", "analysis", "width=650px, height=1200px, top=50, left=200, resizable=yes, scrollbars=yes");
         var f = document.winForm;
@@ -4342,6 +4476,969 @@ details[open]>summary~* {
         f.action = "Test_analysis_ver1.php";
         f.submit();
       }
+
+
+       ====== checkbox check/ uncheck value sample ======
+      // 선택된 목록 가져오기
+      const che_visit = 'input[name="che_visit"]:checked';
+      const selectedEls = document.querySelectorAll(che_visit);
+
+      // 선택된 목록에서 value 찾기
+      let result_visit = '';
+      selectedEls.forEach((el) => {
+        result_visit += el.value + ' ';
+      });
+
+
+
+      ====== radio check/ uncheck value sample ======
+      if ($("input[type=radio][name=QOL_score1]:checked").is(':checked')){
+        var QOL_score1 = document.querySelector("input[name='QOL_score1']:checked").value;
+      } else {
+        var QOL_score1 = "";
+      }
+
+
+
+
+
+
+
+
+
+
+
+         ======= Maiin Body-Evaluation-value start
+
+
+        ======= Maiin Body-Evaluation-value end
+
+
+
+
+
+
+        */
+
+        // 분석하기 실행
+        function sub_analysis() {
+
+          <!-- ======= Maiin Body-Customer-Information-value start ====== -->
+
+          var name = document.getElementById('Cus_Name').value;
+          var sex = document.getElementById('Cus_sex').value;
+          var tell1 = document.getElementById('Cus_tell1').value;
+          var tell2 = document.getElementById('Cus_tell2').value;
+          var mobile1 = document.getElementById('Cus_mobile1').value;
+          var mobile2 = document.getElementById('Cus_mobile2').value;
+          var Birth_y = document.getElementById('Birth_y').value;
+          var Birth_m = document.getElementById('Birth_m').value;
+          var Birth_d = document.getElementById('Birth_d').value;
+          var Birth_sel = document.getElementById('Birth_sel').value;
+          var city = document.getElementById('txt_CCity').value;
+          var Diagnosis1 = document.getElementById('Diagnosis1').value;
+          var Diagnosis2 = document.getElementById('Diagnosis2').value;
+          var reserv_count = document.getElementById('reserv_count').value;
+          var reserv_day1 = document.getElementById('reserv_day1').value;
+          var reserv_day2 = document.getElementById('reserv_day2').value;
+
+          <!-- ======= Maiin Body-Customer-Information-value end ====== -->
+
+
+          <!-- ======= Maiin Body-history-value start ====== -->
+
+         const che_visit = 'input[name="che_visit"]:checked';
+         const selectedEls_visit = document.querySelectorAll(che_visit);
+         let visit_arr = '';
+         selectedEls_visit.forEach((el_visit) => {
+           visit_arr += el_visit.value +" ";
+         });
+
+         const che_request = 'input[name="che_request"]:checked';
+         const selectedEls_request = document.querySelectorAll(che_request);
+         let request_arr = '';
+         selectedEls_request.forEach((el_request) => {
+           request_arr += el_request.value;
+         });
+
+         var text_request1 = document.getElementById('text_request1').value;
+         var text_request2 = document.getElementById('text_request2').value;
+         var text_request3 = document.getElementById('text_request3').value;
+
+         if ($("input[type=radio][name=radio_cl]:checked").is(':checked')){
+           var radio_cl = document.querySelector("input[name='radio_cl']:checked").value;
+         } else {
+           var radio_cl = "";
+         }
+
+         var text_glasscl = document.getElementById('text_glasscl').value;
+         var text_lasttest = document.getElementById('text_lasttest').value;
+
+         const che_eye_disease_self = 'input[name="che_eye_disease_self"]:checked';
+         const selectedEls_eye_disease_self = document.querySelectorAll(che_eye_disease_self);
+         let eye_disease_self_arr = '';
+         selectedEls_eye_disease_self.forEach((el_eye_disease_self) => {
+           eye_disease_self_arr += el_eye_disease_self.value + ' ';
+         });
+
+         var text_eye_disease_self = document.getElementById('text_eye_disease_self').value;
+
+         if ($("input[type=radio][name=radio_surgery1]:checked").is(':checked')){
+           var radio_surgery1 = document.querySelector("input[name='radio_surgery1']:checked").value;
+         } else {
+           var radio_surgery1 = "";
+         }
+
+         var text_surgery1 = document.getElementById('text_surgery1').value;
+
+         const che_eye_disease_family = 'input[name="che_eye_disease_family"]:checked';
+         const selectedEls_eye_disease_family = document.querySelectorAll(che_eye_disease_family);
+         let eye_disease_family_arr = '';
+         selectedEls_eye_disease_family.forEach((el_eye_disease_family) => {
+           eye_disease_family_arr += el_eye_disease_family.value + ' ';
+         });
+
+         var text_eye_disease_family = document.getElementById('text_eye_disease_family').value;
+
+         if ($("input[type=radio][name=radio_surgery2]:checked").is(':checked')){
+           var radio_surgery2 = document.querySelector("input[name='radio_surgery2']:checked").value;
+         } else {
+           var radio_surgery2 = "";
+         }
+
+         var text_surgery2 = document.getElementById('text_surgery2').value;
+
+         const che_body_disease_self = 'input[name="che_body_disease_self"]:checked';
+         const selectedEls_body_disease_self = document.querySelectorAll(che_body_disease_self);
+         let body_disease_self_arr = '';
+         selectedEls_body_disease_self.forEach((el_body_disease_self) => {
+           body_disease_self_arr += el_body_disease_self.value + ' ';
+         });
+
+         var text_body_disease_self = document.getElementById('text_body_disease_self').value;
+
+         if ($("input[type=radio][name=radio_surgery3]:checked").is(':checked')){
+           var radio_surgery3 = document.querySelector("input[name='radio_surgery3']:checked").value;
+         } else {
+           var radio_surgery3 = "";
+         }
+
+         var text_surgery3 = document.getElementById('text_surgery3').value;
+         var text_body_lasttest_self = document.getElementById('text_body_lasttest_self').value;
+
+         const che_body_disease_family = 'input[name="che_body_disease_family"]:checked';
+         const selectedEls_body_disease_family = document.querySelectorAll(che_body_disease_family);
+         let body_disease_family_arr = '';
+         selectedEls_body_disease_family.forEach((el_body_disease_family) => {
+           body_disease_family_arr += el_body_disease_family.value + ' ';
+         });
+
+         var text_body_disease_family = document.getElementById('text_body_disease_family').value;
+
+         if ($("input[type=radio][name=radio_surgery4]:checked").is(':checked')){
+           var radio_surgery4 = document.querySelector("input[name='radio_surgery4']:checked").value;
+         } else {
+           var radio_surgery4 = "";
+         }
+
+         var text_surgery4 = document.getElementById('text_surgery4').value;
+
+         if ($("input[type=radio][name=radio_drug]:checked").is(':checked')){
+           var radio_drug = document.querySelector("input[name='radio_drug']:checked").value;
+         } else {
+           var radio_drug = "";
+         }
+
+         var text_disease_name = document.getElementById('text_disease_name').value;
+         var text_drug = document.getElementById('text_drug').value;
+
+         const che_school_prob = 'input[name="che_school_prob"]:checked';
+         const selectedEls_che_school_prob = document.querySelectorAll(che_school_prob);
+         let che_school_prob_arr = '';
+         selectedEls_che_school_prob.forEach((el_che_school_prob) => {
+           che_school_prob_arr += el_che_school_prob.value + ' ';
+         });
+
+         if ($("input[type=radio][name=radio_school]:checked").is(':checked')){
+           var radio_school = document.querySelector("input[name='radio_school']:checked").value;
+         } else {
+           var radio_school = "";
+         }
+
+         if ($("input[type=radio][name=radio_friend]:checked").is(':checked')){
+           var radio_friend = document.querySelector("input[name='radio_friend']:checked").value;
+         } else {
+           var radio_friend = "";
+         }
+
+         if ($("input[type=radio][name=radio_teacher]:checked").is(':checked')){
+           var radio_teacher = document.querySelector("input[name='radio_teacher']:checked").value;
+         } else {
+           var radio_teacher = "";
+         }
+
+         if ($("input[type=radio][name=radio_report]:checked").is(':checked')){
+           var radio_report = document.querySelector("input[name='radio_report']:checked").value;
+         } else {
+           var radio_report = "";
+         }
+
+         var text_school_prob = document.getElementById('text_school_prob').value;
+
+         if ($("input[type=radio][name=radio_mother_health]:checked").is(':checked')){
+           var radio_mother_health = document.querySelector("input[name='radio_mother_health']:checked").value;
+         } else {
+           var radio_mother_health = "";
+         }
+
+         var text_mother_health = document.getElementById('text_mother_health').value;
+
+         if ($("input[type=radio][name=radio_delivery1]:checked").is(':checked')){
+           var radio_delivery1 = document.querySelector("input[name='radio_delivery1']:checked").value;
+         } else {
+           var radio_delivery1 = "";
+         }
+
+         var text_delivery1 = document.getElementById('text_delivery1').value;
+
+         if ($("input[type=radio][name=radio_delivery2]:checked").is(':checked')){
+           var radio_delivery2 = document.querySelector("input[name='radio_delivery2']:checked").value;
+         } else {
+           var radio_delivery2 = "";
+         }
+
+         var text_delivery2 = document.getElementById('text_delivery2').value;
+
+         if ($("input[type=radio][name=radio_crawl]:checked").is(':checked')){
+           var radio_crawl = document.querySelector("input[name='radio_crawl']:checked").value;
+         } else {
+           var radio_crawl = "";
+         }
+
+         var text_crawl = document.getElementById('text_crawl').value;
+
+         if ($("input[type=radio][name=radio_creeping]:checked").is(':checked')){
+           var radio_creeping = document.querySelector("input[name='radio_creeping']:checked").value;
+         } else {
+           var radio_creeping = "";
+         }
+
+         var text_creeping = document.getElementById('text_creeping').value;
+         var text_walk = document.getElementById('text_walk').value;
+
+         if ($("input[type=radio][name=radio_run]:checked").is(':checked')){
+           var radio_run = document.querySelector("input[name='radio_run']:checked").value;
+         } else {
+           var radio_run = "";
+         }
+
+         var text_run = document.getElementById('text_run').value;
+
+         if ($("input[type=radio][name=radio_pitch]:checked").is(':checked')){
+           var radio_pitch = document.querySelector("input[name='radio_pitch']:checked").value;
+         } else {
+           var radio_pitch = "";
+         }
+
+         var text_pitch = document.getElementById('text_pitch').value;
+
+         if ($("input[type=radio][name=radio_micactiv]:checked").is(':checked')){
+           var radio_micactiv = document.querySelector("input[name='radio_micactiv']:checked").value;
+         } else {
+           var radio_micactiv = "";
+         }
+         var text_micactiv = document.getElementById('text_micactiv').value;
+
+         if ($("input[type=radio][name=radio_dress]:checked").is(':checked')){
+           var radio_dress = document.querySelector("input[name='radio_dress']:checked").value;
+         } else {
+           var radio_dress = "";
+         }
+         var text_dress = document.getElementById('text_dress').value;
+
+         if ($("input[type=radio][name=radio_zipper]:checked").is(':checked')){
+           var radio_zipper = document.querySelector("input[name='radio_zipper']:checked").value;
+         } else {
+           var radio_zipper = "";
+         }
+         var text_zipper = document.getElementById('text_zipper').value;
+
+         if ($("input[type=radio][name=radio_bicycle]:checked").is(':checked')){
+           var radio_bicycle = document.querySelector("input[name='radio_bicycle']:checked").value;
+         } else {
+           var radio_bicycle = "";
+         }
+         var text_bicycle = document.getElementById('text_bicycle').value;
+
+         if ($("input[type=radio][name=radio_play]:checked").is(':checked')){
+           var radio_play = document.querySelector("input[name='radio_play']:checked").value;
+         } else {
+           var radio_play = "";
+         }
+         var text_play = document.getElementById('text_play').value;
+
+         const che_tired = 'input[name="che_tired"]:checked';
+         const selectedEls_che_tired = document.querySelectorAll(che_tired);
+         let che_tired_arr = '';
+         selectedEls_che_tired.forEach((el_che_tired) => {
+           che_tired_arr += el_che_tired.value + ' ';
+         });
+         var text_tired = document.getElementById('text_tired').value;
+
+         const che_nervous = 'input[name="che_nervous"]:checked';
+         const selectedEls_che_nervous = document.querySelectorAll(che_nervous);
+         let che_nervous_arr = '';
+         selectedEls_che_nervous.forEach((el_che_nervous) => {
+           che_nervous_arr += el_che_nervous.value + ' ';
+         });
+         var text_nervous = document.getElementById('text_nervous').value;
+
+         if ($("input[type=radio][name=radio_langs]:checked").is(':checked')){
+           var radio_langs = document.querySelector("input[name='radio_langs']:checked").value;
+         } else {
+           var radio_langs = "";
+         }
+         var text_langs = document.getElementById('text_langs').value;
+
+         var text_character = document.getElementById('text_character').value;
+
+         const che_motor_coordi = 'input[name="che_motor_coordi"]:checked';
+         const selectedEls_che_motor_coordi = document.querySelectorAll(che_motor_coordi);
+         let che_motor_coordi_arr = '';
+         selectedEls_che_motor_coordi.forEach((el_che_motor_coordi) => {
+           che_motor_coordi_arr += el_che_motor_coordi.value + ' ';
+         });
+
+         const che_touch = 'input[name="che_touch"]:checked';
+         const selectedEls_che_touch = document.querySelectorAll(che_touch);
+         let che_touch_arr = '';
+         selectedEls_che_touch.forEach((el_che_touch) => {
+           che_touch_arr += el_che_touch.value + ' ';
+         });
+
+         var text_weekday = document.getElementById('text_weekday').value;
+         var text_weekend1 = document.getElementById('text_weekend1').value;
+         var text_weekend2 = document.getElementById('text_weekend2').value;
+         var text_activity = document.getElementById('text_activity').value;
+         var text_specialty = document.getElementById('text_specialty').value;
+
+         if ($("input[type=radio][name=radio_parents]:checked").is(':checked')){
+           var radio_parents = document.querySelector("input[name='radio_parents']:checked").value;
+         } else {
+           var radio_parents = "";
+         }
+         var text_parents = document.getElementById('text_parents').value;
+
+         if ($("input[type=radio][name=radio_friends]:checked").is(':checked')){
+           var radio_friends = document.querySelector("input[name='radio_friends']:checked").value;
+         } else {
+           var radio_friends = "";
+         }
+         var text_friends = document.getElementById('text_friends').value;
+
+         var text_memory = document.getElementById('text_memory').value;
+
+         <!-- ======= Maiin Body-history-value end ====== -->
+
+         <!-- ======= Maiin Body-QOL-value start ====== -->
+         if ($("input[type=radio][name=QOL_score1]:checked").is(':checked')){
+           var QOL_score1 = document.querySelector("input[name='QOL_score1']:checked").value;
+         } else {
+           var QOL_score1 = "";
+         }
+
+         if ($("input[type=radio][name=QOL_score2]:checked").is(':checked')){
+           var QOL_score2 = document.querySelector("input[name='QOL_score2']:checked").value;
+         } else {
+           var QOL_score2 = "";
+         }
+
+         if ($("input[type=radio][name=QOL_score3]:checked").is(':checked')){
+           var QOL_score3 = document.querySelector("input[name='QOL_score3']:checked").value;
+         } else {
+           var QOL_score3 = "";
+         }
+
+         if ($("input[type=radio][name=QOL_score4]:checked").is(':checked')){
+           var QOL_score4 = document.querySelector("input[name='QOL_score4']:checked").value;
+         } else {
+           var QOL_score4 = "";
+         }
+
+         if ($("input[type=radio][name=QOL_score5]:checked").is(':checked')){
+           var QOL_score5 = document.querySelector("input[name='QOL_score5']:checked").value;
+         } else {
+           var QOL_score5 = "";
+         }
+
+         if ($("input[type=radio][name=QOL_score6]:checked").is(':checked')){
+           var QOL_score6 = document.querySelector("input[name='QOL_score6']:checked").value;
+         } else {
+           var QOL_score6 = "";
+         }
+
+         if ($("input[type=radio][name=QOL_score7]:checked").is(':checked')){
+           var QOL_score7 = document.querySelector("input[name='QOL_score7']:checked").value;
+         } else {
+           var QOL_score7 = "";
+         }
+
+         if ($("input[type=radio][name=QOL_score8]:checked").is(':checked')){
+           var QOL_score8 = document.querySelector("input[name='QOL_score8']:checked").value;
+         } else {
+           var QOL_score8 = "";
+         }
+
+         if ($("input[type=radio][name=QOL_score9]:checked").is(':checked')){
+           var QOL_score9 = document.querySelector("input[name='QOL_score9']:checked").value;
+         } else {
+           var QOL_score9 = "";
+         }
+
+         if ($("input[type=radio][name=QOL_score10]:checked").is(':checked')){
+           var QOL_score10 = document.querySelector("input[name='QOL_score10']:checked").value;
+         } else {
+           var QOL_score10 = "";
+         }
+
+         if ($("input[type=radio][name=QOL_score11]:checked").is(':checked')){
+           var QOL_score11 = document.querySelector("input[name='QOL_score11']:checked").value;
+         } else {
+           var QOL_score11 = "";
+         }
+
+         if ($("input[type=radio][name=QOL_score12]:checked").is(':checked')){
+           var QOL_score12 = document.querySelector("input[name='QOL_score12']:checked").value;
+         } else {
+           var QOL_score12 = "";
+         }
+
+         if ($("input[type=radio][name=QOL_score13]:checked").is(':checked')){
+           var QOL_score13 = document.querySelector("input[name='QOL_score13']:checked").value;
+         } else {
+           var QOL_score13 = "";
+         }
+
+         if ($("input[type=radio][name=QOL_score14]:checked").is(':checked')){
+           var QOL_score14 = document.querySelector("input[name='QOL_score14']:checked").value;
+         } else {
+           var QOL_score14 = "";
+         }
+
+         if ($("input[type=radio][name=QOL_score15]:checked").is(':checked')){
+           var QOL_score15 = document.querySelector("input[name='QOL_score15']:checked").value;
+         } else {
+           var QOL_score15 = "";
+         }
+
+         if ($("input[type=radio][name=QOL_score16]:checked").is(':checked')){
+           var QOL_score16 = document.querySelector("input[name='QOL_score16']:checked").value;
+         } else {
+           var QOL_score16 = "";
+         }
+
+         if ($("input[type=radio][name=QOL_score17]:checked").is(':checked')){
+           var QOL_score17 = document.querySelector("input[name='QOL_score17']:checked").value;
+         } else {
+           var QOL_score17 = "";
+         }
+
+         if ($("input[type=radio][name=QOL_score18]:checked").is(':checked')){
+           var QOL_score18 = document.querySelector("input[name='QOL_score18']:checked").value;
+         } else {
+           var QOL_score18 = "";
+         }
+
+         if ($("input[type=radio][name=QOL_score19]:checked").is(':checked')){
+           var QOL_score19 = document.querySelector("input[name='QOL_score19']:checked").value;
+         } else {
+           var QOL_score19 = "";
+         }
+
+          <!-- ======= Maiin Body-QOL-value end ====== -->
+
+
+          <!-- ======= Maiin Body-Evolution-value start ====== -->
+          if ($("input[type=radio][name=MainEye]:checked").is(':checked')){
+            var MainEye = document.querySelector("input[name='MainEye']:checked").value;
+          } else {
+            var MainEye = "";
+          }
+          var ChAge = parseInt(document.getElementById('Age_y').innerHTML, 10);
+          var ChAge_m = parseInt(document.getElementById('Age_m').innerHTML, 10);
+          var PD = document.getElementById('PD').value;
+          var sel_glass1 = document.getElementById('sel_glass1').value;
+          var RDVision = document.getElementById('RDVision').value;
+          var LDVision = document.getElementById('LDVision').value;
+          var OUDVision = document.getElementById('OUDVision').value;
+          var RNVision = document.getElementById('RNVision').value;
+          var LNVision = document.getElementById('LNVision').value;
+          var OUNVision = document.getElementById('OUNVision').value;
+          var TxtRSph = document.getElementById('TxtRSph').value;
+          var TxtRCyl = document.getElementById('TxtRCyl').value;
+          var TxtRAxis = document.getElementById('TxtRAxis').value;
+          var TxtRAdd = document.getElementById('TxtRAdd').value;
+          var TxtLSph = document.getElementById('TxtLSph').value;
+          var TxtLCyl = document.getElementById('TxtLCyl').value;
+          var TxtLAxis = document.getElementById('TxtLAxis').value;
+          var TxtLAdd = document.getElementById('TxtLAdd').value;
+          var RDVision_new = document.getElementById('RDVision_new').value;
+          var LDVision_new = document.getElementById('LDVision_new').value;
+          var OUDVision_new = document.getElementById('OUDVision_new').value;
+          var RNVision_new = document.getElementById('RNVision_new').value;
+          var LNVision_new = document.getElementById('LNVision_new').value;
+          var OUNVision_new = document.getElementById('OUNVision_new').value;
+          var Balance = document.getElementById('Balance').value;
+          var D_W4D = document.getElementById('D_W4D').value;
+          var N_W4D = document.getElementById('N_W4D').value;
+          var CTest_D = document.getElementById('CTest_D').value;
+          var CTest_N = document.getElementById('CTest_N').value;
+          var R_accom = document.getElementById('R_accom').value;
+          var L_accom = document.getElementById('L_accom').value;
+          var O_accom = document.getElementById('O_accom').value;
+          var RAccom_Rev = document.getElementById('RAccom_Rev').value;
+          var LAccom_Rev = document.getElementById('LAccom_Rev').value;
+          var OUAccom_Rev = document.getElementById('OUAccom_Rev').value;
+          var Sel_AccomRev = document.getElementById('Sel_AccomRev').value;
+          var NVer = document.getElementById('NVer').value;
+          var bro_eye_movement = document.getElementById('bro_eye_movement').value;
+          var bro_head_turn = document.getElementById('bro_head_turn').value;
+          var sacca_eye_movement = document.getElementById('sacca_eye_movement').value;
+          var sacca_head_turn = document.getElementById('sacca_head_turn').value;
+          var DStereo = document.getElementById('DStereo').value;
+          var NStereo = document.getElementById('NStereo').value;
+          var Pupilreflex = document.getElementById('Pupilreflex').value;
+          var horEVA_tool = document.getElementById('horEVA_tool').value;
+          var Dectopic = document.getElementById('Dectopic').value;
+          var D_BIBO = document.getElementById('D_BIBO').value;
+          var Nectopic = document.getElementById('Nectopic').value;
+          var N_BIBO = document.getElementById('N_BIBO').value;
+          var DVer_tool = document.getElementById('DVer_tool').value;
+          var DConver1 = document.getElementById('DConver1').value;
+          var DConver2 = document.getElementById('DConver2').value;
+          var DConver3 = document.getElementById('DConver3').value;
+          var DDever2 = document.getElementById('DDever2').value;
+          var DDever3 = document.getElementById('DDever3').value;
+          var NVer_tool = document.getElementById('NVer_tool').value;
+          var NConver1 = document.getElementById('NConver1').value;
+          var NConver2 = document.getElementById('NConver2').value;
+          var NConver3 = document.getElementById('NConver3').value;
+          var NDever1 = document.getElementById('NDever1').value;
+          var NDever2 = document.getElementById('NDever2').value;
+          var NDever3 = document.getElementById('NDever3').value;
+          var verEVA_tool = document.getElementById('verEVA_tool').value;
+          var DVertical = document.getElementById('DVertical').value;
+          var D_BUBD = document.getElementById('D_BUBD').value;
+          var NVertical = document.getElementById('NVertical').value;
+          var N_BUBD = document.getElementById('N_BUBD').value;
+          var DVertical_tool = document.getElementById('DVertical_tool').value;
+          var DVertical_BD1 = document.getElementById('DVertical_BD1').value;
+          var DVertical_BD2 = document.getElementById('DVertical_BD2').value;
+          var DVertical_BU1 = document.getElementById('DVertical_BU1').value;
+          var DVertical_BU2 = document.getElementById('DVertical_BU2').value;
+          var DVertical_BD3 = document.getElementById('DVertical_BD3').value;
+          var DVertical_BD4 = document.getElementById('DVertical_BD4').value;
+          var DVertical_BU3 = document.getElementById('DVertical_BU3').value;
+          var DVertical_BU4 = document.getElementById('DVertical_BU4').value;
+          var NVertical_tool = document.getElementById('NVertical_tool').value;
+          var NVertical_BD1 = document.getElementById('NVertical_BD1').value;
+          var NVertical_BD2  = document.getElementById('NVertical_BD2').value;
+          var NVertical_BU1 = document.getElementById('NVertical_BU1').value;
+          var NVertical_BU2 = document.getElementById('NVertical_BU2').value;
+          var NVertical_BD3 = document.getElementById('NVertical_BD3').value;
+          var NVertical_BD4 = document.getElementById('NVertical_BD4').value;
+          var NVertical_BU3 = document.getElementById('NVertical_BU3').value;
+          var NVertical_BU4 = document.getElementById('NVertical_BU4').value;
+          var VerRev = document.getElementById('VerRev').value;
+          var D_agree = document.getElementById('D_agree').value;
+          var DHor_maddox = document.getElementById('DHor_maddox').value;
+          var DHor_BIBO = document.getElementById('DHor_BIBO').value;
+          var DVer_maddox = document.getElementById('DVer_maddox').value;
+          var DVer_BIBO = document.getElementById('DVer_BIBO').value;
+          var N_agree = document.getElementById('N_agree').value;
+          var NHor_maddox = document.getElementById('NHor_maddox').value;
+          var NHor_BIBO = document.getElementById('NHor_BIBO').value;
+          var NVer_maddox = document.getElementById('NVer_maddox').value;
+          var NVer_BIBO = document.getElementById('NVer_BIBO').value;
+          var MIT = document.getElementById('MIT').value;
+
+
+          <!-- ======= Maiin Body-사시분류-value start ====== -->
+          if ($("input[type=radio][name=radio_month6]:checked").is(':checked')){
+            var radio_month6 = document.querySelector("input[name='radio_month6']:checked").value;
+          } else {
+            var radio_month6 = "";
+          }
+
+          if ($("input[type=radio][name=radio_exami]:checked").is(':checked')){
+            var radio_exami = document.querySelector("input[name='radio_exami']:checked").value;
+          } else {
+            var radio_exami = "";
+          }
+
+          if ($("input[type=radio][name=ratio_cross]:checked").is(':checked')){
+            var ratio_cross = document.querySelector("input[name='ratio_cross']:checked").value;
+          } else {
+            var ratio_cross = "";
+          }
+
+          if ($("input[type=radio][name=radio_change_ver]:checked").is(':checked')){
+            var radio_change_ver = document.querySelector("input[name='radio_change_ver']:checked").value;
+          } else {
+            var radio_change_ver = "";
+          }
+
+          if ($("input[type=radio][name=radio_splitting]:checked").is(':checked')){
+            var radio_splitting = document.querySelector("input[name='radio_splitting']:checked").value;
+          } else {
+            var radio_splitting = "";
+          }
+
+          if ($("input[type=radio][name=radio_double_vi]:checked").is(':checked')){
+            var radio_double_vi = document.querySelector("input[name='radio_double_vi']:checked").value;
+          } else {
+            var radio_double_vi = "";
+          }
+
+          if ($("input[type=radio][name=radio_amblyopia]:checked").is(':checked')){
+            var radio_amblyopia = document.querySelector("input[name='radio_amblyopia']:checked").value;
+          } else {
+            var radio_amblyopia = "";
+          }
+
+          if ($("input[type=radio][name=radio_eye_movement]:checked").is(':checked')){
+            var radio_eye_movement = document.querySelector("input[name='radio_eye_movement']:checked").value;
+          } else {
+            var radio_eye_movement = "";
+          }
+
+
+          <!-- ======= Maiin Body-TVPS-value start ====== -->
+
+          var RAW_SCORE_DIS = document.getElementById('RAW_SCORE_DIS').value;
+          var RAW_SCORE_MEM = document.getElementById('RAW_SCORE_MEM').value;
+          var RAW_SCORE_SPA = document.getElementById('RAW_SCORE_SPA').value;
+          var RAW_SCORE_CON = document.getElementById('RAW_SCORE_CON').value;
+          var RAW_SCORE_SEQ = document.getElementById('RAW_SCORE_SEQ').value;
+          var RAW_SCORE_FGR = document.getElementById('RAW_SCORE_FGR').value;
+          var RAW_SCORE_CLO = document.getElementById('RAW_SCORE_CLO').value;
+
+
+          <!-- ======= Maiin Body-VMI-value start ====== -->
+          var Raw_vmi = document.getElementById('Raw_vmi').value;
+          var Raw_visual = document.getElementById('Raw_visual').value;
+          var Raw_motor = document.getElementById('Raw_motor').value;
+
+
+          <!-- ======= Maiin Body-DEM-value start ====== -->
+          var DEM_VER = document.getElementById('DEM_VER').value;
+          var VER_ERR_S = document.getElementById('VER_ERR_S').value;
+          var VER_ERR_O = document.getElementById('VER_ERR_O').value;
+          var VER_ERR_A = document.getElementById('VER_ERR_A').value;
+          var VER_ERR_T = document.getElementById('VER_ERR_T').value;
+          var DEM_HOR = document.getElementById('DEM_HOR').value;
+          var HOR_ERR_S = document.getElementById('HOR_ERR_S').value;
+          var HOR_ERR_O = document.getElementById('HOR_ERR_O').value;
+          var HOR_ERR_A = document.getElementById('HOR_ERR_A').value;
+          var HOR_ERR_T = document.getElementById('HOR_ERR_T').value;
+
+
+          <!-- ======= Maiin Body-WACS-value start ====== -->
+          var WACS_RAW_T1 = document.getElementById('WACS_RAW_T1').value;
+          var WACS_RAW_T2 = document.getElementById('WACS_RAW_T2').value;
+          var WACS_RAW_T3 = document.getElementById('WACS_RAW_T3').value;
+          var WACS_RAW_T4 = document.getElementById('WACS_RAW_T4').value;
+
+
+
+
+          <!-- ======= Maiin Body-Evolution-value end ====== -->
+
+
+          <!-- ======= 데이터 전달값 지정 ====== -->
+
+          <!-- ======= 고객정보 ====== -->
+
+          localStorage.setItem('Cus_Name',name);
+          localStorage.setItem('Cus_sex',sex);
+          localStorage.setItem('Cus_tell1',tell1);
+          localStorage.setItem('Cus_tell2',tell2);
+          localStorage.setItem('Cus_mobile1',mobile1);
+          localStorage.setItem('Cus_mobile2',mobile2);
+          localStorage.setItem('Birth_y',Birth_y);
+          localStorage.setItem('Birth_m',Birth_m);
+          localStorage.setItem('Birth_d',Birth_d);
+          localStorage.setItem('Birth_sel',Birth_sel);
+          localStorage.setItem('txt_CCity',city);
+          localStorage.setItem('Diagnosis1',Diagnosis1);
+          localStorage.setItem('Diagnosis2',Diagnosis2);
+          localStorage.setItem('reserv_count',reserv_count);
+          localStorage.setItem('reserv_day1',reserv_day1);
+          localStorage.setItem('reserv_day2',reserv_day2);
+
+
+          <!-- ======= History ====== -->
+          localStorage.setItem('che_visit',visit_arr);
+          localStorage.setItem('che_request',request_arr);
+          localStorage.setItem('text_request1',text_request1);
+          localStorage.setItem('text_request2',text_request2);
+          localStorage.setItem('text_request3',text_request3);
+          localStorage.setItem('radio_cl',radio_cl);
+          localStorage.setItem('text_glasscl',text_glasscl);
+          localStorage.setItem('text_lasttest',text_lasttest);
+          localStorage.setItem('che_eye_disease_self',eye_disease_self_arr);
+          localStorage.setItem('text_eye_disease_self',text_eye_disease_self);
+          localStorage.setItem('eye_disease_family_arr',eye_disease_family_arr);
+          localStorage.setItem('radio_surgery1',radio_surgery1);
+          localStorage.setItem('text_surgery1',text_surgery1);
+          localStorage.setItem('che_eye_disease_family',eye_disease_family_arr);
+          localStorage.setItem('text_eye_disease_family',text_eye_disease_family);
+          localStorage.setItem('radio_surgery2',radio_surgery2);
+          localStorage.setItem('text_surgery2',text_surgery2);
+          localStorage.setItem('che_body_disease_self',body_disease_self_arr);
+          localStorage.setItem('text_body_disease_self',text_body_disease_self);
+          localStorage.setItem('radio_surgery3',radio_surgery3);
+          localStorage.setItem('text_surgery3',text_surgery3);
+          localStorage.setItem('text_body_lasttest_self',text_body_lasttest_self);
+          localStorage.setItem('che_body_disease_family',body_disease_family_arr);
+          localStorage.setItem('text_body_disease_family',text_body_disease_family);
+          localStorage.setItem('radio_surgery4',radio_surgery4);
+          localStorage.setItem('text_surgery4',text_surgery4);
+          localStorage.setItem('radio_drug',radio_drug);
+          localStorage.setItem('text_disease_name',text_disease_name);
+          localStorage.setItem('text_drug',text_drug);
+          localStorage.setItem('che_school_prob',che_school_prob_arr);
+          localStorage.setItem('radio_school',radio_school);
+          localStorage.setItem('radio_friend',radio_friend);
+          localStorage.setItem('radio_teacher',radio_teacher);
+          localStorage.setItem('radio_report',radio_report);
+          localStorage.setItem('text_school_prob',text_school_prob);
+          localStorage.setItem('radio_mother_health',radio_mother_health);
+          localStorage.setItem('text_mother_health',text_mother_health);
+          localStorage.setItem('radio_delivery1',radio_delivery1);
+          localStorage.setItem('text_delivery1',text_delivery1);
+          localStorage.setItem('radio_delivery2',radio_delivery2);
+          localStorage.setItem('text_delivery2',text_delivery2);
+          localStorage.setItem('radio_crawl',radio_crawl);
+          localStorage.setItem('text_crawl',text_crawl);
+          localStorage.setItem('radio_creeping',radio_creeping);
+          localStorage.setItem('text_creeping',text_creeping);
+          localStorage.setItem('text_walk',text_walk);
+          localStorage.setItem('radio_run',radio_run);
+          localStorage.setItem('text_run',text_run);
+          localStorage.setItem('radio_pitch',radio_pitch);
+          localStorage.setItem('text_pitch',text_pitch);
+          localStorage.setItem('radio_micactiv',radio_micactiv);
+          localStorage.setItem('text_micactiv',text_micactiv);
+          localStorage.setItem('radio_dress',radio_dress);
+          localStorage.setItem('text_dress',text_dress);
+          localStorage.setItem('radio_zipper',radio_zipper);
+          localStorage.setItem('text_zipper',text_zipper);
+          localStorage.setItem('radio_bicycle',radio_bicycle);
+          localStorage.setItem('text_bicycle',text_bicycle);
+          localStorage.setItem('radio_play',radio_play);
+          localStorage.setItem('radio_play',radio_play);
+          localStorage.setItem('text_play',text_play);
+          localStorage.setItem('che_tired',che_tired_arr);
+          localStorage.setItem('text_tired',text_tired);
+          localStorage.setItem('che_nervous',che_nervous_arr);
+          localStorage.setItem('text_nervous',text_nervous);
+          localStorage.setItem('radio_langs',radio_langs);
+          localStorage.setItem('text_langs',text_langs);
+          localStorage.setItem('text_character',text_character);
+          localStorage.setItem('che_motor_coordi',che_motor_coordi_arr);
+          localStorage.setItem('che_touch',che_touch_arr);
+          localStorage.setItem('text_weekday',text_weekday);
+          localStorage.setItem('text_weekend1',text_weekend1);
+          localStorage.setItem('text_weekend2',text_weekend2);
+          localStorage.setItem('text_activity',text_activity);
+          localStorage.setItem('text_specialty',text_specialty);
+          localStorage.setItem('radio_parents',radio_parents);
+          localStorage.setItem('text_parents',text_parents);
+          localStorage.setItem('radio_friends',radio_friends);
+          localStorage.setItem('text_friends',text_friends);
+          localStorage.setItem('text_memory',text_memory);
+
+
+          <!-- ======= QOL ====== -->
+          localStorage.setItem('QOL_score1',QOL_score1);
+          localStorage.setItem('QOL_score2',QOL_score2);
+          localStorage.setItem('QOL_score3',QOL_score3);
+          localStorage.setItem('QOL_score4',QOL_score4);
+          localStorage.setItem('QOL_score5',QOL_score5);
+          localStorage.setItem('QOL_score6',QOL_score6);
+          localStorage.setItem('QOL_score7',QOL_score7);
+          localStorage.setItem('QOL_score8',QOL_score8);
+          localStorage.setItem('QOL_score9',QOL_score9);
+          localStorage.setItem('QOL_score10',QOL_score10);
+          localStorage.setItem('QOL_score11',QOL_score11);
+          localStorage.setItem('QOL_score12',QOL_score12);
+          localStorage.setItem('QOL_score13',QOL_score13);
+          localStorage.setItem('QOL_score14',QOL_score14);
+          localStorage.setItem('QOL_score15',QOL_score15);
+          localStorage.setItem('QOL_score16',QOL_score16);
+          localStorage.setItem('QOL_score17',QOL_score17);
+          localStorage.setItem('QOL_score18',QOL_score18);
+          localStorage.setItem('QOL_score19',QOL_score19);
+
+
+          <!-- ======= 양안시평가 ====== -->
+          localStorage.setItem('MainEye',MainEye);
+          localStorage.setItem('PD',PD);
+          localStorage.setItem('sel_glass1',sel_glass1);
+          localStorage.setItem('RDVision',RDVision);
+          localStorage.setItem('LDVision',LDVision);
+          localStorage.setItem('OUDVision',OUDVision);
+          localStorage.setItem('RNVision',RNVision);
+          localStorage.setItem('LNVision',LNVision);
+          localStorage.setItem('OUNVision',OUNVision);
+          localStorage.setItem('TxtRSph',TxtRSph);
+          localStorage.setItem('TxtRCyl',TxtRCyl);
+          localStorage.setItem('TxtRAxis',TxtRAxis);
+          localStorage.setItem('TxtRAdd',TxtRAdd);
+          localStorage.setItem('TxtLSph',TxtLSph);
+          localStorage.setItem('TxtLCyl',TxtLCyl);
+          localStorage.setItem('TxtLAxis',TxtLAxis);
+          localStorage.setItem('TxtLAdd',TxtLAdd);
+          localStorage.setItem('RDVision_new',RDVision_new);
+          localStorage.setItem('LDVision_new',LDVision_new);
+          localStorage.setItem('OUDVision_new',OUDVision_new);
+          localStorage.setItem('RNVision_new',RNVision_new);
+          localStorage.setItem('LNVision_new',LNVision_new);
+          localStorage.setItem('OUNVision_new',OUNVision_new);
+          localStorage.setItem('Balance',Balance);
+          localStorage.setItem('D_W4D',D_W4D);
+          localStorage.setItem('N_W4D',N_W4D);
+          localStorage.setItem('CTest_D',CTest_D);
+          localStorage.setItem('CTest_N',CTest_N);
+          localStorage.setItem('ChAge',ChAge);
+          localStorage.setItem('ChAge_m',ChAge_m);
+          localStorage.setItem('R_accom',R_accom);
+          localStorage.setItem('L_accom',L_accom);
+          localStorage.setItem('O_accom',O_accom);
+          localStorage.setItem('RAccom_Rev',RAccom_Rev);
+          localStorage.setItem('LAccom_Rev',LAccom_Rev);
+          localStorage.setItem('OUAccom_Rev',OUAccom_Rev);
+          localStorage.setItem('Sel_AccomRev',Sel_AccomRev);
+          localStorage.setItem('NVer',NVer);
+          localStorage.setItem('bro_eye_movement',bro_eye_movement);
+          localStorage.setItem('bro_head_turn',bro_head_turn);
+          localStorage.setItem('sacca_eye_movement',sacca_eye_movement);
+          localStorage.setItem('sacca_head_turn',sacca_head_turn);
+          localStorage.setItem('DStereo',DStereo);
+          localStorage.setItem('NStereo',NStereo);
+          localStorage.setItem('Pupilreflex',Pupilreflex);
+          localStorage.setItem('horEVA_tool',horEVA_tool);
+          localStorage.setItem('Dectopic',Dectopic);
+          localStorage.setItem('D_BIBO',D_BIBO);
+          localStorage.setItem('Nectopic',Nectopic);
+          localStorage.setItem('N_BIBO',N_BIBO);
+          localStorage.setItem('DVer_tool',DVer_tool);
+          localStorage.setItem('DConver1',DConver1);
+          localStorage.setItem('DConver2',DConver2);
+          localStorage.setItem('DConver3',DConver3);
+          localStorage.setItem('DDever2',DDever2);
+          localStorage.setItem('DDever3',DDever3);
+          localStorage.setItem('NVer_tool',NVer_tool);
+          localStorage.setItem('NConver1',NConver1);
+          localStorage.setItem('NConver2',NConver2);
+          localStorage.setItem('NConver3',NConver3);
+          localStorage.setItem('NDever1',NDever1);
+          localStorage.setItem('NDever2',NDever2);
+          localStorage.setItem('NDever3',NDever3);
+          localStorage.setItem('verEVA_tool',verEVA_tool);
+          localStorage.setItem('DVertical',DVertical);
+          localStorage.setItem('D_BUBD',D_BUBD);
+          localStorage.setItem('NVertical',NVertical);
+          localStorage.setItem('N_BUBD',N_BUBD);
+          localStorage.setItem('DVertical_tool',DVertical_tool);
+          localStorage.setItem('DVertical_BD1',DVertical_BD1);
+          localStorage.setItem('DVertical_BD2',DVertical_BD2);
+          localStorage.setItem('DVertical_BU1',DVertical_BU1);
+          localStorage.setItem('DVertical_BU2',DVertical_BU2);
+          localStorage.setItem('DVertical_BD3',DVertical_BD3);
+          localStorage.setItem('DVertical_BD4',DVertical_BD4);
+          localStorage.setItem('DVertical_BU3',DVertical_BU3);
+          localStorage.setItem('DVertical_BU4',DVertical_BU4);
+          localStorage.setItem('NVertical_tool',NVertical_tool);
+          localStorage.setItem('NVertical_BD1',NVertical_BD1);
+          localStorage.setItem('NVertical_BD2',NVertical_BD2);
+          localStorage.setItem('NVertical_BU1',NVertical_BU1);
+          localStorage.setItem('NVertical_BU2',NVertical_BU2);
+          localStorage.setItem('NVertical_BD3',NVertical_BD3);
+          localStorage.setItem('NVertical_BD4',NVertical_BD4);
+          localStorage.setItem('NVertical_BU3',NVertical_BU3);
+          localStorage.setItem('NVertical_BU4',NVertical_BU4);
+          localStorage.setItem('VerRev',VerRev);
+          localStorage.setItem('D_agree',D_agree);
+          localStorage.setItem('DHor_maddox',DHor_maddox);
+          localStorage.setItem('DHor_BIBO',DHor_BIBO);
+          localStorage.setItem('DVer_maddox',DVer_maddox);
+          localStorage.setItem('DVer_BIBO',DVer_BIBO);
+          localStorage.setItem('N_agree',N_agree);
+          localStorage.setItem('NHor_maddox',NHor_maddox);
+          localStorage.setItem('NHor_BIBO',NHor_BIBO);
+          localStorage.setItem('NVer_maddox',NVer_maddox);
+          localStorage.setItem('NVer_BIBO',NVer_BIBO);
+          localStorage.setItem('MIT',MIT);
+
+
+          <!-- ======= 사시분류 ====== -->
+          localStorage.setItem('radio_month6',radio_month6);
+          localStorage.setItem('radio_exami',radio_exami);
+          localStorage.setItem('ratio_cross',ratio_cross);
+          localStorage.setItem('radio_change_ver',radio_change_ver);
+          localStorage.setItem('radio_splitting',radio_splitting);
+          localStorage.setItem('radio_double_vi',radio_double_vi);
+          localStorage.setItem('radio_amblyopia',radio_amblyopia);
+          localStorage.setItem('radio_eye_movement',radio_eye_movement);
+
+
+          <!-- ======= TVPS ====== -->
+          localStorage.setItem('RAW_SCORE_DIS',RAW_SCORE_DIS);
+          localStorage.setItem('RAW_SCORE_MEM',RAW_SCORE_MEM);
+          localStorage.setItem('RAW_SCORE_SPA',RAW_SCORE_SPA);
+          localStorage.setItem('RAW_SCORE_CON',RAW_SCORE_CON);
+          localStorage.setItem('RAW_SCORE_SEQ',RAW_SCORE_SEQ);
+          localStorage.setItem('RAW_SCORE_FGR',RAW_SCORE_FGR);
+          localStorage.setItem('RAW_SCORE_CLO',RAW_SCORE_CLO);
+
+
+          <!-- ======= VMI ====== -->
+          localStorage.setItem('Raw_vmi',Raw_vmi);
+          localStorage.setItem('Raw_visual',Raw_visual);
+          localStorage.setItem('Raw_motor',Raw_motor);
+
+
+          <!-- ======= DEM ====== -->
+          localStorage.setItem('DEM_VER',DEM_VER);
+          localStorage.setItem('VER_ERR_S',VER_ERR_S);
+          localStorage.setItem('VER_ERR_O',VER_ERR_O);
+          localStorage.setItem('VER_ERR_A',VER_ERR_A);
+          localStorage.setItem('VER_ERR_T',VER_ERR_T);
+          localStorage.setItem('DEM_HOR',DEM_HOR);
+          localStorage.setItem('HOR_ERR_S',HOR_ERR_S);
+          localStorage.setItem('HOR_ERR_O',HOR_ERR_O);
+          localStorage.setItem('HOR_ERR_A',HOR_ERR_A);
+          localStorage.setItem('HOR_ERR_T',HOR_ERR_T);
+
+
+          <!-- ======= WACS ====== -->
+          localStorage.setItem('WACS_RAW_T1',WACS_RAW_T1);
+          localStorage.setItem('WACS_RAW_T2',WACS_RAW_T2);
+          localStorage.setItem('WACS_RAW_T3',WACS_RAW_T3);
+          localStorage.setItem('WACS_RAW_T4',WACS_RAW_T4);
+
+
+
+        // 보고서작성으로 연결
+        var win = window.open("Test_analysis_ver1.html", "analysis", "width=650px, height=1200px, top=50, left=200, resizable=yes, scrollbars=yes");
+
+      }
+
+    </script>
+    <script>
+      localStorage.clear();
     </script>
 
     <!-- ======= Maiin Body end ======= -->
