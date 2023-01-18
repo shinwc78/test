@@ -1,22 +1,3 @@
-// QOL문진
-if (QOL_score1 !== "" || QOL_score2 !== "" || QOL_score3 !== "" || QOL_score4 !== "" || QOL_score5 !== "" || QOL_score6 !== "" ||
-QOL_score7 !== "" || QOL_score8 !== "" || QOL_score9 !== "" || QOL_score10 !== "" || QOL_score11 !== "" || QOL_score12 !== "" ||
-QOL_score13 !== "" || QOL_score14 !== "" || QOL_score15 !== "" || QOL_score16 !== "" || QOL_score17 !== "" || QOL_score18 !== "" || QOL_score19 !== ""){
-  var sum_QOL = QOL_score1 + QOL_score2 + QOL_score3 + QOL_score4 + QOL_score5 + QOL_score6 + QOL_score7 + QOL_score8 + QOL_score9 + QOL_score11 + QOL_score12 +
-  QOL_score13 + QOL_score14 + QOL_score15 + QOL_score16 + QOL_score17 + QOL_score18 + QOL_score19;
-  if (sum_QOL < 20) {
-    document.write("● ")
-  }
-
-}
-
-
-
-
-
-
-
-
 
 // 우위안
 

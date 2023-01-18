@@ -1,5 +1,5 @@
-// QOL문진
-if (QOL_sum === false){
+//QOL문진
+if (QOL_sum !== ""){
   if (QOL_sum >= 30) {
     document.write("● 시기능이상의 자각적인 증상정도를 확인할 수 있는 QOL문진점수가 "+'<span style="font-weight: bold; color: red;">'+QOL_sum+"점"+'</span>'+"으로 자각적증상의 정도가 "+'<span style="font-weight: bold; color: red;">'+"매우 불량합니다. 시기능발달평가가 적극"+'</span>'+"권장됩니다.<br>\n <br>\n");
   } else if (QOL_sum >= 20 && QOL_sum <30 ) {
@@ -9,7 +9,10 @@ if (QOL_sum === false){
   } else {
     document.write("● 시기능이상의 자각적인 증상정도를 확인할 수 있는 QOL문진점수가 "+QOL_sum+"점으로 양호합니다.<br>\n <br>\n");
   }
+
+  
 }
+
 
 // 시기능이상-비사시성
 
@@ -103,12 +106,19 @@ if (QOL_sum === false){
   } else {
     var Eva_result1 = "외편위";
   }
-} else if ((DEM_RATIO_PER <= 15 && DEM_RATIO_PER>0) && (BroadH != "good" || sacadic != "good"))  {
-    var Eva_result3 = "안구운동이상";
 } else {
-  var Eva_result3 = "";
   var Eva_result1 = "";
 }
+
+if (DEM_RATIO_PER <= 15 || DEM_RATIO_PER === '<1') {
+  if (QOL_sum >= 20){
+    var Eva_result3 = "안구운동이상";
+  }
+} else {
+  var Eva_result3 = "";
+}
+
+
 
 //  elseif ($DVertical >=1 || $NVertical >=1) {
 //   if (($DVertical_BD1 <= 3) || ($DVertical_BD3 <= 3) || ($DVertical_BU1 <= 3) || ($DVertical_BU3 <= 3) || ($NVertical_BD1 <= 3) || ($NVertical_BD3 <= 3) || ($NVertical_BU1 <= 3) || ($NVertical_BU3 <= 3)  ){
@@ -177,7 +187,7 @@ if(RAccom_Rev !== "" || LAccom_Rev !== "" || OUAccom_Rev !== "" || R_accom !==""
 
 
 if (Eva_result1 !== "" || Eva_result2 !== ""  || Eva_result3 !== "" ){
-  document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result1+" "+Eva_result2+" "+Eva_result3+'</span>'+"입니다.<br>\n <br>\n");
+  document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result1+" "+Eva_result2+" "+'</span>'+"입니다.<br>\n <br>\n");
   if (Eva_result1 === "눈모임부족") {
     var EVA_TEST_1 = "안구협응기술과 융합력 ";
     document.write('<span style="font-weight: bold; color: red;">'+"눈모임부족"+'</span>'+"의 경우 버전스이상 중에서 가장 흔한 이상으로 조절이상과 버전스이상이 있는 어린이의 약30%에서 나타나고 있습니다.<br>\n");
@@ -393,7 +403,7 @@ if ((WACS_RAW_T1 === "평가하지 않음") || (WACS_RAW_T2 === "평가하지 �
 
 
 // △,sph 보정값
-if (CTest_D == "exo" || CTest_D == "eso" || CTest_N == "exo" || CTest_N == "eso"){
+if (CTest_D == "exo" || CTest_D == "eso" || CTest_N == "exo" || CTest_N == "eso" || D_BIBO !== "" || N_BIBO !== "" ){
  if (D_BIBO == 'BI') {
  if (N_BIBO == 'BI') {
  var ACA = ((PD/10)+((-Nectopic)-(-Dectopic))/2.5);

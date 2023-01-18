@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>양안시기능평가</title>
+    <script type="text/javascript" src="../js/Evolution_getdata.js"></script>
+    <style media="screen">
+      /* ====== Evaluation =======*/
+
+.object{
+  width: 500;
+  height: 60;
+  background-color: #4682b4;
+  color: #ffffff;
+  font-size: 18px;
+  border: 1px solid rgb(6,30,115);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.object-title {
+  font-weight:bold;
+  font-size: 30;
+  text-align: center;
+}
+
+.Evaluation_bg {
+  border:5px;
+  border-radius: 10px 10px 10px 10px;
+  background-color:#d2d2d2;
+}
+
+.Evaluation_title{
+  height: 35px;
+  text-align: center;
+  background-color: #616161;
+  color:white;
+  font-size: 14px;
+  border: 2px solid black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.Evaluation_item{
+  height: 35px;
+  text-align: center;
+  background-color: rgb(190,204,232);
+  color: rgb(28,55,109);
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.Evaluation_result{
+  text-align: left;
+  font-size: 12px;
+  background-color: white;
+  border: 2px solid #d2d2d2;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-left: 15px;
+}
+
+.Evaluation_button{
+  text-align: center;
+  font-size: 10px;
+  top:1px;
+  left:1px;
+  right: 0.5px;
+  bottom: 0.5px;
+  padding: 0.2em 0.1em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+}
+
+.Evaluation_reference{
+  text-align: center;
+  font-size: 10px;
+  background-color: rgb(241,253,200);
+  border: 1px solid #d2d2d2;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.Evaluation_input{
+  text-align: center;
+  font-size: 10px;
+  top:1px;
+  left:1px;
+  right: 0.5px;
+  bottom: 0.5px;
+  padding: 0.2em 0.1em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.Evaluation_sel{
+  text-align: center;
+  height: 20px;
+  font-size: 10px;
+  border: 2px solid black;
+  padding: 0.2em 0.1em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.Evaluation_analy{
+  height: 30px;
+  text-align: center;
+  font-size: 12px;
+  background-color: rgb(219,254,250);
+  border: 1px solid #d2d2d2;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td height="30">&nbsp;</td>
+      </tr>
+      <tr class="Test_object object_Evalution_bg_color">
+        <td>
+          <table id="prt_Evollution">
+            <tr>
+              <td>
+                <table>
+                  <tr >
+                    <td width="300">&nbsp;</td>
+                    <td class="object object-title" width="500" height="50" >양안시기능평가</td>
+                    <td width="300">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td height="10">&nbsp;</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td name="본문삽입구간">
+                <table name="Evaluation_bg" width="1195">
+                  <tr>
+                    <td width="200" class="Evaluation_title" height="35">평가항목</td>
+                    <td width="550" class="Evaluation_title">평가결과</td>
+                    <td width="150" class="Evaluation_title">기대값(이상값)</td>
+                    <td width="100" class="Evaluation_title">결과분석</td>
+                  </tr>
+                  <tr>
+                    <td class="Evaluation_item">우위안</td>
+                    <td id="MainEye" name="MainEye" class="Evaluation_result" ></td>
+                    <td class="Evaluation_reference">우세하게 작용하는 눈</td>
+                    <td class="Evaluation_analy">
+                      <div id="result_MainEye" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="Evaluation_item">동공간거리</td>
+                    <td class="Evaluation_result" id="PD"></td>
+                    <td class="Evaluation_reference">동공중심간 거리</td>
+                    <td class="Evaluation_analy">
+                      <div id="result_PD" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2" class="Evaluation_item" id="sel_glass1"></td>
+                    <td class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td width="50">원거리 </td>
+                          <td class="TD_Form"> OD : </td>
+                          <td id="RDVision" ></td>
+                          <td class="Sell_Unit">/</td>
+                          <td class="TD_Form"> OS : </td>
+                          <td id="LDVision"></td>
+                          <td class="Sell_Unit">/</td>
+                          <td class="TD_Form"> OU : </td>
+                          <td id="OUDVision"></td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="Evaluation_reference">1.0(0.9)</td>
+                    <td class="Evaluation_analy" name="result_Vision">
+                      <div id="result_DVision" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td width="50">근거리 </td>
+                          <td class="TD_Form"> OD : </td>
+                          <td id="RNVision"></td>
+                          <td class="Sell_Unit">/</td>
+                          <td class="TD_Form"> OS : </td>
+                          <td id="LNVision"></td>
+                          <td class="Sell_Unit">/</td>
+                          <td class="TD_Form"> OU : </td>
+                          <td id="OUNVision"></td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="Evaluation_reference">1.0(0.9)</td>
+                    <td class="Evaluation_analy" id="result_NVision"></td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2" class="Evaluation_item">새로운 굴절력</td>
+                    <td class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td width="50">OD : </td>
+                          <td> Sph </td>
+                          <td id="TxtRSph">D</td>
+                          <td class="Sell_Unit">/</td>
+                          <td> Cyl </td>
+                          <td id="TxtRCyl">D</td>
+                          <td class="Sell_Unit">/</td>
+                          <td> Axis </td>
+                          <td id="TxtRAxis">°</td>
+                          <td class="Sell_Unit">/</td>
+                          <td> 가입도 </td>
+                          <td id="TxtRAdd"></td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="Evaluation_reference"></td>
+                    <td class="Evaluation_analy" name="result_RDiop"></td>
+                  </tr>
+                  <tr>
+                    <td class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td width="50">OS : </td>
+                          <td> Sph </td>
+                          <td id="TxtRSph">D</td>
+                          <td class="Sell_Unit">/</td>
+                          <td> Cyl </td>
+                          <td id="TxtRCyl">D</td>
+                          <td class="Sell_Unit">/</td>
+                          <td> Axis </td>
+                          <td id="TxtRAxis">°</td>
+                          <td class="Sell_Unit">/</td>
+                          <td> 가입도 </td>
+                          <td id="TxtRAdd"></td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="Evaluation_reference"></td>
+                    <td class="Evaluation_analy" name="result_RDiop"></td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2" class="Evaluation_item">새굴절력 교정시력</td>
+                    <td class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td width="50">원거리 </td>
+                          <td class="TD_Form"> OD : </td>
+                          <td id="RDVision_new"></td>
+                          <td class="Sell_Unit">/</td>
+                          <td class="TD_Form"> OS : </td>
+                          <td id="LDVision_new"></td>
+                          <td class="Sell_Unit">/</td>
+                          <td class="TD_Form"> OU : </td>
+                          <td id="OUDVision_new"></td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="Evaluation_reference">1.0(0.9)</td>
+                    <td class="Evaluation_analy" name="result_Vision">
+                      <div id="result_DVision_new" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td width="50">근거리 </td>
+                          <td class="TD_Form"> OD : </td>
+                          <td id="RNVision_new"></td>
+                          <td class="Sell_Unit">/</td>
+                          <td class="TD_Form"> OS : </td>
+                          <td id="LNVision_new"></td>
+                          <td class="Sell_Unit">/</td>
+                          <td class="TD_Form"> OU : </td>
+                          <td id="OUNVision_new"></td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="Evaluation_reference">1.0(0.9)</td>
+                    <td class="Evaluation_analy" id="result_NVision_new"></td>
+                  </tr>
+                  <tr class="EvaItem_result">
+                    <td class="Evaluation_item">균형검사</td>
+                    <td class="Evaluation_result" id="Balance" >  </td>
+                    <td class="Evaluation_reference">균형(불균형)</td>
+                    <td class="Evaluation_analy">
+                      <div id="result_Balance" />
+                    </td>
+                  </tr>
+                  <tr class="EvaItem_result">
+                    <td class="Evaluation_item">W4D</td>
+                    <td class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td> 원거리 : </td>
+                          <td id="D_W4D"></td>
+                          <td class="Sell_Unit" width"20">/</td>
+                          <td> 근거리 :</td>
+                          <td id="N_W4D"></td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="Evaluation_reference">4개</td>
+                    <td class="Evaluation_analy">
+                      <table>
+                        <tr>
+                          <td width="45">
+                            <div id="result_D_W4D" />
+                          </td>
+                          <td width="10">/</td>
+                          <td width="45">
+                            <div id="result_N_W4D" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr class="EvaItem_result">
+                    <td class="Evaluation_item">차폐평가</td>
+                    <td class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td> 원거리 : </td>
+                          <td id="CTest_D"></td>
+                          <td class="Sell_Unit" width"20">/</td>
+                          <td> 근거리 : </td>
+                          <td id="CTest_N"></td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="Evaluation_reference">정위</td>
+                    <td class="Evaluation_analy">
+                      <table>
+                        <tr>
+                          <td width="45">
+                            <div id="result_CTestD" />
+                          </td>
+                          <td width="10">/</td>
+                          <td width="45">
+                            <div id="result_CTestN" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="Evaluation_item">조절근점</td>
+                    <td class="Evaluation_result">
+                      <table>
+                          <tr>
+                            <td class="TD_Form"> OD : </td>
+                            <td id="R_accom"></td>
+                            <td class="Sell_Unit" width"20">/</td>
+                            <td class="TD_Form"> OS : </td>
+                            <td id="L_accom"></td>
+                            <td class="Sell_Unit" width"20">/</td>
+                            <td class="TD_Form"> OU : </td>
+                            <td id="O_accom"></td>
+                          </tr>
+                      </table>
+                    </td>
+                    <td class="Evaluation_reference">
+                      <div id="accom_stand"></div>
+                    </td>
+                    <td class="Evaluation_analy" id="result_accom"></td>
+                  </tr>
+                  <tr>
+                    <td class="Evaluation_item">조절용이</td>
+                    <td class="Evaluation_result">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="TD_Form"> OD : </td>
+                            <td id="RAccom_Rev"></td>
+                            <td class="Sell_Unit" width"20">/</td>
+                            <td class="TD_Form"> OS : </td>
+                            <td id="LAccom_Rev"></td>
+                            <td class="Sell_Unit" width"20">/</td>
+                            <td class="TD_Form"> OU : </td>
+                            <td id="OUAccom_Rev"></td>
+                            <td class="Sell_Unit" width"20">/</td>
+                            <td class="TD_Form"> 지체여부 : </td>
+                            <td id="Sel_AccomRev"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                    <td width="150" class="Evaluation_reference" id="AccomRev"></td>
+                    <td width="100" class="Evaluation_analy">
+                      <table>
+                        <tr>
+                          <td width="45">
+                            <div id="result_AccomRev" />
+                          </td>
+                          <td width="10">/</td>
+                          <td width="45">
+                            <div id="result_Sel_AccomRev" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="200" class="Evaluation_item">눈모임근점</td>
+                    <td width="550" class="Evaluation_result" id="NVer"></td>
+                    <td width="150" class="Evaluation_reference">≤5(≥6)</td>
+                    <td width="100" class="Evaluation_analy" id="result_NVer"></td>
+                  </tr>
+                  <tr class="EvaItem_result">
+                    <td width="200" class="Evaluation_item">따라보기</td>
+                    <td width="550" class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td> 안구움직임 : </td>
+                          <td id="bro_eye_movement"></td>
+                          <td class="Sell_Unit" width"20">&nbsp;</td>
+                          <td> 머리돌림/기울임 : </td>
+                          <td id="bro_head_turn" ></td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td width="150" class="Evaluation_reference">Smooth&Full</td>
+                    <td width="100" class="Evaluation_analy">
+                      <table>
+                        <tr>
+                          <td width="45">
+                            <div id="result_bro_eye_movement" />
+                          </td>
+                          <td width="10">/</td>
+                          <td width="45">
+                            <div id="result_bro_head_turn" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr class="EvaItem_result">
+                    <td width="200" class="Evaluation_item">홱보기</td>
+                    <td width="550" class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td> 안구움직임 : </td>
+                          <td id="sacca_eye_movement"></td>
+                          <td class="Sell_Unit" width"20">&nbsp;</td>
+                          <td> 머리돌림/기울임 : </td>
+                          <td id="sacca_head_turn"></td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td width="150" class="Evaluation_reference">Smooth&Full</td>
+                    <td width="100" class="Evaluation_analy">
+                      <table>
+                        <tr>
+                          <td width="45">
+                            <div id="result_sacca_eye_movement" />
+                          </td>
+                          <td width="10">/</td>
+                          <td width="45">
+                            <div id="result_sacca_head_turn" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr class="EvaItem_result">
+                    <td width="200" class="Evaluation_item">입체시</td>
+                    <td width="550" class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td>원거리 : </td>
+                          <td id="DStereo"></td>
+                          <td class="Sell_Unit" width"20">/</td>
+                          <td>근거리 : </td>
+                          <td id="NStereo"></td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td width="150" class="Evaluation_reference">≤40</td>
+                    <td width="100" class="Evaluation_analy">
+                      <table>
+                        <tr>
+                          <td width="45">
+                            <div id="result_DStereo" />
+                          </td>
+                          <td width="10">/</td>
+                          <td width="45">
+                            <div id="result_NStereo" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr class="EvaItem_result">
+                    <td width="200" class="Evaluation_item">동공반응</td>
+                    <td width="550" class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td>축동반응 : </td>
+                          <td id="Pupilreflex"></td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td width="150" class="Evaluation_reference">양호</td>
+                    <td width="100" class="Evaluation_analy" id="result_Pflex"></td>
+                  </tr>
+                  <tr class="EvaItem_result">
+                    <td width="200" class="Evaluation_item">원/근거리 수평안위</td>
+                    <td width="550" class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td>평가도구 : </td>
+                          <td id="horEVA_tool"></td>
+                          <td class="Sell_Unit" width"5">&nbsp;</td>
+                          <td>원거리:</td>
+                          <td id="Dectopic"></td>
+                          <td id="D_BIBO"></td>
+                          <td class="Sell_Unit" width"5">&nbsp;</td>
+                          <td>근거리:</td>
+                          <td id="Nectopic"></td>
+                          <td id="N_BIBO"></td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td width="150" class="Evaluation_reference">원거리 1BO~3BI <br>근거리 0~6BI</td>
+                    <td width="100" class="Evaluation_analy">
+                      <table>
+                        <tr>
+                          <td width="45">
+                            <div id="result_Dectopic" />
+                          </td>
+                          <td width="10">/</td>
+                          <td width="45">
+                            <div id="result_Nectopic" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr class="EvaItem_result">
+                    <td width="200" class="Evaluation_item">원거리 양성(음성)융합력</td>
+                    <td width="550" class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td>평가도구 : </td>
+                          <td id="DVer_tool"></td>
+                          <td class="Sell_Unit" width"5">&nbsp;</td>
+                          <td>
+                            <table>
+                              <tr>
+                                <td id="DConver1"></td>
+                                <td class="Sell_Unit" width"5">/</td>
+                                <td id="DConver2"></td>
+                                <td class="Sell_Unit" width"5">/</td>
+                                <td id="DConver3"></td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td class="Sell_Unit" width"5">(</td>
+                          <td>
+                            <table>
+                              <tr>
+                                <td id="DDever2"></td>
+                                <td class="Sell_Unit" width"5">/</td>
+                                <td id="DDever3"></td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td class="Sell_Unit" width"5">)</td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td width="150" class="Evaluation_reference">9/19/10 (≤5/11/6)<br>7/4(≤4/2)</td>
+                    <td width="100" class="Evaluation_analy">
+                      <table>
+                        <tr>
+                          <td width="45">
+                            <div id="result_DConver" />
+                          </td>
+                          <td width="45">
+                            <div id="result_DDever" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr class="EvaItem_result">
+                    <td width="200" class="Evaluation_item">근거리 양성(음성)융합력</td>
+                    <td width="550" class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td>평가도구 : </td>
+                          <td id="NVer_tool"></td>
+                          <td class="Sell_Unit" width"5">&nbsp;</td>
+                          <td>
+                            <table>
+                              <tr>
+                                <td id="NConver1"></td>
+                                <td class="Sell_Unit" width"5">/</td>
+                                <td id="NConver2"></td>
+                                <td class="Sell_Unit" width"5">/</td>
+                                <td id="NConver3"></td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td class="Sell_Unit" width"5">(</td>
+                          <td>
+                            <table>
+                              <tr>
+                                <td id="NDever1"></td>
+                                <td class="Sell_Unit" width"5">/</td>
+                                <td id="NDever2"></td>
+                                <td class="Sell_Unit" width"5">/</td>
+                                <td id="NDever3"></td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td class="Sell_Unit" width"5">)</td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td width="150" class="Evaluation_reference">17/21/11 (≤12/15/4)<br>13/21/13(9/17/8)</td>
+                    <td width="100" class="Evaluation_analy">
+                      <table>
+                        <tr>
+                          <td width="45">
+                            <div id="result_NConver" />
+                          </td>
+                          <td width="45">
+                            <div id="result_NDever" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr class="EvaItem_result">
+                    <td width="200" class="Evaluation_item">원/근거리 수직안위</td>
+                    <td width="550" class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td>평가도구 : </td>
+                          <td id="verEVA_tool"></td>
+                          <td class="Sell_Unit" width"5">&nbsp;</td>
+                          <td>원거리:</td>
+                          <td id="DVertical"></td>
+                          <td id="D_BUBD"></td>
+                          <td class="Sell_Unit" width"5">&nbsp;</td>
+                          <td>근거리:</td>
+                          <td id="NVertical"></td>
+                          <td id="N_BUBD"></td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td width="150" class="Evaluation_reference">정위</td>
+                    <td width="100" class="Evaluation_analy">
+                      <table>
+                        <tr>
+                          <td width="45">
+                            <div id="result_DVertical" />
+                          </td>
+                          <td width="10">/</td>
+                          <td width="45">
+                            <div id="result_NVertical" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr class="EvaItem_result">
+                    <td width="200" class="Evaluation_item">원거리 수직융합력</td>
+                    <td width="550" class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td>평가도구 : </td>
+                          <td id="DVertical_tool"></td>
+                          <td class="Sell_Unit" width"5">&nbsp;</td>
+                          <td class="Evaluation_input" style="width:30px">OD :</td>
+                          <td>
+                            <table>
+                              <tr>
+                                <td class="Sell_Unit" width"5">BD(</td>
+                                <td id="DVertical_BD1"></td>
+                                <td class="Sell_Unit" width"5">/</td>
+                                <td id="DVertical_BD2"></td>
+                                <td class="Sell_Unit" width"5">)</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td>
+                            <table>
+                              <tr>
+                                <td class="Sell_Unit" width"5">BU(</td>
+                                <td id="DVertical_BU1"></td>
+                                <td class="Sell_Unit" width"5">/</td>
+                                <td id="DVertical_BU2"></td>
+                                <td class="Sell_Unit" width"5">)</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td class="Sell_Unit" width"5">&nbsp;</td>
+                          <td class="Evaluation_input" style="width:30px">OS :</td>
+                          <td>
+                            <table>
+                              <tr>
+                                <td class="Sell_Unit" width"5">BD(</td>
+                                <td id="DVertical_BD3"></td>
+                                <td class="Sell_Unit" width"5">/</td>
+                                <td id="DVertical_BD4"></td>
+                                <td class="Sell_Unit" width"5">)</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td>
+                            <table>
+                              <tr>
+                                <td class="Sell_Unit" width"5">BU(</td>
+                                <td id="DVertical_BU3"></td>
+                                <td class="Sell_Unit" width"5">/</td>
+                                <td id="DVertical_BU4"></td>
+                                <td class="Sell_Unit" width"5">)</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td width="150" class="Evaluation_reference">3~4 / 1.5~2</td>
+                    <td width="100" class="Evaluation_analy">
+                      <table>
+                        <tr>
+                          <td width="45">
+                            <div id="result_DVertical_OD" />
+                          </td>
+                          <td width="45">
+                            <div id="result_DVertical_OS" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr class="EvaItem_result">
+                    <td width="200" class="Evaluation_item">근거리 수직융합력</td>
+                    <td width="550" class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td>평가도구 : </td>
+                          <td id="NVertical_tool"></td>
+                          <td class="Sell_Unit" width"5">&nbsp;</td>
+                          <td class="Evaluation_input" style="width:30px">OD :</td>
+                          <td>
+                            <table>
+                              <tr>
+                                <td class="Sell_Unit" width"5">BD(</td>
+                                <td id="NVertical_BD1"></td>
+                                <td class="Sell_Unit" width"5">/</td>
+                                <td id="NVertical_BD2"></td>
+                                <td class="Sell_Unit" width"5">)</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td>
+                            <table>
+                              <tr>
+                                <td class="Sell_Unit" width"5">BU(</td>
+                                <td id="NVertical_BU1"></td>
+                                <td class="Sell_Unit" width"5">/</td>
+                                <td id="NVertical_BU2"></td>
+                                <td class="Sell_Unit" width"5">)</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td class="Sell_Unit" width"5">&nbsp;</td>
+                          <td class="Evaluation_input" style="width:30px">OS :</td>
+                          <td>
+                            <table>
+                              <tr>
+                                <td class="Sell_Unit" width"5">BD(</td>
+                                <td id="NVertical_BD3"></td>
+                                <td class="Sell_Unit" width"5">/</td>
+                                <td id="NVertical_BD4"></td>
+                                <td class="Sell_Unit" width"5">)</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td>
+                            <table>
+                              <tr>
+                                <td class="Sell_Unit" width"5">BU(</td>
+                                <td id="NVertical_BU3"></td>
+                                <td class="Sell_Unit" width"5">/</td>
+                                <td id="NVertical_BU4"></td>
+                                <td class="Sell_Unit" width"5">)</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td width="150" class="Evaluation_reference">3~4 / 1.5~2</td>
+                    <td width="100" class="Evaluation_analy">
+                      <table>
+                        <tr>
+                          <td width="45">
+                            <div id="result_NVertical_OD" />
+                          </td>
+                          <td width="45">
+                            <div id="result_NVertical_OS" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr class="EvaItem_result">
+                    <td width="200" class="Evaluation_item">버젼스용이</td>
+                    <td width="550" class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td id="VerRev"></td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td width="150" class="Evaluation_reference">≥15cpm</td>
+                    <td width="100" class="Evaluation_analy" id="result_VerRev"></td>
+                  </tr>
+                  <tr class="EvaItem_result">
+                    <td width="200" class="Evaluation_item">Maddox 원거리</td>
+                    <td width="550" class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td id="D_agree"></td>
+                          <td class="Sell_Unit" width"5">&nbsp;</td>
+                          <td>(수평:</td>
+                          <td id="DHor_maddox"></td>
+                          <td>&nbsp;</td>
+                          <td id="DHor_BIBO"></td>
+                          <td>,</td>
+                          <td class="Sell_Unit" width"5">&nbsp;</td>
+                          <td>수직:</td>
+                          <td id="DVer_maddox"></td>
+                          <td id="DVer_BIBO"></td>
+                          <td>)</td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td width="150" class="Evaluation_reference">일치(불일치)</td>
+                    <td width="100" class="Evaluation_analy">
+                      <table>
+                        <tr>
+                          <td width="100px">
+                            <div id="result_DMaddox" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr class="EvaItem_result">
+                    <td width="200" class="Evaluation_item">Maddox 근거리</td>
+                    <td width="550" class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td id="N_agree"></td>
+                          <td class="Sell_Unit" width"5">&nbsp;</td>
+                          <td>(수평:</td>
+                          <td id="NHor_maddox"></td>
+                          <td>&nbsp;</td>
+                          <td id="NHor_BIBO"></td>
+                          <td>,</td>
+                          <td class="Sell_Unit" width"5">&nbsp;</td>
+                          <td>수직:</td>
+                          <td id="NVer_maddox"></td>
+                          <td id="NVer_BIBO"></td>
+                          <td>)</td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td width="150" class="Evaluation_reference">일치(불일치)</td>
+                    <td width="100" class="Evaluation_analy">
+                      <table>
+                        <tr>
+                          <td width="100px">
+                            <div id="result_NMaddox" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr class="EvaItem_result">
+                    <td width="200" class="Evaluation_item">황반부통합검사(M.I.T)</td>
+                    <td width="550" class="Evaluation_result">
+                      <table>
+                        <tr>
+                          <td id="MIT" ></td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td width="150" class="Evaluation_reference">중심주시</td>
+                    <td width="100" class="Evaluation_analy" id="result_MIT"></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="startPrint('prt_Evollution');">양안시기능평가 인쇄하기</button>
+                    </td>
+                  </tr>
+                </table>
+                <script type="text/javascript">
+
+
+                  // 우위안
+                  if (MainEye == "right"){
+                    var CH_Maineye = "오른쪽 눈";
+                  } else if (MainEye == "left"){
+                    var CH_Maineye = "왼쪽 눈";
+                  } else {
+                    var CH_Maineye = "평가하지 않음";
+                  }
+                  document.getElementById('MainEye').innerHTML = CH_Maineye;
+
+                  // 동공간거리
+                  document.getElementById('PD').innerHTML = PD+"mm";
+                  document.getElementById("result_PD").innerText = PD+"mm";
+
+
+                  // 원거리 나안/교정시력
+
+                  document.getElementById('sel_glass1').innerHTML = sel_glass1+"시력";
+                  document.getElementById('RDVision').innerHTML = RDVision;
+                  document.getElementById('LDVision').innerHTML = LDVision;
+                  document.getElementById('OUDVision').innerHTML = OUDVision;
+
+                    if (RDVision < 0.7 || LDVision < 0.7 || OUDVision < 0.7) {
+                      document.getElementById('result_DVision').innerText = "불량";
+                    } else if (RDVision >= 1.0 && LDVision >= 1.0 && OUDVision >= 1.0) {
+                      document.getElementById('result_DVision').innerText = "양호";
+                    } else {
+                      document.getElementById('result_DVision').innerText = "정기관찰요망";
+                    }
+
+
+                  // 근거리 나안/교정시력
+                  document.getElementById('RNVision').innerHTML = RNVision;
+                  document.getElementById('LNVision').innerHTML = LNVision;
+                  document.getElementById('OUNVision').innerHTML = OUNVision;
+
+                    if (RNVision < 0.7 || LNVision < 0.7 || OUNVision < 0.7) {
+                      document.getElementById('result_NVision').innerText = "불량";
+                    } else if (RNVision >= 1.0 && LNVision >= 1.0 && OUNVision >= 1.0) {
+                      document.getElementById('result_NVision').innerText = "양호";
+                    } else {
+                      document.getElementById('result_NVision').innerText = "정기관찰요망";
+                    }
+
+
+                  // 원거리교정시력_새로운굴절력
+                    document.getElementById('RDVision_new').innerHTML = RDVision_new;
+                    document.getElementById('LDVision_new').innerHTML = LDVision_new;
+                    document.getElementById('OUDVision_new').innerHTML = OUDVision_new;
+                    if (RDVision_new < 0.7 || LDVision_new < 0.7 || OUDVision_new < 0.7) {
+                      document.getElementById('result_DVision_new').innerText = "불량";
+                    } else if (RDVision_new >= 1.0 && LDVision_new >= 1.0 && OUDVision_new >= 1.0) {
+                      document.getElementById('result_DVision_new').innerText = "양호";
+                    } else {
+                      document.getElementById('result_DVision_new').innerText = "정기관찰요망";
+                    }
+
+
+                  // 근거리교정시력_새로운굴절력
+                    document.getElementById('RNVision_new').innerHTML = RNVision_new;
+                    document.getElementById('LNVision_new').innerHTML = LNVision_new;
+                    document.getElementById('OUNVision_new').innerHTML = OUNVision_new;
+                    if (RNVision_new < 0.7 || LNVision_new < 0.7 || OUNVision_new < 0.7) {
+                      document.getElementById('result_NVision_new').innerText = "불량";
+                    } else if (RNVision_new >= 1.0 && LNVision_new >= 1.0 && OUNVision_new >= 1.0) {
+                      document.getElementById('result_NVision_new').innerText = "양호";
+                    } else {
+                      document.getElementById('result_NVision_new').innerText = "정기관찰요망";
+                    }
+
+
+                  //균형검사
+
+                    if (Balance == "good") {
+                      document.getElementById('Balance').innerHTML = "균형";
+                      document.getElementById('result_Balance').innerText = "양호";
+                    } else if (Balance == "bad") {
+                      document.getElementById('Balance').innerHTML = "불균형";
+                      document.getElementById('result_Balance').innerText = "불량";
+                    } else if (Balance == "none") {
+                      document.getElementById('result_Balance').innerText = "평가하지않음";
+                    }
+
+
+                  // W4D 원거리
+                    if (D_W4D == "4") {
+                      document.getElementById('D_W4D').innerText = "4개";
+                      document.getElementById('result_D_W4D').innerText = "양호";
+                    } else if (D_W4D == "3") {
+                      document.getElementById('D_W4D').innerText = "3개";
+                      document.getElementById('result_D_W4D').innerText = "불량";
+                    } else if (D_W4D == "2") {
+                      document.getElementById('D_W4D').innerText = "2개";
+                      document.getElementById('result_D_W4D').innerText = "불량";
+                    } else if (D_W4D == "51") {
+                      document.getElementById('D_W4D').innerText = "5개이상(교차성)";
+                      document.getElementById('result_D_W4D').innerText = "불량";
+                    } else if (D_W4D == "52") {
+                      document.getElementById('D_W4D').innerText = "5개이상(동측성)";
+                      document.getElementById('result_D_W4D').innerText = "불량";
+                    } else if (D_W4D == "53") {
+                      document.getElementById('D_W4D').innerText = "5개이상(수직성)";
+                      document.getElementById('result_D_W4D').innerText = "불량";
+                    } else if (D_W4D == "54") {
+                      document.getElementById('D_W4D').innerText = "5개이상(교차성), 수직동반";
+                      document.getElementById('result_D_W4D').innerText = "불량";
+                    } else if (D_W4D == "55") {
+                      document.getElementById('D_W4D').innerText = "5개이상(동측성), 수직동반";
+                      document.getElementById('result_D_W4D').innerText = "불량";
+                    } else if (D_W4D == "none") {
+                      document.getElementById('D_W4D').innerText = "평가하지않음";
+                      document.getElementById('result_D_W4D').innerText = "평가하지않음";
+                    }
+
+
+                  // W4D 근거리
+                  if (N_W4D == "4") {
+                    document.getElementById('N_W4D').innerText = "4개";
+                    document.getElementById('result_N_W4D').innerText = "양호";
+                  } else if (N_W4D == "3") {
+                    document.getElementById('N_W4D').innerText = "3개";
+                    document.getElementById('result_N_W4D').innerText = "불량";
+                  } else if (N_W4D == "2") {
+                    document.getElementById('N_W4D').innerText = "2개";
+                    document.getElementById('result_N_W4D').innerText = "불량";
+                  } else if (N_W4D == "51") {
+                    document.getElementById('N_W4D').innerText = "5개이상(교차성)";
+                    document.getElementById('result_N_W4D').innerText = "불량";
+                  } else if (N_W4D == "52") {
+                    document.getElementById('N_W4D').innerText = "5개이상(동측성)";
+                    document.getElementById('result_N_W4D').innerText = "불량";
+                  } else if (N_W4D == "53") {
+                    document.getElementById('N_W4D').innerText = "5개이상(수직성)";
+                    document.getElementById('result_N_W4D').innerText = "불량";
+                  } else if (N_W4D == "54") {
+                    document.getElementById('N_W4D').innerText = "5개이상(교차성), 수직동반";
+                    document.getElementById('result_N_W4D').innerText = "불량";
+                  } else if (N_W4D == "55") {
+                    document.getElementById('N_W4D').innerText = "5개이상(동측성), 수직동반";
+                    document.getElementById('result_N_W4D').innerText = "불량";
+                  } else if (N_W4D == "none") {
+                    document.getElementById('N_W4D').innerText = "평가하지않음";
+                    document.getElementById('result_N_W4D').innerText = "평가하지않음";
+                  }
+
+                  // 차폐평가-원거리
+                    if (CTest_D == 'good') {
+                      document.getElementById('CTest_D').innerText = "정위";
+                      document.getElementById('result_CTestD').innerText = "양호";
+                    } else if (CTest_D == 'exo') {
+                      document.getElementById('CTest_D').innerText = "exo";
+                      document.getElementById('result_CTestD').innerText = "불량";
+                    } else if (CTest_D == 'eso') {
+                      document.getElementById('CTest_D').innerText = "eso";
+                      document.getElementById('result_CTestD').innerText = "불량";
+                    } else if (CTest_D == 'XT') {
+                      document.getElementById('CTest_D').innerText = "XT";
+                      document.getElementById('result_CTestD').innerText = "불량";
+                    } else if (CTest_D == 'ET') {
+                      document.getElementById('CTest_D').innerText = "ET";
+                      document.getElementById('result_CTestD').innerText = "불량";
+                    }
+
+
+                  // 차폐평가-근거리
+                  if (CTest_N == 'good') {
+                    document.getElementById('CTest_N').innerText = "정위";
+                    document.getElementById('result_CTestN').innerText = "양호";
+                  } else if (CTest_N == 'exo') {
+                    document.getElementById('CTest_N').innerText = "exo";
+                    document.getElementById('result_CTestN').innerText = "불량";
+                  } else if (CTest_N == 'eso') {
+                    document.getElementById('CTest_N').innerText = "eso";
+                    document.getElementById('result_CTestN').innerText = "불량";
+                  } else if (CTest_N == 'XT') {
+                    document.getElementById('CTest_N').innerText = "XT";
+                    document.getElementById('result_CTestN').innerText = "불량";
+                  } else if (CTest_N == 'ET') {
+                    document.getElementById('CTest_N').innerText = "ET";
+                    document.getElementById('result_CTestN').innerText = "불량";
+                  }
+
+
+                  // 조절근점
+
+                    var Accomage = 15 - (0.25 * ChAge);
+                    document.getElementById('R_accom').innerHTML = R_accom+"D";
+                    document.getElementById('L_accom').innerHTML = L_accom+"D";
+                    document.getElementById('O_accom').innerHTML = O_accom+"D";
+                    if (R_accom < Accomage - 2) {
+                      document.getElementById('result_accom').innerText = "불량";
+                    } else {
+                      document.getElementById('result_accom').innerText = "양호";
+                      if (L_accom < Accomage - 2) {
+                        document.getElementById('result_accom').innerText = "불량";
+                      } else {
+                        document.getElementById('result_accom').innerText = "양호";
+                        if (O_accom < Accomage - 2) {
+                          document.getElementById('result_accom').innerText = "불량";
+                        } else {
+                          document.getElementById('result_accom').innerText = "양호";
+                        }
+                      }
+                    }
+
+
+                  // 조절용이
+                    document.getElementById('RAccom_Rev').innerHTML = RAccom_Rev+"cpm";
+                    document.getElementById('LAccom_Rev').innerHTML = LAccom_Rev+"cpm";
+                    document.getElementById('OUAccom_Rev').innerHTML = OUAccom_Rev+"cpm";
+                    if (ChAge <= 6) {
+                      if (RAccom_Rev <= 3) {
+                        document.getElementById('result_AccomRev').innerText = "불량";
+                      } else {
+                        document.getElementById('result_AccomRev').innerText = "양호";
+                        if (LAccom_Rev <= 3) {
+                          document.getElementById('result_AccomRev').innerText = "불량";
+                        } else {
+                          document.getElementById('result_AccomRev').innerText = "양호";
+                          if (OUAccom_Rev < 0.5) {
+                            document.getElementById('result_AccomRev').innerText = "불량";
+                          } else {
+                            document.getElementById('result_AccomRev').innerText = "양호";
+                          }
+                        }
+                      }
+                    }
+                    if (ChAge > 6 && ChAge <= 7) {
+                      if (RAccom_Rev <= 4.5) {
+                        document.getElementById('result_AccomRev').innerText = "불량";
+                      } else {
+                        document.getElementById('result_AccomRev').innerText = "양호";
+                        if (LAccom_Rev <= 4.5) {
+                          document.getElementById('result_AccomRev').innerText = "불량";
+                        } else {
+                          document.getElementById('result_AccomRev').innerText = "양호";
+                          if (OUAccom_Rev < 1) {
+                            document.getElementById('result_AccomRev').innerText = "불량";
+                          } else {
+                            document.getElementById('result_AccomRev').innerText = "양호";
+                          }
+                        }
+                      }
+                    }
+                    if (ChAge > 7 && ChAge <= 12) {
+                      if (RAccom_Rev <= 4.5) {
+                        document.getElementById('result_AccomRev').innerText = "불량";
+                      } else {
+                        document.getElementById('result_AccomRev').innerText = "양호";
+                        if (LAccom_Rev <= 4.5) {
+                          document.getElementById('result_AccomRev').innerText = "불량";
+                        } else {
+                          document.getElementById('result_AccomRev').innerText = "양호";
+                          if (OUAccom_Rev < 2.5) {
+                            document.getElementById('result_AccomRev').innerText = "불량";
+                          } else {
+                            document.getElementById('result_AccomRev').innerText = "양호";
+                          }
+                        }
+                      }
+                    }
+                    if (ChAge > 12 && ChAge <= 38) {
+                      if (RAccom_Rev <= 6) {
+                        document.getElementById('result_AccomRev').innerText = "불량";
+                      } else {
+                        document.getElementById('result_AccomRev').innerText = "양호";
+                        if (LAccom_Rev <= 6) {
+                          document.getElementById('result_AccomRev').innerText = "불량";
+                        } else {
+                          document.getElementById('result_AccomRev').innerText = "양호";
+                          if (OUAccom_Rev < 2.5) {
+                            document.getElementById('result_AccomRev').innerText = "불량";
+                          } else {
+                            document.getElementById('result_AccomRev').innerText = "양호";
+                          }
+                        }
+                      }
+                    }
+
+
+                  // 조절용이 지체
+
+                    if (Sel_AccomRev == 'bad1') {
+                      document.getElementById('Sel_AccomRev').innerHTML = "(+)지체";
+                      document.getElementById('result_Sel_AccomRev').innerText = "(+)지체";
+                    } else if (Sel_AccomRev == 'bad2') {
+                      document.getElementById('Sel_AccomRev').innerHTML = "(-)지체";
+                      document.getElementById('result_Sel_AccomRev').innerText = "(-)지체";
+                    } else if (Sel_AccomRev == 'bad3') {
+                      document.getElementById('Sel_AccomRev').innerHTML = "(+,-)모두 지체";
+                      document.getElementById('result_Sel_AccomRev').innerText = "(+,-)모두 지체";
+                    } else if (Sel_AccomRev == 'good') {
+                      document.getElementById('Sel_AccomRev').innerHTML = "속도양호";
+                      document.getElementById('result_Sel_AccomRev').innerText = "속도양호";
+                    }
+
+
+
+                  // 눈모임근점
+                    document.getElementById('NVer').innerHTML = NVer+"cm";
+                    if (NVer < 6) {
+                      document.getElementById('result_NVer').innerText = "양호";
+                    } else {
+                      document.getElementById('result_NVer').innerText = "불량";
+                    }
+
+
+                  // 따라보기 _ 안구움직임
+
+                    if (bro_eye_movement == 'good') {
+                      document.getElementById('bro_eye_movement').innerHTML = "Smooth&Full";
+                      document.getElementById('result_bro_eye_movement').innerText = "양호";
+                    } else if (bro_eye_movement == 'jurky') {
+                      document.getElementById('bro_eye_movement').innerHTML = "격동움직임";
+                      document.getElementById('result_bro_eye_movement').innerText = "불량";
+                    } else if (bro_eye_movement == 'overshoot') {
+                      document.getElementById('bro_eye_movement').innerHTML = "과다한 움직임";
+                      document.getElementById('result_bro_eye_movement').innerText = "불량";
+                    } else if (bro_eye_movement == 'undershoot') {
+                      document.getElementById('bro_eye_movement').innerHTML = "저조한 움직임";
+                      document.getElementById('result_bro_eye_movement').innerText = "불량";
+                    } else if (bro_eye_movement == 'nystagmus') {
+                      document.getElementById('bro_eye_movement').innerHTML = "안구진탕";
+                      document.getElementById('result_bro_eye_movement').innerText = "불량";
+                    } else if (bro_eye_movement == 'unsteady') {
+                      document.getElementById('bro_eye_movement').innerHTML = "주시불안";
+                      document.getElementById('result_bro_eye_movement').innerText = "불량";
+                    }
+
+                    // 따라보기 _ 머리움직임
+
+                      if (bro_head_turn == 'good') {
+                        document.getElementById('bro_head_turn').innerHTML = "머리돌림/기울임없음";
+                        document.getElementById('result_bro_head_turn').innerText = "양호";
+                      } else if (bro_head_turn == 'hr') {
+                        document.getElementById('bro_head_turn').innerHTML = "오른쪽 머리돌림";
+                        document.getElementById('result_bro_head_turn').innerText = "불량";
+                      } else if (bro_head_turn == 'hl') {
+                        document.getElementById('bro_head_turn').innerHTML = "왼쪽 머리돌림";
+                        document.getElementById('result_bro_head_turn').innerText = "불량";
+                      } else if (bro_head_turn == 'htr') {
+                        document.getElementById('bro_head_turn').innerHTML = "오른쪽 기울임";
+                        document.getElementById('result_bro_head_turn').innerText = "불량";
+                      } else if (bro_head_turn == 'htl') {
+                        document.getElementById('bro_head_turn').innerHTML = "왼쪽 기울임";
+                        document.getElementById('result_bro_head_turn').innerText = "불량";
+                      } else if (bro_head_turn == 'hru') {
+                        document.getElementById('bro_head_turn').innerHTML = "오른쪽위 머리돌림/기울임";
+                        document.getElementById('result_bro_head_turn').innerText = "불량";
+                      } else if (bro_head_turn == 'hrd') {
+                        document.getElementById('bro_head_turn').innerHTML = "오른쪽아래 머리돌림/기울임";
+                        document.getElementById('result_bro_head_turn').innerText = "불량";
+                      } else if (bro_head_turn == 'hlu') {
+                        document.getElementById('bro_head_turn').innerHTML = "주왼쪽위 머리돌림/기울임";
+                        document.getElementById('result_bro_head_turn').innerText = "불량";
+                      } else if (bro_head_turn == 'hld') {
+                        document.getElementById('bro_head_turn').innerHTML = "왼쪽아래 머리돌림/기울임";
+                        document.getElementById('result_bro_head_turn').innerText = "불량";
+                      }
+
+
+                  // 홱보기 - 안구움직임
+                  if (sacca_eye_movement == 'good') {
+                    document.getElementById('sacca_eye_movement').innerHTML = "Smooth&Full";
+                    document.getElementById('result_sacca_eye_movement').innerText = "양호";
+                  } else if (sacca_eye_movement == 'jurky') {
+                    document.getElementById('sacca_eye_movement').innerHTML = "격동움직임";
+                    document.getElementById('result_sacca_eye_movement').innerText = "불량";
+                  } else if (sacca_eye_movement == 'overshoot') {
+                    document.getElementById('sacca_eye_movement').innerHTML = "과다한 움직임";
+                    document.getElementById('result_sacca_eye_movement').innerText = "불량";
+                  } else if (sacca_eye_movement == 'undershoot') {
+                    document.getElementById('sacca_eye_movement').innerHTML = "저조한 움직임";
+                    document.getElementById('result_sacca_eye_movement').innerText = "불량";
+                  } else if (sacca_eye_movement == 'nystagmus') {
+                    document.getElementById('sacca_eye_movement').innerHTML = "안구진탕";
+                    document.getElementById('result_sacca_eye_movement').innerText = "불량";
+                  } else if (sacca_eye_movement == 'unsteady') {
+                    document.getElementById('sacca_eye_movement').innerHTML = "주시불안";
+                    document.getElementById('result_sacca_eye_movement').innerText = "불량";
+                  }
+
+                  // 홱보기 _ 머리움직임
+
+                    if (sacca_head_turn == 'good') {
+                      document.getElementById('sacca_head_turn').innerHTML = "머리돌림/기울임없음";
+                      document.getElementById('result_sacca_head_turn').innerText = "양호";
+                    } else if (sacca_head_turn == 'hr') {
+                      document.getElementById('sacca_head_turn').innerHTML = "오른쪽 머리돌림";
+                      document.getElementById('result_sacca_head_turn').innerText = "불량";
+                    } else if (sacca_head_turn == 'hl') {
+                      document.getElementById('sacca_head_turn').innerHTML = "왼쪽 머리돌림";
+                      document.getElementById('result_sacca_head_turn').innerText = "불량";
+                    } else if (sacca_head_turn == 'htr') {
+                      document.getElementById('sacca_head_turn').innerHTML = "오른쪽 기울임";
+                      document.getElementById('result_sacca_head_turn').innerText = "불량";
+                    } else if (sacca_head_turn == 'htl') {
+                      document.getElementById('sacca_head_turn').innerHTML = "왼쪽 기울임";
+                      document.getElementById('result_sacca_head_turn').innerText = "불량";
+                    } else if (sacca_head_turn == 'hru') {
+                      document.getElementById('sacca_head_turn').innerHTML = "오른쪽위 머리돌림/기울임";
+                      document.getElementById('result_sacca_head_turn').innerText = "불량";
+                    } else if (sacca_head_turn == 'hrd') {
+                      document.getElementById('sacca_head_turn').innerHTML = "오른쪽아래 머리돌림/기울임";
+                      document.getElementById('result_sacca_head_turn').innerText = "불량";
+                    } else if (sacca_head_turn == 'hlu') {
+                      document.getElementById('sacca_head_turn').innerHTML = "주왼쪽위 머리돌림/기울임";
+                      document.getElementById('result_sacca_head_turn').innerText = "불량";
+                    } else if (sacca_head_turn == 'hld') {
+                      document.getElementById('sacca_head_turn').innerHTML = "왼쪽아래 머리돌림/기울임";
+                      document.getElementById('result_sacca_head_turn').innerText = "불량";
+                    }
+
+
+                  // 입체시-원거리
+                    if (DStereo == 'good') {
+                      document.getElementById('DStereo').innerHTML = "4방향인지가능";
+                      document.getElementById('result_DStereo').innerText = "양호";
+                    } else if (DStereo == 'bad3') {
+                      document.getElementById('DStereo').innerHTML = "3방향인지가능";
+                      document.getElementById('result_DStereo').innerText = "관찰";
+                    } else if (DStereo == 'bad2') {
+                      document.getElementById('DStereo').innerHTML = "상하인지가능";
+                      document.getElementById('result_DStereo').innerText = "관찰";
+                    } else if (DStereo == 'bad1') {
+                      document.getElementById('DStereo').innerHTML = "상하중 1개만 인지가능";
+                      document.getElementById('result_DStereo').innerText = "불량";
+                    } else if (DStereo == 'bad') {
+                      document.getElementById('DStereo').innerHTML = "인지불가";
+                      document.getElementById('result_DStereo').innerText = "불량";
+                    } else if (DStereo == 'none') {
+                      document.getElementById('DStereo').innerHTML = "평가하지않음";
+                      document.getElementById('result_DStereo').innerText = "평가하지않음";
+                    }
+
+
+                  // 입체시-근거리
+                    if (NStereo == "good1") {
+                      document.getElementById('NStereo').innerHTML = "20sec";
+                      document.getElementById('result_NStereo').innerText = "양호";
+                    } else if (NStereo == 'good2') {
+                      document.getElementById('NStereo').innerHTML = "25sec";
+                      document.getElementById('result_NStereo').innerText = "양호";
+                    } else if (NStereo == 'good3') {
+                      document.getElementById('NStereo').innerHTML = "30sec";
+                      document.getElementById('result_NStereo').innerText = "양호";
+                    } else if (NStereo == 'good4') {
+                      document.getElementById('NStereo').innerHTML = "40sec";
+                      document.getElementById('result_NStereo').innerText = "양호";
+                    } else if (NStereo == 'bad0') {
+                      document.getElementById('NStereo').innerHTML = "50sec";
+                      document.getElementById('result_NStereo').innerText = "불량";
+                    } else if (NStereo == 'bad1') {
+                      document.getElementById('NStereo').innerHTML = "60sec";
+                      document.getElementById('result_NStereo').innerText = "불량";
+                    } else if (NStereo == 'bad2') {
+                      document.getElementById('NStereo').innerHTML = "70sec";
+                      document.getElementById('result_NStereo').innerText = "불량";
+                    } else if (NStereo == 'bad3') {
+                      document.getElementById('NStereo').innerHTML = "80sec";
+                      document.getElementById('result_NStereo').innerText = "불량";
+                    } else if (NStereo == 'bad4') {
+                      document.getElementById('NStereo').innerHTML = "100sec";
+                      document.getElementById('result_NStereo').innerText = "불량";
+                    } else if (NStereo == 'bad5') {
+                      document.getElementById('NStereo').innerHTML = "140sec";
+                      document.getElementById('result_NStereo').innerText = "불량";
+                    } else if (NStereo == 'bad6') {
+                      document.getElementById('NStereo').innerHTML = "200sec";
+                      document.getElementById('result_NStereo').innerText = "불량";
+                    } else if (NStereo == 'bad7') {
+                      document.getElementById('NStereo').innerHTML = "400sec";
+                      document.getElementById('result_NStereo').innerText = "불량";
+                    } else if (NStereo == 'bad8') {
+                      document.getElementById('NStereo').innerHTML = "2800sec";
+                      document.getElementById('result_NStereo').innerText = "불량";
+                    } else if (NStereo == 'bad9') {
+                      document.getElementById('NStereo').innerHTML = "3000sec";
+                      document.getElementById('result_NStereo').innerText = "불량";
+                    } else if (NStereo == 'bad') {
+                      document.getElementById('NStereo').innerHTML = "인지불가";
+                      document.getElementById('result_NStereo').innerText = "불량";
+                    }
+
+
+                  // 동공반응
+                    if (Pupilreflex == 'prompt') {
+                      document.getElementById('Pupilreflex').innerHTML = "빛에 반응하여 수축";
+                      document.getElementById('result_Pflex').innerText = "양호";
+                    } else if (Pupilreflex == 'fixed') {
+                      document.getElementById('Pupilreflex').innerHTML = "빛에 무반응";
+                      document.getElementById('result_Pflex').innerText = "불량";
+                    } else if (Pupilreflex == 'sluggish') {
+                      document.getElementById('Pupilreflex').innerHTML = "빛에 서서히 수축";
+                      document.getElementById('result_Pflex').innerText = "불량";
+                    } else if (Pupilreflex == 'AlphaOmega') {
+                      document.getElementById('Pupilreflex').innerHTML = "알파오메가";
+                      document.getElementById('result_Pflex').innerText = "불량";
+                    }
+
+
+                  // 수평안위-원거리
+                    document.getElementById('horEVA_tool').innerHTML = horEVA_tool;
+                    document.getElementById('Dectopic').innerHTML = Dectopic;
+                    document.getElementById('D_BIBO').innerHTML = D_BIBO;
+                    if (D_BIBO == 'BI') {
+                      if (Dectopic > 3 && Dectopic <= 10) {
+                        document.getElementById('result_Dectopic').innerText = "불량";
+                      } else if (Dectopic > 10 && Dectopic <= 30) {
+                        document.getElementById('result_Dectopic').innerText = "불량";
+                      } else if (Dectopic > 30) {
+                        document.getElementById('result_Dectopic').innerText = "불량";
+                      } else {
+                        document.getElementById('result_Dectopic').innerText = "양호";
+                      }
+                    } else if (D_BIBO == 'BO') {
+                      if (Dectopic > 1 && Dectopic <= 10) {
+                        document.getElementById('result_Dectopic').innerText = "불량";
+                      } else if (Dectopic > 10 && Dectopic <= 30) {
+                        document.getElementById('result_Dectopic').innerText = "불량";
+                      } else if (Dectopic > 30) {
+                        document.getElementById('result_Dectopic').innerText = "불량";
+                      } else {
+                        document.getElementById('result_Dectopic').innerText = "양호";
+                      }
+                    }
+
+
+                  // 수평안위-근거리
+                  document.getElementById('Nectopic').innerHTML = Nectopic;
+                  document.getElementById('N_BIBO').innerHTML = N_BIBO;
+                    if (N_BIBO == 'BI') {
+                      if (Nectopic > 6 && Dectopic <= 10) {
+                        document.getElementById('result_Nectopic').innerText = "불량";
+                      } else if (Nectopic > 10 && Nectopic <= 30) {
+                        document.getElementById('result_Nectopic').innerText = "불량";
+                      } else if (Nectopic > 30) {
+                        document.getElementById('result_Nectopic').innerText = "불량";
+                      } else {
+                        document.getElementById('result_Nectopic').innerText = "양호";
+                      }
+                    } else if (N_BIBO == 'BO') {
+                      if (Nectopic > 0 && Nectopic <= 10) {
+                        document.getElementById('result_Nectopic').innerText = "불량";
+                      } else if (Nectopic > 10 && Nectopic <= 30) {
+                        document.getElementById('result_Nectopic').innerText = "불량";
+                      } else if (Nectopic > 30) {
+                        document.getElementById('result_Nectopic').innerText = "불량";
+                      } else {
+                        document.getElementById('result_Nectopic').innerText = "양호";
+                      }
+                    }
+
+
+                  // 수직안위-원거리
+
+                  document.getElementById('verEVA_tool').innerHTML = horEVA_tool;
+                  document.getElementById('DVertical').innerHTML = DVertical;
+                  document.getElementById('D_BUBD').innerHTML = D_BUBD;
+                    if (DVertical > 0) {
+                      document.getElementById('result_DVertical').innerText = "불량";
+                    } else {
+                      document.getElementById('result_DVertical').innerText = "양호";
+                    }
+
+
+                  // 수직안위-근거리
+
+                  document.getElementById('NVertical').innerHTML = NVertical;
+                  document.getElementById('N_BUBD').innerHTML = N_BUBD;
+                    if (NVertical > 0) {
+                      document.getElementById('result_NVertical').innerText = "불량";
+                    } else {
+                      document.getElementById('result_NVertical').innerText = "양호";
+                    }
+
+
+
+                  // 원거리-양성융합력
+                    document.getElementById('DVer_tool').innerHTML = DVer_tool;
+                    document.getElementById('DConver1').innerHTML = DConver1;
+                    document.getElementById('DConver2').innerHTML = DConver2;
+                    document.getElementById('DConver3').innerHTML = DConver3;
+                    if (D_BIBO == 'BI') {
+                      if (DConver2 <= 11) {
+                        document.getElementById('result_DConver').innerText = "불량";
+                      } else {
+                        if (Dectopic * 2 > DConver2) {
+                          document.getElementById('result_DConver').innerText = "불량";
+                        } else {
+                          document.getElementById('result_DConver').innerText = "양호";
+                        }
+                      }
+                    }
+
+
+                  // 원거리-음성융합력
+                  document.getElementById('DDever2').innerHTML = DDever2;
+                  document.getElementById('DDever3').innerHTML = DDever3;
+                    if (D_BIBO == 'BO') {
+                      if (DDever2 <= 4) {
+                        document.getElementById('result_DDever').innerText = "(불량)";
+                      } else {
+                        if (Dectopic * 2 > DDever2) {
+                          document.getElementById('result_DDever').innerText = "(불량)";
+                        } else {
+                          document.getElementById('result_DDever').innerText = "(양호)";
+                        }
+                      }
+                    }
+
+                  // 근거리-양성융합력
+                  document.getElementById('NVer_tool').innerHTML = NVer_tool;
+                  document.getElementById('NConver1').innerHTML = NConver1;
+                  document.getElementById('NConver2').innerHTML = NConver2;
+                  document.getElementById('NConver3').innerHTML = NConver3;
+                    if (N_BIBO == 'BI') {
+                      if (NConver2 < 15) {
+                        document.getElementById('result_NConver').innerText = "불량";
+                      } else {
+                        if (Nectopic * 2 > NConver2) {
+                          document.getElementById('result_NConver').innerText = "불량";
+                        } else {
+                          document.getElementById('result_NConver').innerText = "양호";
+                        }
+                      }
+                    }
+
+
+                  // 음성융합력-근거리
+                  document.getElementById('NDever1').innerHTML = NDever1;
+                  document.getElementById('NDever2').innerHTML = NDever2;
+                  document.getElementById('NDever3').innerHTML = NDever3;
+                    if (N_BIBO == 'BO') {
+                      if (NDever2 < 17) {
+                        document.getElementById('result_NDever').innerText = "(불량)";
+                      } else {
+                        document.getElementById('result_NDever').innerText = "(양호)";
+                        if (Nectopic * 2 > NDever2) {
+                          document.getElementById('result_NDever').innerText = "(불량)";
+                        } else {
+                          document.getElementById('result_NDever').innerText = "(양호)";
+                        }
+                      }
+                    }
+
+                  // 수직융합력-원거리
+
+                    document.getElementById('DVertical_BD1').innerHTML = DVertical_BD1;
+                    document.getElementById('DVertical_BD2').innerHTML = DVertical_BD2;
+                    document.getElementById('DVertical_BD3').innerHTML = DVertical_BD3;
+                    document.getElementById('DVertical_BD4').innerHTML = DVertical_BD4;
+                    document.getElementById('DVertical_BU1').innerHTML = DVertical_BU1;
+                    document.getElementById('DVertical_BU2').innerHTML = DVertical_BU2;
+                    document.getElementById('DVertical_BU3').innerHTML = DVertical_BU3;
+                    document.getElementById('DVertical_BU4').innerHTML = DVertical_BU4;
+                    if (DVertical_tool == "Chois"){
+                      document.getElementById('DVertical_tool').innerHTML = "";
+                    } else {
+                      document.getElementById('DVertical_tool').innerHTML = DVertical_tool;
+                    }
+                    if (DVertical_BD1 < 4 || DVertical_BD2 < 2 || DVertical_BU1 < 4 || DVertical_BU2 < 2) {
+                      document.getElementById('result_DVertical_OD').innerText = "(불량)";
+                    } else {
+                      document.getElementById('result_DVertical_OD').innerText = "(양호)";
+                    }
+                    if (DVertical_BD3 < 4 || DVertical_BD4 < 2 || DVertical_BU3 < 4 || DVertical_BU4 < 2) {
+                      document.getElementById('result_DVertical_OS').innerText = "(불량)";
+                    } else {
+                      document.getElementById('result_DVertical_OS').innerText = "(양호)";
+                    }
+
+
+
+                  // 수직융합력-근거리
+                    document.getElementById('NVertical_BD1').innerText = NVertical_BD1;
+                    document.getElementById('NVertical_BD2').innerText = NVertical_BD2;
+                    document.getElementById('NVertical_BD3').innerText = NVertical_BD3;
+                    document.getElementById('NVertical_BD4').innerText = NVertical_BD4;
+                    document.getElementById('NVertical_BU1').innerText = NVertical_BU1;
+                    document.getElementById('NVertical_BU2').innerText = NVertical_BU2;
+                    document.getElementById('NVertical_BU3').innerText = NVertical_BU3;
+                    document.getElementById('NVertical_BU4').innerText = NVertical_BU4;
+                    if (NVertical_tool == "Chois"){
+                      document.getElementById('NVertical_tool').innerHTML = "";
+                    } else {
+                      document.getElementById('NVertical_tool').innerHTML = NVertical_tool;
+                    }
+                    if (NVertical_BD1 < 4 || NVertical_BD2 < 2 || NVertical_BU1 < 4 || NVertical_BU2 < 2) {
+                      document.getElementById('result_NVertical_OD').innerText = "(불량)";
+                    } else {
+                      document.getElementById('result_NVertical_OD').innerText = "(양호)";
+                    }
+                    if (NVertical_BD3 < 4 || NVertical_BD4 < 2 || NVertical_BU3 < 4 || NVertical_BU4 < 2) {
+                      document.getElementById('result_NVertical_OS').innerText = "(불량)";
+                    } else {
+                      document.getElementById('result_NVertical_OS').innerText = "(양호)";
+                    }
+
+
+                  //마독스로드_원거리
+
+                    if (D_agree == 'agree') {
+                      document.getElementById('D_agree').innerHTML = "일치";
+                      document.getElementById('result_DMaddox').innerText = "(양호)";
+                    } else if (D_agree == 'discord') {
+                      document.getElementById('D_agree').innerHTML = "불일치";
+                      document.getElementById('DHor_maddox').innerHTML = DHor_maddox;
+                      document.getElementById('DHor_BIBO').innerHTML = DHor_BIBO;
+                      document.getElementById('DVer_maddox').innerHTML = DVer_maddox;
+                      document.getElementById('DVer_BIBO').innerHTML = DVer_BIBO;
+                      if ((DHor_maddox > 3 && DHor_BIBO == "BI") || (DHor_maddox > 1 && DHor_BIBO == "BO")){
+                        if (DVer_maddox > 0 || DVer_maddox == "") {
+                          document.getElementById('result_DMaddox').innerText = "(불량)";
+                        } else {
+                          document.getElementById('result_DMaddox').innerText = "(불량)";
+                        }
+                      } else {
+                        document.getElementById('result_DMaddox').innerText = "(양호)";
+                      }
+                    }
+
+
+                  //마독스로드_근거리
+                    if (N_agree == 'agree') {
+                      document.getElementById('N_agree').innerText = "일치";
+                      document.getElementById('result_NMaddox').innerText = "(양호)";
+                    } else if (N_agree == 'discord') {
+                      document.getElementById('N_agree').innerText = "불일치";
+                      document.getElementById('NHor_maddox').innerText = NHor_maddox;
+                      document.getElementById('NHor_BIBO').innerText = NHor_BIBO;
+                      document.getElementById('NVer_maddox').innerText = NVer_maddox;
+                      document.getElementById('NVer_BIBO').innerText = NVer_BIBO;
+                      if ((NHor_maddox > 6 && NHor_BIBO == "BI") || (NHor_maddox > 0 && NHor_BIBO == "BO")){
+                        if (NVer_maddox > 0 || NVer_maddox == "") {
+                          document.getElementById('result_NMaddox').innerText = "(불량)";
+                        } else {
+                          document.getElementById('result_NMaddox').innerText = "(불량)";
+                        }
+                      } else {
+                        document.getElementById('result_NMaddox').innerText = "(양호)";
+                      }
+                    }
+
+
+                  //버전스용이
+                    document.getElementById('VerRev').innerHTML = VerRev+"cpm";
+                    if (VerRev >= 15) {
+                      document.getElementById('result_VerRev').innerText = "양호";
+                    } else {
+                      document.getElementById('result_VerRev').innerText = "불량";
+                    }
+
+
+                  // MIT
+
+                    if (MIT == 'good') {
+                      document.getElementById('MIT').innerHTML = "중심주시";
+                      document.getElementById('result_MIT').innerText = "양호";
+                    } else if (MIT == 'bad') {
+                      document.getElementById('MIT').innerHTML = "중심외주시";
+                      document.getElementById('result_MIT').innerText = "불량";
+                    } else if (MIT == 'none') {
+                      document.getElementById('MIT').innerHTML = "평가하지않음";
+                      document.getElementById('result_MIT').innerText = "평가하지않음";
+                    }
+
+
+
+                </script>
+  </body>
+</html>
