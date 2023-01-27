@@ -35,6 +35,11 @@
 function sub_analysis(Main_test) {
 
   <!-- ======= Maiin Body-Customer-Information-value start ====== -->
+  var center_name = document.getElementById('center_name').value;
+  <!-- ======= Maiin Body-Customer-Information-value end ====== -->
+
+
+  <!-- ======= Maiin Body-Customer-Information-value start ====== -->
 
   var name = document.getElementById('Cus_Name').value;
   var sex = document.getElementById('Cus_sex').value;
@@ -667,6 +672,10 @@ function sub_analysis(Main_test) {
 
 
   <!-- ======= 데이터 전달값 지정 ====== -->
+
+  <!-- ======= 고객정보 ====== -->
+  localStorage.setItem('center_name',center_name);
+
 
   <!-- ======= 고객정보 ====== -->
 

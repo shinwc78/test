@@ -10,7 +10,7 @@ if (QOL_sum !== ""){
     document.write("● 시기능이상의 자각적인 증상정도를 확인할 수 있는 QOL문진점수가 "+QOL_sum+"점으로 양호합니다.<br>\n <br>\n");
   }
 
-  
+
 }
 
 
@@ -71,7 +71,7 @@ if (QOL_sum !== ""){
     var Eva_result1 = "조절성_항상성내편위";
   } else if (radio_month6 == "later" && radio_exami == "sudden") {
     var Eva_result1 = "급성_항상성내편위";
-  } else if((Dectopic < 30 || Nectopic < 30) && eye_movement == "yes" && change_ver == "yes" && radio_month6 == "later") {
+  } else if((Dectopic < 30 || Nectopic < 30) && radio_eye_movement == "yes" && change_ver == "yes" && radio_month6 == "later") {
     var Eva_result1 = "물리적_항상성내편위";
   } else if (ratio_cross == "always" && radio_splitting == "unilater" && amblyopia == "yes" ){
     var Eva_result1 = "감각성_항상성내편위";
@@ -95,7 +95,7 @@ if (QOL_sum !== ""){
     }
   } else if(radio_month6 == "later" && radio_exami == "sudden" ){
     var Eva_result1 = "급성_항상성외편위";
-  } else if((Dectopic < 30 || Nectopic < 30) && eye_movement == "yes" && change_ver == "yes" && radio_month6 == "later"){
+  } else if((Dectopic < 30 || Nectopic < 30) && radio_eye_movement == "yes" && change_ver == "yes" && radio_month6 == "later"){
     var Eva_result1 = "물리적_항상성외편위";
   } else if(ratio_cross == "always" && radio_splitting == "unilater" && amblyopia == "yes"){
     var Eva_result1 = "감각성_항상성외편위";
