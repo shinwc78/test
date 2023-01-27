@@ -328,7 +328,73 @@ if (DEM_HOR === "평가하지 않음" || HOR_ERR_S === "" || HOR_ERR_O === "" ||
   var ERR_HOR = "";
 } else {
   var HOR_Adj_time = (DEM_HOR*(80/((80-HOR_ERR_O)+HOR_ERR_A))).toFixed(2);
-  var CH_HOR_Adj_time = (DEM_HOR*(80/((80-HOR_ERR_O)+HOR_ERR_A))).toFixed(0);
+  var Int_HOR_Adj_time = parseInt(HOR_Adj_time);
+  if (ChAge <7){
+    if (Int_HOR_Adj_time <32){
+      var CH_HOR_Adj_time = 0;
+    } else if (Int_HOR_Adj_time > 183) {
+      var CH_HOR_Adj_time = 151;
+    } else {
+      var CH_HOR_Adj_time = Int_HOR_Adj_time - 32;
+    }
+  } else if (ChAge >= 7 && ChAge <8){
+    if (Int_HOR_Adj_time <29){
+      var CH_HOR_Adj_time = 0;
+    } else if (Int_HOR_Adj_time > 161) {
+      var CH_HOR_Adj_time = 132;
+    } else {
+      var CH_HOR_Adj_time = Int_HOR_Adj_time - 29;
+    }
+  } else if (ChAge >= 8 && ChAge <9){
+    if (Int_HOR_Adj_time <32){
+      var CH_HOR_Adj_time = 0;
+    } else if (Int_HOR_Adj_time > 89) {
+      var CH_HOR_Adj_time = 57;
+    } else {
+      var CH_HOR_Adj_time = Int_HOR_Adj_time - 32;
+    }
+  } else if (ChAge >= 9 && ChAge < 10){
+    if (Int_HOR_Adj_time <20){
+      var CH_HOR_Adj_time = 0;
+    } else if (Int_HOR_Adj_time > 85) {
+      var CH_HOR_Adj_time = 65;
+    } else {
+      var CH_HOR_Adj_time = Int_HOR_Adj_time - 20;
+    }
+  } else if (ChAge >= 10 && ChAge < 11){
+    if (Int_HOR_Adj_time <25){
+      var CH_HOR_Adj_time = 0;
+    } else if (Int_HOR_Adj_time > 74) {
+      var CH_HOR_Adj_time = 49;
+    } else {
+      var CH_HOR_Adj_time = Int_HOR_Adj_time - 25;
+    }
+  } else if (ChAge >= 11 && ChAge < 12){
+    if (Int_HOR_Adj_time <26){
+      var CH_HOR_Adj_time = 0;
+    } else if (Int_HOR_Adj_time > 63) {
+      var CH_HOR_Adj_time = 37;
+    } else {
+      var CH_HOR_Adj_time = Int_HOR_Adj_time - 23;
+    }
+  } else if (ChAge >= 12 && ChAge <13){
+    if (Int_HOR_Adj_time <23){
+      var CH_HOR_Adj_time = 0;
+    } else if (Int_HOR_Adj_time > 61) {
+      var CH_HOR_Adj_time = 38;
+    } else {
+      var CH_HOR_Adj_time = Int_HOR_Adj_time - 23;
+    }
+  } else if (ChAge >= 13){
+    if (Int_HOR_Adj_time <22){
+      var CH_HOR_Adj_time = 0;
+    } else if (Int_HOR_Adj_time > 57) {
+      var CH_HOR_Adj_time = 35;
+    } else {
+      var CH_HOR_Adj_time = Int_HOR_Adj_time - 22;
+    }
+  }
+
   var DEM_HOR_PER = DEM_ACAge_HOR[1][CH_HOR_Adj_time];
   var DEM_HOR_STAND = DEM_ACAge_HOR[2][CH_HOR_Adj_time];
 }
@@ -347,7 +413,7 @@ if (DEM_ERR === "") {
       var CHDEM_ERR = DEM_ERR;
     }
   } else if (ChAge >= 7 && ChAge < 8) {
-    if (DEM_ERR >45 ) {
+    if (DEM_ERR > 45 ) {
       var CHDEM_ERR = 45;
     } else {
       var CHDEM_ERR = DEM_ERR;
@@ -406,67 +472,67 @@ if (HOR_Adj_time === "평가하지 않음" || VER_Adj_time === "평가하지 않
   // DEM비 최대최소값 지정
   if (ChAge < 7){
     if (DEM_Ratio < 0.80) {
-      var CHDEM_RATIO = 0.80*100-80;
+      var CHDEM_RATIO = 0;
     } else if (DEM_Ratio > 2.74) {
-      var CHDEM_RATIO = 2.74*100-80;
+      var CHDEM_RATIO = 194;
     } else {
-      var CHDEM_RATIO = DEM_Ratio*100-80;
+      var CHDEM_RATIO = (DEM_Ratio*100)-80;
     }
   } else if (ChAge >= 7 && ChAge < 8) {
     if (DEM_Ratio < 0.90) {
-      var CHDEM_RATIO = 0.90*100-90;
+      var CHDEM_RATIO = 0;
     } else if (DEM_Ratio > 2.53) {
-      var CHDEM_RATIO = 2.53*100-90;
+      var CHDEM_RATIO = 163;
     } else {
-      var CHDEM_RATIO = DEM_Ratio*100-90;
+      var CHDEM_RATIO = (DEM_Ratio*100)-90;
     }
   } else if (ChAge >= 8 && ChAge < 9) {
     if (DEM_Ratio < 0.90) {
-      var CHDEM_RATIO = 0.90*100-90;
+      var CHDEM_RATIO = 0;
     } else if (DEM_Ratio > 1.71) {
-      var CHDEM_RATIO = 1.71*100-90;
+      var CHDEM_RATIO = 81;
     } else {
-      var CHDEM_RATIO = DEM_Ratio*100-90;
+      var CHDEM_RATIO = (DEM_Ratio*100)-90;
     }
   } else if (ChAge >= 9 && ChAge < 10) {
     if (DEM_Ratio < 0.90) {
-      var CHDEM_RATIO = 0.90*100-90;
+      var CHDEM_RATIO = 0;
     } else if (DEM_Ratio > 1.71) {
-      var CHDEM_RATIO = 1.71;
+      var CHDEM_RATIO = 81;
     } else {
-      var CHDEM_RATIO = DEM_Ratio*100-90;
+      var CHDEM_RATIO = (DEM_Ratio*100)-90;
     }
   } else if (ChAge >= 10 && ChAge < 11) {
     if (DEM_Ratio < 0.90) {
-      var CHDEM_RATIO = 0.90*100-90;
+      var CHDEM_RATIO = 0;
     } else if (DEM_Ratio > 1.63) {
-      var CHDEM_RATIO = 1.63*100-90;
+      var CHDEM_RATIO = 73;
     } else {
-      var CHDEM_RATIO = DEM_Ratio*100-90;
+      var CHDEM_RATIO = (DEM_Ratio*100)-90;
     }
   } else if (ChAge >= 11 && ChAge < 12) {
     if (DEM_Ratio < 0.90) {
-      var CHDEM_RATIO = 0.90*100-90;
+      var CHDEM_RATIO = 0;
     } else if (DEM_Ratio > 1.49) {
-      var CHDEM_RATIO = 1.49*100-90;
+      var CHDEM_RATIO = 59;
     } else {
-      var CHDEM_RATIO = DEM_Ratio*100-90;
+      var CHDEM_RATIO = (DEM_Ratio*100)-90;
     }
   } else if (ChAge >= 12 && ChAge < 13) {
     if (DEM_Ratio < 0.92) {
-      var CHDEM_RATIO = 0.92*100-90;
+      var CHDEM_RATIO = 0;
     } else if (DEM_Ratio > 1.37) {
-      var CHDEM_RATIO = 1.37*100-90;
+      var CHDEM_RATIO = 45;
     } else {
-      var CHDEM_RATIO = DEM_Ratio*100-90;
+      var CHDEM_RATIO = (DEM_Ratio*100)-90;
     }
   } else if (ChAge >= 13) {
     if (DEM_Ratio <= 0.9) {
-      var CHDEM_RATIO = 0.90*100-90;
+      var CHDEM_RATIO = 0;
     } else if (DEM_Ratio >= 1.43) {
-      var CHDEM_RATIO = 1.43*100-90;
+      var CHDEM_RATIO = 53;
     } else {
-      var CHDEM_RATIO = DEM_Ratio*100-90;
+      var CHDEM_RATIO = (DEM_Ratio*100)-90;
     }
   }
   var DEM_RATIO_PER = DEM_ACAge_ratio[1][CHDEM_RATIO];
