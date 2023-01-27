@@ -706,6 +706,27 @@ details[open]>summary~* {
           <table>
             <tbody>
               <tr>
+                <td class="CI_Box_Title">센터정보</td>
+              </tr>
+              <tr>
+                <td height valign="top">
+                  <table width="300">
+                    <tr>
+                      <td class="CI_title_R" width="100">*센터명</td>
+                      <td class="CI_td_Form_Form">
+                        <select class="CI_Form_CusInp" id="center_name" name="center_name" style="width:170px; height">
+                          <option value="서원대로센터">서원대로센터</option>
+                          <option value="해운대센터">해운대센터</option>
+                          <option value="누리학원">누리학원</option>
+                          <option value="동래학원">동래학원</option>
+                          <option value="수영센터">수영센터</option>
+                        </select>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
                 <td class="CI_Box_Title">고객정보</td>
               </tr>
               <tr>
@@ -752,7 +773,7 @@ details[open]>summary~* {
                         </td>
                       </tr>
                       <tr>
-                        <td class="CI_title_R">생년월일</td>
+                        <td class="CI_title_R">*생년월일</td>
                         <td class="CI_td_Form_Form">
                           <input type="text" id="Birth_y" name="Birth_y" tabindex="7" maxlength="4" class="CI_Form_CusInp" style="width:40px;" placeholder="yyyy" onchange="age()">
                           <input type="text" id="Birth_m" name="Birth_m" tabindex="8" maxlength="2" class="CI_Form_CusInp" style="width:25px;" placeholder="mm" onchange="age()">
@@ -3787,6 +3808,8 @@ details[open]>summary~* {
         // 양안시분석결과서
         function sub_Evolution(){
 
+
+
           <!-- ======= Maiin Body-Evolution-value start ====== -->
           if ($("input[type=radio][name=MainEye]:checked").is(':checked')){
             var MainEye = document.querySelector("input[name='MainEye']:checked").value;
@@ -4005,6 +4028,11 @@ details[open]>summary~* {
 
         // 분석하기 실행
         function sub_analysis() {
+
+          <!-- ======= Maiin Body-Customer-Information-value start ====== -->
+          var center_name = document.getElementById('center_name').value;
+          <!-- ======= Maiin Body-Customer-Information-value end ====== -->
+
 
           <!-- ======= Maiin Body-Customer-Information-value start ====== -->
 
@@ -4642,6 +4670,7 @@ details[open]>summary~* {
 
           <!-- ======= 고객정보 ====== -->
 
+          localStorage.setItem('center_name',center_name);
           localStorage.setItem('Cus_Name',name);
           localStorage.setItem('Cus_sex',sex);
           localStorage.setItem('Cus_tell1',tell1);
