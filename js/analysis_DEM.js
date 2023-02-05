@@ -476,7 +476,7 @@ if (HOR_Adj_time === "평가하지 않음" || VER_Adj_time === "평가하지 않
     } else if (DEM_Ratio > 2.74) {
       var CHDEM_RATIO = 194;
     } else {
-      var CHDEM_RATIO = (DEM_Ratio*100)-80;
+      var CHDEM_RATIO = parseInt((DEM_Ratio*100)-80);
     }
   } else if (ChAge >= 7 && ChAge < 8) {
     if (DEM_Ratio < 0.90) {
@@ -484,7 +484,7 @@ if (HOR_Adj_time === "평가하지 않음" || VER_Adj_time === "평가하지 않
     } else if (DEM_Ratio > 2.53) {
       var CHDEM_RATIO = 163;
     } else {
-      var CHDEM_RATIO = (DEM_Ratio*100)-90;
+      var CHDEM_RATIO = parseInt((DEM_Ratio*100)-90);
     }
   } else if (ChAge >= 8 && ChAge < 9) {
     if (DEM_Ratio < 0.90) {
@@ -492,7 +492,7 @@ if (HOR_Adj_time === "평가하지 않음" || VER_Adj_time === "평가하지 않
     } else if (DEM_Ratio > 1.71) {
       var CHDEM_RATIO = 81;
     } else {
-      var CHDEM_RATIO = (DEM_Ratio*100)-90;
+      var CHDEM_RATIO = parseInt((DEM_Ratio*100)-90);
     }
   } else if (ChAge >= 9 && ChAge < 10) {
     if (DEM_Ratio < 0.90) {
@@ -500,7 +500,7 @@ if (HOR_Adj_time === "평가하지 않음" || VER_Adj_time === "평가하지 않
     } else if (DEM_Ratio > 1.71) {
       var CHDEM_RATIO = 81;
     } else {
-      var CHDEM_RATIO = (DEM_Ratio*100)-90;
+      var CHDEM_RATIO = parseInt((DEM_Ratio*100)-90);
     }
   } else if (ChAge >= 10 && ChAge < 11) {
     if (DEM_Ratio < 0.90) {
@@ -508,7 +508,7 @@ if (HOR_Adj_time === "평가하지 않음" || VER_Adj_time === "평가하지 않
     } else if (DEM_Ratio > 1.63) {
       var CHDEM_RATIO = 73;
     } else {
-      var CHDEM_RATIO = (DEM_Ratio*100)-90;
+      var CHDEM_RATIO = parseInt((DEM_Ratio*100)-90);
     }
   } else if (ChAge >= 11 && ChAge < 12) {
     if (DEM_Ratio < 0.90) {
@@ -516,7 +516,7 @@ if (HOR_Adj_time === "평가하지 않음" || VER_Adj_time === "평가하지 않
     } else if (DEM_Ratio > 1.49) {
       var CHDEM_RATIO = 59;
     } else {
-      var CHDEM_RATIO = (DEM_Ratio*100)-90;
+      var CHDEM_RATIO = parseInt((DEM_Ratio*100)-90);
     }
   } else if (ChAge >= 12 && ChAge < 13) {
     if (DEM_Ratio < 0.92) {
@@ -524,7 +524,7 @@ if (HOR_Adj_time === "평가하지 않음" || VER_Adj_time === "평가하지 않
     } else if (DEM_Ratio > 1.37) {
       var CHDEM_RATIO = 45;
     } else {
-      var CHDEM_RATIO = (DEM_Ratio*100)-90;
+      var CHDEM_RATIO = parseInt((DEM_Ratio*100)-90);
     }
   } else if (ChAge >= 13) {
     if (DEM_Ratio <= 0.9) {
@@ -532,7 +532,7 @@ if (HOR_Adj_time === "평가하지 않음" || VER_Adj_time === "평가하지 않
     } else if (DEM_Ratio >= 1.43) {
       var CHDEM_RATIO = 53;
     } else {
-      var CHDEM_RATIO = (DEM_Ratio*100)-90;
+      var CHDEM_RATIO = parseInt((DEM_Ratio*100)-90);
     }
   }
   var DEM_RATIO_PER = DEM_ACAge_ratio[1][CHDEM_RATIO];
