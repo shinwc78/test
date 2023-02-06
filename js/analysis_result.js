@@ -6,12 +6,13 @@ if (QOL_sum !== ""){
     document.write("● 시기능이상의 자각적인 증상정도를 확인할 수 있는 QOL문진점수가 "+'<span style="font-weight: bold; color: red;">'+QOL_sum+"점"+'</span>'+"으로 자각적증상의 정도가 "+'<span style="font-weight: bold; color: red;">'+"불량합니다. 시기능발달평가가 "+'</span>'+"권장됩니다.<br>\n <br>\n");
   } else if (QOL_sum < 20 && QOL_sum >10) {
     document.write("● 시기능이상의 자각적인 증상정도를 확인할 수 있는 QOL문진점수가 "+'<span style="font-weight: bold; color: blue;">'+QOL_sum+"점"+'</span>'+"으로 자각적증상의 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰이 "+'</span>'+"권장됩니다.<br>\n <br>\n");
-  } else {
+  } else  if (QOL_sum <=10){
     document.write("● 시기능이상의 자각적인 증상정도를 확인할 수 있는 QOL문진점수가 "+QOL_sum+"점으로 양호합니다.<br>\n <br>\n");
+  } else {
+    document.write("● 시기능이상의 자각적인 증상정도를 확인할 수 있는 QOL문진점수가 평가되지 않았습니다.<br>\n <br>\n");
   }
-
-
 }
+
 
 
 // 시기능이상-비사시성
@@ -104,7 +105,7 @@ if (QOL_sum !== ""){
   } else if ((Dectopic < 11 || Nectopic < 11) && ratio_cross == "always" && radio_splitting == "unilater" && amblyopia == "yes" ){
     var Eva_result1 = "미세_항상성외편위";
   } else {
-    var Eva_result1 = "외편위";
+    var Eva_result1 = "항상성외편위";
   }
 } else {
   var Eva_result1 = "";
@@ -187,7 +188,7 @@ if(RAccom_Rev !== "" || LAccom_Rev !== "" || OUAccom_Rev !== "" || R_accom !==""
 
 
 if (Eva_result1 !== "" || Eva_result2 !== ""  || Eva_result3 !== "" ){
-  document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result1+" "+Eva_result2+" "+'</span>'+"입니다.<br>\n <br>\n");
+  document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result1+" "+Eva_result2+" "+Eva_result3+'</span>'+"입니다.<br>\n <br>\n");
   if (Eva_result1 === "눈모임부족") {
     var EVA_TEST_1 = "안구협응기술과 융합력 ";
     document.write('<span style="font-weight: bold; color: red;">'+"눈모임부족"+'</span>'+"의 경우 버전스이상 중에서 가장 흔한 이상으로 조절이상과 버전스이상이 있는 어린이의 약30%에서 나타나고 있습니다.<br>\n");
@@ -297,7 +298,6 @@ if (Eva_result3 === "안구운동이상") {
   var EVA_TEST_3 = ", 안정적인 주시능력";
   document.write('<span style="font-weight: bold; color: red;">'+"안구운동이상"+'</span>'+"은 독립적으로 존재하기 보다는 조절이상과 버전스이상, 시지각이상과 동반되어 발생하는 것으로 나타나 유병률이 상대적으로 높은 편입니다. <br>\n");
   document.write("주로 과다한 머리움직임, 독서시 속도가 느리고 집중도와 이해력이 저하, 운전이나 스포츠 수행능력이 불량, 읽던위치를 놓침, 칠판의 글씨를 노트에 옮겨쓰기가 어려움등 불편함을 호소합니다. <br>\n <br>\n");
-}
 } else {
   document.write("● 양안시기능평가결과 특이사항 없음.<br>\n <br>\n");
 }
@@ -480,7 +480,7 @@ if (CTest_D == "exo" || CTest_D == "eso" || CTest_N == "exo" || CTest_N == "eso"
     } else if (Eva_result1 === "급성_항상성외편위") {
       document.write("♣ 급성_항상성외편위의 관리계획 및 처치 순서는 <br>\n 1.정밀검사 <br>\n 2.프리즘 : 복시를 제거하고, 양안시를 회복하기 위하여 중등도 이하의 편위를 교정하기 위하여 프리즘을 처방할 수 있습니다. <br>\n 3.시기능훈련 : 융합버전스 범위와 융합용이를 증진시키기 위하여 시기능훈련을 처방할 수 있습니다. <br>\n 4.수술 : 항상성외편위가 20 이상이고 미용적으로 좋지 않은 경우 수술을 고려할 수 있습니다.  <br>\n - 외편위의 원인이 혈관성이거나 당뇨와 같은 허혈성인 경우 예후가 양호하고, 외상과 관련된 경우 예후가 좋지 않습니다. <br>\n <br>\n");
     } else if (Eva_result1 === "물리적_항상성외편위") {
-      document.write("♣ 물리적_항상성외편위의 교정 및 관리는 <br>\n 1.정밀검사 : 질병에 의해 유발되는 마비성외편위와 구별하기 위해 즉시 받아야합니다. <br>\n 2.시기능훈련  <br>\n 3.프리즘 : 고개돌림이 작을 경우 고려할 수 있습니다.  <br>\n 4.수술 : 고개돌림이 클경우 미용목적으로 수술을 고려할 수 있지만, 수술이 외편위를 향상시키지는 못합니다.<br>\n <br>\n");
+      document.write("♣ 물리적_항상성외편위의 교정 및 관리는 <br>\n 1.정밀검사 : 질병에 의해 유발되는 마비성외편위와 구별하기 위해 즉시 받아야합니다. <br>\n 2.시기능훈련  <br>\n 3.프리즘 : 고개돌림이 작을 경우 고려할 수 있습니다.  <br>\n 4.수술 : 고개돌림이 클경우 미용목적으로 수술을 고려할 수 있지만, 수술이 항상성외편위를 향상시키지는 못합니다.<br>\n <br>\n");
     } else if (Eva_result1 === "감각성_항상성외편위") {
       document.write("♣ 감각성_항상성외편위의 교정 및 관리는 <br>\n - 선천성 단안 백내장으로 인해 감각성_항상성외편위가 발생한 경우 : 생후 2개월 이내에 백내장을 제거해야 합니다. <br>\n - 백내장을 제거한 후, 콘택트렌즈 처방이나 안내렌즈 삽입, 약시제거를 위해 차폐치료를 할 수 있습니다.  <br>\n - 융합력이 있다면 프리즘을 처방하거나, 외편위가 크다면 수술을 고려할 수 있습니다.  <br>\n - 선천성_감각성_항상성외편위는 모든 치료법을 사용해도 양안시 회복을 기대하기 어렵습니다. <br>\n <br>\n");
     } else if (Eva_result1 === "속발성_항상성외편위") {
@@ -521,3 +521,7 @@ if (CTest_D == "exo" || CTest_D == "eso" || CTest_N == "exo" || CTest_N == "eso"
   } else {
     document.write("♣ "+Cus_Name+"님의 시기능발달평가결과 특이 사항은 없으며, 정기적인 평가는 권장됩니다.");
   }
+
+  document.write("Eva_result1 : "+Eva_result1+"<br>");
+  document.write("Eva_result2 : "+Eva_result2+"<br>");
+  document.write("Eva_result3 : "+Eva_result3+"<br>");
