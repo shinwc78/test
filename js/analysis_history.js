@@ -275,7 +275,7 @@ if (radio_crawl !== "" || radio_creeping !== "" || text_walk !== "" || radio_run
       document.write("미세활동을 즐겨함. ");
     } else if (radio_micactiv == "no") {
       if(text_micactiv !== ""){
-        document.write("("+$text_micactiv+")이유로 미세활동을 즐겨하지 않음. ");
+        document.write("("+text_micactiv+")이유로 미세활동을 즐겨하지 않음. ");
       } else {
         document.write("미세활동을 즐겨하지 않음. ");
       }
