@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="http://code.jquery.com/jquery-1.8.0.min.js?ver=1"></script>
+    <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="CSS/main.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -3954,7 +3954,7 @@ details[open]>summary~* {
           localStorage.setItem('CTest_N',CTest_N);
           localStorage.setItem('ChAge',ChAge);
           localStorage.setItem('ChAge_m',ChAge_m);
-          localStorage.setItem('R_accom',R_accom);
+          localStorage.setItem('R_accom',JSON.stringify(R_accom));
           localStorage.setItem('L_accom',L_accom);
           localStorage.setItem('O_accom',O_accom);
           localStorage.setItem('RAccom_Rev',RAccom_Rev);
