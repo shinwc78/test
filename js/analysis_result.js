@@ -298,6 +298,7 @@ if (Eva_result3 === "안구운동이상") {
   var EVA_TEST_3 = ", 안정적인 주시능력";
   document.write('<span style="font-weight: bold; color: red;">'+"안구운동이상"+'</span>'+"은 독립적으로 존재하기 보다는 조절이상과 버전스이상, 시지각이상과 동반되어 발생하는 것으로 나타나 유병률이 상대적으로 높은 편입니다. <br>\n");
   document.write("주로 과다한 머리움직임, 독서시 속도가 느리고 집중도와 이해력이 저하, 운전이나 스포츠 수행능력이 불량, 읽던위치를 놓침, 칠판의 글씨를 노트에 옮겨쓰기가 어려움등 불편함을 호소합니다. <br>\n <br>\n");
+}
 } else {
   document.write("● 양안시기능평가결과 특이사항 없음.<br>\n <br>\n");
 }
@@ -521,7 +522,3 @@ if (CTest_D == "exo" || CTest_D == "eso" || CTest_N == "exo" || CTest_N == "eso"
   } else {
     document.write("♣ "+Cus_Name+"님의 시기능발달평가결과 특이 사항은 없으며, 정기적인 평가는 권장됩니다.");
   }
-
-  document.write("Eva_result1 : "+Eva_result1+"<br>");
-  document.write("Eva_result2 : "+Eva_result2+"<br>");
-  document.write("Eva_result3 : "+Eva_result3+"<br>");
