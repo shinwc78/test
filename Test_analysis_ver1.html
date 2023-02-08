@@ -137,7 +137,7 @@
               <h1 style="text-align:center; width:700px;">시기능 발달평가 결과서 (<script>document.write(Cus_Name)</script>)</h1>
             </tr>
             <tr>
-              <h3 style="text-align:center; width:700px;">한국시기능훈련센터 서원대로점</h3>
+              <h3 style="text-align:center; width:700px;">한국시기능훈련센터 (<script>document.write(center_name)</script>)</h3>
             </tr>
           </table>
         </tr>
@@ -197,35 +197,34 @@
               <tr>
                 <td colspan="6" style="text-align:center; width:700px; height: 30px; font-size: 16px; font-weight: bold;">시각인지기술(TVPS-4)</td>
                   <tr>
-                    <td height="40px" width="200" rowspan="2" class="TVPS_Menu_head">SUBTESTS</td>
-
-                    <td colspan="5" height="40px" class="TVPS_Menu_head">SUBTESTS SCORE</td>
+                    <td height="40px" width="200" rowspan="2" style="border:2px solid black; background-color : #b91a4d; color: rgb(255,255,255); font-size: 13px; font-weight: bold; text-align: center;">SUBTESTS</td>
+                    <td colspan="5" height="40px" style="border:2px solid black; background-color : #b91a4d; color: rgb(255,255,255); font-size: 13px; font-weight: bold; text-align: center;">SUBTESTS SCORE</td>
                   </tr>
                   <tr>
-                    <td width="100" class="TVPS_Menu_Item">Raw Score</td>
-                    <td width="100" class="TVPS_Menu_Item">Scaled Score</td>
-                    <td width="100" class="TVPS_Menu_Item">CI 90%-95%</td>
-                    <td width="100" class="TVPS_Menu_Item">Percentile Rank</td>
-                    <td width="100" class="TVPS_Menu_Item">Age Epuivalent</td>
+                    <td width="100" style=" height: 30px; border : 1px solid black; font-size : 10px; font-weight: bold; text-align: center; background-color: #dcdcdc;">Raw Score</td>
+                    <td width="100" style=" height: 30px; border : 1px solid black; font-size : 10px; font-weight: bold; text-align: center; background-color: #dcdcdc;">Scaled Score</td>
+                    <td width="100" style=" height: 30px; border : 1px solid black; font-size : 10px; font-weight: bold; text-align: center; background-color: #dcdcdc;">CI 90%-95%</td>
+                    <td width="100" style=" height: 30px; border : 1px solid black; font-size : 10px; font-weight: bold; text-align: center; background-color: #dcdcdc;">Percentile Rank</td>
+                    <td width="100" style=" height: 30px; border : 1px solid black; font-size : 10px; font-weight: bold; text-align: center; background-color: #dcdcdc;">Age Epuivalent</td>
                   </tr>
                   <tr>
-                    <td name="Dis_Sub" class="TVPS_Menu_Sec">1.Visual Discrimination (DIS)</td>
-                    <td class="Form_Sell">
+                    <td name="Dis_Sub" style=" border:2px solid black; background-color : rgb(254,174,174); font-size: 10px; font-weight: bold; text-align: center;">1.Visual Discrimination (DIS)</td>
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(RAW_SCORE_DIS);
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(scaled_DIS);
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write("-");
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                       if(percentile_DIS < 16){
                         document.write('<span style="font-weight: bold; color: red;">'+percentile_DIS+"%"+'</span>');
@@ -236,30 +235,30 @@
                       }
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(qgeEqui_DIS);
                       </script>
                     </td>
                   </tr>
                   <tr>
-                    <td name="Mem_Sub" class="TVPS_Menu_Sec">2.Visual Memory (MEM)</td>
-                    <td class="Form_Sell">
+                    <td name="Mem_Sub" style=" border:2px solid black; background-color : rgb(254,174,174); font-size: 10px; font-weight: bold; text-align: center;">2.Visual Memory (MEM)</td>
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(RAW_SCORE_MEM);
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(scaled_MEM);
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write("-");
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                       if(percentile_MEM < 16){
                         document.write('<span style="font-weight: bold; color: red;">'+percentile_MEM+"%"+'</span>');
@@ -270,30 +269,30 @@
                       }
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(qgeEqui_MEM);
                       </script>
                     </td>
                   </tr>
                   <tr>
-                    <td name="Spa_Sub" class="TVPS_Menu_Sec">3.Spatial Relationships (SPA)</td>
-                    <td class="Form_Sell">
+                    <td name="Spa_Sub" style=" border:2px solid black; background-color : rgb(254,174,174); font-size: 10px; font-weight: bold; text-align: center;">3.Spatial Relationships (SPA)</td>
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(RAW_SCORE_SPA);
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(scaled_SPA);
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write("-");
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                       if(percentile_SPA < 16){
                         document.write('<span style="font-weight: bold; color: red;">'+percentile_SPA+"%"+'</span>');
@@ -304,30 +303,30 @@
                       }
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(qgeEqui_SPA);
                       </script>
                     </td>
                   </tr>
                   <tr>
-                    <td name="Con_Sub" class="TVPS_Menu_Sec">4.Form Constancy (CON)</td>
-                    <td class="Form_Sell">
+                    <td name="Con_Sub" style=" border:2px solid black; background-color : rgb(254,174,174); font-size: 10px; font-weight: bold; text-align: center;">4.Form Constancy (CON)</td>
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(RAW_SCORE_CON);
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(scaled_CON);
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write("-");
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                       if(percentile_CON < 16){
                         document.write('<span style="font-weight: bold; color: red;">'+percentile_CON+"%"+'</span>');
@@ -338,30 +337,30 @@
                       }
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(qgeEqui_CON);
                       </script>
                     </td>
                   </tr>
                   <tr>
-                    <td name="Seq_Sub"  class="TVPS_Menu_Sec">5.Sequential Memory (SEQ)</td>
-                    <td class="Form_Sell">
+                    <td name="Seq_Sub"  style=" border:2px solid black; background-color : rgb(254,174,174); font-size: 10px; font-weight: bold; text-align: center;">5.Sequential Memory (SEQ)</td>
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(RAW_SCORE_SEQ);
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(scaled_SEQ);
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write("-");
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                       if(percentile_SEQ < 16){
                         document.write('<span style="font-weight: bold; color: red;">'+percentile_SEQ+"%"+'</span>');
@@ -372,30 +371,30 @@
                       }
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(qgeEqui_SEQ);
                       </script>
                     </td>
                   </tr>
                   <tr>
-                    <td name="Fgr_Sub" class="TVPS_Menu_Sec">6.Visual Figure-Ground (FGR)</td>
-                    <td class="Form_Sell">
+                    <td name="Fgr_Sub" style=" border:2px solid black; background-color : rgb(254,174,174); font-size: 10px; font-weight: bold; text-align: center;">6.Visual Figure-Ground (FGR)</td>
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(RAW_SCORE_FGR);
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(scaled_FGR);
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write("-");
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                       if(percentile_FGR < 16){
                         document.write('<span style="font-weight: bold; color: red;">'+percentile_FGR+"%"+'</span>');
@@ -406,30 +405,30 @@
                       }
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(qgeEqui_FGR);
                       </script>
                     </td>
                   </tr>
                   <tr>
-                    <td name="Clo_Sub" class="TVPS_Menu_Sec">7.Visual Closure (CLO)</td>
-                    <td class="Form_Sell">
+                    <td name="Clo_Sub" style=" border:2px solid black; background-color : rgb(254,174,174); font-size: 10px; font-weight: bold; text-align: center;">7.Visual Closure (CLO)</td>
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(RAW_SCORE_CLO);
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(scaled_CLO);
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write("-");
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                       if(percentile_CLO < 16){
                         document.write('<span style="font-weight: bold; color: red;">'+percentile_CLO+"%"+'</span>');
@@ -440,7 +439,7 @@
                       }
                       </script>
                     </td>
-                    <td class="Form_Sell">
+                    <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
                         document.write(qgeEqui_CLO);
                       </script>
@@ -773,7 +772,7 @@
                   <td height="30px"  style="height:30px; border:2px solid black; background-color :rgb(253,235,170); font-size: 10px; font-weight: bold; text-align: center;">미가공점수</td>
                   <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                     <script>
-                      document.write(VER_Adj_time);
+                      document.write(VER_Adj_time+"<br>");
                     </script>
                   </td>
                   <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
@@ -1144,7 +1143,7 @@
         <tr>
           <td height="10px">&nbsp</td>
         </tr>
-        <tr class="Evaluation_Result"  style="page-break-after: always;">
+        <tr name="종합평가" class="Evaluation_Result"  style="page-break-after: always;">
           <table  style="border:3px solid black; width:700px;">
             <tr>
               <td colspan="2" style="text-align:center; width:700px; height: 30px; font-size: 16px; font-weight: bold;">종합평가</td>
@@ -1153,9 +1152,7 @@
               <td style="font-size:12px;" colspan="2" style="font-weight:bold;" width="100px">
                 <script type="text/javascript" src="js/analysis_result.js"></script>
               </td>
-
             </tr>
-
           </table>
         </tr>
           <td>
