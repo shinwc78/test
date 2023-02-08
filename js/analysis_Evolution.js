@@ -12,17 +12,50 @@
 }
 
 
-// 원거리 나안/교정시력
+// 원거리와 근거리의 나안/교정시력
 
 if (RDVision == "" || LDVision == "" || OUDVision == ""){
   document.write("");
 } else {
-  if (RDVision < 0.7 || LDVision < 0.7 || OUDVision < 0.7) {
-    document.write("● "+sel_glass1+"의 원거리 시력이 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었습니다.<br>\n");
+  if (RNVision == "" || LNVision == "" || OUNVision == ""){
+    document.write("");
+  } else {
+    if (RDVision < 0.7 || LDVision < 0.7 || OUDVision < 0.7) {
+      if (RNVision == "" || LNVision == "" || OUNVision == ""){
+        document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었습니다.<br>\n");
+      } else {
+        if (RNVision < 0.7 || LNVision < 0.7 || OUNVision < 0.7) {
+          document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었고, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었습니다.<br>\n");
+        } else if (RNVision >= 1.0 && LNVision >= 1.0 && OUNVision >= 1.0){
+          document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었고, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 양호하게 평가 되었습니다.<br>\n");
+        } else {
+          document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었고, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구됩니다.<br>\n");
+        }
+      }
   } else if (RDVision >= 1.0 && LDVision >= 1.0 && OUDVision >= 1.0){
-    document.write("● "+sel_glass1+"의 원거리 시력이 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 양호하게 평가 되었습니다.<br>\n");
+    if (RNVision == "" || LNVision == "" || OUNVision == ""){
+      document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 양호하게 평가 되었습니다.<br>\n");
+    } else {
+      if (RNVision < 0.7 || LNVision < 0.7 || OUNVision < 0.7) {
+        document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 양호하게 평가 되었고, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었습니다.<br>\n");
+      } else if (RNVision >= 1.0 && LNVision >= 1.0 && OUNVision >= 1.0){
+        document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 양호하게 평가 되었고, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 양호하게 평가 되었습니다.<br>\n");
+      } else {
+        document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 양호하게 평가 되었고, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구됩니다.<br>\n");
+      }
+    }
   } else if ((RDVision >=0.7 && RDVision <1.0) || (LDVision >=0.7 && LDVision <1.0) ||(OUDVision >=0.7 && OUDVision <1.0)) {
-    document.write("● "+sel_glass1+"의 원거리 시력이 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구됩니다.<br>\n");
+    if (RNVision == "" || LNVision == "" || OUNVision == ""){
+      document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구됩니다.<br>\n");
+    } else {
+      if (RNVision < 0.7 || LNVision < 0.7 || OUNVision < 0.7) {
+        document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구되며, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었습니다.<br>\n");
+      } else if (RNVision >= 1.0 && LNVision >= 1.0 && OUNVision >= 1.0){
+        document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구되며, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 양호하게 평가 되었습니다.<br>\n");
+      } else {
+        document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구되며, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구됩니다.<br>\n");
+      }
+    }
   }
 }
 
@@ -136,7 +169,11 @@ document.write("");
   } else if (CTest_D == 'eso') {
    document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 잠복성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
   } else if (CTest_D == 'XT') {
-   document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 항상성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
+    if ( ratio_cross == "sometime") {
+      document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 간헐성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
+    }
+    document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 항상성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
+
   } else if (CTest_D == 'ET') {
    document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 항상성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
   }
@@ -186,7 +223,7 @@ if (ChAge <= 6) {
     if (RAccom_Rev > 3 && LAccom_Rev > 3 && OUAccom_Rev > 0.5) {
      document.write("● 가까운 거리와 멀리있는 사물을 빠르고 선명하게 만들수 있는 조절용이능력이 오른쪽 "+RAccom_Rev+"cpm, 왼쪽 "+LAccom_Rev+"cpm, 양안 "+OUAccom_Rev+"cpm 으로 "+ChAge+"세기준 정상범위로 평가되었습니다.<br>\n");
     } else {
-        document.write("● 가까운 거리와 멀리있는 사물을 빠르고 선명하게 만들수 있는 조절용이능력이 오른쪽 "+RAccom_Rev+"cpm, 왼쪽 "+LAccom_Rev+"cpm, 양안 "+OUAccom_Rev+"cpm 으로 "+ChAge+"세기준 정상범위보다"+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
+        document.write("● 가까운 거리와 멀리있는 사물을 빠르고 선명하게 만들수 있는 조절용이능력이 오른쪽 "+RAccom_Rev+"cpm, 왼쪽 "+LAccom_Rev+"cpm, 양안 "+OUAccom_Rev+"cpm 으로 "+ChAge+"세기준 정상범위보다"+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
       if (Sel_AccomRev !== ""){
         if (Sel_AccomRev === "bad1"){
           document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"(+)방향에서 지체"+'</span>'+"입니다.<br>\n");
@@ -201,7 +238,7 @@ if (ChAge <= 6) {
     if (RAccom_Rev > 4.5 && LAccom_Rev > 4.5 && OUAccom_Rev >= 1) {
       document.write("● 가까운 거리와 멀리있는 사물을 빠르고 선명하게 만들수 있는 조절용이능력이 오른쪽 "+RAccom_Rev+"cpm, 왼쪽 "+LAccom_Rev+"cpm, 양안 "+OUAccom_Rev+"cpm 으로 "+ChAge+"세기준 정상범위로 평가되었습니다.<br>\n");
      } else {
-       document.write("● 가까운 거리와 멀리있는 사물을 빠르고 선명하게 만들수 있는 조절용이능력이 오른쪽 "+RAccom_Rev+"cpm, 왼쪽 "+LAccom_Rev+"cpm, 양안 "+OUAccom_Rev+"cpm 으로 "+ChAge+"세기준 정상범위보다"+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
+       document.write("● 가까운 거리와 멀리있는 사물을 빠르고 선명하게 만들수 있는 조절용이능력이 오른쪽 "+RAccom_Rev+"cpm, 왼쪽 "+LAccom_Rev+"cpm, 양안 "+OUAccom_Rev+"cpm 으로 "+ChAge+"세기준 정상범위보다"+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
        if (Sel_AccomRev !== ""){
          if (Sel_AccomRev === "bad1"){
            document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"(+)방향에서 지체"+'</span>'+"입니다.<br>\n");
@@ -216,7 +253,7 @@ if (ChAge <= 6) {
     if (RAccom_Rev > 4.5 && LAccom_Rev > 4.5 && OUAccom_Rev >= 2.5) {
       document.write("● 가까운 거리와 멀리있는 사물을 빠르고 선명하게 만들수 있는 조절용이능력이 오른쪽 "+RAccom_Rev+"cpm, 왼쪽 "+LAccom_Rev+"cpm, 양안 "+OUAccom_Rev+"cpm 으로 "+ChAge+"세기준 정상범위로 평가되었습니다.<br>\n");
      } else {
-       document.write("● 가까운 거리와 멀리있는 사물을 빠르고 선명하게 만들수 있는 조절용이능력이 오른쪽 "+RAccom_Rev+"cpm, 왼쪽 "+LAccom_Rev+"cpm, 양안 "+OUAccom_Rev+"cpm 으로 "+ChAge+"세기준 정상범위보다"+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
+       document.write("● 가까운 거리와 멀리있는 사물을 빠르고 선명하게 만들수 있는 조절용이능력이 오른쪽 "+RAccom_Rev+"cpm, 왼쪽 "+LAccom_Rev+"cpm, 양안 "+OUAccom_Rev+"cpm 으로 "+ChAge+"세기준 정상범위보다"+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
        if (Sel_AccomRev !== ""){
          if (Sel_AccomRev === "bad1"){
            document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"(+)방향에서 지체"+'</span>'+"입니다.<br>\n");
@@ -231,7 +268,7 @@ if (ChAge <= 6) {
     if (RAccom_Rev > 6 && LAccom_Rev > 6 && OUAccom_Rev >= 2.5) {
       document.write("● 가까운 거리와 멀리있는 사물을 빠르고 선명하게 만들수 있는 조절용이능력이 오른쪽 "+RAccom_Rev+"cpm, 왼쪽 "+LAccom_Rev+"cpm, 양안 "+OUAccom_Rev+"cpm 으로 "+ChAge+"세기준 정상범위로 평가되었습니다.<br>\n");
      } else {
-       document.write("● 가까운 거리와 멀리있는 사물을 빠르고 선명하게 만들수 있는 조절용이능력이 오른쪽 "+RAccom_Rev+"cpm, 왼쪽 "+LAccom_Rev+"cpm, 양안 "+OUAccom_Rev+"cpm 으로 "+ChAge+"세기준 정상범위보다"+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
+       document.write("● 가까운 거리와 멀리있는 사물을 빠르고 선명하게 만들수 있는 조절용이능력이 오른쪽 "+RAccom_Rev+"cpm, 왼쪽 "+LAccom_Rev+"cpm, 양안 "+OUAccom_Rev+"cpm 으로 "+ChAge+"세기준 정상범위보다"+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. <br>\n");
        if (Sel_AccomRev !== ""){
          if (Sel_AccomRev === "bad1"){
            document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"(+)방향에서 지체"+'</span>'+"입니다.<br>\n");
