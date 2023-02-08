@@ -4,8 +4,10 @@
   <head>
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.8.0.min.js?ver=1"></script>
     <link rel="stylesheet" type="text/css" href="CSS/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <title>시기능훈련 고객관리</title>
     <style media="screen">
     /*-- ====== header css ======= */
@@ -3153,13 +3155,13 @@ details[open]>summary~* {
                                   <td width="550" class="Evaluation_result">
                                     <table>
                                       <tr>
-                                        <td id="D_agree" name="D_agree" onchange="D_agree()">
+                                        <td id="D_agree" name="D_agree" onchange="D_agree(event)">
                                           <input type="radio" name="D_agree" value="agree" />일치
                                           <input type="radio" name="D_agree" value="discord" />불일치
                                         </td>
                                         <td class="Sell_Unit" width"5">&nbsp;</td>
                                         <td>
-                                          (수평:<input type="text" id="DHor_maddox" name="DHor_maddox" class="Evaluation_input"  onkeyup="D_agree()" style="width:25px">
+                                          (수평:<input type="text" id="DHor_maddox" name="DHor_maddox" class="Evaluation_input" style="width:25px">
                                         </td>
                                         <td>&nbsp;</td>
                                         <td>
@@ -3172,7 +3174,7 @@ details[open]>summary~* {
                                         <td>,</td>
                                         <td class="Sell_Unit" width"5">&nbsp;</td>
                                         <td>
-                                          수직:<input type="text" id="DVer_maddox" name="DVer_maddox" class="Evaluation_input"  onkeyup="D_agree()" style="width:25px">
+                                          수직:<input type="text" id="DVer_maddox" name="DVer_maddox" class="Evaluation_input" style="width:25px">
                                         </td>
                                         <td>
                                           <select style="width:85px" id="DVer_BIBO" name="DVer_BIBO" class="Evaluation_sel">
@@ -3721,6 +3723,10 @@ details[open]>summary~* {
                       <input type="submit" class="submit" name="update" value="수정하기(준비중)">
                     </td>
                     <td width="200px">&nbsp</td>
+                    <td style="text-align:center;">
+                      <input type="submit" class="submit" name="clear" value="자료초기화">
+                    </td>
+                    <td width="200px">&nbsp</td>
                   </tr>
                 </table>
                 <!-- ======= Maiin Body- Test- submit end ======= -->
@@ -4026,7 +4032,7 @@ details[open]>summary~* {
 
 
 
-        // 분석하기 실행
+        // 종합결과 분석하기 실행
         function sub_analysis() {
 
           <!-- ======= Maiin Body-Customer-Information-value start ====== -->
@@ -4946,6 +4952,10 @@ details[open]>summary~* {
         // 보고서작성으로 연결
         var win = window.open("Test_analysis_ver1.html", "analysis", "width=650px, height=1200px, top=50, left=200, resizable=yes, scrollbars=yes");
 
+      }
+
+      function sub_Evolution(){
+        localStorage.clear();
       }
 
     </script>
