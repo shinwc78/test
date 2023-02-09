@@ -690,7 +690,7 @@
 
   //마독스로드_원거리
   function D_agree(event) {
-    const D_agree = document.getElementById('D_agree').value;
+    const D_agree = event.target.value;
     if (D_agree == 'agree') {
       document.getElementById('result_DMaddox').innerText = "(양호)";
     } else if (D_agree == 'discord') {
@@ -699,13 +699,17 @@
       const DVer_maddox = document.getElementById('DVer_maddox').value;
       const DVer_BIBO = document.getElementById('DVer_BIBO').value;
       if ((DHor_maddox > 3 && DHor_BIBO == "BI") || (DHor_maddox > 1 && DHor_BIBO == "BO")){
-        if (DVer_maddox > 0 || DVer_maddox == "") {
+        if (DVer_maddox > 0 ) {
           document.getElementById('result_DMaddox').innerText = "(불량)";
         } else {
           document.getElementById('result_DMaddox').innerText = "(불량)";
         }
       } else {
-        document.getElementById('result_DMaddox').innerText = "(양호)";
+        if (DVer_maddox > 0 ) {
+          document.getElementById('result_DMaddox').innerText = "(불량)";
+        } else {
+          document.getElementById('result_DMaddox').innerText = "(양호)";
+        }
       }
     }
   }
@@ -721,13 +725,17 @@
       const NVer_maddox = document.getElementById('NVer_maddox').value;
       const NVer_BIBO = document.getElementById('NVer_BIBO').value;
       if ((NHor_maddox > 6 && NHor_BIBO == "BI") || (NHor_maddox > 0 && NHor_BIBO == "BO")){
-        if (NVer_maddox > 0 || NVer_maddox == "") {
+        if (NVer_maddox > 0 ) {
           document.getElementById('result_NMaddox').innerText = "(불량)";
         } else {
           document.getElementById('result_NMaddox').innerText = "(불량)";
         }
       } else {
-        document.getElementById('result_NMaddox').innerText = "(양호)";
+        if (NVer_maddox > 0 ) {
+          document.getElementById('result_NMaddox').innerText = "(불량)";
+        } else {
+          document.getElementById('result_NMaddox').innerText = "(양호)";
+        }
       }
     }
   }

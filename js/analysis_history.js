@@ -146,6 +146,7 @@ if(radio_drug !== ""){
 
 // ● 학교생활 :
 if (che_school_prob !== "" || radio_school !== "" || radio_friend !== "" || radio_teacher !== "" || radio_report !== "" || text_school_prob !== "") {
+  document.write("● 학교생활 : ");
   if(che_school_prob !== ""){
       document.write(che_school_prob+"이 있음. ");
   }
