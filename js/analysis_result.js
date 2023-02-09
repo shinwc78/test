@@ -201,25 +201,6 @@ if (QOL_sum >= 20) {
   var Eva_result3 = "";
 }
 
-document.write("QOL_score1 :"+QOL_score1);document.write(typeof QOL_score1);document.write("<br>");
-document.write("QOL_score2 :"+QOL_score2);document.write(typeof QOL_score2);document.write("<br>");
-document.write("QOL_score3 :"+QOL_score3);document.write(typeof QOL_score3);document.write("<br>");
-document.write("QOL_score4 :"+QOL_score4);document.write(typeof QOL_score4);document.write("<br>");
-document.write("QOL_score5 :"+QOL_score5);document.write(typeof QOL_score5);document.write("<br>");
-document.write("ChAge :"+ChAge);document.write(typeof ChAge);document.write("<br>");
-document.write("Accomage :"+Accomage);document.write(typeof Accomage);document.write("<br>");
-document.write("RAccom_Rev :"+RAccom_Rev);document.write(typeof RAccom_Rev);document.write("<br>");
-document.write("LAccom_Rev :"+LAccom_Rev);document.write(typeof LAccom_Rev);document.write("<br>");
-document.write("OUAccom_Rev :"+OUAccom_Rev);document.write(typeof OUAccom_Rev);document.write("<br>");
-document.write("R_accom :"+R_accom);document.write(typeof R_accom);document.write("<br>");
-document.write("L_accom :"+L_accom);document.write(typeof L_accom);document.write("<br>");
-document.write("O_accom :"+O_accom);document.write(typeof O_accom);document.write("<br>");
-document.write("Sel_AccomRev :"+Sel_AccomRev);document.write(typeof Sel_AccomRev);document.write("<br>");
-document.write("DEM_RATIO_PER :"+DEM_RATIO_PER);document.write(typeof DEM_RATIO_PER);document.write("<br>");
-document.write("QOL_sum :"+QOL_sum);document.write(typeof QOL_sum);document.write("<br>");
-document.write("Eva_result1 :"+Eva_result1);document.write(typeof Eva_result1);document.write("<br>");
-document.write("Eva_result2 :"+Eva_result2);document.write(typeof Eva_result2);document.write("<br>");
-document.write("Eva_result3 :"+Eva_result3);document.write(typeof Eva_result3);document.write("<br>");
 
 if (Eva_result1 !== "" || Eva_result2 !== ""  || Eva_result3 !== "" ){
   document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result1+" "+Eva_result2+" "+Eva_result3+'</span>'+"입니다.<br>\n <br>\n");
