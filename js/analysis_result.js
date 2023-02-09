@@ -117,8 +117,10 @@ if (QOL_sum !== ""){
 //     $Eva_result1 = "수직사위";
 //   }
 // }
+
 var Accomage = 15 - (0.25 * ChAge);
-if(RAccom_Rev !== "" || LAccom_Rev !== "" || OUAccom_Rev !== "" || R_accom !=="" || L_accom !== "" || O_accom !== ""){
+
+if(RAccom_Rev !== "" && LAccom_Rev !== "" && OUAccom_Rev !== "" && R_accom !=="" && L_accom !== "" && O_accom !== ""){
   if((R_accom <= Accomage-2) || (L_accom <= Accomage-2)){
     if(ChAge <= 6){
       if(RAccom_Rev <= 3 || LAccom_Rev <= 3){
@@ -127,22 +129,28 @@ if(RAccom_Rev !== "" || LAccom_Rev !== "" || OUAccom_Rev !== "" || R_accom !==""
         } else if (Sel_AccomRev == 'bad1'){
           var Eva_result2 = "조절과다(조절경련)";
         }
+      } else {
+        var Eva_result2 = "";
       }
-    } else if (ChAge > 6 && ChAge < 13) {
+    } else if (ChAge > 6 && ChAge <= 13) {
       if((RAccom_Rev <= 4.5) || (LAccom_Rev <= 4.5)){
         if(Sel_AccomRev == 'bad2'){
           var Eva_result2 = "조절부족/조절지속능력부족";
         } else if(Sel_AccomRev == 'bad1'){
           var Eva_result2 = "조절과다(조절경련)";
         }
+      } else {
+        var Eva_result2 = "";
       }
-    }  else if (ChAge >= 13 ) {
+    }  else if (ChAge > 13 ) {
       if((RAccom_Rev <= 6) || (LAccom_Rev <= 6)){
         if(Sel_AccomRev == 'bad2'){
           var Eva_result2 = "조절부족/조절지속능력부족";
         } else if(Sel_AccomRev == 'bad1'){
           var Eva_result2 = "조절과다(조절경련)";
         }
+      } else {
+        var Eva_result2 = "";
       }
     }
   } else if ((R_accom >= Accomage) || (L_accom >= Accomage)){
@@ -153,39 +161,59 @@ if(RAccom_Rev !== "" || LAccom_Rev !== "" || OUAccom_Rev !== "" || R_accom !==""
           var Eva_result2 = "조절용이부족";
         }
       }
+    } else {
+      var Eva_result2 = "";
     }
-  } else if (ChAge >= 7 && ChAge < 12) {
+  } else if (ChAge >6  && ChAge <= 13) {
       if((RAccom_Rev <= 4.5) || (LAccom_Rev <= 4.5)){
         if (OUAccom_Rev <= 2.5) {
           if(Sel_AccomRev == 'bad3'){
           var Eva_result2 = "조절용이부족";
         }
       }
+    } else {
+      var Eva_result2 = "";
     }
-  } else if (ChAge >= 13 && ChAge < 38) {
+  } else if (ChAge > 13 && ChAge < 38) {
       if((RAccom_Rev <= 6) || (LAccom_Rev <= 6)){
         if (OUAccom_Rev <= 2.5) {
           if(Sel_AccomRev == 'bad3'){
           var Eva_result2 = "조절용이부족";
         }
       }
+    } else {
+      var Eva_result2 = "";
     }
   }
+}
 } else {
   var Eva_result2 = "";
 }
-}
+
 
 if (QOL_sum >= 20) {
   if (DEM_RATIO_PER <= 15 || DEM_RATIO_PER === '<1') {
     var Eva_result3 = "안구운동이상";
   }
-} else if (QOL_sum == "NaN") {
-  var Eva_result3 = "";
 } else {
   var Eva_result3 = "";
 }
 
+
+document.write("ChAge :"+ChAge);document.write(typeof ChAge);document.write("<br>");
+document.write("Accomage :"+Accomage);document.write(typeof Accomage);document.write("<br>");
+document.write("RAccom_Rev :"+RAccom_Rev);document.write(typeof RAccom_Rev);document.write("<br>");
+document.write("LAccom_Rev :"+LAccom_Rev);document.write(typeof LAccom_Rev);document.write("<br>");
+document.write("OUAccom_Rev :"+OUAccom_Rev);document.write(typeof OUAccom_Rev);document.write("<br>");
+document.write("R_accom :"+R_accom);document.write(typeof R_accom);document.write("<br>");
+document.write("L_accom :"+L_accom);document.write(typeof L_accom);document.write("<br>");
+document.write("O_accom :"+O_accom);document.write(typeof O_accom);document.write("<br>");
+document.write("Sel_AccomRev :"+Sel_AccomRev);document.write(typeof Sel_AccomRev);document.write("<br>");
+document.write("DEM_RATIO_PER :"+DEM_RATIO_PER);document.write(typeof DEM_RATIO_PER);document.write("<br>");
+document.write("QOL_sum :"+QOL_sum);document.write(typeof QOL_sum);document.write("<br>");
+document.write("Eva_result1 :"+Eva_result1);document.write(typeof Eva_result1);document.write("<br>");
+document.write("Eva_result2 :"+Eva_result2);document.write(typeof Eva_result2);document.write("<br>");
+document.write("Eva_result3 :"+Eva_result3);document.write(typeof Eva_result3);document.write("<br>");
 
 if (Eva_result1 !== "" || Eva_result2 !== ""  || Eva_result3 !== "" ){
   document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result1+" "+Eva_result2+" "+Eva_result3+'</span>'+"입니다.<br>\n <br>\n");
