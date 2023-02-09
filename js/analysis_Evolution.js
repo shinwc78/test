@@ -58,21 +58,9 @@ if (RDVision == "" || LDVision == "" || OUDVision == ""){
     }
   }
 }
-
-
-
-// 근거리 나안/교정시력
-if (RNVision == "" || LNVision == "" || OUNVision == ""){
-  document.write("");
-} else {
-  if (RNVision < 0.7 || LNVision < 0.7 || OUNVision < 0.7) {
-    document.write("● "+sel_glass1+"의 근거리 시력이 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었습니다.<br>\n");
-  } else if (RNVision >= 1.0 && LNVision >= 1.0 && OUNVision >= 1.0){
-    document.write("● "+sel_glass1+"의 근거리 시력이 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 양호하게 평가 되었습니다.<br>\n");
-  } else {
-    document.write("● "+sel_glass1+"의 근거리 시력이 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구됩니다.<br>\n");
-  }
 }
+
+
 
 
 // 원거리교정시력_새로운굴절력
@@ -203,13 +191,11 @@ var Accomage = 15 - (0.25 * ChAge);
 if (R_accom == "" || L_accom == "" || O_accom == "" ){
 
 } else {
-
   if ((R_accom < Accomage) || (L_accom < Accomage) || (O_accom < Accomage) ) {
     document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절력이 오른쪽 "+R_accom+"D, 왼쪽 "+L_accom+"D, 양안 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
   } else {
     document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절력이 오른쪽 "+R_accom+"D, 왼쪽 "+L_accom+"D, 양안 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 이상으로 양호하게 평가되었습니다.<br>\n");
-
-    }
+  }
 }
 
 
@@ -359,6 +345,7 @@ if (ChAge <= 6) {
       document.write("● 서로 떨어진 두 물체를 두눈이 동시에 빠르고 정확하게 볼수 있는 홱보기평가(Saccadic)시 안구운동이 "+'<span style="font-weight: bold; color: red;">'+"주시가 불안정하여 불량"+'</span>'+"합니다.");
     }
   }
+
   if (sacca_head_turn == "none" || sacca_head_turn == "") {
     document.write("");
   } else {
@@ -575,7 +562,6 @@ if (ChAge <= 6) {
       if (NConver1 == ""){
         var NConver1 = "×";
       }
-
         if (NConver2 < 15) {
           document.write("● "+NVer_tool+"(으)로 평가한 근거리 수평양성융합력이 "+NConver1+" / "+NConver2+" / "+NConver3+" 로 "+'<span style="font-weight: bold; color: red;">'+"정상범위보다 불량"+'</span>'+"합니다.<br>\n");
         } else {
@@ -706,4 +692,6 @@ if (ChAge <= 6) {
       } else if (MIT == "bad"){
         document.write("● 황반부의 중심으로 주시할수 있는지를 자각적으로 관찰할 수 있는 황반부통합검사에서 "+'<span style="font-weight: bold; color: red;">'+"중심외주시로 불량"+'</span>'+"합니다.<br>\n");
       }
+    } else {
+      
     }
