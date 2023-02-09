@@ -106,127 +106,70 @@ var text_friends = localStorage.getItem('text_friends');
 var text_memory = localStorage.getItem('text_memory');
 
 // <!-- ======= QOL value ====== -->
-var QOL_score1 = localStorage.getItem('QOL_score1');
-if (QOL_score1 !== "") {
-  var int_QOL_score1 = Change_int[QOL_score1];
-}
-var QOL_score2 = localStorage.getItem('QOL_score2');
-if (QOL_score2 !== "") {
-  var int_QOL_score2 = Change_int[QOL_score2];
-}
-var QOL_score3 = localStorage.getItem('QOL_score3');
-if (QOL_score3 !== "") {
-  var int_QOL_score3 = Change_int[QOL_score3];
-}
-var QOL_score4 = localStorage.getItem('QOL_score4');
-if (QOL_score4 !== "") {
-  var int_QOL_score4 = Change_int[QOL_score4];
-}
-var QOL_score5 = localStorage.getItem('QOL_score5');
-if (QOL_score5 !== "") {
-  var int_QOL_score5 = Change_int[QOL_score5];
-}
-var QOL_score6 = localStorage.getItem('QOL_score6');
-if (QOL_score6 !== "") {
-  var int_QOL_score6 = Change_int[QOL_score6];
-}
-var QOL_score7 = localStorage.getItem('QOL_score7');
-if (QOL_score7 !== "") {
-  var int_QOL_score7 = Change_int[QOL_score7];
-}
-var QOL_score8 = localStorage.getItem('QOL_score8');
-if (QOL_score8 !== "") {
-  var int_QOL_score8 = Change_int[QOL_score8];
-}
-var QOL_score9 = localStorage.getItem('QOL_score9');
-if (QOL_score9 !== "") {
-  var int_QOL_score9 = Change_int[QOL_score9];
-}
-var QOL_score10 = localStorage.getItem('QOL_score10');
-if (QOL_score10 !== "") {
-  var int_QOL_score10 = Change_int[QOL_score10];
-}
-var QOL_score11 = localStorage.getItem('QOL_score11');
-if (QOL_score11 !== "") {
-  var int_QOL_score11 = Change_int[QOL_score11];
-}
-var QOL_score12 = localStorage.getItem('QOL_score12');
-if (QOL_score12 !== "") {
-  var int_QOL_score12 = Change_int[QOL_score12];
-}
-var QOL_score13 = localStorage.getItem('QOL_score13');
-if (QOL_score13 !== "") {
-  var int_QOL_score13 = Change_int[QOL_score13];
-}
-var QOL_score14 = localStorage.getItem('QOL_score14');
-if (QOL_score14 !== "") {
-  var int_QOL_score14 = Change_int[QOL_score14];
-}
-var QOL_score15 = localStorage.getItem('QOL_score15');
-if (QOL_score15 !== "") {
-  var int_QOL_score15 = Change_int[QOL_score15];
-}
-var QOL_score16 = localStorage.getItem('QOL_score16');
-if (QOL_score16 !== "") {
-  var int_QOL_score16 = Change_int[QOL_score16];
-}
-var QOL_score17 = localStorage.getItem('QOL_score17');
-if (QOL_score17 !== "") {
-  var int_QOL_score17 = Change_int[QOL_score17];
-}
-var QOL_score18 = localStorage.getItem('QOL_score18');
-if (QOL_score18 !== "") {
-  var int_QOL_score18 = Change_int[QOL_score18];
-}
-var QOL_score19 = localStorage.getItem('QOL_score19');
-if (QOL_score19 !== "") {
-  var int_QOL_score19 = Change_int[QOL_score19];
-}
 
-var QOL_sum = int_QOL_score1+int_QOL_score2+int_QOL_score3+int_QOL_score4+int_QOL_score5+int_QOL_score6+int_QOL_score7+int_QOL_score8+int_QOL_score9+
-int_QOL_score10+int_QOL_score11+int_QOL_score12+int_QOL_score13+int_QOL_score14+int_QOL_score15+int_QOL_score16+int_QOL_score17+int_QOL_score18+int_QOL_score19;
 
+var QOL_score1 = parseInt(localStorage.getItem('QOL_score1'));
+var QOL_score2 = parseInt(localStorage.getItem('QOL_score2'));
+var QOL_score3 = parseInt(localStorage.getItem('QOL_score3'));
+var QOL_score4 = parseInt(localStorage.getItem('QOL_score4'));
+var QOL_score5 = parseInt(localStorage.getItem('QOL_score5'));
+var QOL_score6 = parseInt(localStorage.getItem('QOL_score6'));
+var QOL_score7 = parseInt(localStorage.getItem('QOL_score7'));
+var QOL_score8 = parseInt(localStorage.getItem('QOL_score8'));
+var QOL_score9 = parseInt(localStorage.getItem('QOL_score9'));
+var QOL_score10 = parseInt(localStorage.getItem('QOL_score10'));
+var QOL_score11 = parseInt(localStorage.getItem('QOL_score11'));
+var QOL_score12 = parseInt(localStorage.getItem('QOL_score12'));
+var QOL_score13 = parseInt(localStorage.getItem('QOL_score13'));
+var QOL_score14 = parseInt(localStorage.getItem('QOL_score14'));
+var QOL_score15 = parseInt(localStorage.getItem('QOL_score15'));
+var QOL_score16 = parseInt(localStorage.getItem('QOL_score16'));
+var QOL_score17 = parseInt(localStorage.getItem('QOL_score17'));
+var QOL_score18 = parseInt(localStorage.getItem('QOL_score18'));
+var QOL_score19 = parseInt(localStorage.getItem('QOL_score19'));
+
+var QOL_sum = QOL_score1+QOL_score2+QOL_score3+QOL_score4+QOL_score5+QOL_score6+QOL_score7+QOL_score8+QOL_score9+QOL_score10+QOL_score11+QOL_score12+QOL_score13+QOL_score14+QOL_score15+QOL_score16+QOL_score17+QOL_score18+QOL_score19;
 
 
 // <!-- ======= 양안시평가 ====== -->
 var MainEye = localStorage.getItem('MainEye');
-var PD = JSON.parse(localStorage.getItem('PD'));
+var PD = parseFloat(localStorage.getItem('PD'));
 var sel_glass1 = localStorage.getItem('sel_glass1');
-var RDVision = JSON.parse(localStorage.getItem('RDVision'));
-var LDVision = JSON.parse(localStorage.getItem('LDVision'));
-var OUDVision = JSON.parse(localStorage.getItem('OUDVision'));
-var RNVision = JSON.parse(localStorage.getItem('RNVision'));
-var LNVision = JSON.parse(localStorage.getItem('LNVision'));
-var OUNVision = JSON.parse(localStorage.getItem('OUNVision'));
-var TxtRSph = localStorage.getItem('TxtRSph');
-var TxtRCyl = localStorage.getItem('TxtRCyl');
-var TxtRAxis = localStorage.getItem('TxtRAxis');
-var TxtRAdd = localStorage.getItem('TxtRAdd');
-var TxtLSph = localStorage.getItem('TxtLSph');
-var TxtLCyl = localStorage.getItem('TxtLCyl');
-var TxtLAxis = localStorage.getItem('TxtLAxis');
-var TxtLAdd = localStorage.getItem('TxtLAdd');
-var RDVision_new = localStorage.getItem('RDVision_new');
-var LDVision_new = localStorage.getItem('LDVision_new');
-var OUDVision_new = localStorage.getItem('OUDVision_new');
-var RNVision_new = localStorage.getItem('RNVision_new');
-var LNVision_new = localStorage.getItem('LNVision_new');
-var OUNVision_new = localStorage.getItem('OUNVision_new');
+var RDVision = parseFloat(localStorage.getItem('RDVision'));
+var LDVision = parseFloat(localStorage.getItem('LDVision'));
+var OUDVision = parseFloat(localStorage.getItem('OUDVision'));
+var RNVision = parseFloat(localStorage.getItem('RNVision'));
+var LNVision = parseFloat(localStorage.getItem('LNVision'));
+var OUNVision = parseFloat(localStorage.getItem('OUNVision'));
+var TxtRSph = parseFloat(localStorage.getItem('TxtRSph'));
+var TxtRCyl = parseFloat(localStorage.getItem('TxtRCyl'));
+var TxtRAxis = parseFloat(localStorage.getItem('TxtRAxis'));
+var TxtRAdd = parseFloat(localStorage.getItem('TxtRAdd'));
+var TxtLSph = parseFloat(localStorage.getItem('TxtLSph'));
+var TxtLCyl = parseFloat(localStorage.getItem('TxtLCyl'));
+var TxtLAxis = parseFloat(localStorage.getItem('TxtLAxis'));
+var TxtLAdd = parseFloat(localStorage.getItem('TxtLAdd'));
+var RDVision_new = parseFloat(localStorage.getItem('RDVision_new'));
+var LDVision_new = parseFloat(localStorage.getItem('LDVision_new'));
+var OUDVision_new = parseFloat(localStorage.getItem('OUDVision_new'));
+var RNVision_new = parseFloat(localStorage.getItem('RNVision_new'));
+var LNVision_new = parseFloat(localStorage.getItem('LNVision_new'));
+var OUNVision_new = parseFloat(localStorage.getItem('OUNVision_new'));
 var Balance = localStorage.getItem('Balance');
 var D_W4D = localStorage.getItem('D_W4D');
 var N_W4D = localStorage.getItem('N_W4D');
 var CTest_D = localStorage.getItem('CTest_D');
 var CTest_N = localStorage.getItem('CTest_N');
-var ChAge = JSON.parse(localStorage.getItem('ChAge'));
-var ChAge_m = JSON.parse(localStorage.getItem('ChAge_m'));
-var R_accom = JSON.parse(localStorage.getItem('R_accom'));
-var L_accom = JSON.parse(localStorage.getItem('L_accom'));
-var O_accom = JSON.parse(localStorage.getItem('O_accom'));
-var RAccom_Rev = JSON.parse(localStorage.getItem('RAccom_Rev'));
-var LAccom_Rev = JSON.parse(localStorage.getItem('LAccom_Rev'));
-var OUAccom_Rev = JSON.parse(localStorage.getItem('OUAccom_Rev'));
-var Sel_AccomRev = JSON.parse(localStorage.getItem('Sel_AccomRev'));
-var NVer = JSON.parse(localStorage.getItem('NVer'));
+var ChAge = parseInt(localStorage.getItem('ChAge'));
+var ChAge_m = parseInt(localStorage.getItem('ChAge_m'));
+var R_accom = parseInt(localStorage.getItem('R_accom'));
+var L_accom = parseInt(localStorage.getItem('L_accom'));
+var O_accom = parseInt(localStorage.getItem('O_accom'));
+var RAccom_Rev = parseFloat(localStorage.getItem('RAccom_Rev'));
+var LAccom_Rev = parseFloat(localStorage.getItem('LAccom_Rev'));
+var OUAccom_Rev = parseFloat(localStorage.getItem('OUAccom_Rev'));
+var Sel_AccomRev =parseFloat(localStorage.getItem('Sel_AccomRev'));
+var NVer = parseFloat(localStorage.getItem('NVer'));
 var bro_eye_movement = localStorage.getItem('bro_eye_movement');
 var bro_head_turn = localStorage.getItem('bro_head_turn');
 var sacca_eye_movement = localStorage.getItem('sacca_eye_movement');
@@ -235,56 +178,56 @@ var DStereo = localStorage.getItem('DStereo');
 var NStereo = localStorage.getItem('NStereo');
 var Pupilreflex = localStorage.getItem('Pupilreflex');
 var horEVA_tool = localStorage.getItem('horEVA_tool');
-var Dectopic = JSON.parse(localStorage.getItem('Dectopic'));
+var Dectopic = parseFloat(localStorage.getItem('Dectopic'));
 var D_BIBO = localStorage.getItem('D_BIBO');
-var Nectopic = JSON.parse(localStorage.getItem('Nectopic'));
+var Nectopic = parseFloat(localStorage.getItem('Nectopic'));
 var N_BIBO = localStorage.getItem('N_BIBO');
 var DVer_tool = localStorage.getItem('DVer_tool');
-var DConver1 = JSON.parse(localStorage.getItem('DConver1'));
-var DConver2 = JSON.parse(localStorage.getItem('DConver2'));
-var DConver3 = JSON.parse(localStorage.getItem('DConver3'));
-var DDever2 = JSON.parse(localStorage.getItem('DDever2'));
-var DDever3 = JSON.parse(localStorage.getItem('DDever3'));
+var DConver1 = parseFloat(localStorage.getItem('DConver1'));
+var DConver2 = parseFloat(localStorage.getItem('DConver2'));
+var DConver3 = parseFloat(localStorage.getItem('DConver3'));
+var DDever2 = parseFloat(localStorage.getItem('DDever2'));
+var DDever3 = parseFloat(localStorage.getItem('DDever3'));
 var NVer_tool = localStorage.getItem('NVer_tool');
-var NConver1 = JSON.parse(localStorage.getItem('NConver1'));
-var NConver2 = JSON.parse(localStorage.getItem('NConver2'));
-var NConver3 = JSON.parse(localStorage.getItem('NConver3'));
-var NDever1 = JSON.parse(localStorage.getItem('NDever1'));
-var NDever2 = JSON.parse(localStorage.getItem('NDever2'));
-var NDever3 = JSON.parse(localStorage.getItem('NDever3'));
+var NConver1 = parseFloat(localStorage.getItem('NConver1'));
+var NConver2 = parseFloat(localStorage.getItem('NConver2'));
+var NConver3 = parseFloat(localStorage.getItem('NConver3'));
+var NDever1 = parseFloat(localStorage.getItem('NDever1'));
+var NDever2 = parseFloat(localStorage.getItem('NDever2'));
+var NDever3 = parseFloat(localStorage.getItem('NDever3'));
 var verEVA_tool = localStorage.getItem('verEVA_tool');
-var DVertical = JSON.parse(localStorage.getItem('DVertical'));
+var DVertical = parseFloat(localStorage.getItem('DVertical'));
 var D_BUBD = localStorage.getItem('D_BUBD');
-var NVertical = JSON.parse(localStorage.getItem('NVertical'));
+var NVertical = parseFloat(localStorage.getItem('NVertical'));
 var N_BUBD = localStorage.getItem('N_BUBD');
 var DVertical_tool = localStorage.getItem('DVertical_tool');
-var DVertical_BD1 = JSON.parse(localStorage.getItem('DVertical_BD1'));
-var DVertical_BD2 = JSON.parse(localStorage.getItem('DVertical_BD2'));
-var DVertical_BU1 = JSON.parse(localStorage.getItem('DVertical_BU1'));
-var DVertical_BU2 = JSON.parse(localStorage.getItem('DVertical_BU2'));
-var DVertical_BD3 = JSON.parse(localStorage.getItem('DVertical_BD3'));
-var DVertical_BD4 = JSON.parse(localStorage.getItem('DVertical_BD4'));
-var DVertical_BU3 = JSON.parse(localStorage.getItem('DVertical_BU3'));
-var DVertical_BU4 = JSON.parse(localStorage.getItem('DVertical_BU4'));
+var DVertical_BD1 = parseFloat(localStorage.getItem('DVertical_BD1'));
+var DVertical_BD2 = parseFloat(localStorage.getItem('DVertical_BD2'));
+var DVertical_BU1 = parseFloat(localStorage.getItem('DVertical_BU1'));
+var DVertical_BU2 = parseFloat(localStorage.getItem('DVertical_BU2'));
+var DVertical_BD3 = parseFloat(localStorage.getItem('DVertical_BD3'));
+var DVertical_BD4 = parseFloat(localStorage.getItem('DVertical_BD4'));
+var DVertical_BU3 = parseFloat(localStorage.getItem('DVertical_BU3'));
+var DVertical_BU4 = parseFloat(localStorage.getItem('DVertical_BU4'));
 var NVertical_tool = localStorage.getItem('NVertical_tool');
-var NVertical_BD1 = JSON.parse(localStorage.getItem('NVertical_BD1'));
-var NVertical_BD2 = JSON.parse(localStorage.getItem('NVertical_BD2'));
-var NVertical_BU1 = JSON.parse(localStorage.getItem('NVertical_BU1'));
-var NVertical_BU2 = JSON.parse(localStorage.getItem('NVertical_BU2'));
-var NVertical_BD3 = JSON.parse(localStorage.getItem('NVertical_BD3'));
-var NVertical_BD4 = JSON.parse(localStorage.getItem('NVertical_BD4'));
-var NVertical_BU3 = JSON.parse(localStorage.getItem('NVertical_BU3'));
-var NVertical_BU4 = JSON.parse(localStorage.getItem('NVertical_BU4'));
-var VerRev = JSON.parse(localStorage.getItem('VerRev'));
+var NVertical_BD1 = parseFloat(localStorage.getItem('NVertical_BD1'));
+var NVertical_BD2 = parseFloat(localStorage.getItem('NVertical_BD2'));
+var NVertical_BU1 = parseFloat(localStorage.getItem('NVertical_BU1'));
+var NVertical_BU2 = parseFloat(localStorage.getItem('NVertical_BU2'));
+var NVertical_BD3 = parseFloat(localStorage.getItem('NVertical_BD3'));
+var NVertical_BD4 = parseFloat(localStorage.getItem('NVertical_BD4'));
+var NVertical_BU3 = parseFloat(localStorage.getItem('NVertical_BU3'));
+var NVertical_BU4 = parseFloat(localStorage.getItem('NVertical_BU4'));
+var VerRev = parseFloat(localStorage.getItem('VerRev'));
 var D_agree = localStorage.getItem('D_agree');
-var DHor_maddox = JSON.parse(localStorage.getItem('DHor_maddox'));
+var DHor_maddox = parseFloat(localStorage.getItem('DHor_maddox'));
 var DHor_BIBO = localStorage.getItem('DHor_BIBO');
-var DVer_maddox = JSON.parse(localStorage.getItem('DVer_maddox'));
+var DVer_maddox = parseFloat(localStorage.getItem('DVer_maddox'));
 var DVer_BIBO = localStorage.getItem('DVer_BIBO');
 var N_agree = localStorage.getItem('N_agree');
-var NHor_maddox = JSON.parse(localStorage.getItem('NHor_maddox'));
+var NHor_maddox = parseFloat(localStorage.getItem('NHor_maddox'));
 var NHor_BIBO = localStorage.getItem('NHor_BIBO');
-var NVer_maddox = JSON.parse(localStorage.getItem('NVer_maddox'));
+var NVer_maddox = parseFloat(localStorage.getItem('NVer_maddox'));
 var NVer_BIBO = localStorage.getItem('NVer_BIBO');
 var MIT = localStorage.getItem('MIT');
 
