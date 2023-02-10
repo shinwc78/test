@@ -38,46 +38,6 @@ var B4_Age_CLO = ['<5-0','<5-0','<5-0','<5-0','5-1','6-0','6-6','7-2','7-10','8-
 var B5_Age_overall = ['<5-0','5-0','5-1','5-2','5-3','5-5','5-6','5-7','5-8','5-9','5-10','5-11','6-0','6-1','6-2','6-3','6-4','6-5','6-7','6-8','6-9','6-10','6-11','7-1','7-2','7-3','7-4','7-5','7-6','7-8','7-9','7-10','8-0','8-1','8-2','8-4','8-5','8-6','8-8','8-9','8-11','9-0','9-1','9-3','9-4','9-6','9-8','9-9','9-11','10-1','10-3','10-4','10-6','10-8','10-11','11-1','11-3','11-6','11-8','11-11','12-2','12-4','12-7','12-11','13-2','13-6','13-11','14-4','15-3','16-5','17-3','18-7','20-7','>21-11'];
 
 
-// 입력자료 숫자로 변환
-if (RAW_SCORE_DIS_int === "") {
-  var RAW_SCORE_DIS = "";
-} else {
-var RAW_SCORE_DIS = TVPSRAW_int[RAW_SCORE_DIS_int];
-}
-
-if (RAW_SCORE_MEM_int === "") {
-  var RAW_SCORE_MEM = "";
-} else {
-var RAW_SCORE_MEM = TVPSRAW_int[RAW_SCORE_MEM_int];
-}
-if (RAW_SCORE_SPA_int === "") {
-  var RAW_SCORE_SPA = "";
-} else {
-var RAW_SCORE_SPA = TVPSRAW_int[RAW_SCORE_SPA_int];
-}
-if (RAW_SCORE_CON_int === "") {
-  var RAW_SCORE_CON = "";
-} else {
-var RAW_SCORE_CON = TVPSRAW_int[RAW_SCORE_CON_int];
-}
-if (RAW_SCORE_SEQ_int === "") {
-  var RAW_SCORE_SEQ = "";
-} else {
-var RAW_SCORE_SEQ = TVPSRAW_int[RAW_SCORE_SEQ_int];
-}
-if (RAW_SCORE_FGR_int === "") {
-  var RAW_SCORE_FGR = "";
-} else {
-var RAW_SCORE_FGR = TVPSRAW_int[RAW_SCORE_FGR_int];
-}
-if (RAW_SCORE_CLO_int === "") {
-  var RAW_SCORE_CLO = "";
-} else {
-var RAW_SCORE_CLO = TVPSRAW_int[RAW_SCORE_CLO_int];
-}
-
-
-
 
 
 // 분석기준나이설정(TVPS)
@@ -201,91 +161,84 @@ if (ChAge < 5) {
 
 // 척도점수 , 백분위점수, 등가나이환산
 
-if (RAW_SCORE_DIS === "") {
+if (RAW_SCORE_DIS === "" || RAW_SCORE_DIS == "NaN") {
   var RAW_SCORE_DIS = "평가하지 않음";
   var scaled_DIS = "";
   var percentile_DIS = "";
   var qgeEqui_DIS = "";
 } else {
-  var RAW_SCORE_DIS = Number.parseInt(RAW_SCORE_DIS);
   var scaled_DIS = B1_DIS_scaled[TVPS_ACAge][RAW_SCORE_DIS];
   var percentile_DIS = B3_scaled_other[2][scaled_DIS];
   var qgeEqui_DIS = B4_Age_DIS[RAW_SCORE_DIS];
 }
 
 
-if (RAW_SCORE_MEM === "") {
+if (RAW_SCORE_MEM === "" || RAW_SCORE_MEM == "NaN") {
   var RAW_SCORE_MEM = "평가하지 않음";
   var scaled_MEM = "";
   var percentile_MEM = "";
   var qgeEqui_MEM = "";
   } else {
-    var RAW_SCORE_MEM = Number.parseInt(RAW_SCORE_MEM);
   var scaled_MEM = B1_MEM_scaled[TVPS_ACAge][RAW_SCORE_MEM];
   var percentile_MEM = B3_scaled_other[2][scaled_MEM];
   var qgeEqui_MEM = B4_Age_MEM[RAW_SCORE_MEM];
   }
 
 
-if (RAW_SCORE_SPA === "") {
+if (RAW_SCORE_SPA === "" || RAW_SCORE_SPA == "NaN") {
   var RAW_SCORE_SPA = "평가하지 않음";
   var scaled_SPA = "";
   var percentile_SPA = "";
   var qgeEqui_SPA = "";
   } else {
-    var RAW_SCORE_SPA = Number.parseInt(RAW_SCORE_SPA);
   var scaled_SPA = B1_SPA_scaled[TVPS_ACAge][RAW_SCORE_SPA];
   var percentile_SPA = B3_scaled_other[2][scaled_SPA];
   var qgeEqui_SPA = B4_Age_SPA[RAW_SCORE_SPA];
   }
 
 
-if (RAW_SCORE_CON === "") {
+if (RAW_SCORE_CON === "" || RAW_SCORE_CON == "NaN") {
   var RAW_SCORE_CON = "평가하지 않음";
   var scaled_CON = "";
   var percentile_CON = "";
   var qgeEqui_CON = "";
   } else {
-    var RAW_SCORE_CON = Number.parseInt(RAW_SCORE_CON);
   var scaled_CON = B1_CON_scaled[TVPS_ACAge][RAW_SCORE_CON];
   var percentile_CON = B3_scaled_other[2][scaled_CON];
   var qgeEqui_CON = B4_Age_CON[RAW_SCORE_CON];
   }
 
 
-if (RAW_SCORE_SEQ === "") {
+if (RAW_SCORE_SEQ === "" || RAW_SCORE_SEQ == "NaN") {
   var RAW_SCORE_SEQ = "평가하지 않음";
   var scaled_SEQ = "";
   var percentile_SEQ = "";
   var qgeEqui_SEQ = "";
   } else {
-    var RAW_SCORE_SEQ = Number.parseInt(RAW_SCORE_SEQ);
   var scaled_SEQ = B1_SEQ_scaled[TVPS_ACAge][RAW_SCORE_SEQ];
   var percentile_SEQ = B3_scaled_other[2][scaled_SEQ];
   var qgeEqui_SEQ = B4_Age_SEQ[RAW_SCORE_SEQ];
   }
 
 
-if (RAW_SCORE_FGR === "") {
+if (RAW_SCORE_FGR === "" || RAW_SCORE_FGR == "NaN") {
   var RAW_SCORE_FGR = "평가하지 않음";
   var scaled_FGR = "";
   var percentile_FGR = "";
   var qgeEqui_FGR = "";
   } else {
-    var RAW_SCORE_FGR = Number.parseInt(RAW_SCORE_FGR);
   var scaled_FGR = B1_FGR_scaled[TVPS_ACAge][RAW_SCORE_FGR];
   var percentile_FGR = B3_scaled_other[2][scaled_FGR];
   var qgeEqui_FGR = B4_Age_FGR[RAW_SCORE_FGR];
   }
 
 
-if (RAW_SCORE_CLO === "") {
+if (RAW_SCORE_CLO === "" || RAW_SCORE_CLO == "NaN") {
   var RAW_SCORE_CLO = "평가하지 않음";
   var scaled_CLO = "";
   var percentile_CLO = "";
   var qgeEqui_CLO = "";
   } else {
-    var RAW_SCORE_CLO = Number.parseInt(RAW_SCORE_CLO);
   var scaled_CLO = B1_CLO_scaled[TVPS_ACAge][RAW_SCORE_CLO];
   var percentile_CLO = B3_scaled_other[2][scaled_CLO];
   var qgeEqui_CLO = B4_Age_CLO[RAW_SCORE_CLO];

@@ -135,7 +135,7 @@ var QOL_sum = QOL_score1+QOL_score2+QOL_score3+QOL_score4+QOL_score5+QOL_score6+
 var MainEye = localStorage.getItem('MainEye');
 var PD = parseFloat(localStorage.getItem('PD'));
 var sel_glass1 = localStorage.getItem('sel_glass1');
-var RDVision = parseFloat(localStorage.getItem('RDVision'));
+var RDVision = parseFloat(localStorage.getItem('RDVision')).toFixed(1);
 var LDVision = parseFloat(localStorage.getItem('LDVision'));
 var OUDVision = parseFloat(localStorage.getItem('OUDVision'));
 var RNVision = parseFloat(localStorage.getItem('RNVision'));
@@ -244,36 +244,36 @@ var radio_eye_movement = localStorage.getItem('radio_eye_movement');
 
 
 // <!-- ======= TVPS ====== -->
-var RAW_SCORE_DIS_int = localStorage.getItem('RAW_SCORE_DIS');
-var RAW_SCORE_MEM_int = localStorage.getItem('RAW_SCORE_MEM');
-var RAW_SCORE_SPA_int = localStorage.getItem('RAW_SCORE_SPA');
-var RAW_SCORE_CON_int = localStorage.getItem('RAW_SCORE_CON');
-var RAW_SCORE_SEQ_int = localStorage.getItem('RAW_SCORE_SEQ');
-var RAW_SCORE_FGR_int = localStorage.getItem('RAW_SCORE_FGR');
-var RAW_SCORE_CLO_int = localStorage.getItem('RAW_SCORE_CLO');
+var RAW_SCORE_DIS = parseFloat(localStorage.getItem('RAW_SCORE_DIS'));
+var RAW_SCORE_MEM = parseFloat(localStorage.getItem('RAW_SCORE_MEM'));
+var RAW_SCORE_SPA = parseFloat(localStorage.getItem('RAW_SCORE_SPA'));
+var RAW_SCORE_CON = parseFloat(localStorage.getItem('RAW_SCORE_CON'));
+var RAW_SCORE_SEQ = parseFloat(localStorage.getItem('RAW_SCORE_SEQ'));
+var RAW_SCORE_FGR = parseFloat(localStorage.getItem('RAW_SCORE_FGR'));
+var RAW_SCORE_CLO = parseFloat(localStorage.getItem('RAW_SCORE_CLO'));
 
 
 // <!-- ======= VMI ====== -->
-var Raw_vmi_int = localStorage.getItem('Raw_vmi');
-var Raw_visual_int = localStorage.getItem('Raw_visual');
-var Raw_motor_int = localStorage.getItem('Raw_motor');
+var Raw_vmi_int = parseFloat(localStorage.getItem('Raw_vmi'));
+var Raw_visual_int = parseFloat(localStorage.getItem('Raw_visual'));
+var Raw_motor_int = parseFloat(localStorage.getItem('Raw_motor'));
 
 
 // <!-- ======= DEM ====== -->
-var DEM_VER_int = localStorage.getItem('DEM_VER');
-var VER_ERR_S_int = localStorage.getItem('VER_ERR_S');
-var VER_ERR_O_int = localStorage.getItem('VER_ERR_O');
-var VER_ERR_A_int = localStorage.getItem('VER_ERR_A');
-var VER_ERR_T_int = localStorage.getItem('VER_ERR_T');
-var DEM_HOR_int = localStorage.getItem('DEM_HOR');
-var HOR_ERR_S_int = localStorage.getItem('HOR_ERR_S');
-var HOR_ERR_O_int = localStorage.getItem('HOR_ERR_O');
-var HOR_ERR_A_int = localStorage.getItem('HOR_ERR_A');
-var HOR_ERR_T_int = localStorage.getItem('HOR_ERR_T');
+var DEM_VER_int = parseFloat(localStorage.getItem('DEM_VER'));
+var VER_ERR_S_int = parseFloat(localStorage.getItem('VER_ERR_S'));
+var VER_ERR_O_int = parseFloat(localStorage.getItem('VER_ERR_O'));
+var VER_ERR_A_int = parseFloat(localStorage.getItem('VER_ERR_A'));
+var VER_ERR_T_int = parseFloat(localStorage.getItem('VER_ERR_T'));
+var DEM_HOR_int = parseFloat(localStorage.getItem('DEM_HOR'));
+var HOR_ERR_S_int = parseFloat(localStorage.getItem('HOR_ERR_S'));
+var HOR_ERR_O_int = parseFloat(localStorage.getItem('HOR_ERR_O'));
+var HOR_ERR_A_int = parseFloat(localStorage.getItem('HOR_ERR_A'));
+var HOR_ERR_T_int = parseFloat(localStorage.getItem('HOR_ERR_T'));
 
 
 // <!-- ======= WACS ====== -->
-var WACS_RAW_T1_int = localStorage.getItem('WACS_RAW_T1');
-var WACS_RAW_T2_int = localStorage.getItem('WACS_RAW_T2');
-var WACS_RAW_T3_int = localStorage.getItem('WACS_RAW_T3');
-var WACS_RAW_T4_int = localStorage.getItem('WACS_RAW_T4');
+var WACS_RAW_T1_int = parseFloat(localStorage.getItem('WACS_RAW_T1'));
+var WACS_RAW_T2_int = parseFloat(localStorage.getItem('WACS_RAW_T2'));
+var WACS_RAW_T3_int = parseFloat(localStorage.getItem('WACS_RAW_T3'));
+var WACS_RAW_T4_int = parseFloat(localStorage.getItem('WACS_RAW_T4'));
