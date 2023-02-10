@@ -14,82 +14,103 @@
 
 // 원거리와 근거리의 나안/교정시력
 
-if (RDVision == "" || LDVision == "" || OUDVision == ""){
-  document.write("");
-} else {
-  if (RNVision == "" || LNVision == "" || OUNVision == ""){
-    document.write("");
+if (RDVision == "" || LDVision == "" || OUDVision == "" || RDVision == "NaN" || LDVision == "NaN" || OUDVision == "NaN"){
+  if (RNVision == "" || LNVision == "" || OUNVision == "" || RNVision == "NaN" || LNVision == "NaN" || OUNVision == "NaN"){
+
+  } else if (RNVision < 0.7 || LNVision < 0.7 || OUNVision < 0.7) {
+    document.write("● 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었습니다.<br>\n");
+  } else if (RNVision >= 1.0 && LNVision >= 1.0 && OUNVision >= 1.0){
+    document.write("● 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 양호하게 평가 되었습니다.<br>\n");
   } else {
-    if (RDVision < 0.7 || LDVision < 0.7 || OUDVision < 0.7) {
-      if (RNVision == "" || LNVision == "" || OUNVision == ""){
-        document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었습니다.<br>\n");
-      } else {
-        if (RNVision < 0.7 || LNVision < 0.7 || OUNVision < 0.7) {
-          document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었고, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었습니다.<br>\n");
-        } else if (RNVision >= 1.0 && LNVision >= 1.0 && OUNVision >= 1.0){
-          document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었고, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 양호하게 평가 되었습니다.<br>\n");
-        } else {
-          document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었고, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구됩니다.<br>\n");
-        }
-      }
-  } else if (RDVision >= 1.0 && LDVision >= 1.0 && OUDVision >= 1.0){
-    if (RNVision == "" || LNVision == "" || OUNVision == ""){
-      document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 양호하게 평가 되었습니다.<br>\n");
+    document.write("● 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구됩니다.<br>\n");
+  }
+} else {
+  if (RDVision < 0.7 || LDVision < 0.7 || OUDVision < 0.7) {
+    if (RNVision == "" || LNVision == "" || OUNVision == "" || RNVision == "NaN" || LNVision == "NaN" || OUNVision == "NaN"){
+      document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었습니다.<br>\n");
+    } else if (RNVision < 0.7 || LNVision < 0.7 || OUNVision < 0.7) {
+      document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었고, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었습니다.<br>\n");
+    } else if (RNVision >= 1.0 && LNVision >= 1.0 && OUNVision >= 1.0){
+      document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었고, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 양호하게 평가 되었습니다.<br>\n");
     } else {
-      if (RNVision < 0.7 || LNVision < 0.7 || OUNVision < 0.7) {
-        document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 양호하게 평가 되었고, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었습니다.<br>\n");
-      } else if (RNVision >= 1.0 && LNVision >= 1.0 && OUNVision >= 1.0){
-        document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 양호하게 평가 되었고, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 양호하게 평가 되었습니다.<br>\n");
-      } else {
-        document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 양호하게 평가 되었고, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구됩니다.<br>\n");
-      }
+      document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었고, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구됩니다.<br>\n");
+    }
+  } else if (RDVision >= 1.0 && LDVision >= 1.0 && OUDVision >= 1.0){
+    if (RNVision == "" || LNVision == "" || OUNVision == "" || RNVision == "NaN" || LNVision == "NaN" || OUNVision == "NaN"){
+      document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 양호하게 평가 되었습니다.<br>\n");
+    } else if (RNVision < 0.7 || LNVision < 0.7 || OUNVision < 0.7) {
+      document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 양호하게 평가 되었고, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었습니다.<br>\n");
+    } else if (RNVision >= 1.0 && LNVision >= 1.0 && OUNVision >= 1.0){
+      document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 양호하게 평가 되었고, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 양호하게 평가 되었습니다.<br>\n");
+    } else {
+      document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 양호하게 평가 되었고, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구됩니다.<br>\n");
     }
   } else if ((RDVision >=0.7 && RDVision <1.0) || (LDVision >=0.7 && LDVision <1.0) ||(OUDVision >=0.7 && OUDVision <1.0)) {
-    if (RNVision == "" || LNVision == "" || OUNVision == ""){
+    if (RNVision == "" || LNVision == "" || OUNVision == "" || RNVision == "NaN" || LNVision == "NaN" || OUNVision == "NaN"){
       document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구됩니다.<br>\n");
+    } else if (RNVision < 0.7 || LNVision < 0.7 || OUNVision < 0.7) {
+      document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구되며, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었습니다.<br>\n");
+    } else if (RNVision >= 1.0 && LNVision >= 1.0 && OUNVision >= 1.0){
+      document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구되며, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 양호하게 평가 되었습니다.<br>\n");
     } else {
-      if (RNVision < 0.7 || LNVision < 0.7 || OUNVision < 0.7) {
-        document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구되며, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하게"+'</span>'+"평가 되었습니다.<br>\n");
-      } else if (RNVision >= 1.0 && LNVision >= 1.0 && OUNVision >= 1.0){
-        document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구되며, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 양호하게 평가 되었습니다.<br>\n");
-      } else {
-        document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구되며, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구됩니다.<br>\n");
-      }
+      document.write("● 원거리의 "+sel_glass1+"시력은 "+"우안: "+RDVision+", "+"좌안: "+LDVision+", "+"양안: "+OUDVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구되며, 근거리의 "+sel_glass1+"시력은 "+"우안: "+RNVision+", "+"좌안: "+LNVision+", "+"양안: "+OUNVision+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구됩니다.<br>\n");
     }
   }
 }
-}
 
 
 
 
-// 원거리교정시력_새로운굴절력
-if (RDVision_new == "" || LDVision_new == "" || OUDVision_new == ""){
-  document.write("");
+
+
+// 원/ 근거리교정시력_새로운굴절력
+if (RDVision_new == "" || LDVision_new == "" || OUDVision_new == "" || RDVision_new == "NaN" || LDVision_new == "NaN" || OUDVision_new == "NaN"){
+  if (RNVision_new == "" || LNVision_new == "" || OUNVision_new == "" || RNVision_new == "NaN" || LNVision_new == "NaN" || OUNVision_new == "NaN") {
+
+  } else if (RNVision_new < 0.7 || LNVision_new < 0.7 || OUNVision_new < 0.7) {
+    document.write("● 새로운 굴절력으로 교정하였을때 근거리 교정시력이 "+"우안: "+RNVision_new+", "+"좌안: "+LNVision_new+", "+"양안: "+OUNVision_new+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하여"+'</span>'+"꾸준한 관찰이 요구됩니다.<br>\n");
+  } else if (RNVision_new >= 1.0 && LNVision_new >= 1.0 && OUNVision_new >= 1.0){
+    document.write("● 새로운 굴절력으로 교정하였을때 근거리 교정시력이 "+"우안: "+RNVision_new+", "+"좌안: "+LNVision_new+", "+"양안: "+OUNVision_new+"(으)로 양호하게 교정됩니다.<br>\n");
+  } else {
+    document.write("● 새로운 굴절력으로 교정하였을때 근거리 교정시력이 "+"우안: "+RNVision_new+", "+"좌안: "+LNVision_new+", "+"양안: "+OUNVision_new+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구됩니다.<br>\n");
+  }
 } else {
     if (RDVision_new < 0.7 || LDVision_new < 0.7 || OUDVision_new < 0.7) {
-      document.write("● 새로운 굴절력으로 교정하여도 원거리 교정시력이 "+"우안: "+RDVision_new+", "+"좌안: "+LDVision_new+", "+"양안: "+OUDVision_new+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하여"+'</span>'+"꾸준한 관찰이 요구됩니다.<br>\n");
+      if (RNVision_new == "" || LNVision_new == "" || OUNVision_new == "" || RNVision_new == "NaN" || LNVision_new == "NaN" || OUNVision_new == "NaN") {
+        document.write("● 새로운 굴절력으로 교정하였을때 원거리 교정시력이 "+"우안: "+RDVision_new+", "+"좌안: "+LDVision_new+", "+"양안: "+OUDVision_new+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하여"+'</span>'+"꾸준한 관찰이 요구됩니다.<br>\n");
+      } else if (RNVision_new < 0.7 || LNVision_new < 0.7 || OUNVision_new < 0.7) {
+        document.write("● 새로운 굴절력으로 교정하였을때 원거리 교정시력이 "+"우안: "+RDVision_new+", "+"좌안: "+LDVision_new+", "+"양안: "+OUDVision_new+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하고, 근거리 교정시력도 "+"우안: "+RNVision_new+", "+"좌안: "+LNVision_new+", "+"양안: "+OUNVision_new+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하여"+'</span>'+"꾸준한 관찰이 요구됩니다.<br>\n");
+      } else if (RNVision_new >= 1.0 && LNVision_new >= 1.0 && OUNVision_new >= 1.0){
+        document.write("● 새로운 굴절력으로 교정하였을때 원거리 교정시력이 "+"우안: "+RDVision_new+", "+"좌안: "+LDVision_new+", "+"양안: "+OUDVision_new+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하고, 근거리 교정시력은 "+"우안: "+RNVision_new+", "+"좌안: "+LNVision_new+", "+"양안: "+OUNVision_new+"(으)로 양호하게 교정됩니다.<br>\n");
+      } else {
+        document.write("● 새로운 굴절력으로 교정하였을때 원거리 교정시력이 "+"우안: "+RDVision_new+", "+"좌안: "+LDVision_new+", "+"양안: "+OUDVision_new+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하고, 근거리 교정시력은 "+"우안: "+RNVision_new+", "+"좌안: "+LNVision_new+", "+"양안: "+OUNVision_new+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구됩니다.<br>\n");
+      }
     } else if (RDVision_new >= 1.0 && LDVision_new >= 1.0 && OUDVision_new >= 1.0){
-      document.write("● 새로운 굴절력으로 교정하면 원거리 교정시력이 "+"우안: "+RDVision_new+", "+"좌안: "+LDVision_new+", "+"양안: "+OUDVision_new+"(으)로 양호하게 교정됩니다.<br>\n");
+      if (RNVision_new == "" || LNVision_new == "" || OUNVision_new == "" || RNVision_new == "NaN" || LNVision_new == "NaN" || OUNVision_new == "NaN") {
+        document.write("● 새로운 굴절력으로 교정하였을때 원거리 교정시력이 "+"우안: "+RDVision_new+", "+"좌안: "+LDVision_new+", "+"양안: "+OUDVision_new+"(으)로 양호하게 교정됩니다.<br>\n");
+      } else if (RNVision_new < 0.7 || LNVision_new < 0.7 || OUNVision_new < 0.7) {
+        document.write("● 새로운 굴절력으로 교정하였을때 원거리 교정시력이 "+"우안: "+RDVision_new+", "+"좌안: "+LDVision_new+", "+"양안: "+OUDVision_new+"(으)로 양호하게 교정되고, 근거리 교정시력은 "+"우안: "+RNVision_new+", "+"좌안: "+LNVision_new+", "+"양안: "+OUNVision_new+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하여"+'</span>'+"꾸준한 관찰이 요구됩니다.<br>\n");
+      } else if (RNVision_new >= 1.0 && LNVision_new >= 1.0 && OUNVision_new >= 1.0){
+        document.write("● 새로운 굴절력으로 교정하였을때 원거리 교정시력이 "+"우안: "+RDVision_new+", "+"좌안: "+LDVision_new+", "+"양안: "+OUDVision_new+"(으)로 양호하게 교정되고, 근거리 교정시력도 "+"우안: "+RNVision_new+", "+"좌안: "+LNVision_new+", "+"양안: "+OUNVision_new+"(으)로 양호하게 교정됩니다.<br>\n");
+      } else {
+        document.write("● 새로운 굴절력으로 교정하였을때 원거리 교정시력이 "+"우안: "+RDVision_new+", "+"좌안: "+LDVision_new+", "+"양안: "+OUDVision_new+"(으)로 양호하게 교정되고, 근거리 교정시력은 "+"우안: "+RNVision_new+", "+"좌안: "+LNVision_new+", "+"양안: "+OUNVision_new+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구됩니다.<br>\n");
+      }
     } else {
+      if (RNVision_new == "" || LNVision_new == "" || OUNVision_new == "" || RNVision_new == "NaN" || LNVision_new == "NaN" || OUNVision_new == "NaN") {
+        document.write("● 새로운 굴절력으로 교정하였을때 원거리 교정시력이 "+"우안: "+RDVision_new+", "+"좌안: "+LDVision_new+", "+"양안: "+OUDVision_new+"(으)로 양호하게 교정됩니다.<br>\n");
+      } else if (RNVision_new < 0.7 || LNVision_new < 0.7 || OUNVision_new < 0.7) {
+        document.write("● 새로운 굴절력으로 교정하였을때 원거리 교정시력이 "+"우안: "+RDVision_new+", "+"좌안: "+LDVision_new+", "+"양안: "+OUDVision_new+"(으)로 양호하게 교정되고, 근거리 교정시력은 "+"우안: "+RNVision_new+", "+"좌안: "+LNVision_new+", "+"양안: "+OUNVision_new+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하여"+'</span>'+"꾸준한 관찰이 요구됩니다.<br>\n");
+      } else if (RNVision_new >= 1.0 && LNVision_new >= 1.0 && OUNVision_new >= 1.0){
+        document.write("● 새로운 굴절력으로 교정하였을때 원거리 교정시력이 "+"우안: "+RDVision_new+", "+"좌안: "+LDVision_new+", "+"양안: "+OUDVision_new+"(으)로 양호하게 교정되고, 근거리 교정시력도 "+"우안: "+RNVision_new+", "+"좌안: "+LNVision_new+", "+"양안: "+OUNVision_new+"(으)로 양호하게 교정됩니다.<br>\n");
+      } else {
+        document.write("● 새로운 굴절력으로 교정하였을때 원거리 교정시력이 "+"우안: "+RDVision_new+", "+"좌안: "+LDVision_new+", "+"양안: "+OUDVision_new+"(으)로 양호하게 교정되고, 근거리 교정시력은 "+"우안: "+RNVision_new+", "+"좌안: "+LNVision_new+", "+"양안: "+OUNVision_new+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구됩니다.<br>\n");
+      }
       document.write("● 새로운 굴절력으로 교정하면 원거리 교정시력이 "+"우안: "+RDVision_new+", "+"좌안: "+LDVision_new+", "+"양안: "+OUDVision_new+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구됩니다.<br>\n");
     }
   }
 
 
 
-// 근거리교정시력_새로운굴절력
-if (RNVision_new == "" || LNVision_new == "" || OUNVision_new == ""){
-  document.write("");
-} else {
-    if (RNVision_new < 0.7 || LNVision_new < 0.7 || OUNVision_new < 0.7) {
-      document.write("● 새로운 굴절력으로 교정하여도 근거리 교정시력이 "+"우안: "+RNVision_new+", "+"좌안: "+LNVision_new+", "+"양안: "+OUNVision_new+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하여"+'</span>'+"꾸준한 관찰이 요구됩니다.<br>\n");
-    } else if (RNVision_new >= 1.0 && LNVision_new >= 1.0 && OUNVision_new >= 1.0){
-      document.write("● 새로운 굴절력으로 교정하면 근거리 교정시력이 "+"우안: "+RNVision_new+", "+"좌안: "+LNVision_new+", "+"양안: "+OUNVision_new+"(으)로 양호하게 교정됩니다.<br>\n");
-    } else {
-      document.write("● 새로운 굴절력으로 교정하면 근거리 교정시력이 "+"우안: "+RNVision_new+", "+"좌안: "+LNVision_new+", "+"양안: "+OUNVision_new+"(으)로 "+'<span style="font-weight: bold; color: blue;">'+"정기적인 관찰"+'</span>'+"이 요구됩니다.<br>\n");
-    }
-  }
 
 
 
@@ -103,11 +124,30 @@ if (Balance === "none") {
   }
 
 
-// 원거리 W4D
+// 원/ 근거리 W4D
  if (D_W4D == "none"){
-   document.write("");
- } else if (D_W4D == "4") {
-      document.write("● 융합상태검사(W4D)시 원거리는 불빛 4개로 정상융합을 하고 있습니다. ");
+   if (N_W4D == "none" || N_W4D == ""){
+     document.write("");
+   } else if (N_W4D == "4") {
+      document.write("● 융합상태검사(W4D)시 근거리에서 불빛 4개로 정상융합을 하고 있습니다.<br>\n");
+    } else if (N_W4D == "3"){
+     document.write("● 융합상태검사(W4D)시 근거리에서 불빛이"+'<span style="font-weight: bold; color: red;">'+" 녹색 3개(우안억제)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
+    } else if (N_W4D == "2") {
+      document.write("● 융합상태검사(W4D)시 근거리에서 불빛이"+'<span style="font-weight: bold; color: red;">'+" 적색 2개(우안억제)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
+    } else if (N_W4D == "51") {
+     document.write("● 융합상태검사(W4D)시 근거리에서 불빛이"+'<span style="font-weight: bold; color: red;">'+" 5개(교차성 외편위)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
+    } else if (N_W4D == "52") {
+      document.write("● 융합상태검사(W4D)시 근거리에서 불빛이"+'<span style="font-weight: bold; color: red;">'+" 5개(동측성 내편위)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
+    } else if (N_W4D == "53") {
+      document.write("● 융합상태검사(W4D)시 근거리에서 불빛이"+'<span style="font-weight: bold; color: red;">'+" 5개(수직성)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
+    } else if (N_W4D == "54") {
+      document.write("● 융합상태검사(W4D)시 근거리에서 불빛이"+'<span style="font-weight: bold; color: red;">'+" 5개(교차성 외편위와 수직편위가 동반)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
+    } else if (N_W4D == "55") {
+      document.write("● 융합상태검사(W4D)시 근거리에서 불빛이"+'<span style="font-weight: bold; color: red;">'+" 5개(교차성 내편위와 수직편위가 동반)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
+   }
+ } else {
+   if (D_W4D == "4") {
+    document.write("● 융합상태검사(W4D)시 원거리는 불빛 4개로 정상융합을 하고 있습니다. ");
   } else if (D_W4D == "3"){
    document.write("● 융합상태검사(W4D)시 원거리는 불빛이"+'<span style="font-weight: bold; color: red;">'+" 녹색 3개(우안억제)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
   } else if (D_W4D == "2") {
@@ -122,35 +162,62 @@ if (Balance === "none") {
     document.write("● 융합상태검사(W4D)시 원거리는 불빛이"+'<span style="font-weight: bold; color: red;">'+" 5개(교차성 외편위와 수직편위가 동반)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
   } else if (D_W4D == "55") {
     document.write("● 융합상태검사(W4D)시 원거리는 불빛이"+'<span style="font-weight: bold; color: red;">'+" 5개(교차성 내편위와 수직편위가 동반)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
- }
-
- // 근거리 W4D
-  if (N_W4D == "none" || N_W4D == ""){
-    document.write("");
-  } else if (N_W4D == "4") {
-       document.write("또한, 근거리에서는 불빛 4개로 정상융합을 하고 있습니다.<br>\n");
-   } else if (N_W4D == "3"){
-    document.write("또한, 근거리에서는 불빛이"+'<span style="font-weight: bold; color: red;">'+" 녹색 3개(우안억제)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
-   } else if (N_W4D == "2") {
-     document.write("또한, 근거리에서는 불빛이"+'<span style="font-weight: bold; color: red;">'+" 적색 2개(우안억제)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
-   } else if (N_W4D == "51") {
-    document.write("또한, 근거리에서는 불빛이"+'<span style="font-weight: bold; color: red;">'+" 5개(교차성 외편위)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
-   } else if (N_W4D == "52") {
-     document.write("또한, 근거리에서는 불빛이"+'<span style="font-weight: bold; color: red;">'+" 5개(동측성 내편위)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
-   } else if (N_W4D == "53") {
-     document.write("또한, 근거리에서는 불빛이"+'<span style="font-weight: bold; color: red;">'+" 5개(수직성)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
-   } else if (N_W4D == "54") {
-     document.write("또한, 근거리에서는 불빛이"+'<span style="font-weight: bold; color: red;">'+" 5개(교차성 외편위와 수직편위가 동반)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
-   } else if (N_W4D == "55") {
-     document.write("또한, 근거리에서는 불빛이"+'<span style="font-weight: bold; color: red;">'+" 5개(교차성 내편위와 수직편위가 동반)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
   }
+  if (N_W4D == "4") {
+    document.write("또한, 근거리에서는 불빛 4개로 정상융합을 하고 있습니다.<br>\n");
+  } else if (N_W4D == "3"){
+    document.write("또한, 근거리에서는 불빛이"+'<span style="font-weight: bold; color: red;">'+" 녹색 3개(우안억제)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
+  } else if (N_W4D == "2") {
+    document.write("또한, 근거리에서는 불빛이"+'<span style="font-weight: bold; color: red;">'+" 적색 2개(우안억제)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
+  } else if (N_W4D == "51") {
+    document.write("또한, 근거리에서는 불빛이"+'<span style="font-weight: bold; color: red;">'+" 5개(교차성 외편위)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
+  } else if (N_W4D == "52") {
+    document.write("또한, 근거리에서는 불빛이"+'<span style="font-weight: bold; color: red;">'+" 5개(동측성 내편위)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
+  } else if (N_W4D == "53") {
+    document.write("또한, 근거리에서는 불빛이"+'<span style="font-weight: bold; color: red;">'+" 5개(수직성)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
+  } else if (N_W4D == "54") {
+    document.write("또한, 근거리에서는 불빛이"+'<span style="font-weight: bold; color: red;">'+" 5개(교차성 외편위와 수직편위가 동반)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
+  } else if (N_W4D == "55") {
+    document.write("또한, 근거리에서는 불빛이"+'<span style="font-weight: bold; color: red;">'+" 5개(교차성 내편위와 수직편위가 동반)"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
+  } else {
+    document.write("<br>\n");
+  }
+}
 
 
 
-// 차폐평가-원거리
+
+
+
+// 원/근거리 차폐평가
 if (CTest_D === "none") {
-document.write("");
-} else if (CTest_D == 'good'){
+  if (CTest_N === "none" || CTest_N == "") {
+    document.write("");
+  } else if (CTest_N == 'good'){
+    document.write("● 근거리 차폐평가(안구정렬상태검사)시 정위로 양호하게 평가되었습니다.<br>\n");
+  } else if (CTest_N == 'exo'){
+    document.write("● 근거리 차폐평가(안구정렬상태검사)시 "+'<span style="font-weight: bold; color: red;">'+" 잠복성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
+  } else if (CTest_N == 'eso') {
+    document.write("● 근거리 차폐평가(안구정렬상태검사)시 "+'<span style="font-weight: bold; color: red;">'+" 잠복성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
+  } else if (CTest_N == 'XT') {
+    if ( ratio_cross == "sometime") {
+      document.write("● 근거리 차폐평가(안구정렬상태검사)시 "+'<span style="font-weight: bold; color: red;">'+" 간헐성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
+    } else if (ratio_cross == "always"){
+      document.write("● 근거리 차폐평가(안구정렬상태검사)시 "+'<span style="font-weight: bold; color: red;">'+" 항상성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
+    } else {
+      document.write("● 근거리 차폐평가(안구정렬상태검사)시 "+'<span style="font-weight: bold; color: red;">'+" 현성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
+    }
+  } else if (CTest_N == 'ET') {
+    if ( ratio_cross == "sometime") {
+      document.write("● 근거리 차폐평가(안구정렬상태검사)시 "+'<span style="font-weight: bold; color: red;">'+" 간헐성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
+    } else if (ratio_cross == "always"){
+      document.write("● 근거리 차폐평가(안구정렬상태검사)시 "+'<span style="font-weight: bold; color: red;">'+" 항상성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
+    } else {
+      document.write("● 근거리 차폐평가(안구정렬상태검사)시 "+'<span style="font-weight: bold; color: red;">'+" 현성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
+    }
+  }
+} else {
+  if (CTest_D == 'good'){
    document.write("● 원거리 차폐평가(안구정렬상태검사)시 정위로 양호하게 평가되었습니다. ");
   } else if (CTest_D == 'exo'){
    document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 잠복성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
@@ -159,29 +226,51 @@ document.write("");
   } else if (CTest_D == 'XT') {
     if ( ratio_cross == "sometime") {
       document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 간헐성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
+    } else if (ratio_cross == "always"){
+      document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 항상성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
+    } else {
+      document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 현성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
     }
-    document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 항상성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
-
   } else if (CTest_D == 'ET') {
-   document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 항상성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
+    if ( ratio_cross == "sometime") {
+      document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 간헐성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
+    } else if (ratio_cross == "always"){
+      document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 항상성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
+    } else {
+      document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 현성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
+    }
+  }
+   if (CTest_N == 'good'){
+     document.write("또한, 근거리에서는 정위로 양호하게 평가되었습니다.<br>\n");
+    } else if (CTest_N == 'exo'){
+     document.write("또한, 근거리에서는"+'<span style="font-weight: bold; color: red;">'+" 잠복성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
+    } else if (CTest_N == 'eso') {
+     document.write("또한, 근거리에서는"+'<span style="font-weight: bold; color: red;">'+" 잠복성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
+    } else if (CTest_N == 'XT') {
+      if ( ratio_cross == "sometime") {
+        document.write("또한, 근거리에서는"+'<span style="font-weight: bold; color: red;">'+" 간헐성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
+      } else if (ratio_cross == "always"){
+        document.write("또한, 근거리에서는"+'<span style="font-weight: bold; color: red;">'+" 항상성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
+      } else {
+        document.write("또한, 근거리에서는"+'<span style="font-weight: bold; color: red;">'+" 현성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
+      }
+    } else if (CTest_N == 'ET') {
+      if ( ratio_cross == "sometime") {
+        document.write("또한, 근거리에서는"+'<span style="font-weight: bold; color: red;">'+" 간헐성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
+      } else if (ratio_cross == "always"){
+        document.write("또한, 근거리에서는"+'<span style="font-weight: bold; color: red;">'+" 항상성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
+      } else {
+        document.write("또한, 근거리에서는"+'<span style="font-weight: bold; color: red;">'+" 현성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
+      }
+    } else {
+      document.write("<br>\n");
+    }
   }
 
 
 
-// 차폐평가-근거리
-if (CTest_D === "none" || CTest_D == "") {
-  document.write("");
-} else if (CTest_N == 'good'){
-   document.write("또한, 근거리에서는 정위로 양호하게 평가되었습니다.<br>\n");
-  } else if (CTest_N == 'exo'){
-   document.write("또한, 근거리에서는"+'<span style="font-weight: bold; color: red;">'+" 잠복성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
-  } else if (CTest_N == 'eso') {
-   document.write("또한, 근거리에서는"+'<span style="font-weight: bold; color: red;">'+" 잠복성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
-  } else if (CTest_N == 'XT') {
-   document.write("또한, 근거리에서는"+'<span style="font-weight: bold; color: red;">'+" 항상성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
-  } else if (CTest_N == 'ET') {
-   document.write("또한, 근거리에서는"+'<span style="font-weight: bold; color: red;">'+" 항상성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
-  }
+
+
 
 
 
@@ -192,13 +281,14 @@ if (R_accom == "" || L_accom == "" || O_accom == "" ){
 
 } else {
   if ((R_accom < Accomage) || (L_accom < Accomage) || (O_accom < Accomage) ) {
-    document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절력이 오른쪽 "+R_accom+"D, 왼쪽 "+L_accom+"D, 양안 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
+    document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력이 오른쪽 "+R_accom+"D, 왼쪽 "+L_accom+"D, 양안 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
   } else {
-    document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절력이 오른쪽 "+R_accom+"D, 왼쪽 "+L_accom+"D, 양안 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 이상으로 양호하게 평가되었습니다.<br>\n");
+    document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력이 오른쪽 "+R_accom+"D, 왼쪽 "+L_accom+"D, 양안 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 이상으로 양호하게 평가되었습니다.<br>\n");
+  }
+  if (ChAge > 38) {
+    document.write("단, 38세 이후는 수정체경화로 조절능력이 현저히 저하되어 가까운 곳에 초점을 맞추기 어려운 초기노안을 예상할 수 있습니다.<br>\n");
   }
 }
-
-
 
 
 // 조절용이
@@ -271,9 +361,9 @@ if (ChAge <= 6) {
   }
 
   // 눈모임근점
-  if (NVer == ""){
+  if (NVer == "" || NVer == "NaN"){
 
-  }else {
+  } else {
     if (NVer < 6) {
      document.write("● 융합을 유지한 상태에서 눈을 안으로 모을 수 있는 눈모임능력이 "+NVer+"cm로 양호합니다.<br>\n");
     } else {
@@ -285,7 +375,29 @@ if (ChAge <= 6) {
 
   // 따라보기
   if (bro_eye_movement === "none" || bro_eye_movement == ""){
-
+    if (bro_head_turn == "none" || bro_head_turn == "") {
+      document.write("");
+    } else {
+      if (bro_head_turn == "good") {
+        document.write("● 외안근과 지배신경에 대한 완전성평가인 외안근평가(Broad H)시 머리돌림이나 기울임은 관찰되지 않았습니다.<br>\n");
+      } else if (bro_head_turn == "hr"){
+        document.write("● 외안근과 지배신경에 대한 완전성평가인 외안근평가(Broad H)시 "+'<span style="font-weight: bold; color: red;">'+"오른쪽 머리돌림이 "+'</span>'+"관찰되었습니다.<br>\n");
+      } else if (bro_head_turn == "hl"){
+        document.write("● 외안근과 지배신경에 대한 완전성평가인 외안근평가(Broad H)시 "+'<span style="font-weight: bold; color: red;">'+"왼쪽 머리돌림이 "+'</span>'+"관찰되었습니다.<br>\n");
+      } else if (bro_head_turn == "htr"){
+        document.write("● 외안근과 지배신경에 대한 완전성평가인 외안근평가(Broad H)시 "+'<span style="font-weight: bold; color: red;">'+"오른쪽 머리기울임이 "+'</span>'+"관찰되었습니다.<br>\n");
+      } else if (bro_head_turn == "htl"){
+        document.write("● 외안근과 지배신경에 대한 완전성평가인 외안근평가(Broad H)시 "+'<span style="font-weight: bold; color: red;">'+"왼쪽 머리기울임이 "+'</span>'+"관찰되었습니다.<br>\n");
+      } else if (bro_head_turn == "hru"){
+        document.write("● 외안근과 지배신경에 대한 완전성평가인 외안근평가(Broad H)시 "+'<span style="font-weight: bold; color: red;">'+"오른쪽 위로 머리돌림과 기울임이 "+'</span>'+"관찰되었습니다.<br>\n");
+      } else if (bro_head_turn == "hrd"){
+        document.write("● 외안근과 지배신경에 대한 완전성평가인 외안근평가(Broad H)시 "+'<span style="font-weight: bold; color: red;">'+"오른쪽 아래로 머리돌림과 기울임이 "+'</span>'+"관찰되었습니다.<br>\n");
+      } else if (bro_head_turn == "hlu"){
+        document.write("● 외안근과 지배신경에 대한 완전성평가인 외안근평가(Broad H)시 "+'<span style="font-weight: bold; color: red;">'+"왼쪽 위로 머리돌림과 기울임이 "+'</span>'+"관찰되었습니다.<br>\n");
+      } else if (bro_head_turn == "hld"){
+        document.write("● 외안근과 지배신경에 대한 완전성평가인 외안근평가(Broad H)시 "+'<span style="font-weight: bold; color: red;">'+"왼쪽 아래로 머리돌림과 기울임이 "+'</span>'+"관찰되었습니다.<br>\n");
+      }
+    }
   } else {
     if (bro_eye_movement == 'good') {
     document.write("● 외안근과 지배신경에 대한 완전성평가인 외안근평가(Broad H)시 안구운동이 부드럽고 완전해 양호합니다.");
@@ -300,11 +412,7 @@ if (ChAge <= 6) {
     } else if (bro_eye_movement == 'unsteady') {
     document.write("● 외안근과 지배신경에 대한 완전성평가인 외안근평가(Broad H)시 안구운동이 "+'<span style="font-weight: bold; color: red;">'+"주시가 불안정하여 불량"+'</span>'+"합니다.");
     }
-  }
 
-  if (bro_head_turn == "none" || bro_head_turn == "") {
-    document.write("");
-  } else {
     if (bro_head_turn == "good") {
       document.write(" 또한 머리돌림이나 기울임은 관찰되지 않았습니다.<br>\n");
     } else if (bro_head_turn == "hr"){
@@ -323,16 +431,40 @@ if (ChAge <= 6) {
       document.write(" 또한 "+'<span style="font-weight: bold; color: red;">'+"왼쪽 위로 머리돌림과 기울임이 "+'</span>'+"관찰되었습니다.<br>\n");
     } else if (bro_head_turn == "hld"){
       document.write(" 또한 "+'<span style="font-weight: bold; color: red;">'+"왼쪽 아래로 머리돌림과 기울임이 "+'</span>'+"관찰되었습니다.<br>\n");
+    } else {
+      document.write("<br>\n");
     }
   }
 
 
   // 홱보기
   if (sacca_eye_movement === "none" || sacca_eye_movement == ""){
-
+    if (sacca_head_turn == "none" || sacca_head_turn == "") {
+      document.write("");
+    } else {
+      if (sacca_head_turn == "good") {
+        document.write("● 서로 떨어진 두 물체를 두눈이 동시에 빠르고 정확하게 볼수 있는 홱보기평가(Saccadic)시 머리돌림이나 기울임은 관찰되지 않았습니다.<br>\n");
+      } else if (sacca_head_turn == "hr"){
+        document.write("● 서로 떨어진 두 물체를 두눈이 동시에 빠르고 정확하게 볼수 있는 홱보기평가(Saccadic)시 "+'<span style="font-weight: bold; color: red;">'+"오른쪽 머리돌림이 "+'</span>'+"관찰되었습니다.<br>\n");
+      } else if (sacca_head_turn == "hl"){
+        document.write("● 서로 떨어진 두 물체를 두눈이 동시에 빠르고 정확하게 볼수 있는 홱보기평가(Saccadic)시 "+'<span style="font-weight: bold; color: red;">'+"왼쪽 머리돌림이 "+'</span>'+"관찰되었습니다.<br>\n");
+      } else if (sacca_head_turn == "htr"){
+        document.write("● 서로 떨어진 두 물체를 두눈이 동시에 빠르고 정확하게 볼수 있는 홱보기평가(Saccadic)시 "+'<span style="font-weight: bold; color: red;">'+"오른쪽 머리기울임이 "+'</span>'+"관찰되었습니다.<br>\n");
+      } else if (sacca_head_turn == "htl"){
+        document.write("● 서로 떨어진 두 물체를 두눈이 동시에 빠르고 정확하게 볼수 있는 홱보기평가(Saccadic)시 "+'<span style="font-weight: bold; color: red;">'+"왼쪽 머리기울임이 "+'</span>'+"관찰되었습니다.<br>\n");
+      } else if (sacca_head_turn == "hru"){
+        document.write("● 서로 떨어진 두 물체를 두눈이 동시에 빠르고 정확하게 볼수 있는 홱보기평가(Saccadic)시 "+'<span style="font-weight: bold; color: red;">'+"오른쪽 위로 머리돌림과 기울임이 "+'</span>'+"관찰되었습니다.<br>\n");
+      } else if (sacca_head_turn == "hrd"){
+        document.write("● 서로 떨어진 두 물체를 두눈이 동시에 빠르고 정확하게 볼수 있는 홱보기평가(Saccadic)시 "+'<span style="font-weight: bold; color: red;">'+"오른쪽 아래로 머리돌림과 기울임이 "+'</span>'+"관찰되었습니다.<br>\n");
+      } else if (sacca_head_turn == "hlu"){
+        document.write("● 서로 떨어진 두 물체를 두눈이 동시에 빠르고 정확하게 볼수 있는 홱보기평가(Saccadic)시 "+'<span style="font-weight: bold; color: red;">'+"왼쪽 위로 머리돌림과 기울임이 "+'</span>'+"관찰되었습니다.<br>\n");
+      } else if (sacca_head_turn == "hld"){
+        document.write("● 서로 떨어진 두 물체를 두눈이 동시에 빠르고 정확하게 볼수 있는 홱보기평가(Saccadic)시 "+'<span style="font-weight: bold; color: red;">'+"왼쪽 아래로 머리돌림과 기울임이 "+'</span>'+"관찰되었습니다.<br>\n");
+      }
+    }
   } else {
     if (sacca_eye_movement == 'good') {
-      document.write("●  서로 떨어진 두 물체를 두눈이 동시에 빠르고 정확하게 볼수 있는 홱보기평가(Saccadic)시 안구운동이 빠르고 정확함.");
+      document.write("● 서로 떨어진 두 물체를 두눈이 동시에 빠르고 정확하게 볼수 있는 홱보기평가(Saccadic)시 안구운동이 빠르고 정확함.");
     } else if (sacca_eye_movement == 'jurky') {
       document.write("● 서로 떨어진 두 물체를 두눈이 동시에 빠르고 정확하게 볼수 있는 홱보기평가(Saccadic)시 안구운동이 "+'<span style="font-weight: bold; color: red;">'+"격동움직임으로 주시가 불안정"+'</span>'+"합니다.");
     } else if (sacca_eye_movement == 'overshoot') {
@@ -344,11 +476,7 @@ if (ChAge <= 6) {
     } else if (sacca_eye_movement == 'unsteady') {
       document.write("● 서로 떨어진 두 물체를 두눈이 동시에 빠르고 정확하게 볼수 있는 홱보기평가(Saccadic)시 안구운동이 "+'<span style="font-weight: bold; color: red;">'+"주시가 불안정하여 불량"+'</span>'+"합니다.");
     }
-  }
 
-  if (sacca_head_turn == "none" || sacca_head_turn == "") {
-    document.write("");
-  } else {
     if (sacca_head_turn == "good") {
       document.write(" 또한 머리돌림이나 기울임은 관찰되지 않았습니다.<br>\n");
     } else if (sacca_head_turn == "hr"){
@@ -367,12 +495,50 @@ if (ChAge <= 6) {
       document.write(" 또한 "+'<span style="font-weight: bold; color: red;">'+"왼쪽 위로 머리돌림과 기울임이 "+'</span>'+"관찰되었습니다.<br>\n");
     } else if (sacca_head_turn == "hld"){
       document.write(" 또한 "+'<span style="font-weight: bold; color: red;">'+"왼쪽 아래로 머리돌림과 기울임이 "+'</span>'+"관찰되었습니다.<br>\n");
+    } else {
+      document.write("<br>\n");
     }
   }
 
+
+
   // 입체시-원거리
   if (DStereo === "none") {
+    if (NStereo === "none") {
 
+    } else {
+      if (NStereo == "good1") {
+        document.write("● 망막시차로 인한 상대적 깊이를 인식할 수 있는 입체시평가중 근거리 입체시가 20sec로 양호합니다.<br>\n");
+      } else if (NStereo == 'good2') {
+        document.write("● 망막시차로 인한 상대적 깊이를 인식할 수 있는 입체시평가중 근거리 입체시가 25sec로 양호합니다.<br>\n");
+      } else if (NStereo == 'good3') {
+        document.write("● 망막시차로 인한 상대적 깊이를 인식할 수 있는 입체시평가중 근거리 입체시가 30sec로 양호합니다.<br>\n");
+      } else if (NStereo == 'good4') {
+        document.write("● 망막시차로 인한 상대적 깊이를 인식할 수 있는 입체시평가중 근거리 입체시가 40sec로 양호합니다.<br>\n");
+      } else if (NStereo == 'bad0') {
+        document.write("● 망막시차로 인한 상대적 깊이를 인식할 수 있는 입체시평가중 근거리 입체시가 "+'<span style="font-weight: bold; color: red;">'+"50sec로 불량"+'</span>'+"합니다.<br>\n");
+      } else if (NStereo == 'bad1') {
+        document.write("● 망막시차로 인한 상대적 깊이를 인식할 수 있는 입체시평가중 근거리 입체시가 "+'<span style="font-weight: bold; color: red;">'+"60sec로 불량"+'</span>'+"합니다.<br>\n");
+      } else if (NStereo == 'bad2') {
+        document.write("● 망막시차로 인한 상대적 깊이를 인식할 수 있는 입체시평가중 근거리 입체시가 "+'<span style="font-weight: bold; color: red;">'+"70sec로 불량"+'</span>'+"합니다.<br>\n");
+      } else if (NStereo == 'bad3') {
+        document.write("● 망막시차로 인한 상대적 깊이를 인식할 수 있는 입체시평가중 근거리 입체시가 "+'<span style="font-weight: bold; color: red;">'+"80sec로 불량"+'</span>'+"합니다.<br>\n");
+      } else if (NStereo == 'bad4') {
+        document.write("● 망막시차로 인한 상대적 깊이를 인식할 수 있는 입체시평가중, 근거리 입체시가 "+'<span style="font-weight: bold; color: red;">'+"100sec로 불량"+'</span>'+"합니다.<br>\n");
+      } else if (NStereo == 'bad5') {
+        document.write("● 망막시차로 인한 상대적 깊이를 인식할 수 있는 입체시평가중 근거리 입체시가 "+'<span style="font-weight: bold; color: red;">'+"140sec로 불량"+'</span>'+"합니다.<br>\n");
+      } else if (NStereo == 'bad6') {
+        document.write("● 망막시차로 인한 상대적 깊이를 인식할 수 있는 입체시평가중 근거리 입체시가 "+'<span style="font-weight: bold; color: red;">'+"200sec로 불량"+'</span>'+"합니다.<br>\n");
+      } else if (NStereo == 'bad7') {
+        document.write("● 망막시차로 인한 상대적 깊이를 인식할 수 있는 입체시평가중 근거리 입체시가 "+'<span style="font-weight: bold; color: red;">'+"400sec로 불량"+'</span>'+"합니다.<br>\n");
+      } else if (NStereo == 'bad8') {
+        document.write("● 망막시차로 인한 상대적 깊이를 인식할 수 있는 입체시평가중 근거리 입체시가 "+'<span style="font-weight: bold; color: red;">'+"800sec로 불량"+'</span>'+"합니다.<br>\n");
+      } else if (NStereo == 'bad9') {
+        document.write("● 망막시차로 인한 상대적 깊이를 인식할 수 있는 입체시평가중 근거리 입체시가 "+'<span style="font-weight: bold; color: red;">'+"3000sec로 불량"+'</span>'+"합니다.<br>\n");
+      } else if (NStereo == 'bad') {
+        document.write("● 망막시차로 인한 상대적 깊이를 인식할 수 있는 입체시평가중 근거리 입체시표를 "+'<span style="font-weight: bold; color: red;">'+"인지하지 못해 불량"+'</span>'+"합니다.<br>\n");
+      }
+    }
   } else {
     if (DStereo == 'good'){
      document.write("● 망막시차로 인한 상대적 깊이를 인식할 수 있는 원거리 입체시표중 4방향에서 순서대로 인식할 수 있어 양호합니다. ");
@@ -385,13 +551,7 @@ if (ChAge <= 6) {
     } else if (DStereo == 'bad') {
       document.write("● 망막시차로 인한 상대적 깊이를 인식할 수 있는 원거리 입체시표를 "+'<span style="font-weight: bold; color: red;">'+"인식할 수 없어 불량"+'</span>'+"합니다. ");
     }
-  }
 
-
-  // 입체시-근거리
-  if (NStereo === "none") {
-    document.write("");
-  } else {
     if (NStereo == "good1") {
       document.write("또한, 근거리 입체시가 20sec로 양호합니다.<br>\n");
     } else if (NStereo == 'good2') {
@@ -422,8 +582,13 @@ if (ChAge <= 6) {
       document.write("또한, 근거리 입체시가 "+'<span style="font-weight: bold; color: red;">'+"3000sec로 불량"+'</span>'+"합니다.<br>\n");
     } else if (NStereo == 'bad') {
       document.write("또한, 근거리 입체시표를 "+'<span style="font-weight: bold; color: red;">'+"인지하지 못해 불량"+'</span>'+"합니다.<br>\n");
+    } else {
+      document.write("<br>\n");
     }
   }
+
+
+
 
 
   // 동공반응
@@ -443,65 +608,86 @@ if (ChAge <= 6) {
 
 
 
-  // 수평안위-원거리
-  if (Dectopic == "" || D_BIBO === "Chois") {
+  // 원/근거리 수평안위
+  if (Dectopic == "" || Dectopic == "NaN" || D_BIBO == "Chois") {
+    if (Nectopic == "" || Nectopic == "NaN" || N_BIBO === "Chois") {
 
+   } else {
+     if (N_BIBO == 'BI') {
+       if (Nectopic > 6 && Nectopic <=10 ) {
+         document.write("● "+horEVA_tool+"(으)로 평가한 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"약도 외편위로 불량"+'</span>'+"합니다.<br>\n");
+       } else if (Nectopic >10 && Nectopic<=30){
+        document.write("● "+horEVA_tool+"(으)로 평가한 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"중등도 외편위로 불량"+'</span>'+"합니다.<br>\n");
+       }  else if (Nectopic > 30){
+        document.write("● "+horEVA_tool+"(으)로 평가한 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"고도 외편위로 불량"+'</span>'+"합니다.<br>\n");
+       } else {
+        document.write("● "+horEVA_tool+"(으)로 평가한 근거리 수평안위가 정상범위로 양호합니다.<br>\n");
+       }
+     } else if (N_BIBO == 'BO'){
+       if (Nectopic > 0 && Nectopic <=10 ) {
+        document.write("● "+horEVA_tool+"(으)로 평가한 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"약도 내편위로 불량"+'</span>'+"합니다.<br>\n");
+       } else if ($Nectopic > 10 && $Dectopic <=30 ){
+         document.write("● "+horEVA_tool+"(으)로 평가한 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"중등도 내편위로 불량"+'</span>'+"합니다.<br>\n");
+       } else if (Nectopic > 30 ){
+         document.write("● "+horEVA_tool+"(으)로 평가한 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"고도 내편위로 불량"+'</span>'+"합니다.<br>\n");
+       } else {
+         document.write("● "+horEVA_tool+"(으)로 평가한 근거리 수평안위가 정상범위로 양호합니다.<br>\n");
+       }
+     }
+   }
   } else {
-
     if (D_BIBO == 'BI') {
       if (Dectopic > 3 && Dectopic <=10 ) {
-        document.write("● "+horEVA_tool+"(으)로 평가한 원거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"약도 외편위로 불량"+'</span>'+"합니다.<br>\n");
+        document.write("● "+horEVA_tool+"(으)로 평가한 원거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"약도 외편위로 불량"+'</span>'+"합니다.");
       } else if (Dectopic >10 && Dectopic<=30){
-       document.write("● "+horEVA_tool+"(으)로 평가한 원거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"중등도 외편위로 불량"+'</span>'+"합니다.<br>\n");
+       document.write("● "+horEVA_tool+"(으)로 평가한 원거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"중등도 외편위로 불량"+'</span>'+"합니다.");
       } else if (Dectopic > 30){
-       document.write("● "+horEVA_tool+"(으)로 평가한 원거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"고도 외편위로 불량"+'</span>'+"합니다.<br>\n");
+       document.write("● "+horEVA_tool+"(으)로 평가한 원거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"고도 외편위로 불량"+'</span>'+"합니다.");
       } else {
-       document.write("● "+horEVA_tool+"(으)로 평가한 원거리 수평안위가 정상범위로 양호합니다.<br>\n");
+       document.write("● "+horEVA_tool+"(으)로 평가한 원거리 수평안위가 정상범위로 양호합니다.");
       }
     } else if (D_BIBO == 'BO'){
       if (Dectopic > 1 && Dectopic <=10 ) {
-       document.write("● "+horEVA_tool+"(으)로 평가한 원거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"약도 내편위로 불량"+'</span>'+"합니다.<br>\n");
+       document.write("● "+horEVA_tool+"(으)로 평가한 원거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"약도 내편위로 불량"+'</span>'+"합니다.");
       } else if (Dectopic > 10 && Dectopic <=30 ){
-        document.write("● "+horEVA_tool+"(으)로 평가한 원거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"중등도 내편위로 불량"+'</span>'+"합니다.<br>\n");
+        document.write("● "+horEVA_tool+"(으)로 평가한 원거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"중등도 내편위로 불량"+'</span>'+"합니다.");
       } else if (Dectopic > 30 ){
-        document.write("● "+horEVA_tool+"(으)로 평가한 원거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"고도 내편위로 불량"+'</span>'+"합니다.<br>\n");
+        document.write("● "+horEVA_tool+"(으)로 평가한 원거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"고도 내편위로 불량"+'</span>'+"합니다.");
       } else {
-        document.write("● "+horEVA_tool+"(으)로 평가한 원거리 수평안위가 정상범위로 양호합니다.<br>\n");
+        document.write("● "+horEVA_tool+"(으)로 평가한 원거리 수평안위가 정상범위로 양호합니다.");
       }
     }
-  }
-
-
-  // 수평안위-근거리
-   if (Nectopic == "" || N_BIBO === "Chois") {
-
-  } else {
 
     if (N_BIBO == 'BI') {
       if (Nectopic > 6 && Nectopic <=10 ) {
-        document.write("● "+horEVA_tool+"(으)로 평가한 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"약도 외편위로 불량"+'</span>'+"합니다.<br>\n");
+        document.write(" 또한, 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"약도 외편위로 불량"+'</span>'+"합니다.<br>\n");
       } else if (Nectopic >10 && Nectopic<=30){
-       document.write("● "+horEVA_tool+"(으)로 평가한 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"중등도 외편위로 불량"+'</span>'+"합니다.<br>\n");
+       document.write(" 또한, 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"중등도 외편위로 불량"+'</span>'+"합니다.<br>\n");
       }  else if (Nectopic > 30){
-       document.write("● "+horEVA_tool+"(으)로 평가한 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"고도 외편위로 불량"+'</span>'+"합니다.<br>\n");
+       document.write(" 또한, 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"고도 외편위로 불량"+'</span>'+"합니다.<br>\n");
       } else {
-       document.write("● "+horEVA_tool+"(으)로 평가한 근거리 수평안위가 정상범위로 양호합니다.<br>\n");
+       document.write(" 또한, 근거리 수평안위가 정상범위로 양호합니다.<br>\n");
       }
     } else if (N_BIBO == 'BO'){
       if (Nectopic > 0 && Nectopic <=10 ) {
-       document.write("● "+horEVA_tool+"(으)로 평가한 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"약도 내편위로 불량"+'</span>'+"합니다.<br>\n");
+       document.write(" 또한, 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"약도 내편위로 불량"+'</span>'+"합니다.<br>\n");
       } else if ($Nectopic > 10 && $Dectopic <=30 ){
-        document.write("● "+horEVA_tool+"(으)로 평가한 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"중등도 내편위로 불량"+'</span>'+"합니다.<br>\n");
+        document.write(" 또한, 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"중등도 내편위로 불량"+'</span>'+"합니다.<br>\n");
       } else if (Nectopic > 30 ){
-        document.write("● "+horEVA_tool+"(으)로 평가한 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"고도 내편위로 불량"+'</span>'+"합니다.<br>\n");
+        document.write(" 또한, 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"고도 내편위로 불량"+'</span>'+"합니다.<br>\n");
       } else {
-        document.write("● "+horEVA_tool+"(으)로 평가한 근거리 수평안위가 정상범위로 양호합니다.<br>\n");
+        document.write(" 또한, 근거리 수평안위가 정상범위로 양호합니다.<br>\n");
       }
+    } else {
+      document.write("<br>\n");
     }
   }
 
+
+
+
   // 수직안위-원거리,근거리
-  if (DVertical == "" || NVertical == "" ){
+  if (DVertical == "" || NVertical == "" || verEVA_tool== "chois" ){
 
   } else {
     if (DVertical > 0 ) {
@@ -520,70 +706,60 @@ if (ChAge <= 6) {
   }
 
 
-  // 양성융합력-원거리
+  // 원거리 양성/음성 융합력
   if (DConver2 == "" || DConver3 == "" ){
+    if (DDever2 == "" || DDever3 == "" ){
 
-  } else {
-    if (DConver1 == ""){
-      DConver1 = "×";
-    }
-     if (DConver2 <= 11) {
-        document.write("● "+DVer_tool+"(으)로 평가한 원거리 수평양성융합력이 "+DConver1+" / "+DConver2+" / "+DConver3+" 로 "+'<span style="font-weight: bold; color: red;">'+"정상범위보다 불량"+'</span>'+"합니다.<br>\n");
-      } else {
-        if (Dectopic*2 > DConver2) {
-          document.write("● "+DVer_tool+"(으)로 평가한 원거리 수평양성융합력이 "+DConver1+" / "+DConver2+" / "+DConver3+" 로 "+'<span style="font-weight: bold; color: red;">'+"편위량의 2배보다 적어서 불량"+'</span>'+"합니다.<br>\n");
-        } else {
-          document.write("● "+DVer_tool+"(으)로 평가한 원거리 수평양성융합력이 "+DConver1+" / "+DConver2+" / "+DConver3+" 로 정상범위로 평가됩니다.<br>\n");
-        }
-      }
-    }
-
-
-  // 음성융합력-원거리
-  if (DDever2 == "" || DDever3 == "" ){
-
-  } else {
+    } else {
       if (DDever2 <= 4) {
-         document.write("● "+DVer_tool+"(으)로 평가한 원거리 수평음성융합력이 "+DDever2+" / "+DDever3+" 로 "+'<span style="font-weight: bold; color: red;">'+"정상범위보다 불량"+'</span>'+"합니다.<br>\n");
+        document.write("● "+DVer_tool+"(으)로 평가한 원거리 수평음성융합력이 "+DDever2+" / "+DDever3+" 로 "+'<span style="font-weight: bold; color: red;">'+"정상범위보다 불량"+'</span>'+"합니다.<br>\n");
       } else {
         if (Dectopic*2 > DDever2) {
-         document.write("● "+DVer_tool+"(으)로 평가한 원거리 수평음성융합력이 "+DDever2+" / "+DDever3+" 로 "+'<span style="font-weight: bold; color: red;">'+"편위량의 2배보다 적어서 불량"+'</span>'+"합니다.<br>\n");
-        }else {
+          document.write("● "+DVer_tool+"(으)로 평가한 원거리 수평음성융합력이 "+DDever2+" / "+DDever3+" 로 "+'<span style="font-weight: bold; color: red;">'+"편위량의 2배보다 적어서 불량"+'</span>'+"합니다.<br>\n");
+        } else {
           document.write("● "+DVer_tool+"(으)로 평가한 원거리 수평음성융합력이 "+DDever2+" / "+DDever3+" 로 정상범위로 평가됩니다.<br>\n");
         }
       }
     }
+  } else {
+    if (DConver2 <= 11) {
+      document.write("● "+DVer_tool+"(으)로 평가한 원거리 수평양성융합력이 "+DConver1+" / "+DConver2+" / "+DConver3+" 로 "+'<span style="font-weight: bold; color: red;">'+"정상범위보다 불량"+'</span>'+"합니다.");
+    } else if (DConver2 > 11){
+      if (Dectopic*2 > DConver2) {
+        document.write("● "+DVer_tool+"(으)로 평가한 원거리 수평양성융합력이 "+DConver1+" / "+DConver2+" / "+DConver3+" 로 "+'<span style="font-weight: bold; color: red;">'+"편위량의 2배보다 적어서 불량"+'</span>'+"합니다.");
+      } else {
+        document.write("● "+DVer_tool+"(으)로 평가한 원거리 수평양성융합력이 "+DConver1+" / "+DConver2+" / "+DConver3+" 로 정상범위로 평가됩니다.");
+      }
+    }
 
-
-    // 양성융합력-근거리
-    if (NConver2 == "" || NConver3 == "" ){
-
+    if (DDever2 <= 4) {
+       document.write("또한, 수평음성융합력은 "+DDever2+" / "+DDever3+" 로 "+'<span style="font-weight: bold; color: red;">'+"정상범위보다 불량"+'</span>'+"합니다.<br>\n");
+    } else if (DDever2 > 4){
+      if (Dectopic*2 > DDever2) {
+       document.write("또한, 수평음성융합력은 "+DDever2+" / "+DDever3+" 로 "+'<span style="font-weight: bold; color: red;">'+"편위량의 2배보다 적어서 불량"+'</span>'+"합니다.<br>\n");
+      } else {
+        document.write("또한, 수평음성융합력은 "+DDever2+" / "+DDever3+" 로 정상범위로 평가됩니다.<br>\n");
+      }
     } else {
-      if (NConver1 == ""){
-        var NConver1 = "×";
-      }
-        if (NConver2 < 15) {
-          document.write("● "+NVer_tool+"(으)로 평가한 근거리 수평양성융합력이 "+NConver1+" / "+NConver2+" / "+NConver3+" 로 "+'<span style="font-weight: bold; color: red;">'+"정상범위보다 불량"+'</span>'+"합니다.<br>\n");
-        } else {
-          if (Nectopic*2 > NConver2) {
-            document.write("● "+NVer_tool+"(으)로 평가한 근거리 수평양성융합력이 "+NConver1+" / "+NConver2+" / "+NConver3+" 로 "+'<span style="font-weight: bold; color: red;">'+"편위량의 2배보다 적어서 불량"+'</span>'+"합니다.<br>\n");
-          } else {
-            document.write("● "+NVer_tool+"(으)로 평가한 근거리 수평양성융합력이 "+NConver1+" / "+NConver2+" / "+NConver3+" 로 정상범위로 평가됩니다.<br>\n");
-          }
-        }
-      }
+      document.write("<br>\n");
+    }
+  }
 
 
-      // 음성융합력-근거리
+
+
+
+
+
+
+    // 원거리/근거리 양성융합력
+    if (NConver2 == "" || NConver3 == "" ){
       if (NDever2 == "" || NDever3 == "" ){
 
       } else {
-        if (NDever1 == ""){
-          var NDever1 = "×";
-        }
-          if (NDever2 < 17) {
+        if (NDever2 < 17) {
              document.write("● "+NVer_tool+"(으)로 평가한 근거리 수평음성융합력이 "+NDever1+" / "+NDever2+" / "+NDever3+" 로 "+'<span style="font-weight: bold; color: red;">'+"정상범위보다 불량"+'</span>'+"합니다.<br>\n");
-          } else {
+          } else if (NDever2 >= 17) {
             if (N_BIBO === "BO") {
               if (Nectopic*2 > NDever2) {
                 document.write("● "+NVer_tool+"(으)로 평가한 근거리 수평음성융합력이 "+NDever1+" / "+NDever2+" / "+NDever3+" 로 "+'<span style="font-weight: bold; color: red;">'+"편위량의 2배보다 적어서 불량"+'</span>'+"합니다.<br>\n");
@@ -591,6 +767,31 @@ if (ChAge <= 6) {
                 document.write("● "+NVer_tool+"(으)로 평가한 근거리 수평음성융합력이 "+NDever1+" / "+NDever2+" / "+NDever3+" 로 정상범위로 평가됩니다.<br>\n");
             }
           }
+        }
+      }
+    } else {
+      if (NConver2 < 15) {
+          document.write("● "+NVer_tool+"(으)로 평가한 근거리 수평양성융합력이 "+NConver1+" / "+NConver2+" / "+NConver3+" 로 "+'<span style="font-weight: bold; color: red;">'+"정상범위보다 불량"+'</span>'+"합니다.");
+        } else if (NConver2 >= 15) {
+          if (Nectopic*2 > NConver2) {
+            document.write("● "+NVer_tool+"(으)로 평가한 근거리 수평양성융합력이 "+NConver1+" / "+NConver2+" / "+NConver3+" 로 "+'<span style="font-weight: bold; color: red;">'+"편위량의 2배보다 적어서 불량"+'</span>'+"합니다.");
+          } else {
+            document.write("● "+NVer_tool+"(으)로 평가한 근거리 수평양성융합력이 "+NConver1+" / "+NConver2+" / "+NConver3+" 로 정상범위로 평가됩니다.");
+          }
+        }
+
+        if (NDever2 < 17) {
+             document.write("또한, 수평음성융합력이 "+NDever1+" / "+NDever2+" / "+NDever3+" 로 "+'<span style="font-weight: bold; color: red;">'+"정상범위보다 불량"+'</span>'+"합니다.<br>\n");
+          } else if (NDever2 >= 17) {
+            if (N_BIBO === "BO") {
+              if (Nectopic*2 > NDever2) {
+                document.write("또한, 수평음성융합력이 "+NDever1+" / "+NDever2+" / "+NDever3+" 로 "+'<span style="font-weight: bold; color: red;">'+"편위량의 2배보다 적어서 불량"+'</span>'+"합니다.<br>\n");
+              } else {
+                document.write("또한, 수평음성융합력이 "+NDever1+" / "+NDever2+" / "+NDever3+" 로 정상범위로 평가됩니다.<br>\n");
+            }
+          }
+        } else {
+          document.write("<br>\n");
         }
       }
 
@@ -607,52 +808,16 @@ if (ChAge <= 6) {
     }
 
     // 원거리Maddox
-    if (D_agree !== ""){
-      if(D_agree == "agree") {
-        document.write("● 두눈의 융합자극을 제거한 상태로 편위방향과 편위량을 평가하는 원거리 Maddox평가에서 두눈이 정렬되어 광원과 선조상이 일치되어 보입니다.<br>\n");
-      } else if (D_agree == "discord"){
-        if(DHor_maddox !== ""){
-          if(DHor_maddox <= 10) {
-            if(DHor_BIBO == "BI"){
-              var text_DH_maddox = "약도외편위";
-            } else if(DHor_BIBO == "BO"){
-              var text_DH_maddox = "약도내편위";
-            }
-          } else if (DHor_maddox > 10 && DHor_maddox <= 30){
-            if(DHor_BIBO == "BI"){
-              var text_DH_maddox = "중등도외편위";
-            } else if(DHor_BIBO == "BO"){
-              var text_DH_maddox = "중등도내편위";
-            }
-          } else if (DHor_maddox > 30) {
-            if(DHor_BIBO == "BI"){
-              var text_DH_maddox = "고도외편위";
-            } else if(DHor_BIBO == "BO"){
-              var text_DH_maddox = "고도내편위";
-            }
-          }
-        } else {
-          var text_DH_maddox = "";
-        }
-        if(DVer_maddox !== ""){
-          var text_DV_maddox = ", 수직편위";
-        } else {
-          var text_DV_maddox = "";
-        }
-        document.write("● 두눈의 융합자극을 제거한 상태로 편위방향과 편위량을 평가하는 원거리 Maddox평가에서 "+'<span style="font-weight: bold; color: red;">'+text_DH_maddox+text_DV_maddox+"로 불량"+'</span>'+"합니다.<br>\n");
-        }
+    if (D_agree == "" || D_agree == "NaN"){
+      if (N_agree == "" || N_agree == "NaN"){
+
       } else {
-
-    }
-
-
-    // 근거리Maddox
-    if (N_agree !== ""){
-      if(N_agree == "agree") {
-        document.write("● 두눈의 융합자극을 제거한 상태로 편위방향과 편위량을 평가하는 근거리 Maddox평가에서 두눈이 정렬되어 광원과 선조상이 일치되어 보입니다.<br>\n");
-      } else if (N_agree == "discord"){
-        if(NHor_maddox !== ""){
-          if(NHor_maddox <= 10) {
+        if(N_agree == "agree") {
+          document.write("● 두눈의 융합자극을 제거한 상태로 편위방향과 편위량을 평가하는 근거리 Maddox평가에서 두눈이 정렬되어 광원과 선조상이 일치되어 보입니다.<br>\n");
+        } else if (N_agree == "discord"){
+          if(NHor_maddox == "" || NHor_maddox == "NaN"){
+            document.write("● 두눈의 융합자극을 제거한 상태로 편위방향과 편위량을 평가하는 근거리 Maddox평가에서 "+'<span style="font-weight: bold; color: red;">'+"두눈이 정렬되지 않아 광원과 선조상이 떨어져 불량"+'</span>'+"합니다.<br>\n");
+          } else if(NHor_maddox <= 10) {
             if(NHor_BIBO == "BI"){
               var text_NH_maddox = "약도외편위";
             } else if(NHor_BIBO == "BO"){
@@ -671,19 +836,155 @@ if (ChAge <= 6) {
               var text_NH_maddox = "고도내편위";
             }
           }
-        } else {
-          var text_NH_maddox = "";
+
+          if(NVer_maddox == "" || NVer_maddox == "NaN"){
+            var text_NV_maddox = "";
+          } else {
+            var text_NV_maddox = ", 수직편위";
+          }
+          document.write("● 두눈의 융합자극을 제거한 상태로 편위방향과 편위량을 평가하는 근거리 Maddox평가에서 "+'<span style="font-weight: bold; color: red;">'+text_NH_maddox+text_NV_maddox+"로 불량"+'</span>'+"합니다.<br>\n");
         }
-        if(NVer_maddox !== ""){
-          var text_NV_maddox = ", 수직편위";
-        } else {
-          var text_NV_maddox = "";
+      }
+    } else {
+      if(D_agree == "agree") {
+        if (N_agree == "" || N_agree == "NaN") {
+          document.write("● 두눈의 융합자극을 제거한 상태로 편위방향과 편위량을 평가하는 원거리 Maddox평가에서 두눈이 정렬되어 광원과 선조상이 일치되어 보입니다.<br>\n");
+        } else if(N_agree == "agree") {
+          document.write("● 두눈의 융합자극을 제거한 상태로 편위방향과 편위량을 평가하는 Maddox평가에서 원거리와 근거리 모두 두눈이 정렬되어 광원과 선조상이 일치되어 보입니다.<br>\n");
+        } else if (N_agree == "discord"){
+          if(NHor_maddox == "" || NHor_maddox == "NaN"){
+            document.write("● 두눈의 융합자극을 제거한 상태로 편위방향과 편위량을 평가하는 Maddox평가에서 원거리는 두눈이 정렬되어 광원과 선조상이 일치되어 보이나, 근거리는 "+'<span style="font-weight: bold; color: red;">'+"두눈이 정렬되지 않아 광원과 선조상이 떨어져 보여 불량"+'</span>'+"합니다.<br>\n");
+          } else if(NHor_maddox <= 10) {
+            if(NHor_BIBO == "BI"){
+              var text_NH_maddox = "약도외편위";
+            } else if(NHor_BIBO == "BO"){
+              var text_NH_maddox = "약도내편위";
+            }
+          } else if (NHor_maddox > 10 && NHor_maddox <= 30){
+            if(NHor_BIBO == "BI"){
+              var text_NH_maddox = "중등도외편위";
+            } else if(NHor_BIBO == "BO"){
+              var text_NH_maddox = "중등도내편위";
+            }
+          } else if (NHor_maddox > 30) {
+            if(NHor_BIBO == "BI"){
+              var text_NH_maddox = "고도외편위";
+            } else if (NHor_BIBO == "BO"){
+              var text_NH_maddox = "고도내편위";
+            }
+          }
+
+          if(NVer_maddox == "" || NVer_maddox == "NaN"){
+            var text_NV_maddox = "";
+          } else {
+            var text_NV_maddox = ", 수직편위";
+          }
+          document.write("● 두눈의 융합자극을 제거한 상태로 편위방향과 편위량을 평가하는 Maddox평가에서 원거리는 두눈이 정렬되어 광원과 선조상이 일치되어 보이나, 근거리는 "+'<span style="font-weight: bold; color: red;">'+text_NH_maddox+text_NV_maddox+"로 불량"+'</span>'+"합니다.<br>\n");
         }
-        document.write("● 두눈의 융합자극을 제거한 상태로 편위방향과 편위량을 평가하는 원거리 Maddox평가에서 "+'<span style="font-weight: bold; color: red;">'+text_NH_maddox+text_NV_maddox+"로 불량"+'</span>'+"합니다.<br>\n");
+      } else if (D_agree == "discord"){
+        if(DHor_maddox == "" || DHor_maddox == "NaN"){
+          if (N_agree == "" || N_agree == "NaN") {
+            document.write("● 두눈의 융합자극을 제거한 상태로 편위방향과 편위량을 평가하는 원거리 Maddox평가에서 "+'<span style="font-weight: bold; color: red;">'+"두눈이 정렬되지 않아 광원과 선조상이 떨어져 불량"+'</span>'+"합니다.<br>\n");
+          } else {
+            if(N_agree == "agree") {
+              document.write("● 두눈의 융합자극을 제거한 상태로 편위방향과 편위량을 평가하는 Maddox평가에서 원거리는 "+'<span style="font-weight: bold; color: red;">'+"두눈이 정렬되지 않아 광원과 선조상이 떨어져 불량"+'</span>'+"하고, 근거리는 두눈이 정렬되어 광원과 선조상이 일치되어 보입니다.<br>\n");
+            } else if (N_agree == "discord"){
+              if(NHor_maddox == "" || NHor_maddox == "NaN"){
+                document.write("● 두눈의 융합자극을 제거한 상태로 편위방향과 편위량을 평가하는 Maddox평가에서 원거리와 근거리 모두 "+'<span style="font-weight: bold; color: red;">'+"두눈이 정렬되지 않아 광원과 선조상이 떨어져 보여 불량"+'</span>'+"합니다.<br>\n");
+              } else if(NHor_maddox <= 10) {
+                if(NHor_BIBO == "BI"){
+                  var text_NH_maddox = "약도외편위";
+                } else if(NHor_BIBO == "BO"){
+                  var text_NH_maddox = "약도내편위";
+                }
+              } else if (NHor_maddox > 10 && NHor_maddox <= 30){
+                if(NHor_BIBO == "BI"){
+                  var text_NH_maddox = "중등도외편위";
+                } else if(NHor_BIBO == "BO"){
+                  var text_NH_maddox = "중등도내편위";
+                }
+              } else if (NHor_maddox > 30) {
+              if(NHor_BIBO == "BI"){
+                var text_NH_maddox = "고도외편위";
+              } else if (NHor_BIBO == "BO"){
+                var text_NH_maddox = "고도내편위";
+              }
+            }
+
+            if(NVer_maddox == "" || NVer_maddox == "NaN"){
+              var text_NV_maddox = "";
+            } else {
+              var text_NV_maddox = ", 수직편위";
+            }
+            document.write("● 두눈의 융합자극을 제거한 상태로 편위방향과 편위량을 평가하는 Maddox평가에서 원거리는 "+'<span style="font-weight: bold; color: red;">'+"두눈이 정렬되지 않아 광원과 선조상이 떨어져 불량"+'</span>'+"하고, 근거리는 "+'<span style="font-weight: bold; color: red;">'+text_NH_maddox+text_NV_maddox+"로 불량"+'</span>'+"합니다.<br>\n");
+          }
         }
       } else {
+        if (DHor_maddox <= 10) {
+          if(DHor_BIBO == "BI"){
+            var text_DH_maddox = "약도외편위";
+          } else if(DHor_BIBO == "BO"){
+            var text_DH_maddox = "약도내편위";
+          }
+        } else if (DHor_maddox > 10 && DHor_maddox <= 30){
+          if(DHor_BIBO == "BI"){
+            var text_DH_maddox = "중등도외편위";
+          } else if(DHor_BIBO == "BO"){
+            var text_DH_maddox = "중등도내편위";
+          }
+        } else if (DHor_maddox > 30) {
+          if(DHor_BIBO == "BI"){
+            var text_DH_maddox = "고도외편위";
+          } else if(DHor_BIBO == "BO"){
+            var text_DH_maddox = "고도내편위";
+          }
+        }
 
+        if(DVer_maddox == "" || DVer_maddox == "NaN"){
+          var text_DV_maddox = "";
+        } else {
+          var text_DV_maddox = ", 수직편위";
+        }
+        document.write("● 두눈의 융합자극을 제거한 상태로 편위방향과 편위량을 평가하는 원거리 Maddox평가에서 "+'<span style="font-weight: bold; color: red;">'+text_DH_maddox+text_DV_maddox+"로 불량"+'</span>'+"합니다.<br>\n");
+
+        if(N_agree == "agree") {
+          document.write(" 또한, 근거리에서 두눈이 정렬되어 광원과 선조상이 일치되어 보입니다.<br>\n");
+        } else if (N_agree == "discord"){
+          if(NHor_maddox == "" || NHor_maddox == "NaN"){
+            document.write(" 또한, 근거리에서 "+'<span style="font-weight: bold; color: red;">'+"두눈이 정렬되지 않아 광원과 선조상이 떨어져 보여 불량"+'</span>'+"합니다.<br>\n");
+          } else if(NHor_maddox <= 10) {
+            if(NHor_BIBO == "BI"){
+              var text_NH_maddox = "약도외편위";
+            } else if(NHor_BIBO == "BO"){
+              var text_NH_maddox = "약도내편위";
+            }
+          } else if (NHor_maddox > 10 && NHor_maddox <= 30){
+            if(NHor_BIBO == "BI"){
+              var text_NH_maddox = "중등도외편위";
+            } else if(NHor_BIBO == "BO"){
+              var text_NH_maddox = "중등도내편위";
+            }
+          } else if (NHor_maddox > 30) {
+            if(NHor_BIBO == "BI"){
+              var text_NH_maddox = "고도외편위";
+            } else if (NHor_BIBO == "BO"){
+              var text_NH_maddox = "고도내편위";
+            }
+          }
+
+          if(NVer_maddox == "" || NVer_maddox == "NaN"){
+            var text_NV_maddox = "";
+          } else {
+            var text_NV_maddox = ", 수직편위";
+          }
+          document.write(" 또한, 근거리에서 "+'<span style="font-weight: bold; color: red;">'+text_NH_maddox+text_NV_maddox+"로 불량"+'</span>'+"합니다.<br>\n");
+        }
+      }
     }
+  } 
+
+
+
 
     // MIT
     if(MIT !== ""){
@@ -693,5 +994,5 @@ if (ChAge <= 6) {
         document.write("● 황반부의 중심으로 주시할수 있는지를 자각적으로 관찰할 수 있는 황반부통합검사에서 "+'<span style="font-weight: bold; color: red;">'+"중심외주시로 불량"+'</span>'+"합니다.<br>\n");
       }
     } else {
-      
+
     }
