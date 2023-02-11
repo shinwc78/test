@@ -66,7 +66,7 @@ if (RDVision == "" || LDVision == "" || OUDVision == "" || RDVision == "NaN" || 
 // 원/ 근거리교정시력_새로운굴절력
 if (RDVision_new == "" || LDVision_new == "" || OUDVision_new == "" || RDVision_new == "NaN" || LDVision_new == "NaN" || OUDVision_new == "NaN"){
   if (RNVision_new == "" || LNVision_new == "" || OUNVision_new == "" || RNVision_new == "NaN" || LNVision_new == "NaN" || OUNVision_new == "NaN") {
-
+    document.write("");
   } else if (RNVision_new < 0.7 || LNVision_new < 0.7 || OUNVision_new < 0.7) {
     document.write("● 새로운 굴절력으로 교정하였을때 근거리 교정시력이 "+"우안: "+RNVision_new+", "+"좌안: "+LNVision_new+", "+"양안: "+OUNVision_new+"(으)로 "+'<span style="font-weight: bold; color: red;">'+"저조하여"+'</span>'+"꾸준한 관찰이 요구됩니다.<br>\n");
   } else if (RNVision_new >= 1.0 && LNVision_new >= 1.0 && OUNVision_new >= 1.0){
@@ -981,7 +981,7 @@ if (ChAge <= 6) {
         }
       }
     }
-  } 
+  }
 
 
 

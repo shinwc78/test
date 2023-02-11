@@ -1,4 +1,3 @@
-var Change_int = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,290,300];
 
 // <!-- ======= Customer Information value ====== -->
 
@@ -136,25 +135,25 @@ var MainEye = localStorage.getItem('MainEye');
 var PD = parseFloat(localStorage.getItem('PD'));
 var sel_glass1 = localStorage.getItem('sel_glass1');
 var RDVision = parseFloat(localStorage.getItem('RDVision')).toFixed(1);
-var LDVision = parseFloat(localStorage.getItem('LDVision'));
-var OUDVision = parseFloat(localStorage.getItem('OUDVision'));
-var RNVision = parseFloat(localStorage.getItem('RNVision'));
-var LNVision = parseFloat(localStorage.getItem('LNVision'));
-var OUNVision = parseFloat(localStorage.getItem('OUNVision'));
-var TxtRSph = parseFloat(localStorage.getItem('TxtRSph'));
-var TxtRCyl = parseFloat(localStorage.getItem('TxtRCyl'));
+var LDVision = parseFloat(localStorage.getItem('LDVision')).toFixed(1);
+var OUDVision = parseFloat(localStorage.getItem('OUDVision')).toFixed(1);
+var RNVision = parseFloat(localStorage.getItem('RNVision')).toFixed(1);
+var LNVision = parseFloat(localStorage.getItem('LNVision')).toFixed(1);
+var OUNVision = parseFloat(localStorage.getItem('OUNVision')).toFixed(1);
+var TxtRSph = parseFloat(localStorage.getItem('TxtRSph')).toFixed(2);
+var TxtRCyl = parseFloat(localStorage.getItem('TxtRCyl')).toFixed(2);
 var TxtRAxis = parseFloat(localStorage.getItem('TxtRAxis'));
-var TxtRAdd = parseFloat(localStorage.getItem('TxtRAdd'));
-var TxtLSph = parseFloat(localStorage.getItem('TxtLSph'));
-var TxtLCyl = parseFloat(localStorage.getItem('TxtLCyl'));
+var TxtRAdd = parseFloat(localStorage.getItem('TxtRAdd')).toFixed(2);
+var TxtLSph = parseFloat(localStorage.getItem('TxtLSph')).toFixed(2);
+var TxtLCyl = parseFloat(localStorage.getItem('TxtLCyl')).toFixed(2);
 var TxtLAxis = parseFloat(localStorage.getItem('TxtLAxis'));
-var TxtLAdd = parseFloat(localStorage.getItem('TxtLAdd'));
-var RDVision_new = parseFloat(localStorage.getItem('RDVision_new'));
-var LDVision_new = parseFloat(localStorage.getItem('LDVision_new'));
-var OUDVision_new = parseFloat(localStorage.getItem('OUDVision_new'));
-var RNVision_new = parseFloat(localStorage.getItem('RNVision_new'));
-var LNVision_new = parseFloat(localStorage.getItem('LNVision_new'));
-var OUNVision_new = parseFloat(localStorage.getItem('OUNVision_new'));
+var TxtLAdd = parseFloat(localStorage.getItem('TxtLAdd')).toFixed(2);
+var RDVision_new = parseFloat(localStorage.getItem('RDVision_new')).toFixed(1);
+var LDVision_new = parseFloat(localStorage.getItem('LDVision_new')).toFixed(1);
+var OUDVision_new = parseFloat(localStorage.getItem('OUDVision_new')).toFixed(1);
+var RNVision_new = parseFloat(localStorage.getItem('RNVision_new')).toFixed(1);
+var LNVision_new = parseFloat(localStorage.getItem('LNVision_new')).toFixed(1);
+var OUNVision_new = parseFloat(localStorage.getItem('OUNVision_new')).toFixed(1);
 var Balance = localStorage.getItem('Balance');
 var D_W4D = localStorage.getItem('D_W4D');
 var N_W4D = localStorage.getItem('N_W4D');
@@ -165,10 +164,10 @@ var ChAge_m = parseInt(localStorage.getItem('ChAge_m'));
 var R_accom = parseInt(localStorage.getItem('R_accom'));
 var L_accom = parseInt(localStorage.getItem('L_accom'));
 var O_accom = parseInt(localStorage.getItem('O_accom'));
-var RAccom_Rev = parseFloat(localStorage.getItem('RAccom_Rev'));
-var LAccom_Rev = parseFloat(localStorage.getItem('LAccom_Rev'));
-var OUAccom_Rev = parseFloat(localStorage.getItem('OUAccom_Rev'));
-var Sel_AccomRev =parseFloat(localStorage.getItem('Sel_AccomRev'));
+var RAccom_Rev = parseFloat(localStorage.getItem('RAccom_Rev')).toFixed(1);
+var LAccom_Rev = parseFloat(localStorage.getItem('LAccom_Rev')).toFixed(1);
+var OUAccom_Rev = parseFloat(localStorage.getItem('OUAccom_Rev')).toFixed(1);
+var Sel_AccomRev =parseFloat(localStorage.getItem('Sel_AccomRev')).toFixed(1);
 var NVer = parseFloat(localStorage.getItem('NVer'));
 var bro_eye_movement = localStorage.getItem('bro_eye_movement');
 var bro_head_turn = localStorage.getItem('bro_head_turn');
@@ -218,7 +217,7 @@ var NVertical_BD3 = parseFloat(localStorage.getItem('NVertical_BD3'));
 var NVertical_BD4 = parseFloat(localStorage.getItem('NVertical_BD4'));
 var NVertical_BU3 = parseFloat(localStorage.getItem('NVertical_BU3'));
 var NVertical_BU4 = parseFloat(localStorage.getItem('NVertical_BU4'));
-var VerRev = parseFloat(localStorage.getItem('VerRev'));
+var VerRev = parseFloat(localStorage.getItem('VerRev')).toFixed(1);
 var D_agree = localStorage.getItem('D_agree');
 var DHor_maddox = parseFloat(localStorage.getItem('DHor_maddox'));
 var DHor_BIBO = localStorage.getItem('DHor_BIBO');
@@ -244,36 +243,36 @@ var radio_eye_movement = localStorage.getItem('radio_eye_movement');
 
 
 // <!-- ======= TVPS ====== -->
-var RAW_SCORE_DIS = parseFloat(localStorage.getItem('RAW_SCORE_DIS'));
-var RAW_SCORE_MEM = parseFloat(localStorage.getItem('RAW_SCORE_MEM'));
-var RAW_SCORE_SPA = parseFloat(localStorage.getItem('RAW_SCORE_SPA'));
-var RAW_SCORE_CON = parseFloat(localStorage.getItem('RAW_SCORE_CON'));
-var RAW_SCORE_SEQ = parseFloat(localStorage.getItem('RAW_SCORE_SEQ'));
-var RAW_SCORE_FGR = parseFloat(localStorage.getItem('RAW_SCORE_FGR'));
-var RAW_SCORE_CLO = parseFloat(localStorage.getItem('RAW_SCORE_CLO'));
+var RAW_SCORE_DIS = parseInt(localStorage.getItem('RAW_SCORE_DIS'));
+var RAW_SCORE_MEM = parseInt(localStorage.getItem('RAW_SCORE_MEM'));
+var RAW_SCORE_SPA = parseInt(localStorage.getItem('RAW_SCORE_SPA'));
+var RAW_SCORE_CON = parseInt(localStorage.getItem('RAW_SCORE_CON'));
+var RAW_SCORE_SEQ = parseInt(localStorage.getItem('RAW_SCORE_SEQ'));
+var RAW_SCORE_FGR = parseInt(localStorage.getItem('RAW_SCORE_FGR'));
+var RAW_SCORE_CLO = parseInt(localStorage.getItem('RAW_SCORE_CLO'));
 
 
 // <!-- ======= VMI ====== -->
-var Raw_vmi_int = parseFloat(localStorage.getItem('Raw_vmi'));
-var Raw_visual_int = parseFloat(localStorage.getItem('Raw_visual'));
-var Raw_motor_int = parseFloat(localStorage.getItem('Raw_motor'));
+var Raw_vmi = parseInt(localStorage.getItem('Raw_vmi'));
+var Raw_visual = parseInt(localStorage.getItem('Raw_visual'));
+var Raw_motor = parseInt(localStorage.getItem('Raw_motor'));
 
 
 // <!-- ======= DEM ====== -->
-var DEM_VER_int = parseFloat(localStorage.getItem('DEM_VER'));
-var VER_ERR_S_int = parseFloat(localStorage.getItem('VER_ERR_S'));
-var VER_ERR_O_int = parseFloat(localStorage.getItem('VER_ERR_O'));
-var VER_ERR_A_int = parseFloat(localStorage.getItem('VER_ERR_A'));
-var VER_ERR_T_int = parseFloat(localStorage.getItem('VER_ERR_T'));
-var DEM_HOR_int = parseFloat(localStorage.getItem('DEM_HOR'));
-var HOR_ERR_S_int = parseFloat(localStorage.getItem('HOR_ERR_S'));
-var HOR_ERR_O_int = parseFloat(localStorage.getItem('HOR_ERR_O'));
-var HOR_ERR_A_int = parseFloat(localStorage.getItem('HOR_ERR_A'));
-var HOR_ERR_T_int = parseFloat(localStorage.getItem('HOR_ERR_T'));
+var DEM_VER = parseFloat(localStorage.getItem('DEM_VER'));
+var VER_ERR_S = parseInt(localStorage.getItem('VER_ERR_S'));
+var VER_ERR_O = parseInt(localStorage.getItem('VER_ERR_O'));
+var VER_ERR_A = parseInt(localStorage.getItem('VER_ERR_A'));
+var VER_ERR_T = parseInt(localStorage.getItem('VER_ERR_T'));
+var DEM_HOR = parseFloat(localStorage.getItem('DEM_HOR'));
+var HOR_ERR_S = parseInt(localStorage.getItem('HOR_ERR_S'));
+var HOR_ERR_O = parseInt(localStorage.getItem('HOR_ERR_O'));
+var HOR_ERR_A = parseInt(localStorage.getItem('HOR_ERR_A'));
+var HOR_ERR_T = parseInt(localStorage.getItem('HOR_ERR_T'));
 
 
 // <!-- ======= WACS ====== -->
-var WACS_RAW_T1_int = parseFloat(localStorage.getItem('WACS_RAW_T1'));
-var WACS_RAW_T2_int = parseFloat(localStorage.getItem('WACS_RAW_T2'));
-var WACS_RAW_T3_int = parseFloat(localStorage.getItem('WACS_RAW_T3'));
-var WACS_RAW_T4_int = parseFloat(localStorage.getItem('WACS_RAW_T4'));
+var WACS_RAW_T1 = parseInt(localStorage.getItem('WACS_RAW_T1'));
+var WACS_RAW_T2 = parseInt(localStorage.getItem('WACS_RAW_T2'));
+var WACS_RAW_T3 = parseInt(localStorage.getItem('WACS_RAW_T3'));
+var WACS_RAW_T4 = parseInt(localStorage.getItem('WACS_RAW_T4'));
