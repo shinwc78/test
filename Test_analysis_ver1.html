@@ -211,7 +211,7 @@
                     <td name="Dis_Sub" style=" border:2px solid black; background-color : rgb(254,174,174); font-size: 10px; font-weight: bold; text-align: center;">1.Visual Discrimination (DIS)</td>
                     <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
-                        document.write(RAW_SCORE_DIS); document.write(typeof(RAW_SCORE_DIS));
+                        document.write(RAW_SCORE_DIS);
                       </script>
                     </td>
                     <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
@@ -720,7 +720,7 @@
                 <td style="font-size:12px;" width="700px"  colspan="4">
                   <script>
 
-                    if (Raw_vmi == "평가하지 않음" || Raw_visual == "평가하지 않음" || Raw_motor == "평가하지 않음"){
+                    if (Raw_vmi == "평가하지 않음" || Raw_visual == "평가하지 않음" || Raw_motor == "평가하지 않음" || Raw_vmi == "NaN" || Raw_visual == "NaN" || Raw_motor == "NaN"){
                       document.write("● 평가하지 않음.");
                     } else {
                       if (VMI_PERCENTILE <= 16 || VMI_PERCENTILE == "<1"){
@@ -826,9 +826,6 @@
                         document.write(DEM_VER_PER+"%");
                       }
                       </script>
-
-
-
                     </td>
                     <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
@@ -840,7 +837,6 @@
                         document.write(DEM_HOR_PER+"%");
                       }
                       </script>
-
                     </td>
                     <td style="height: 25px; border : 1px solid black; font-size : 10px; text-align: center;">
                       <script>
@@ -893,25 +889,33 @@
                       <tr>
                         <td style="font-size:12px;" width="700px" colspan="5">
                           <script>
-                            if (VER_Adj_time === "평가하지 않음" || HOR_Adj_time === "평가하지 않음"){
-                            document.write("● 평가하지 않음.");
-                          } else {
-                            if (DEM_RATIO_PER <= 15 || DEM_RATIO_PER == '<1' ){
-                              if (DEM_VER_PER <=15 ||  DEM_VER_PER == '<1' ) {
-                                if (DEM_HOR_PER <= 15 || DEM_HOR_PER == '<1')
-                                document.write("● "+'<span style="font-weight: bold; color: red;">'+"안구운동발달 유형이 IV형 "+'</span>'+"으로 조정된 수직시간이나 수평시간, DEM비 모두 이상값을 나타내는 경우로, 이것은 "+'<span style="font-weight: bold; color: red;">'+"안구운동이상(II유형)과 자동성이상(III유형)이 동반된 유형"+'</span>'+"입니다.<br>\n <br>\n" );
+                            if (VER_Adj_time === "평가하지 않음" || HOR_Adj_time === "평가하지 않음" || VER_Adj_time == "" || VER_Adj_time == "NaN" || HOR_Adj_time == "" || HOR_Adj_time == "NaN"){
+                              document.write("● 평가하지 않음.");
+                            } else {
+                              if (DEM_HOR_PER <= 15 || DEM_HOR_PER == '<1') {
+                                if (DEM_VER_PER <=15 ||  DEM_VER_PER == '<1' ) {
+                                  if (DEM_RATIO_PER <= 15 || DEM_RATIO_PER == '<1' ){
+                                    document.write("● "+'<span style="font-weight: bold; color: red;">'+"안구운동발달 유형이 IV형 "+'</span>'+"으로 조정된 수직시간이나 수평시간, DEM비 모두 이상값을 나타내는 경우로, 이것은 "+'<span style="font-weight: bold; color: red;">'+"안구운동이상(II유형)과 자동성이상(III유형)이 동반된 유형"+'</span>'+"입니다.<br>\n <br>\n" );
+                                  } else {
+                                    document.write("● "+'<span style="font-weight: bold; color: red;">'+"안구운동발달 유형이 III형 "+'</span>'+"으로 DEM비는 정상이지만, 미숙한 자동성이 수평으로 나열된 숫자를 읽는 것에도 부정적인 영향을 미쳐 조정된 수평시간 및 수직시간이 증가한 것으로 "+'<span style="font-weight: bold; color: red;">'+"자동성에 문제가 있는 유형"+'</span>'+"입니다.<br>\n <br>\n");
+                                  }
+                                } else {
+                                  if (DEM_RATIO_PER <= 15 || DEM_RATIO_PER == '<1' ){
+                                    document.write("● "+'<span style="font-weight: bold; color: red;">'+"안구운동발달 유형이 II형 "+'</span>'+"으로 수직에 비해 조정된 수평시간이 커서 "+'<span style="font-weight: bold; color: red;">'+"안구운동이상"+'</span>'+"을 나타내는 유형입니다.<br>\n <br>\n");
+                                  }
+                                }
                               } else {
-                                document.write("● "+'<span style="font-weight: bold; color: red;">'+"안구운동발달 유형이 II형 "+'</span>'+"으로 수직에 비해 조정된 수평시간이 커서 "+'<span style="font-weight: bold; color: red;">'+"안구운동이상"+'</span>'+"을 나타내는 유형입니다.<br>\n <br>\n");
-                              }
-                            }else {
-                              if (DEM_VER_PER >=15 && DEM_HOR_PER >= 15){
-                                document.write("● 안구운동발달 유형이 I형으로 조정된 수평시간과 수직시간이 정상으로 안구운동기능이 정상인 유형입니다.<br>\n <br>\n");
-                              } else {
-                                document.write("● "+'<span style="font-weight: bold; color: red;">'+"안구운동발달 유형이 III형 "+'</span>'+"으로 DEM비는 정상이지만, 미숙한 자동성이 수평으로 나열된 숫자를 읽는 것에도 부정적인 영향을 미쳐 조정된 수평시간 및 수직시간이 증가한 것으로 "+'<span style="font-weight: bold; color: red;">'+"자동성에 문제가 있는 유형"+'</span>'+"입니다.<br>\n <br>\n");
+                                if (DEM_VER_PER <=15 ||  DEM_VER_PER == '<1' ) {
 
+                                } else {
+                                  if (DEM_RATIO_PER <= 15 || DEM_RATIO_PER == '<1' ){
+
+                                  } else {
+                                    document.write("● 안구운동발달 유형이 I형으로 조정된 수평시간과 수직시간이 정상으로 안구운동기능이 정상인 유형입니다.<br>\n <br>\n");
+                                  }
+                                }
                               }
                             }
-                          }
                            </script>
                         </td>
                       </tr>
@@ -926,7 +930,6 @@
                 </tr>
               </table>
             </tr>
-
           </table>
         </tr>
         <tr>
