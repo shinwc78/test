@@ -103,18 +103,17 @@ if (ChAge < 4) {
 }
 
 // 물체식별 표준점수, 백분위수
-if (WACS_RAW_T1 === ""){
+if (WACS_RAW_T1 === "" || WACS_RAW_T1 === "NaN"){
  var WACS_RAW_T1 = "평가하지 않음";
  var WACS_T1_PER = "";
  var WACS_T1_STAND = "";
 } else {
-  var WACS_RAW_T1 = Number.parseInt(WACS_RAW_T1);
   var WACS_T1_PER = WACS_T1_per[WACS_ACAge][WACS_RAW_T1];
   var WACS_T1_STAND = WACS_T1_stand[WACS_ACAge][WACS_RAW_T1];
 }
 
 // 물체설계 표준점수, 백분위수
-if (WACS_RAW_T2 === ""){
+if (WACS_RAW_T2 === "" || WACS_RAW_T2 === "NaN"){
    var WACS_RAW_T2 = "평가하지 않음";
    var WACS_T2_PER = "";
    var WACS_T2_STAND = "";
@@ -125,7 +124,7 @@ if (WACS_RAW_T2 === ""){
 
 
 // 그림설계 표준점수, 백분위수
-if (WACS_RAW_T3 === ""){
+if (WACS_RAW_T3 === "" || WACS_RAW_T3 === "NaN"){
    var WACS_RAW_T3 = "평가하지 않음";
    var WACS_T3_PER = "";
    var WACS_T3_STAND = "";
@@ -136,7 +135,7 @@ if (WACS_RAW_T3 === ""){
 
 
 // 일반움직임 표준점수, 백분위수
-if (WACS_RAW_T4 === ""){
+if (WACS_RAW_T4 === "" || WACS_RAW_T4 === "NaN"){
    var WACS_RAW_T4 = "평가하지 않음";
    var WACS_T4_PER = "";
    var WACS_T4_STAND = "";
@@ -146,7 +145,7 @@ if (WACS_RAW_T4 === ""){
 }
 
 // 표준점수평균
-if (WACS_T1_STAND === "평가하지 않음" || WACS_T2_STAND === "평가하지 않음" || WACS_T3_STAND === "평가하지 않음" || WACS_T4_STAND === "평가하지 않음" ) {
+if (WACS_T1_STAND === "" || WACS_T2_STAND === "" || WACS_T3_STAND === "" || WACS_T4_STAND === "" || WACS_T1_STAND === "NaN" || WACS_T2_STAND === "NaN" || WACS_T3_STAND === "NaN" || WACS_T4_STAND === "NaN") {
  var WACS_T5_PER = "";
  var SUM_STAND = "";
 } else {

@@ -540,7 +540,7 @@ if (ChAge < 2) {
 
 
 
-if (Raw_vmi === "") {
+if (Raw_vmi === "" || Raw_vmi === "NaN") {
   var Raw_vmi = "평가하지 않음";
   var VMI_STAND = "";
   var VMI_PERCENTILE = "";
@@ -561,7 +561,7 @@ if (Raw_vmi === "") {
 
 
 
-if (Raw_visual === "") {
+if (Raw_visual === "" || Raw_visual === "NaN") {
   var Raw_visual = "평가하지 않음";
   var VISUAL_STAND = "";
   var VISUAL_PERCENTILE = "";
@@ -580,7 +580,7 @@ if (Raw_visual === "") {
   var VISUAL_Age = Beery_raws_age[1][Raw_visual];
 }
 
-if (Raw_motor === "") {
+if (Raw_motor === "" || Raw_motor === "NaN") {
   var Raw_motor = "평가하지 않음";
   var MOTOR_STAND = "";
   var MOTOR_PERCENTILE = "";

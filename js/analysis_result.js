@@ -120,7 +120,9 @@ if (QOL_sum !== ""){
 
 var Accomage = 15 - (0.25 * ChAge);
 
-if(RAccom_Rev !== "" && LAccom_Rev !== "" && OUAccom_Rev !== "" && R_accom !=="" && L_accom !== "" && O_accom !== ""){
+if(RAccom_Rev == "" || LAccom_Rev == "" || R_accom =="" || L_accom == "" || RAccom_Rev == "NaN" || LAccom_Rev == "NaN" || R_accom =="NaN" || L_accom == "NaN" ){
+  var Eva_result2 = "";
+} else {
   if((R_accom <= Accomage-2) || (L_accom <= Accomage-2)){
     if(ChAge <= 6){
       if(RAccom_Rev <= 3 || LAccom_Rev <= 3){
@@ -129,66 +131,53 @@ if(RAccom_Rev !== "" && LAccom_Rev !== "" && OUAccom_Rev !== "" && R_accom !==""
         } else if (Sel_AccomRev == 'bad1'){
           var Eva_result2 = "조절과다(조절경련)";
         }
-      } else {
-        var Eva_result2 = "";
       }
-    } else if (ChAge > 6 && ChAge <= 13) {
+    } else if (ChAge > 6 && ChAge <= 12) {
       if((RAccom_Rev <= 4.5) || (LAccom_Rev <= 4.5)){
         if(Sel_AccomRev == 'bad2'){
           var Eva_result2 = "조절부족/조절지속능력부족";
         } else if(Sel_AccomRev == 'bad1'){
           var Eva_result2 = "조절과다(조절경련)";
         }
-      } else {
-        var Eva_result2 = "";
       }
-    }  else if (ChAge > 13 ) {
+    } else if (ChAge > 12 ) {
       if((RAccom_Rev <= 6) || (LAccom_Rev <= 6)){
         if(Sel_AccomRev == 'bad2'){
           var Eva_result2 = "조절부족/조절지속능력부족";
         } else if(Sel_AccomRev == 'bad1'){
           var Eva_result2 = "조절과다(조절경련)";
         }
-      } else {
-        var Eva_result2 = "";
       }
     }
-  } else if ((R_accom >= Accomage) || (L_accom >= Accomage)){
+  } else {
     if(ChAge <= 6){
       if((RAccom_Rev <= 3) || (LAccom_Rev <= 3)){
         if (OUAccom_Rev <= 0.5) {
-          if(Sel_AccomRev == 'bad3'){
+          if(Sel_AccomRev == 'bad3' ){
           var Eva_result2 = "조절용이부족";
         }
       }
-    } else {
-      var Eva_result2 = "";
     }
-  } else if (ChAge >6  && ChAge <= 13) {
+  } else if (ChAge >6  && ChAge <= 12) {
       if((RAccom_Rev <= 4.5) || (LAccom_Rev <= 4.5)){
         if (OUAccom_Rev <= 2.5) {
           if(Sel_AccomRev == 'bad3'){
           var Eva_result2 = "조절용이부족";
         }
       }
-    } else {
-      var Eva_result2 = "";
     }
-  } else if (ChAge > 13 && ChAge < 38) {
+  } else if (ChAge > 12 && ChAge < 38) {
       if((RAccom_Rev <= 6) || (LAccom_Rev <= 6)){
         if (OUAccom_Rev <= 2.5) {
           if(Sel_AccomRev == 'bad3'){
           var Eva_result2 = "조절용이부족";
+          }
         }
       }
-    } else {
-      var Eva_result2 = "";
     }
   }
 }
-} else {
-  var Eva_result2 = "";
-}
+
 
 
 if (QOL_sum >= 20) {
@@ -430,19 +419,19 @@ if (CTest_D == "exo" || CTest_D == "eso" || CTest_N == "exo" || CTest_N == "eso"
  var ACA = ((PD/10)+((Nectopic)-(-Dectopic))/2.5);
      var Nprism = parseInt(((2*Nectopic)-(NDever2))/3);
    var Dprism = parseInt(((2*Dectopic)-(DConver2))/3);
-     var Sph_cha = parseInt((((2*Nectopic)-(NDever2))/3)/(($PD/10)+((Nectopic)-(-Dectopic))/2.5));
+     var Sph_cha = parseInt((((2*Nectopic)-(NDever2))/3)/((PD/10)+((Nectopic)-(-Dectopic))/2.5));
  }
  } else if (D_BIBO == 'BO'){
      if(N_BIBO == 'BO') {
        var ACA = ((PD/10)+((Nectopic)-(Dectopic))/2.5);
        var Nprism = parseInt(((2*Nectopic)-(NDever2))/3);
      var Dprism = parseInt(((2*Dectopic)-(DDever2))/3);
-       var Sph_cha = parseInt((((2*Nectopic)-(NDever2))/3)/(($PD/10)+(Nectopic-Dectopic)/2.5));
+       var Sph_cha = parseInt((((2*Nectopic)-(NDever2))/3)/((PD/10)+(Nectopic-Dectopic)/2.5));
      } else if (N_BIBO == 'BI') {
        var ACA = ((PD/10)+((Nectopic)-(-Dectopic))/2.5);
        var Nprism = parseInt(((2*Nectopic)-(NConver2))/3);
        var Dprism = parseInt(((2*Dectopic)-(DConver2))/3);
-       var Sph_cha = parseInt((((2*Nectopic)-(NConver2))/3)/(($PD/10)+((-Nectopic)-(Dectopic))/2.5));
+       var Sph_cha = parseInt((((2*Nectopic)-(NConver2))/3)/((PD/10)+((-Nectopic)-(Dectopic))/2.5));
        }
    }
 }

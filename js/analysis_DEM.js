@@ -172,10 +172,10 @@ var T8_errors = [[0,1,2,3,4,5,6,7,8],['>77',61,43,26,13,6,2,1,'<1'],[111,104,97,
 
 // 조정된 수직데이터
 
-var Int_Adj_time = "시간";
 var ERR_VER = VER_ERR_S+VER_ERR_O+VER_ERR_A+VER_ERR_T;
 
-if (DEM_VER === "평가하지 않음" || VER_ERR_S === "" || VER_ERR_O === "" || VER_ERR_A === "" || VER_ERR_T === "") {
+if (DEM_VER === "" || VER_ERR_S === "" || VER_ERR_O === "" || VER_ERR_A === "" || VER_ERR_T === "" || DEM_VER === "NaN" || VER_ERR_S === "NaN" || VER_ERR_O === "NaN" || VER_ERR_A === "NaN" || VER_ERR_T === "NaN") {
+  var DEM_VER = "평가하지 않음"
   var VER_Adj_time = "평가하지 않음";
   var DEM_VER_PER = "";
   var DEM_VER_STAND = "";
@@ -259,7 +259,8 @@ if (DEM_VER === "평가하지 않음" || VER_ERR_S === "" || VER_ERR_O === "" ||
 
 var ERR_HOR = HOR_ERR_S + HOR_ERR_O + HOR_ERR_A + HOR_ERR_T;
 
-if (DEM_HOR === "평가하지 않음" || HOR_ERR_S === "" || HOR_ERR_O === "" || HOR_ERR_A === "" || HOR_ERR_T === ""){
+if (DEM_HOR === "" || HOR_ERR_S === "" || HOR_ERR_O === "" || HOR_ERR_A === "" || HOR_ERR_T === "" || DEM_HOR === "NaN" || HOR_ERR_S === "NaN" || HOR_ERR_O === "NaN" || HOR_ERR_A === "NaN" || HOR_ERR_T === "NaN"){
+  var DEM_VER = "평가하지 않음"
   var HOR_Adj_time = "평가하지 않음";
   var DEM_HOR_PER = "";
   var DEM_HOR_STAND = "";
@@ -340,7 +341,7 @@ if (DEM_HOR === "평가하지 않음" || HOR_ERR_S === "" || HOR_ERR_O === "" ||
 // 조정된 오류데이터
 var DEM_ERR = ERR_VER + ERR_HOR;
 
-if (DEM_ERR === "") {
+if (DEM_ERR === "" || DEM_ERR === "NaN") {
   var DEM_ERR_PER = "";
   var DEM_ERR_STAND = "";
 } else {

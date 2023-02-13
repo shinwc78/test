@@ -626,7 +626,7 @@ if (ChAge <= 6) {
      } else if (N_BIBO == 'BO'){
        if (Nectopic > 0 && Nectopic <=10 ) {
         document.write("● "+horEVA_tool+"(으)로 평가한 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"약도 내편위로 불량"+'</span>'+"합니다.<br>\n");
-       } else if ($Nectopic > 10 && $Dectopic <=30 ){
+       } else if (Nectopic > 10 && Dectopic <=30 ){
          document.write("● "+horEVA_tool+"(으)로 평가한 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"중등도 내편위로 불량"+'</span>'+"합니다.<br>\n");
        } else if (Nectopic > 30 ){
          document.write("● "+horEVA_tool+"(으)로 평가한 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"고도 내편위로 불량"+'</span>'+"합니다.<br>\n");
@@ -671,7 +671,7 @@ if (ChAge <= 6) {
     } else if (N_BIBO == 'BO'){
       if (Nectopic > 0 && Nectopic <=10 ) {
        document.write(" 또한, 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"약도 내편위로 불량"+'</span>'+"합니다.<br>\n");
-      } else if ($Nectopic > 10 && $Dectopic <=30 ){
+      } else if (Nectopic > 10 && Dectopic <=30 ){
         document.write(" 또한, 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"중등도 내편위로 불량"+'</span>'+"합니다.<br>\n");
       } else if (Nectopic > 30 ){
         document.write(" 또한, 근거리 수평안위가 정상범위보다 많은 "+'<span style="font-weight: bold; color: red;">'+"고도 내편위로 불량"+'</span>'+"합니다.<br>\n");
