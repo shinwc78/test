@@ -540,7 +540,7 @@ if (ChAge < 2) {
 
 
 
-if (Raw_vmi === "" || Raw_vmi === "NaN") {
+if (Raw_vmi == "" || Raw_vmi == "NaN") {
   var Raw_vmi = "평가하지 않음";
   var VMI_STAND = "";
   var VMI_PERCENTILE = "";

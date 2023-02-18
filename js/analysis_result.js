@@ -351,6 +351,10 @@ if ((Raw_vmi === "평가하지 않음") || (Raw_visual === "평가하지 않음"
   var VMI_TEST = "";
     document.write("● 시각운동통합기술이 "+VMI_PERCENTILE+"% 로 우수합니다.<br>\n <br>\n");
   }
+
+  if (segment_VMI == "VMI17" || segment_Motor == "Motor17"){
+    document.write("특히, 분절은  ")
+  }
 }
 
 
@@ -403,6 +407,10 @@ if ((WACS_RAW_T1 === "평가하지 않음") || (WACS_RAW_T2 === "평가하지 �
 } else if (WACS_T5_PER > 84) {
   var WACS_TEST = "";
     document.write("● 시각운동통합기술이 "+WACS_T5_PER+"% 로 우수합니다.<br>\n <br>\n");
+  }
+
+  if (reflex_WACS == "reflex") {
+    document.write("특히, 원시반사는 ")
   }
 }
 

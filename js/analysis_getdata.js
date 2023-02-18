@@ -250,12 +250,17 @@ var RAW_SCORE_CON = parseInt(localStorage.getItem('RAW_SCORE_CON'));
 var RAW_SCORE_SEQ = parseInt(localStorage.getItem('RAW_SCORE_SEQ'));
 var RAW_SCORE_FGR = parseInt(localStorage.getItem('RAW_SCORE_FGR'));
 var RAW_SCORE_CLO = parseInt(localStorage.getItem('RAW_SCORE_CLO'));
+var TVPS_memory = localStorage.getItem('TVPS_memory');
+
 
 
 // <!-- ======= VMI ====== -->
 var Raw_vmi = parseInt(localStorage.getItem('Raw_vmi'));
 var Raw_visual = parseInt(localStorage.getItem('Raw_visual'));
 var Raw_motor = parseInt(localStorage.getItem('Raw_motor'));
+var VMI_memory = localStorage.getItem('VMI_memory');
+var segment_VMI = localStorage.getItem('segment_VMI');
+var segment_Motor = localStorage.getItem('segment_Motor');
 
 
 // <!-- ======= DEM ====== -->
@@ -269,6 +274,7 @@ var HOR_ERR_S = parseInt(localStorage.getItem('HOR_ERR_S'));
 var HOR_ERR_O = parseInt(localStorage.getItem('HOR_ERR_O'));
 var HOR_ERR_A = parseInt(localStorage.getItem('HOR_ERR_A'));
 var HOR_ERR_T = parseInt(localStorage.getItem('HOR_ERR_T'));
+var DEM_memory = localStorage.getItem('DEM_memory');
 
 
 // <!-- ======= WACS ====== -->
@@ -276,3 +282,5 @@ var WACS_RAW_T1 = parseInt(localStorage.getItem('WACS_RAW_T1'));
 var WACS_RAW_T2 = parseInt(localStorage.getItem('WACS_RAW_T2'));
 var WACS_RAW_T3 = parseInt(localStorage.getItem('WACS_RAW_T3'));
 var WACS_RAW_T4 = parseInt(localStorage.getItem('WACS_RAW_T4'));
+var WACS_memory = localStorage.getItem('WACS_memory');
+var reflex_WACS = localStorage.getItem('reflex_WACS');
