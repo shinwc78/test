@@ -66,19 +66,19 @@ if (QOL_sum !== ""){
     }
   }
 } else if ((CTest_N == 'ET') || (CTest_D == 'ET')) {
-  if(radio_month6 == "early" && ratio_cross == "always" && (Dectopic > 30 || Nectopic > 30) && BroadH == "bad") {
+  if(radio_month6 == "early" && radio_cross == "always" && (Dectopic > 30 || Nectopic > 30) && BroadH == "bad") {
     var Eva_result1 = "유아_항상성내편위";
-  } else if(((Dectopic < 35 && Dectopic > 10) || (Nectopic > 35 && Nectopic > 10)) && change_ver == "yes" && Nectopic >= (Dectopic-2) && radio_month6 == "later" ){
+  } else if(((Dectopic < 35 && Dectopic > 10) || (Nectopic > 35 && Nectopic > 10)) && radio_change_ver == "yes" && Nectopic >= (Dectopic-2) && radio_month6 == "later" ){
     var Eva_result1 = "조절성_항상성내편위";
   } else if (radio_month6 == "later" && radio_exami == "sudden") {
     var Eva_result1 = "급성_항상성내편위";
-  } else if((Dectopic < 30 || Nectopic < 30) && radio_eye_movement == "yes" && change_ver == "yes" && radio_month6 == "later") {
+  } else if((Dectopic < 30 || Nectopic < 30) && radio_eye_movement == "yes" && radio_change_ver == "yes" && radio_month6 == "later") {
     var Eva_result1 = "물리적_항상성내편위";
-  } else if (ratio_cross == "always" && radio_splitting == "unilater" && amblyopia == "yes" ){
+  } else if (radio_cross == "always" && radio_splitting == "unilater" && radio_amblyopia == "yes" ){
     var Eva_result1 = "감각성_항상성내편위";
-  } else if (radio_surgery1 == "yes" && BroadH != "good" && ratio_cross == "always" && radio_splitting == "unilater"){
+  } else if (radio_surgery1 == "yes" && BroadH != "good" && radio_cross == "always" && radio_splitting == "unilater"){
     var Eva_result1 = "속발성_항상성내편위";
-  } else if ((Dectopic < 11 || Nectopic < 11) && ratio_cross == "always" && radio_splitting == "unilater" && amblyopia == "yes" ){
+  } else if ((Dectopic < 11 || Nectopic < 11) && ratio_cross == "always" && radio_splitting == "unilater" && radio_amblyopia == "yes" ){
     var Eva_result1 = "미세_항상성내편위";
   } else {
     var Eva_result1 = "항상성내편위";
@@ -86,7 +86,7 @@ if (QOL_sum !== ""){
 } else if ((CTest_N == 'XT') || (CTest_D == 'XT')){
   if(radio_month6 == "early" && (Dectopic > 30 || Nectopic > 30) && radio_splitting == "alter" && ratio_cross == "always" ){
     var Eva_result1 = "유아_항상성외편위";
-  } else if(radio_month6 == "later" && ratio_cross == "sometime"){
+  } else if(radio_month6 == "later" && radio_cross == "sometime"){
     if(((Dectopic- Nectopic)<10 || (Nectopic- Dectopic)<10)){
       var Eva_result1 = "간헐성_외편위(기본형)";
     } else if((Dectopic- Nectopic)>=10){
@@ -96,13 +96,13 @@ if (QOL_sum !== ""){
     }
   } else if(radio_month6 == "later" && radio_exami == "sudden" ){
     var Eva_result1 = "급성_항상성외편위";
-  } else if((Dectopic < 30 || Nectopic < 30) && radio_eye_movement == "yes" && change_ver == "yes" && radio_month6 == "later"){
+  } else if((Dectopic < 30 || Nectopic < 30) && radio_eye_movement == "yes" && radio_change_ver == "yes" && radio_month6 == "later"){
     var Eva_result1 = "물리적_항상성외편위";
-  } else if(ratio_cross == "always" && radio_splitting == "unilater" && amblyopia == "yes"){
+  } else if(radio_cross == "always" && radio_splitting == "unilater" && radio_amblyopia == "yes"){
     var Eva_result1 = "감각성_항상성외편위";
-  } else if (radio_surgery1 == "yes" && BroadH != "good" && ratio_cross == "always" && radio_splitting == "unilater"){
+  } else if (radio_surgery1 == "yes" && BroadH != "good" && radio_cross == "always" && radio_splitting == "unilater"){
     var Eva_result1 = "속발성_항상성외편위";
-  } else if ((Dectopic < 11 || Nectopic < 11) && ratio_cross == "always" && radio_splitting == "unilater" && amblyopia == "yes" ){
+  } else if ((Dectopic < 11 || Nectopic < 11) && radio_cross == "always" && radio_splitting == "unilater" && radio_amblyopia == "yes" ){
     var Eva_result1 = "미세_항상성외편위";
   } else {
     var Eva_result1 = "항상성외편위";

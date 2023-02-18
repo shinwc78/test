@@ -234,7 +234,7 @@ var MIT = localStorage.getItem('MIT');
 // <!-- ======= 사시분류 ====== -->
 var radio_month6 = localStorage.getItem('radio_month6');
 var radio_exami = localStorage.getItem('radio_exami');
-var ratio_cross = localStorage.getItem('ratio_cross');
+var radio_cross = localStorage.getItem('radio_cross');
 var radio_change_ver = localStorage.getItem('radio_change_ver');
 var radio_splitting = localStorage.getItem('radio_splitting');
 var radio_double_vi = localStorage.getItem('radio_double_vi');
