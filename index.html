@@ -3332,8 +3332,8 @@ details[open]>summary~* {
                                   <tr>
                                     <td width="200px" class="Evaluation_item" >발생 빈도</td>
                                     <td width="550px" class="Evaluation_result">
-                                      <input type="radio" name="ratio_cross" value="always">항상성
-                                      <input type="radio" name="ratio_cross" value="sometime">간헐성
+                                      <input type="radio" name="radio_cross" value="always">항상성
+                                      <input type="radio" name="radio_cross" value="sometime">간헐성
                                     </td>
                                   </tr>
                                   <tr>
@@ -4698,10 +4698,10 @@ details[open]>summary~* {
             var radio_exami = "";
           }
 
-          if ($("input[type=radio][name=ratio_cross]:checked").is(':checked')){
-            var ratio_cross = document.querySelector("input[name='ratio_cross']:checked").value;
+          if ($("input[type=radio][name=radio_cross]:checked").is(':checked')){
+            var radio_cross = document.querySelector("input[name='radio_cross']:checked").value;
           } else {
-            var ratio_cross = "";
+            var radio_cross = "";
           }
 
           if ($("input[type=radio][name=radio_change_ver]:checked").is(':checked')){
@@ -5017,7 +5017,7 @@ details[open]>summary~* {
           <!-- ======= 사시분류 ====== -->
           localStorage.setItem('radio_month6',radio_month6);
           localStorage.setItem('radio_exami',radio_exami);
-          localStorage.setItem('ratio_cross',ratio_cross);
+          localStorage.setItem('radio_cross',radio_cross);
           localStorage.setItem('radio_change_ver',radio_change_ver);
           localStorage.setItem('radio_splitting',radio_splitting);
           localStorage.setItem('radio_double_vi',radio_double_vi);
