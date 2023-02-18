@@ -134,19 +134,19 @@ if (radio_drug == "" || radio_drug == "NaN"){
     document.write("● 본인 약물복용 : ");
     if (text_disease == "" || text_disease == "NaN"){
       if (text_drug == "" || text_drug == "NaN"){
-        document.write("정보없음");
+        document.write("정보없음<br>\n");
       } else {
-        document.write(text_drug+"을 복용하고 있음. ");
+        document.write(text_drug+"을 복용하고 있음. <br>\n");
       }
     } else {
       if (text_drug == "" || text_drug == "NaN"){
         document.write(text_disease+"질환이 있음 <br>\n");
       } else {
-        document.write(text_disease_name+"(으)로 "+text_drug+"(을)를 복용하고 있음. ");
+        document.write(text_disease_name+"(으)로 "+text_drug+"(을)를 복용하고 있음.<br>\n ");
       }
     }
   } else if (radio_drug == "no"){
-      document.write("● 본인 약물복용 : 평소 복용하는 약물은 없음. ");
+      document.write("● 본인 약물복용 : 평소 복용하는 약물은 없음. <br>\n");
     }
   }
 
