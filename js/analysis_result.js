@@ -177,7 +177,7 @@ if(RAccom_Rev == "" || LAccom_Rev == "" || R_accom =="" || L_accom == "" || RAcc
     }
   }
 }
-
+document.write("RDVision : "+RDVision); document.write(typeof(RDVision)+"<br>\n");
 document.write("ChAge : "+ChAge); document.write(typeof(ChAge)+"<br>\n");
 document.write("Accomage : "+Accomage); document.write(typeof(Accomage)+"<br>\n");
 document.write("RAccom_Rev : "+RAccom_Rev); document.write(typeof(RAccom_Rev)+"<br>\n");
