@@ -178,6 +178,16 @@ if(RAccom_Rev == "" || LAccom_Rev == "" || R_accom =="" || L_accom == "" || RAcc
   }
 }
 
+document.write("ChAge : "+ChAge); document.write(typeof(ChAge)+"<br>\n");
+document.write("Accomage : "+Accomage); document.write(typeof(Accomage)+"<br>\n");
+document.write("RAccom_Rev : "+RAccom_Rev); document.write(typeof(RAccom_Rev)+"<br>\n");
+document.write("LAccom_Rev : "+LAccom_Rev); document.write(typeof(LAccom_Rev)+"<br>\n");
+document.write("OUAccom_Rev : "+OUAccom_Rev); document.write(typeof(OUAccom_Rev)+"<br>\n");
+document.write("R_accom : "+R_accom); document.write(typeof(R_accom)+"<br>\n");
+document.write("L_accom : "+L_accom); document.write(typeof(L_accom)+"<br>\n");
+document.write("QOL_sum : "+QOL_sum); document.write(typeof(QOL_sum)+"<br>\n");
+document.write("Sel_AccomRev : "+Sel_AccomRev); document.write(typeof(Sel_AccomRev)+"<br>\n");
+document.write("Eva_result2 : "+Eva_result2); document.write(typeof(Eva_result2)+"<br>\n");
 
 
 if (QOL_sum >= 20) {
