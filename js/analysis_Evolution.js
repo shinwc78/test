@@ -200,17 +200,17 @@ if (CTest_D === "none") {
   } else if (CTest_N == 'eso') {
     document.write("● 근거리 차폐평가(안구정렬상태검사)시 "+'<span style="font-weight: bold; color: red;">'+" 잠복성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
   } else if (CTest_N == 'XT') {
-    if ( ratio_cross == "sometime") {
+    if ( radio_cross == "sometime") {
       document.write("● 근거리 차폐평가(안구정렬상태검사)시 "+'<span style="font-weight: bold; color: red;">'+" 간헐성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
-    } else if (ratio_cross == "always"){
+    } else if (radio_cross == "always"){
       document.write("● 근거리 차폐평가(안구정렬상태검사)시 "+'<span style="font-weight: bold; color: red;">'+" 항상성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
     } else {
       document.write("● 근거리 차폐평가(안구정렬상태검사)시 "+'<span style="font-weight: bold; color: red;">'+" 현성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
     }
   } else if (CTest_N == 'ET') {
-    if ( ratio_cross == "sometime") {
+    if ( radio_cross == "sometime") {
       document.write("● 근거리 차폐평가(안구정렬상태검사)시 "+'<span style="font-weight: bold; color: red;">'+" 간헐성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
-    } else if (ratio_cross == "always"){
+    } else if (radio_cross == "always"){
       document.write("● 근거리 차폐평가(안구정렬상태검사)시 "+'<span style="font-weight: bold; color: red;">'+" 항상성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
     } else {
       document.write("● 근거리 차폐평가(안구정렬상태검사)시 "+'<span style="font-weight: bold; color: red;">'+" 현성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
@@ -224,17 +224,17 @@ if (CTest_D === "none") {
   } else if (CTest_D == 'eso') {
    document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 잠복성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
   } else if (CTest_D == 'XT') {
-    if ( ratio_cross == "sometime") {
+    if ( radio_cross == "sometime") {
       document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 간헐성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
-    } else if (ratio_cross == "always"){
+    } else if (radio_cross == "always"){
       document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 항상성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
     } else {
       document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 현성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
     }
   } else if (CTest_D == 'ET') {
-    if ( ratio_cross == "sometime") {
+    if ( radio_cross == "sometime") {
       document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 간헐성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
-    } else if (ratio_cross == "always"){
+    } else if (radio_cross == "always"){
       document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 항상성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
     } else {
       document.write("● 원거리 차폐평가(안구정렬상태검사)시"+'<span style="font-weight: bold; color: red;">'+" 현성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다. ");
@@ -247,17 +247,17 @@ if (CTest_D === "none") {
     } else if (CTest_N == 'eso') {
      document.write("또한, 근거리에서는"+'<span style="font-weight: bold; color: red;">'+" 잠복성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n");
     } else if (CTest_N == 'XT') {
-      if ( ratio_cross == "sometime") {
+      if ( radio_cross == "sometime") {
         document.write("또한, 근거리에서는"+'<span style="font-weight: bold; color: red;">'+" 간헐성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
-      } else if (ratio_cross == "always"){
+      } else if (radio_cross == "always"){
         document.write("또한, 근거리에서는"+'<span style="font-weight: bold; color: red;">'+" 항상성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
       } else {
         document.write("또한, 근거리에서는"+'<span style="font-weight: bold; color: red;">'+" 현성 외편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
       }
     } else if (CTest_N == 'ET') {
-      if ( ratio_cross == "sometime") {
+      if ( radio_cross == "sometime") {
         document.write("또한, 근거리에서는"+'<span style="font-weight: bold; color: red;">'+" 간헐성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
-      } else if (ratio_cross == "always"){
+      } else if (radio_cross == "always"){
         document.write("또한, 근거리에서는"+'<span style="font-weight: bold; color: red;">'+" 항상성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
       } else {
         document.write("또한, 근거리에서는"+'<span style="font-weight: bold; color: red;">'+" 현성 내편위"+'</span>'+"로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되었습니다.<br>\n ");
