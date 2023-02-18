@@ -549,6 +549,12 @@
 
                         }
 
+                        if (TVPS_memory !== "" || TVPS_memory == "NaN"){
+
+                        } else {
+                          document.write("● 평가중 관찰사항으로 "+TVPS_memory);
+                        }
+
                        </script>
                     </td>
                   </tr>
@@ -742,6 +748,26 @@
                         var MOTOR_ment = "운동협응기술"+"("+MOTOR_Age+") ";
                         document.write("● "+VMI_ment+VISUAL_ment+MOTOR_ment+"의 수행능력입니다.<br>\n <br>\n");
                     }
+
+                    if (VMI_memory == "" || VMI_memory == "NaN"){
+
+                    } else {
+                      document.write("● 평가중 관찰사항으로 "+VMI_memory);
+                    }
+
+                    if (segment_VMI == "VMI17"){
+                      if (segment_Motor == "Motor17"){
+                        document.write("특히 "+'<span style="font-weight: bold; color: red;">'+"VMI 17번 문항"+'</span>'+"과 "+'<span style="font-weight: bold; color: red;">'+"부가검사 Motor 17번 문항"+'</span>'+" 에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰되었습니다.");
+                      } else {
+                        document.write("특히 "+'<span style="font-weight: bold; color: red;">'+"VMI 17번 문항"+'</span>'+"에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰되었습니다.");
+                      }
+                    } else {
+                      if (segment_Motor == "Motor17"){
+                        document.write("특히 "+'<span style="font-weight: bold; color: red;">'+"부가검사 Motor 17번 문항"+'</span>'+" 에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰되었습니다.");
+                      } else {
+                        document.write("");
+                      }
+                    }
                      </script>
                   </td>
                 </tr>
@@ -915,6 +941,12 @@
                                   }
                                 }
                               }
+                            }
+
+                            if (DEM_memory !== "" || DEM_memory == "NaN"){
+
+                            } else {
+                              document.write("● 평가중 관찰사항으로 "+DEM_memory);
                             }
                            </script>
                         </td>
@@ -1126,6 +1158,18 @@
                                  var WACS_T3_ment = "그림설계"+"("+WACS_T3_PER+"%), ";
                                  var WACS_T4_ment = "일반움직임"+"("+WACS_T4_PER+"%) ";
                                  document.write("● "+WACS_T1_ment+WACS_T2_ment+WACS_T3_ment+WACS_T4_ment+"로 평가되었습니다.<br>\n <br>\n");
+                           }
+
+                           if (WACS_memory !== "" || WACS_memory == "NaN"){
+
+                           } else {
+                             document.write("● 평가중 관찰사항으로 "+WACS_memory);
+                           }
+
+                           if (reflex_WACS == "reflex" ){
+                             document.write("특히 "+'<span style="font-weight: bold; color: red;">'+"LineWalk toe/heel on line과제"+'</span>'+"에서 "+'<span style="font-weight: bold; color: red;">'+"원시반사"+'</span>'+"가 관찰되었습니다.");
+                           } else {
+                             document.write("");
                            }
                          </script>
                         </td>

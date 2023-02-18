@@ -697,7 +697,7 @@ details[open]>summary~* {
     </header>
 
     <!-- ======= Maiin Body start ======= -->
-    <form id="Main_test" method="post" action="Test_analysis_ver1.html">
+    <form method="post" >
 
 
     <table width="1535px">
@@ -3474,6 +3474,29 @@ details[open]>summary~* {
                                     </td>
                                     <td>&nbsp;</td>
                                   </tr>
+                                  <tr>
+                                    <td height="10">&nbsp;</td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <table>
+                                  <tr>
+                                    <td width="100">&nbsp;</td>
+                                    <td>특이사항 : </td>
+                                    <td width="10">&nbsp;</td>
+                                    <td>
+                                      <table>
+                                        <tr>
+                                          <td >
+                                            <textarea id="TVPS_memory" name="TVPS_memory" class="TVPS_score" rows="4" cols="80" placeholder="평가중 특이사항을 입력해주세요" style="width:920px; height:60px;"></textarea>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
                                 </table>
                               </td>
                             </tr>
@@ -3518,24 +3541,54 @@ details[open]>summary~* {
                                     <tr>
                                       <td width="80">&nbsp;</td>
                                       <td class="VMI_head" height="40px" width="200" style="font-weight:bold; text-align:center;">평가항목</td>
-                                      <td class="VMI_head" width="200" style="font-weight:bold; text-align:center;">시각운동통합</td>
-                                      <td class="VMI_head" width="200" style="font-weight:bold; text-align:center;">시각인지</td>
-                                      <td class="VMI_head" width="200" style="font-weight:bold; text-align:center;">운동협응</td>
+                                      <td class="VMI_head" width="150" style="font-weight:bold; text-align:center;">시각운동통합</td>
+                                      <td class="VMI_head" width="150" style="font-weight:bold; text-align:center;">시각인지</td>
+                                      <td class="VMI_head" width="150" style="font-weight:bold; text-align:center;">운동협응</td>
+                                      <td class="VMI_head" width="150" style="font-weight:bold; text-align:center; background-color:" colspan="2">분절여부</td>
                                       <td width="80">&nbsp;</td>
                                     </tr>
                                     <tr>
                                       <td>&nbsp;</td>
                                       <td class="VMI_menu" height="30px" style="font-weight:bold; text-align:center; background-color: #dcdcdc;">미가공점수</td>
                                       <td class="VMI_score">
-                                        <input width="200" height="30px" style="border:none; text-align: center;" id="Raw_vmi" type="text" name="Raw_vmi" placeholder="점수입력">
+                                        <input id="Raw_vmi" type="text" name="Raw_vmi" style="border:none; text-align: center;" placeholder="점수입력">
                                       </td>
                                       <td class="VMI_score">
-                                        <input width="200" height="30px" style="border:none; text-align: center;" id="Raw_visual" type="text" name="Raw_visual" placeholder="점수입력">
+                                        <input id="Raw_visual" type="text" name="Raw_visual" style="border:none; text-align: center;" placeholder="점수입력">
                                       </td>
                                       <td class="VMI_score">
-                                        <input width="200" height="30px" style="border:none; text-align: center;" id="Raw_motor" type="text" name="Raw_motor" placeholder="점수입력">
+                                        <input id="Raw_motor" type="text" name="Raw_motor" style="border:none; text-align: center;" placeholder="점수입력">
+                                      </td>
+                                      <td class="VMI_score" style="text-align:center; padding-left:0;">
+                                        <input id="segment_VMI" type="checkbox" name="segment_VMI" style="border:none;" value="VMI17"> VMI 17번
+                                      </td>
+                                      <td class="VMI_score" style="text-align:center; padding-left:0;">
+                                        <input id="segment_Motor" type="checkbox" name="segment_Motor" style="border:none;" value="Motor17"> Motor 17번
                                       </td>
                                       <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td height="10">&nbsp;</td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <table>
+                                    <tr>
+                                      <td width="100">&nbsp;</td>
+                                      <td>특이사항 : </td>
+                                      <td width="10">&nbsp;</td>
+                                      <td>
+                                        <table>
+                                          <tr>
+                                            <td >
+                                              <textarea id="VMI_memory" name="VMI_memory" class="VMI_score" rows="4" cols="80" placeholder="평가중 특이사항을 입력해주세요" style="width:820px; height:60px;"></textarea>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
                                     </tr>
                                   </table>
                                 </td>
@@ -3633,6 +3686,29 @@ details[open]>summary~* {
                                   </table>
                               </td>
                             </tr>
+                            <tr>
+                              <td>
+                                <table>
+                                  <tr>
+                                    <td height="10">&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="100">&nbsp;</td>
+                                    <td>특이사항 : </td>
+                                    <td width="10">&nbsp;</td>
+                                    <td>
+                                      <table>
+                                        <tr>
+                                          <td >
+                                            <textarea id="DEM_memory" name="DEM_memory" class="DEM_score" rows="4" cols="80" placeholder="평가중 특이사항을 입력해주세요" style="width:820px; height:60px;"></textarea>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
                           </table>
                         </details>
                       </td>
@@ -3672,31 +3748,58 @@ details[open]>summary~* {
                               <table name="WACS" width="1195" style="border:5px; border-radius: 10px 10px 10px 10px">
                                 <tr>
                                   <td width="80">&nbsp;</td>
-                                  <td class="WACS_head" height="40px" width="190" style="font-weight:bold; text-align:center;">평가항목</td>
-                                  <td class="WACS_head" width="190" style="font-weight:bold; text-align:center;">물체식별</td>
-                                  <td class="WACS_head" width="190" style="font-weight:bold; text-align:center;">물체설계</td>
-                                  <td class="WACS_head" width="190" style="font-weight:bold; text-align:center;">그림설계</td>
-                                  <td class="WACS_head" width="190" style="font-weight:bold; text-align:center;">일반움직임</td>
+                                  <td class="WACS_head" height="40px" width="150" style="font-weight:bold; text-align:center;">평가항목</td>
+                                  <td class="WACS_head" width="150" style="font-weight:bold; text-align:center;">물체식별</td>
+                                  <td class="WACS_head" width="150" style="font-weight:bold; text-align:center;">물체설계</td>
+                                  <td class="WACS_head" width="150" style="font-weight:bold; text-align:center;">그림설계</td>
+                                  <td class="WACS_head" width="150" style="font-weight:bold; text-align:center;">일반움직임</td>
+                                  <td class="WACS_head" width="150" style="font-weight:bold; text-align:center;">원시반사여부</td>
                                   <td width="80">&nbsp;</td>
                                 </tr>
                                 <tr>
                                   <td>&nbsp;</td>
                                   <td class="WACS_Menu" height="30px" style="font-weight:bold; text-align:center;">미가공점수</td>
                                   <td class="WACS_score">
-                                    <input width="200" height="30px" style="border:none; text-align: center;" id="WACS_RAW_T1" type="text" name="WACS_RAW_T1" placeholder="점수입력">
+                                    <input id="WACS_RAW_T1" type="text" name="WACS_RAW_T1" style="border:none; text-align: center;" placeholder="점수입력">
                                   </td>
                                   <td class="WACS_score">
-                                    <input width="200" height="30px" style="border:none; text-align: center;" id="WACS_RAW_T2" type="text" name="WACS_RAW_T2" placeholder="점수입력">
+                                    <input id="WACS_RAW_T2" type="text" name="WACS_RAW_T2" style="border:none; text-align: center;" placeholder="점수입력">
                                   </td>
                                   <td class="WACS_score">
-                                    <input width="200" height="30px" style="border:none; text-align: center;" id="WACS_RAW_T3" type="text" name="WACS_RAW_T3" placeholder="점수입력">
+                                    <input id="WACS_RAW_T3" type="text" name="WACS_RAW_T3" style="border:none; text-align: center;" placeholder="점수입력">
                                   </td>
                                   <td class="WACS_score">
-                                    <input width="200" height="30px" style="border:none; text-align: center;" id="WACS_RAW_T4" type="text" name="WACS_RAW_T4" placeholder="점수입력">
+                                    <input id="WACS_RAW_T4" type="text" name="WACS_RAW_T4" style="border:none; text-align: center;" placeholder="점수입력">
+                                  </td>
+                                  <td class="WACS_score" style="text-align:center;">
+                                    <input id="reflex_WACS" type="checkbox" name="reflex_WACS" style="border:none;" value="reflex">잔존
                                   </td>
                                   <td>&nbsp;</td>
                                 </tr>
                               </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table>
+                              <tr>
+                                <td height="10">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td width="100">&nbsp;</td>
+                                <td>특이사항 : </td>
+                                <td width="10">&nbsp;</td>
+                                <td>
+                                  <table>
+                                    <tr>
+                                      <td >
+                                        <textarea id="WACS_memory" name="WACS_memory" class="WACS_score" rows="4" cols="80" placeholder="평가중 특이사항을 입력해주세요" style="width:820px; height:60px;"></textarea>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
                           </td>
                         </tr>
                       </table>
@@ -3714,7 +3817,7 @@ details[open]>summary~* {
                   <tr>
                     <td width="200px">&nbsp</td>
                     <td style="text-align:center;">
-                      <input type="button" class="submit" name="analysis" onclick="sub_analysis()" value="분석하기">
+                      <input type="button" formaction="Test_analysis_ver1.html" name="analysis" class="submit" onclick="sub_analysis()" value="분석하기"></input>  >
                     </td>
                     <td width="200px">&nbsp</td>
                     <td style="text-align:center;">
@@ -4641,12 +4744,16 @@ details[open]>summary~* {
           var RAW_SCORE_SEQ = document.getElementById('RAW_SCORE_SEQ').value;
           var RAW_SCORE_FGR = document.getElementById('RAW_SCORE_FGR').value;
           var RAW_SCORE_CLO = document.getElementById('RAW_SCORE_CLO').value;
+          var TVPS_memory = document.getElementById('TVPS_memory').value;
 
 
           <!-- ======= Maiin Body-VMI-value start ====== -->
           var Raw_vmi = document.getElementById('Raw_vmi').value;
           var Raw_visual = document.getElementById('Raw_visual').value;
           var Raw_motor = document.getElementById('Raw_motor').value;
+          var VMI_memory = document.getElementById('VMI_memory').value;
+          var segment_VMI = document.getElementById('segment_VMI').value;
+          var segment_Motor = document.getElementById('segment_Motor').value;
 
 
           <!-- ======= Maiin Body-DEM-value start ====== -->
@@ -4660,6 +4767,7 @@ details[open]>summary~* {
           var HOR_ERR_O = document.getElementById('HOR_ERR_O').value;
           var HOR_ERR_A = document.getElementById('HOR_ERR_A').value;
           var HOR_ERR_T = document.getElementById('HOR_ERR_T').value;
+          var DEM_memory = document.getElementById('DEM_memory').value;
 
 
           <!-- ======= Maiin Body-WACS-value start ====== -->
@@ -4667,6 +4775,8 @@ details[open]>summary~* {
           var WACS_RAW_T2 = document.getElementById('WACS_RAW_T2').value;
           var WACS_RAW_T3 = document.getElementById('WACS_RAW_T3').value;
           var WACS_RAW_T4 = document.getElementById('WACS_RAW_T4').value;
+          var WACS_memory = document.getElementById('WACS_memory').value;
+          var reflex_WACS = document.getElementById('reflex_WACS').value;
 
 
 
@@ -4802,6 +4912,7 @@ details[open]>summary~* {
           localStorage.setItem('QOL_score19',QOL_score19);
 
 
+
           <!-- ======= 양안시평가 ====== -->
           localStorage.setItem('MainEye',MainEye);
           localStorage.setItem('PD',PD);
@@ -4922,12 +5033,16 @@ details[open]>summary~* {
           localStorage.setItem('RAW_SCORE_SEQ',RAW_SCORE_SEQ);
           localStorage.setItem('RAW_SCORE_FGR',RAW_SCORE_FGR);
           localStorage.setItem('RAW_SCORE_CLO',RAW_SCORE_CLO);
+          localStorage.setItem('TVPS_memory',TVPS_memory);
+          localStorage.setItem('segment_VMI',segment_VMI);
+          localStorage.setItem('segment_Motor',segment_Motor);
 
 
           <!-- ======= VMI ====== -->
           localStorage.setItem('Raw_vmi',Raw_vmi);
           localStorage.setItem('Raw_visual',Raw_visual);
           localStorage.setItem('Raw_motor',Raw_motor);
+          localStorage.setItem('VMI_memory',VMI_memory);
 
 
           <!-- ======= DEM ====== -->
@@ -4941,6 +5056,7 @@ details[open]>summary~* {
           localStorage.setItem('HOR_ERR_O',HOR_ERR_O);
           localStorage.setItem('HOR_ERR_A',HOR_ERR_A);
           localStorage.setItem('HOR_ERR_T',HOR_ERR_T);
+          localStorage.setItem('DEM_memory',DEM_memory);
 
 
           <!-- ======= WACS ====== -->
@@ -4948,6 +5064,8 @@ details[open]>summary~* {
           localStorage.setItem('WACS_RAW_T2',WACS_RAW_T2);
           localStorage.setItem('WACS_RAW_T3',WACS_RAW_T3);
           localStorage.setItem('WACS_RAW_T4',WACS_RAW_T4);
+          localStorage.setItem('WACS_memory',WACS_memory);
+          localStorage.setItem('reflex_WACS',reflex_WACS);
 
 
 
@@ -4956,9 +5074,7 @@ details[open]>summary~* {
 
       }
 
-      function sub_Evolution(){
-        localStorage.clear();
-      }
+
 
     </script>
     <script>
