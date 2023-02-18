@@ -125,7 +125,7 @@ if(RAccom_Rev == "" || LAccom_Rev == "" || R_accom =="" || L_accom == "" || RAcc
 } else {
   if((R_accom <= Accomage-2) || (L_accom <= Accomage-2)){
     if(ChAge <= 6){
-      if(RAccom_Rev <= 3 || LAccom_Rev <= 3){
+      if (QOL_sum >= 20){
         if(Sel_AccomRev == 'bad2'){
           var Eva_result2 = "조절부족/조절지속능력부족";
         } else if (Sel_AccomRev == 'bad1'){
@@ -133,7 +133,7 @@ if(RAccom_Rev == "" || LAccom_Rev == "" || R_accom =="" || L_accom == "" || RAcc
         }
       }
     } else if (ChAge > 6 && ChAge <= 12) {
-      if((RAccom_Rev <= 4.5) || (LAccom_Rev <= 4.5)){
+      if (QOL_sum >= 20){
         if(Sel_AccomRev == 'bad2'){
           var Eva_result2 = "조절부족/조절지속능력부족";
         } else if(Sel_AccomRev == 'bad1'){
@@ -141,7 +141,7 @@ if(RAccom_Rev == "" || LAccom_Rev == "" || R_accom =="" || L_accom == "" || RAcc
         }
       }
     } else if (ChAge > 12 ) {
-      if((RAccom_Rev <= 6) || (LAccom_Rev <= 6)){
+      if (QOL_sum >= 20){
         if(Sel_AccomRev == 'bad2'){
           var Eva_result2 = "조절부족/조절지속능력부족";
         } else if(Sel_AccomRev == 'bad1'){
@@ -153,7 +153,7 @@ if(RAccom_Rev == "" || LAccom_Rev == "" || R_accom =="" || L_accom == "" || RAcc
     if(ChAge <= 6){
       if((RAccom_Rev <= 3) || (LAccom_Rev <= 3)){
         if (OUAccom_Rev <= 0.5) {
-          if(Sel_AccomRev == 'bad3' ){
+          if (QOL_sum >= 20){
           var Eva_result2 = "조절용이부족";
         }
       }
@@ -161,7 +161,7 @@ if(RAccom_Rev == "" || LAccom_Rev == "" || R_accom =="" || L_accom == "" || RAcc
   } else if (ChAge >6  && ChAge <= 12) {
       if((RAccom_Rev <= 4.5) || (LAccom_Rev <= 4.5)){
         if (OUAccom_Rev <= 2.5) {
-          if(Sel_AccomRev == 'bad3'){
+          if (QOL_sum >= 20){
           var Eva_result2 = "조절용이부족";
         }
       }
@@ -169,7 +169,7 @@ if(RAccom_Rev == "" || LAccom_Rev == "" || R_accom =="" || L_accom == "" || RAcc
   } else if (ChAge > 12 && ChAge < 38) {
       if((RAccom_Rev <= 6) || (LAccom_Rev <= 6)){
         if (OUAccom_Rev <= 2.5) {
-          if(Sel_AccomRev == 'bad3'){
+          if (QOL_sum >= 20){
           var Eva_result2 = "조절용이부족";
           }
         }
