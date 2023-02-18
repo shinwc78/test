@@ -750,24 +750,37 @@
                     }
 
                     if (VMI_memory == "" || VMI_memory == "NaN"){
-
-                    } else {
-                      document.write("● 평가중 관찰사항으로 "+VMI_memory+"<br>\n");
-                    }
-
-                    if (segment_VMI == "VMI17"){
-                      if (segment_Motor == "Motor17"){
-                        document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"VMI 17번 문항"+'</span>'+"과 "+'<span style="font-weight: bold; color: red;">'+"부가검사 Motor 17번 문항"+'</span>'+" 에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰되었습니다.<br>\n");
+                      if (segment_VMI == "VMI17"){
+                        if (segment_Motor == "Motor17"){
+                          document.write("● 특히 "+'<span style="font-weight: bold; color: red;">'+"VMI 17번 문항"+'</span>'+"과 "+'<span style="font-weight: bold; color: red;">'+"부가검사 Motor 17번 문항"+'</span>'+" 에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰되었습니다.<br>\n");
+                        } else {
+                          document.write("● 특히 "+'<span style="font-weight: bold; color: red;">'+"VMI 17번 문항"+'</span>'+"에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰되었습니다.<br>\n");
+                        }
                       } else {
-                        document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"VMI 17번 문항"+'</span>'+"에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰되었습니다.<br>\n");
+                        if (segment_Motor == "Motor17"){
+                          document.write("● 특히 "+'<span style="font-weight: bold; color: red;">'+"부가검사 Motor 17번 문항"+'</span>'+" 에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰되었습니다.<br>\n");
+                        } else {
+                          document.write("");
+                        }
                       }
                     } else {
-                      if (segment_Motor == "Motor17"){
-                        document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"부가검사 Motor 17번 문항"+'</span>'+" 에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰되었습니다.<br>\n");
+                      document.write("● 평가중 관찰사항은 "+VMI_memory);
+                      if (segment_VMI == "VMI17"){
+                        if (segment_Motor == "Motor17"){
+                          document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"VMI 17번 문항"+'</span>'+"과 "+'<span style="font-weight: bold; color: red;">'+"부가검사 Motor 17번 문항"+'</span>'+" 에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰되었습니다.<br>\n");
+                        } else {
+                          document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"VMI 17번 문항"+'</span>'+"에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰되었습니다.<br>\n");
+                        }
                       } else {
-                        document.write("");
+                        if (segment_Motor == "Motor17"){
+                          document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"부가검사 Motor 17번 문항"+'</span>'+" 에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰되었습니다.<br>\n");
+                        } else {
+                          document.write("");
+                        }
                       }
                     }
+
+
                      </script>
                   </td>
                 </tr>
@@ -1161,16 +1174,21 @@
                            }
 
                            if (WACS_memory == "" || WACS_memory == "NaN"){
-
+                             if (reflex_WACS == "reflex" ){
+                               document.write("● 특히 "+'<span style="font-weight: bold; color: red;">'+"LineWalk toe/heel on line과제"+'</span>'+"에서 "+'<span style="font-weight: bold; color: red;">'+"원시반사"+'</span>'+"가 관찰되었습니다.<br>\n");
+                             } else {
+                               document.write("");
+                             }
                            } else {
                              document.write("● 평가중 관찰사항으로 "+WACS_memory+"<br>\n");
+                             if (reflex_WACS == "reflex" ){
+                               document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"LineWalk toe/heel on line과제"+'</span>'+"에서 "+'<span style="font-weight: bold; color: red;">'+"원시반사"+'</span>'+"가 관찰되었습니다.<br>\n");
+                             } else {
+                               document.write("");
+                             }
                            }
 
-                           if (reflex_WACS == "reflex" ){
-                             document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"LineWalk toe/heel on line과제"+'</span>'+"에서 "+'<span style="font-weight: bold; color: red;">'+"원시반사"+'</span>'+"가 관찰되었습니다.<br>\n");
-                           } else {
-                             document.write("");
-                           }
+
                          </script>
                         </td>
                       </tr>
