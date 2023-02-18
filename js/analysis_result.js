@@ -78,13 +78,13 @@ if (QOL_sum !== ""){
     var Eva_result1 = "감각성_항상성내편위";
   } else if (radio_surgery1 == "yes" && BroadH != "good" && radio_cross == "always" && radio_splitting == "unilater"){
     var Eva_result1 = "속발성_항상성내편위";
-  } else if ((Dectopic < 11 || Nectopic < 11) && ratio_cross == "always" && radio_splitting == "unilater" && radio_amblyopia == "yes" ){
+  } else if ((Dectopic < 11 || Nectopic < 11) && radio_cross == "always" && radio_splitting == "unilater" && radio_amblyopia == "yes" ){
     var Eva_result1 = "미세_항상성내편위";
   } else {
     var Eva_result1 = "항상성내편위";
   }
 } else if ((CTest_N == 'XT') || (CTest_D == 'XT')){
-  if(radio_month6 == "early" && (Dectopic > 30 || Nectopic > 30) && radio_splitting == "alter" && ratio_cross == "always" ){
+  if(radio_month6 == "early" && (Dectopic > 30 || Nectopic > 30) && radio_splitting == "alter" && radio_cross == "always" ){
     var Eva_result1 = "유아_항상성외편위";
   } else if(radio_month6 == "later" && radio_cross == "sometime"){
     if(((Dectopic- Nectopic)<10 || (Nectopic- Dectopic)<10)){
