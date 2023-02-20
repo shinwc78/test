@@ -352,7 +352,7 @@ if ((Raw_vmi === "평가하지 않음") || (Raw_visual === "평가하지 않음"
   }
 
   if (segment_VMI == "VMI17" || segment_Motor == "Motor17"){
-    document.write("특히, 분절은  <br>\n")
+    document.write("특히, 분절은  <br>\n<br>\n")
   }
 }
 
@@ -409,7 +409,7 @@ if ((WACS_RAW_T1 === "평가하지 않음") || (WACS_RAW_T2 === "평가하지 �
   }
 
   if (reflex_WACS == "reflex") {
-    document.write("특히, 원시반사는 <br>\n")
+    document.write("특히, 원시반사는 <br>\n<br>\n")
   }
 }
 
