@@ -560,7 +560,7 @@ if (CTest_D == "exo" || CTest_D == "eso" || CTest_N == "exo" || CTest_N == "eso"
     var EVA_TEST_3 = "";
   }
 
-  if (D_W4D == "2" || D_W4D == "3" || N_W4D == "2" || N_W4D == "3" ||){
+  if (D_W4D == "2" || D_W4D == "3" || N_W4D == "2" || N_W4D == "3"){
     if (CTest_D == "XT" || CTest_D == "ET" || CTest_N == "XT" || CTest_N == "ET"){
       document.write("♣ 물체를 주시하는데 한쪽눈만 주로 사용하기 때문에 3차원 공간을 인식하는 깊이지각 능력인 입체시가 매우 불량합니다. 이 때문에 계단을 오르내리거나 체육활동에서 특별한 주의가 요구됩니다. <br>\n <br>\n");
     }
