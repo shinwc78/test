@@ -189,9 +189,43 @@ if (QOL_sum >= 20) {
   var Eva_result3 = "";
 }
 
+document.write("Eva_result1 : "+Eva_result1+"<br>\n");
+document.write("Eva_result2 : "+Eva_result2+"<br>\n");
+document.write("Eva_result3 : "+Eva_result3+"<br>\n");
+
+
 
 if (Eva_result1 !== "" || Eva_result2 !== ""  || Eva_result3 !== "" ){
-  document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result1+" "+Eva_result2+" "+Eva_result3+'</span>'+"입니다.<br>\n <br>\n");
+  if (Eva_result1 == "NaN" || Eva_result1 == "undefined") {
+    if (Eva_result2 == "NaN" || Eva_result2 == "undefined") {
+      if (Eva_result3 == "NaN" || Eva_result3 == "undefined") {
+        document.write("● 양안시기능평가결과 특이사항 없음.<br>\n <br>\n");
+      } else {
+        document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result3+'</span>'+"입니다.<br>\n <br>\n");
+      }
+    } else {
+      if (Eva_result3 == "NaN" || Eva_result3 == "undefined") {
+        document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result2+'</span>'+"입니다.<br>\n <br>\n");
+      } else {
+        document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result2+" "+Eva_result3+'</span>'+"입니다.<br>\n <br>\n");
+      }
+    }
+  } else {
+    if (Eva_result2 == "NaN" || Eva_result2 == "undefined") {
+      if (Eva_result3 == "NaN" || Eva_result3 == "undefined") {
+        document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result1+'</span>'+"입니다.<br>\n <br>\n");
+      } else {
+        document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result1+" "+Eva_result3+'</span>'+"입니다.<br>\n <br>\n");
+      }
+    } else {
+      if (Eva_result3 == "NaN" || Eva_result3 == "undefined") {
+        document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result1+" "+Eva_result2+'</span>'+"입니다.<br>\n <br>\n");
+      } else {
+        document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result1+" "+Eva_result2+" "+Eva_result3+'</span>'+"입니다.<br>\n <br>\n");
+      }
+    }
+  }
+
   if (Eva_result1 === "눈모임부족") {
     var EVA_TEST_1 = "안구협응기술과 융합력 ";
     document.write('<span style="font-weight: bold; color: red;">'+"눈모임부족"+'</span>'+"의 경우 버전스이상 중에서 가장 흔한 이상으로 조절이상과 버전스이상이 있는 어린이의 약30%에서 나타나고 있습니다.<br>\n");
@@ -352,7 +386,7 @@ if ((Raw_vmi === "평가하지 않음") || (Raw_visual === "평가하지 않음"
   }
 
   if (segment_VMI == "VMI17" || segment_Motor == "Motor17"){
-    document.write("특히, 분절은  <br>\n<br>\n")
+    document.write("특히, 분절은 신체중심선인 척추를 기준으로 신체중심선을 부드럽게 가로지르는 활동이 어려울 수 있습니다. 좌우측 인식에 대한 발달저조로 인해 좌우 개념을 익히는데 어려움이 발생할 수 있고, 글자를 거꾸로 읽고 쓰거나, 글자나 숫자를 쓰거나 기억하는데 어려움이 흔하게 발생할 수 있습니다. <br>\n<br>\n")
   }
 }
 
@@ -409,7 +443,7 @@ if ((WACS_RAW_T1 === "평가하지 않음") || (WACS_RAW_T2 === "평가하지 �
   }
 
   if (reflex_WACS == "reflex") {
-    document.write("특히, 원시반사는 <br>\n<br>\n")
+    document.write("특히, 원시반사가 남아있는 경우 신체균형, 신체협응, 신체리듬이 저조할 수 있습니다. 이로인해 동작이 어둔하고 잘 넘어지거나 잦은 부상의 원인이 될 수 있습니다.<br>\n<br>\n")
   }
 }
 
@@ -525,6 +559,19 @@ if (CTest_D == "exo" || CTest_D == "eso" || CTest_N == "exo" || CTest_N == "eso"
   if (Eva_result3 === "") {
     var EVA_TEST_3 = "";
   }
+
+  if (D_W4D == "2" || D_W4D == "3" || N_W4D == "2" || N_W4D == "3" ||){
+    if (CTest_D == "XT" || CTest_D == "ET" || CTest_N == "XT" || CTest_N == "ET"){
+      document.write("♣ 물체를 주시하는데 한쪽눈만 주로 사용하기 때문에 3차원 공간을 인식하는 깊이지각 능력인 입체시가 매우 불량합니다. 이 때문에 계단을 오르내리거나 체육활동에서 특별한 주의가 요구됩니다. <br>\n <br>\n");
+    }
+  }
+
+
+  if (WACS_T5_PER <= 50 || WACS_T5_PER == "<1" || reflex_WACS == "reflex" || segment_VMI == "VMI17" || segment_Motor == "Motor17"){
+    document.write("♣ 신체균형과 신체협응을 발달시키기 위하여 양측성 신체활동이나 양측성 운동을 권장합니다. 예를들어 신체접촉이 많은 구기종목 보다는 요가나 줄넘기, 트램펄린점프, 필라테스와 같은 운동을 권장합니다. <br>\n <br>\n");
+
+  }
+
 
 
 
