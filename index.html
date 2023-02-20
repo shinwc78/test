@@ -3560,10 +3560,10 @@ details[open]>summary~* {
                                         <input id="Raw_motor" type="text" name="Raw_motor" style="border:none; text-align: center;" placeholder="점수입력">
                                       </td>
                                       <td class="VMI_score" style="text-align:center; padding-left:0;">
-                                        <input id="segment_VMI" type="checkbox" name="segment_VMI" style="border:none;" value="VMI17"> VMI 17번
+                                        <input id="segment_VMI" type="checkbox" style="border:none;" value="VMI17" > VMI 17번
                                       </td>
                                       <td class="VMI_score" style="text-align:center; padding-left:0;">
-                                        <input id="segment_Motor" type="checkbox" name="segment_Motor" style="border:none;" value="Motor17"> Motor 17번
+                                        <input id="segment_Motor" type="checkbox" style="border:none;" value="Motor17"> Motor 17번
                                       </td>
                                       <td>&nbsp;</td>
                                     </tr>
@@ -4752,8 +4752,17 @@ details[open]>summary~* {
           var Raw_visual = document.getElementById('Raw_visual').value;
           var Raw_motor = document.getElementById('Raw_motor').value;
           var VMI_memory = document.getElementById('VMI_memory').value;
-          var segment_VMI = document.getElementById('segment_VMI').value;
-          var segment_Motor = document.getElementById('segment_Motor').value;
+          if (document.getElementById('segment_VMI').checked){
+            var segment_VMI = document.getElementById('segment_VMI').value;
+          } else {
+            var segment_VMI = "";
+          }
+
+          if (document.getElementById('segment_Motor').checked){
+            var segment_Motor = document.getElementById('segment_Motor').value;
+          } else {
+            var segment_Motor = "";
+          }
 
 
           <!-- ======= Maiin Body-DEM-value start ====== -->
@@ -4776,7 +4785,12 @@ details[open]>summary~* {
           var WACS_RAW_T3 = document.getElementById('WACS_RAW_T3').value;
           var WACS_RAW_T4 = document.getElementById('WACS_RAW_T4').value;
           var WACS_memory = document.getElementById('WACS_memory').value;
-          var reflex_WACS = document.getElementById('reflex_WACS').value;
+          if (document.getElementById('reflex_WACS').checked){
+            var reflex_WACS = document.getElementById('reflex_WACS').value;
+          } else {
+            var reflex_WACS = "";
+          }
+
 
 
 
@@ -5074,11 +5088,6 @@ details[open]>summary~* {
 
       }
 
-
-
-    </script>
-    <script>
-      localStorage.clear();
     </script>
 
     <!-- ======= Maiin Body end ======= -->

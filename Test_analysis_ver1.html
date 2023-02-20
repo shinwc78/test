@@ -535,7 +535,7 @@
                           var SEQ_ment = "순차적기억기술"+"("+percentile_SEQ+"%), ";
                           var FGR_ment = "형태-배경식별기술"+"("+percentile_FGR+"%), ";
                           var CLO_ment = "시각폐쇄기술"+"("+percentile_CLO+"%)";
-                          document.write("● "+DIS_ment+MEM_ment+SPA_ment+CON_ment+SEQ_ment+FGR_ment+CLO_ment+"로 평가되었습니다.<br>\n <br>\n");
+                          document.write("● "+DIS_ment+MEM_ment+SPA_ment+CON_ment+SEQ_ment+FGR_ment+CLO_ment+"로 평가됨.<br>\n <br>\n");
 
                           var TVPS4_AGE_ment = "전체 시지각기술 "+TVPS4AGE_B5+", ";
                           var DIS_AGE_ment = "시각식별기술"+"("+percentile_DIS+"%), ";
@@ -545,7 +545,7 @@
                           var SEQ_AGE_ment = "순차적기억기술"+"("+percentile_SEQ+"%), ";
                           var FGR_AGE_ment = "형태-배경식별기술"+"("+percentile_FGR+"%), ";
                           var CLO_AGE_ment = "시각폐쇄기술"+"("+percentile_CLO+"%)";
-                          document.write("● 전체 시지각기술 ("+TVPS4AGE_B5+"), "+"시각식별기술 ("+qgeEqui_DIS+"), "+"시각기억기술 ("+qgeEqui_MEM+"), "+"공간관계기술 ("+qgeEqui_SPA+"), "+"형태항상성기술 ("+qgeEqui_CON+"), "+"순차적기억기술 ("+qgeEqui_SEQ+"), "+"형태-배경식별기술 ("+qgeEqui_FGR+"), "+"시각폐쇄기술 ("+qgeEqui_CLO+")의 수행능력입니다.<br>\n <br>\n");
+                          document.write("● 전체 시지각기술 ("+TVPS4AGE_B5+"), "+"시각식별기술 ("+qgeEqui_DIS+"), "+"시각기억기술 ("+qgeEqui_MEM+"), "+"공간관계기술 ("+qgeEqui_SPA+"), "+"형태항상성기술 ("+qgeEqui_CON+"), "+"순차적기억기술 ("+qgeEqui_SEQ+"), "+"형태-배경식별기술 ("+qgeEqui_FGR+"), "+"시각폐쇄기술 ("+qgeEqui_CLO+")의 수행능력임.<br>\n <br>\n");
 
                         }
 
@@ -730,35 +730,35 @@
                       document.write("● 평가하지 않음.");
                     } else {
                       if (VMI_PERCENTILE <= 16 || VMI_PERCENTILE == "<1"){
-                          document.write("● 시각운동통합기술이 "+'<span style="font-weight: bold; color: red;">'+VMI_PERCENTILE+"%"+'</span>'+"로 표준집단에 있는 연령이 같은 어린이와 비교해"+'<span style="font-weight: bold; color: red;">'+" 매우 저조"+'</span>'+"합니다.<br>\n <br>\n");
+                          document.write("● 시각운동통합기술이 "+'<span style="font-weight: bold; color: red;">'+VMI_PERCENTILE+"%"+'</span>'+"로 표준집단에 있는 연령이 같은 어린이와 비교해"+'<span style="font-weight: bold; color: red;">'+" 매우 저조"+'</span>'+"함.<br>\n <br>\n");
                       }else if (VMI_PERCENTILE <= 50) {
-                          document.write("● 시각운동통합기술이 "+'<span style="font-weight: bold; color: blue;">'+VMI_PERCENTILE+"%"+'</span>'+"로 표준집단에 있는 연령이 같은 어린이와 비교해 정상범위이나"+'<span style="font-weight: bold; color: blue;">'+" 다소 저조"+'</span>'+"합니다.<br>\n <br>\n");
+                          document.write("● 시각운동통합기술이 "+'<span style="font-weight: bold; color: blue;">'+VMI_PERCENTILE+"%"+'</span>'+"로 표준집단에 있는 연령이 같은 어린이와 비교해 정상범위이나"+'<span style="font-weight: bold; color: blue;">'+" 다소 저조"+'</span>'+"함.<br>\n <br>\n");
                       }else if (VMI_PERCENTILE <= 84) {
-                          document.write("● 시각운동통합기술이 "+VMI_PERCENTILE+"% 로 표준집단에 있는 연령이 같은 어린이와 비교해 정상범위로 양호합니다.<br>\n <br>\n");
+                          document.write("● 시각운동통합기술이 "+VMI_PERCENTILE+"% 로 표준집단에 있는 연령이 같은 어린이와 비교해 정상범위로 양호함.<br>\n <br>\n");
                       }else if (VMI_PERCENTILE > 84) {
-                          document.write("● 시각운동통합기술이 "+VMI_PERCENTILE+"% 로 표준집단에 있는 연령이 같은 어린이와 비교해 우수합니다.<br>\n <br>\n");
+                          document.write("● 시각운동통합기술이 "+VMI_PERCENTILE+"% 로 표준집단에 있는 연령이 같은 어린이와 비교해 우수함.<br>\n <br>\n");
                       }
 
                         var VISUAL_ment = "시각인지기술"+"("+VISUAL_PERCENTILE+"%), ";
                         var MOTOR_ment = "운동협응기술"+"("+MOTOR_PERCENTILE+"%) ";
-                        document.write("● "+VISUAL_ment+MOTOR_ment+"로 평가되었습니다.<br>\n <br>\n");
+                        document.write("● "+VISUAL_ment+MOTOR_ment+"로 평가됨.<br>\n <br>\n");
 
                         var VMI_ment = "시각운동통합기술"+"("+VMI_Age+"), ";
                         var VISUAL_ment = "시각인지기술"+"("+VISUAL_Age+"), ";
                         var MOTOR_ment = "운동협응기술"+"("+MOTOR_Age+") ";
-                        document.write("● "+VMI_ment+VISUAL_ment+MOTOR_ment+"의 수행능력입니다.<br>\n <br>\n");
+                        document.write("● "+VMI_ment+VISUAL_ment+MOTOR_ment+"의 수행능력임.<br>\n <br>\n");
                     }
 
                     if (VMI_memory == "" || VMI_memory == "NaN"){
                       if (segment_VMI == "VMI17"){
                         if (segment_Motor == "Motor17"){
-                          document.write("● 특히 "+'<span style="font-weight: bold; color: red;">'+"VMI 17번 문항"+'</span>'+"과 "+'<span style="font-weight: bold; color: red;">'+"부가검사 Motor 17번 문항"+'</span>'+" 에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰되었습니다.<br>\n");
+                          document.write("● 특히 "+'<span style="font-weight: bold; color: red;">'+"VMI 17번 문항"+'</span>'+"과 "+'<span style="font-weight: bold; color: red;">'+"부가검사 Motor 17번 문항"+'</span>'+" 에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰됨.<br>\n");
                         } else {
-                          document.write("● 특히 "+'<span style="font-weight: bold; color: red;">'+"VMI 17번 문항"+'</span>'+"에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰되었습니다.<br>\n");
+                          document.write("● 특히 "+'<span style="font-weight: bold; color: red;">'+"VMI 17번 문항"+'</span>'+"에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰됨.<br>\n");
                         }
                       } else {
                         if (segment_Motor == "Motor17"){
-                          document.write("● 특히 "+'<span style="font-weight: bold; color: red;">'+"부가검사 Motor 17번 문항"+'</span>'+" 에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰되었습니다.<br>\n");
+                          document.write("● 특히 "+'<span style="font-weight: bold; color: red;">'+"부가검사 Motor 17번 문항"+'</span>'+" 에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰됨.<br>\n");
                         } else {
                           document.write("");
                         }
@@ -767,18 +767,25 @@
                       document.write("● 평가중 관찰사항은 "+VMI_memory);
                       if (segment_VMI == "VMI17"){
                         if (segment_Motor == "Motor17"){
-                          document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"VMI 17번 문항"+'</span>'+"과 "+'<span style="font-weight: bold; color: red;">'+"부가검사 Motor 17번 문항"+'</span>'+" 에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰되었습니다.<br>\n");
+                          document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"VMI 17번 문항"+'</span>'+"과 "+'<span style="font-weight: bold; color: red;">'+"부가검사 Motor 17번 문항"+'</span>'+" 에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰됨.<br>\n");
                         } else {
-                          document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"VMI 17번 문항"+'</span>'+"에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰되었습니다.<br>\n");
+                          document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"VMI 17번 문항"+'</span>'+"에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰됨.<br>\n");
                         }
                       } else {
                         if (segment_Motor == "Motor17"){
-                          document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"부가검사 Motor 17번 문항"+'</span>'+" 에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰되었습니다.<br>\n");
+                          document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"부가검사 Motor 17번 문항"+'</span>'+" 에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰됨.<br>\n");
                         } else {
                           document.write("");
                         }
                       }
                     }
+
+                    document.write("Raw_vmi : "+Raw_vmi+"-"); document.write(typeof(Raw_vmi)+"<br>\n");
+                    document.write("Raw_visual : "+Raw_visual+"-"); document.write(typeof(Raw_visual)+"<br>\n");
+                    document.write("VMI_memory : "+VMI_memory+"-"); document.write(typeof(VMI_memory)+"<br>\n");
+                    document.write("segment_VMI : "+segment_VMI+"-"); document.write(typeof(segment_VMI)+"<br>\n");
+                    document.write("segment_Motor : "+segment_Motor+"-"); document.write(typeof(segment_Motor)+"<br>\n");
+
 
 
                      </script>
@@ -934,13 +941,13 @@
                               if (DEM_HOR_PER <= 15 || DEM_HOR_PER == '<1') {
                                 if (DEM_VER_PER <=15 ||  DEM_VER_PER == '<1' ) {
                                   if (DEM_RATIO_PER <= 15 || DEM_RATIO_PER == '<1' ){
-                                    document.write("● "+'<span style="font-weight: bold; color: red;">'+"안구운동발달 유형이 IV형 "+'</span>'+"으로 조정된 수직시간이나 수평시간, DEM비 모두 이상값을 나타내는 경우로, 이것은 "+'<span style="font-weight: bold; color: red;">'+"안구운동이상(II유형)과 자동성이상(III유형)이 동반된 유형"+'</span>'+"입니다.<br>\n <br>\n" );
+                                    document.write("● "+'<span style="font-weight: bold; color: red;">'+"안구운동발달 유형이 IV형 "+'</span>'+"으로 조정된 수직시간이나 수평시간, DEM비 모두 이상값을 나타내는 경우로, 이것은 "+'<span style="font-weight: bold; color: red;">'+"안구운동이상(II유형)과 자동성이상(III유형)이 동반된 유형"+'</span>'+"임.<br>\n <br>\n" );
                                   } else {
-                                    document.write("● "+'<span style="font-weight: bold; color: red;">'+"안구운동발달 유형이 III형 "+'</span>'+"으로 DEM비는 정상이지만, 미숙한 자동성이 수평으로 나열된 숫자를 읽는 것에도 부정적인 영향을 미쳐 조정된 수평시간 및 수직시간이 증가한 것으로 "+'<span style="font-weight: bold; color: red;">'+"자동성에 문제가 있는 유형"+'</span>'+"입니다.<br>\n <br>\n");
+                                    document.write("● "+'<span style="font-weight: bold; color: red;">'+"안구운동발달 유형이 III형 "+'</span>'+"으로 DEM비는 정상이지만, 미숙한 자동성이 수평으로 나열된 숫자를 읽는 것에도 부정적인 영향을 미쳐 조정된 수평시간 및 수직시간이 증가한 것으로 "+'<span style="font-weight: bold; color: red;">'+"자동성에 문제가 있는 유형"+'</span>'+"임.<br>\n <br>\n");
                                   }
                                 } else {
                                   if (DEM_RATIO_PER <= 15 || DEM_RATIO_PER == '<1' ){
-                                    document.write("● "+'<span style="font-weight: bold; color: red;">'+"안구운동발달 유형이 II형 "+'</span>'+"으로 수직에 비해 조정된 수평시간이 커서 "+'<span style="font-weight: bold; color: red;">'+"안구운동이상"+'</span>'+"을 나타내는 유형입니다.<br>\n <br>\n");
+                                    document.write("● "+'<span style="font-weight: bold; color: red;">'+"안구운동발달 유형이 II형 "+'</span>'+"으로 수직에 비해 조정된 수평시간이 커서 "+'<span style="font-weight: bold; color: red;">'+"안구운동이상"+'</span>'+"을 나타내는 유형임.<br>\n <br>\n");
                                   }
                                 }
                               } else {
@@ -950,7 +957,7 @@
                                   if (DEM_RATIO_PER <= 15 || DEM_RATIO_PER == '<1' ){
 
                                   } else {
-                                    document.write("● 안구운동발달 유형이 I형으로 조정된 수평시간과 수직시간이 정상으로 안구운동기능이 정상인 유형입니다.<br>\n <br>\n");
+                                    document.write("● 안구운동발달 유형이 I형으로 조정된 수평시간과 수직시간이 정상으로 안구운동기능이 정상인 유형임.<br>\n <br>\n");
                                   }
                                 }
                               }
@@ -1149,44 +1156,53 @@
                              document.write("● 평가하지 않음.");
                            } else {
                              if (WACS_T5_PER <= 16 || WACS_T5_PER == "<1"){
-                               document.write("● 시각공간방향기술이 "+'<span style="font-weight: bold; color: red;">'+WACS_T5_PER+"%"+'</span>'+"로 표준집단에 있는 연령이 같은 또래와 비교해"+'<span style="font-weight: bold; color: red;">'+" 매우 저조"+'</span>'+"합니다.<br>\n <br>\n");
+                               document.write("● 시각공간방향기술이 "+'<span style="font-weight: bold; color: red;">'+WACS_T5_PER+"%"+'</span>'+"로 표준집단에 있는 연령이 같은 또래와 비교해"+'<span style="font-weight: bold; color: red;">'+" 매우 저조"+'</span>'+"함.<br>\n <br>\n");
                                if (ChAge >=6) {
-                                 document.write("● 또한 분석기준나이가 5세임을 감안한다면 연령이 같은 또래와 비교해"+'<span style="font-weight: bold; color: red;">'+" 매우 저조"+'</span>'+"합니다.<br>\n <br>\n");
+                                 document.write("● 또한 분석기준나이가 5세임을 감안한다면 연령이 같은 또래와 비교해"+'<span style="font-weight: bold; color: red;">'+" 매우 저조"+'</span>'+"함.<br>\n <br>\n");
                                }
                              } else if (WACS_T5_PER <= 50) {
-                               document.write("● 시각운동통합기술이 "+'<span style="font-weight: bold; color: blue;">'+WACS_T5_PER+"%"+'</span>'+"로 표준집단에 있는 연령이 같은 또래와 비교해 정상범위이나"+'<span style="font-weight: bold; color: blue;">'+" 다소 저조"+'</span>'+"합니다.<br>\n <br>\n");
+                               document.write("● 시각운동통합기술이 "+'<span style="font-weight: bold; color: blue;">'+WACS_T5_PER+"%"+'</span>'+"로 표준집단에 있는 연령이 같은 또래와 비교해 정상범위이나"+'<span style="font-weight: bold; color: blue;">'+" 다소 저조"+'</span>'+"함.<br>\n <br>\n");
                                if (ChAge >=6) {
-                               document.write("● 단, 분석기준나이가 5세임을 감안한다면 연령이 같은 또래와 비교해"+'<span style="font-weight: bold; color: red;">'+" 매우 저조"+'</span>'+"합니다.<br>\n <br>\n");
+                               document.write("● 단, 분석기준나이가 5세임을 감안한다면 연령이 같은 또래와 비교해"+'<span style="font-weight: bold; color: red;">'+" 매우 저조"+'</span>'+"함.<br>\n <br>\n");
                                }
                              } else if (WACS_T5_PER <= 84) {
-                               document.write("● 시각운동통합기술이 "+WACS_T5_PER+"% 로 표준집단에 있는 연령이 같은 또래와 비교해 정상범위로 양호합니다.<br>\n <br>\n");
+                               document.write("● 시각운동통합기술이 "+WACS_T5_PER+"% 로 표준집단에 있는 연령이 같은 또래와 비교해 정상범위로 양호함.<br>\n <br>\n");
                                if (ChAge >=6) {
-                               document.write("● 단, 분석기준나이가 5세임을 감안한다면 "+'<span style="font-weight: bold; color: red;">'+" 정기적인 관찰이"+'</span>'+"요구됩니다.<br>\n <br>\n");
+                               document.write("● 단, 분석기준나이가 5세임을 감안한다면 "+'<span style="font-weight: bold; color: red;">'+" 정기적인 관찰이"+'</span>'+"요구됨.<br>\n <br>\n");
                                }
                              } else {
-                               document.write("● 시각운동통합기술이 "+WACS_T5_PER+"% 로 표준집단에 있는 연령이 같은 또래와 비교해 우수합니다.<br>\n <br>\n");
+                               document.write("● 시각운동통합기술이 "+WACS_T5_PER+"% 로 표준집단에 있는 연령이 같은 또래와 비교해 우수함.<br>\n <br>\n");
                              }
                                  var WACS_T1_ment = "물체식별"+"("+WACS_T1_PER+"%), ";
                                  var WACS_T2_ment = "물체설계"+"("+WACS_T2_PER+"%) ";
                                  var WACS_T3_ment = "그림설계"+"("+WACS_T3_PER+"%), ";
                                  var WACS_T4_ment = "일반움직임"+"("+WACS_T4_PER+"%) ";
-                                 document.write("● "+WACS_T1_ment+WACS_T2_ment+WACS_T3_ment+WACS_T4_ment+"로 평가되었습니다.<br>\n <br>\n");
+                                 document.write("● "+WACS_T1_ment+WACS_T2_ment+WACS_T3_ment+WACS_T4_ment+"로 평가됨.<br>\n <br>\n");
                            }
 
                            if (WACS_memory == "" || WACS_memory == "NaN"){
                              if (reflex_WACS == "reflex" ){
-                               document.write("● 특히 "+'<span style="font-weight: bold; color: red;">'+"LineWalk toe/heel on line과제"+'</span>'+"에서 "+'<span style="font-weight: bold; color: red;">'+"원시반사"+'</span>'+"가 관찰되었습니다.<br>\n");
+                               document.write("● 특히 "+'<span style="font-weight: bold; color: red;">'+"LineWalk toe/heel on line과제"+'</span>'+"에서 "+'<span style="font-weight: bold; color: red;">'+"원시반사"+'</span>'+"가 관찰됨.<br>\n");
                              } else {
                                document.write("");
                              }
                            } else {
                              document.write("● 평가중 관찰사항으로 "+WACS_memory);
                              if (reflex_WACS == "reflex" ){
-                               document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"LineWalk toe/heel on line과제"+'</span>'+"에서 "+'<span style="font-weight: bold; color: red;">'+"원시반사"+'</span>'+"가 관찰되었습니다.<br>\n");
+                               document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"LineWalk toe/heel on line과제"+'</span>'+"에서 "+'<span style="font-weight: bold; color: red;">'+"원시반사"+'</span>'+"가 관찰됨.<br>\n");
                              } else {
                                document.write("");
                              }
                            }
+
+
+                           document.write("WACS_RAW_T1 : "+WACS_RAW_T1+"-"); document.write(typeof(WACS_RAW_T1)+"<br>\n");
+                           document.write("WACS_RAW_T2 : "+WACS_RAW_T2+"-"); document.write(typeof(WACS_RAW_T2)+"<br>\n");
+                           document.write("WACS_RAW_T3 : "+WACS_RAW_T3+"-"); document.write(typeof(WACS_RAW_T3)+"<br>\n");
+                           document.write("WACS_RAW_T4 : "+WACS_RAW_T4+"-"); document.write(typeof(WACS_RAW_T4)+"<br>\n");
+                           document.write("WACS_memory : "+WACS_memory+"-"); document.write(typeof(WACS_memory)+"<br>\n");
+                           document.write("reflex_WACS : "+reflex_WACS+"-"); document.write(typeof(reflex_WACS)+"<br>\n");
+
 
 
                          </script>
