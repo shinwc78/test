@@ -111,17 +111,23 @@ if (QOL_sum !== ""){
   var Eva_result1 = "";
 }
 
-
+document.write("Eva_result1 : "+Eva_result1+"<br>\n");
+document.write("EVA_TEST_1 : "+EVA_TEST_1+"<br>\n");
 //  elseif ($DVertical >=1 || $NVertical >=1) {
 //   if (($DVertical_BD1 <= 3) || ($DVertical_BD3 <= 3) || ($DVertical_BU1 <= 3) || ($DVertical_BU3 <= 3) || ($NVertical_BD1 <= 3) || ($NVertical_BD3 <= 3) || ($NVertical_BU1 <= 3) || ($NVertical_BU3 <= 3)  ){
 //     $Eva_result1 = "수직사위";
 //   }
 // }
 
+
+
+
 var Accomage = 15 - (0.25 * ChAge);
 
 if(RAccom_Rev == "" || LAccom_Rev == "" || R_accom =="" || L_accom == "" || RAccom_Rev == "NaN" || LAccom_Rev == "NaN" || R_accom =="NaN" || L_accom == "NaN" ){
   var Eva_result2 = "";
+  var EVA_TEST_2 = "";
+
 } else {
   if((R_accom <= Accomage-2) || (L_accom <= Accomage-2)){
     if(ChAge <= 6){
@@ -157,6 +163,9 @@ if(RAccom_Rev == "" || LAccom_Rev == "" || R_accom =="" || L_accom == "" || RAcc
           var Eva_result2 = "조절용이부족";
         }
       }
+    } else {
+      var Eva_result2 = "";
+      var EVA_TEST_2 = "";
     }
   } else if (ChAge >6  && ChAge <= 12) {
       if((RAccom_Rev <= 4.5) || (LAccom_Rev <= 4.5)){
@@ -165,6 +174,9 @@ if(RAccom_Rev == "" || LAccom_Rev == "" || R_accom =="" || L_accom == "" || RAcc
           var Eva_result2 = "조절용이부족";
         }
       }
+    } else {
+      var Eva_result2 = "";
+      var EVA_TEST_2 = "";
     }
   } else if (ChAge > 12 && ChAge < 38) {
       if((RAccom_Rev <= 6) || (LAccom_Rev <= 6)){
@@ -173,6 +185,9 @@ if(RAccom_Rev == "" || LAccom_Rev == "" || R_accom =="" || L_accom == "" || RAcc
           var Eva_result2 = "조절용이부족";
           }
         }
+      } else {
+        var Eva_result2 = "";
+        var EVA_TEST_2 = "";
       }
     }
   }
@@ -184,21 +199,27 @@ if (QOL_sum >= 20) {
     var Eva_result3 = "안구운동이상";
   } else {
     var Eva_result3 = "";
+    var EVA_TEST_3 = "";
+
   }
 } else {
   var Eva_result3 = "";
+  var EVA_TEST_3 = "";
+
 }
 
-document.write("Eva_result1 : "+Eva_result1+"<br>\n");
+
 document.write("Eva_result2 : "+Eva_result2+"<br>\n");
+document.write("EVA_TEST_2 : "+EVA_TEST_2+"<br>\n");
 document.write("Eva_result3 : "+Eva_result3+"<br>\n");
+document.write("EVA_TEST_3 : "+EVA_TEST_3+"<br>\n");
 
 
 
 if (Eva_result1 !== "" || Eva_result2 !== ""  || Eva_result3 !== "" ){
-  if (Eva_result1 == "NaN" || Eva_result1 == "undefined") {
-    if (Eva_result2 == "NaN" || Eva_result2 == "undefined") {
-      if (Eva_result3 == "NaN" || Eva_result3 == "undefined") {
+  if (Eva_result1 === "NaN" || Eva_result1 === "undefined") {
+    if (Eva_result2 === "NaN" || Eva_result2 === "undefined") {
+      if (Eva_result3 === "NaN" || Eva_result3 === "undefined") {
         document.write("● 양안시기능평가결과 특이사항 없음.<br>\n <br>\n");
       } else {
         document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result3+'</span>'+"입니다.<br>\n <br>\n");
@@ -225,6 +246,7 @@ if (Eva_result1 !== "" || Eva_result2 !== ""  || Eva_result3 !== "" ){
       }
     }
   }
+
 
   if (Eva_result1 === "눈모임부족") {
     var EVA_TEST_1 = "안구협응기술과 융합력 ";
@@ -315,6 +337,9 @@ if (Eva_result1 !== "" || Eva_result2 !== ""  || Eva_result3 !== "" ){
 } else if (Eva_result1 === "항상성외편위") {
     var EVA_TEST_1 = "안구협응기술과 융합력 ";
     document.write('<span style="font-weight: bold; color: red;">'+"항상성외편위"+'</span>'+"는 어린이 대상으로한 연구결과 항상성내편위가 항상성외편위보다 3~5배 더 많이 발생하는것으로 보고되는데 전연령을 대상으로하면 항상성외편위가 항상성내편위보다 2배높은 것으로 보고되었습니다. 이것은 실제 항상성외편위가 더 빈번하게 발생하는 50대 이상의 성인에서 유병률이 높기 때문입니다.   <br>\n <br>\n");
+} else {
+  var Eva_result1 = "";
+  var EVA_TEST_1 = "";
 }
 
 if (Eva_result2 === "조절부족/조절지속능력부족") {
@@ -392,7 +417,9 @@ if ((Raw_vmi === "평가하지 않음") || (Raw_visual === "평가하지 않음"
 
 
 // DEM 종합평가
-if ((VER_Adj_time === "평가하지 않음") || (HOR_Adj_time === "평가하지 않음")){
+
+
+if (VER_Adj_time === "평가하지 않음" || HOR_Adj_time === "평가하지 않음" || VER_Adj_time === "NaN" || HOR_Adj_time === "NaN" || VER_Adj_time === "undefined" || HOR_Adj_time === "평가하지 않음"){
   var DEM_TEST = "";
   document.write("● 말하는 속도의 자동성기술은 평가하지 않음.<br>\n <br>\n");
 } else {
@@ -419,6 +446,7 @@ if ((VER_Adj_time === "평가하지 않음") || (HOR_Adj_time === "평가하지 
     }
   }
 }
+
 
 // WACS 종합평가
 if ((WACS_RAW_T1 === "평가하지 않음") || (WACS_RAW_T2 === "평가하지 않음") || (WACS_RAW_T3 === "평가하지 않음") || (WACS_RAW_T4 === "평가하지 않음")) {
@@ -550,15 +578,6 @@ if (CTest_D == "exo" || CTest_D == "eso" || CTest_N == "exo" || CTest_N == "eso"
     }
   }
 
-  if (Eva_result1 === "") {
-    var EVA_TEST_1 = "";
-  }
-  if (Eva_result2 === "") {
-    var EVA_TEST_2 = "";
-  }
-  if (Eva_result3 === "") {
-    var EVA_TEST_3 = "";
-  }
 
   if (D_W4D == "2" || D_W4D == "3" || N_W4D == "2" || N_W4D == "3"){
     if (CTest_D == "XT" || CTest_D == "ET" || CTest_N == "XT" || CTest_N == "ET"){
@@ -574,9 +593,9 @@ if (CTest_D == "exo" || CTest_D == "eso" || CTest_N == "exo" || CTest_N == "eso"
 
 
 
-
-  if (Eva_result1 !== ""  || Eva_result2 !== "" || Eva_result3 !== "" || TVPS4_TEST !== "" || VMI_TEST !== "" || DEM_TEST !== "" || WACS_TEST !== "" ){
-    document.write("♣ "+Cus_Name+"님의 "+EVA_TEST_1+" "+EVA_TEST_2+" "+EVA_TEST_3+" "+TVPS4_TEST+" "+VMI_TEST+" "+DEM_TEST+" "+WACS_TEST+" 을 발달시키기 위하여 시기능훈련이 권장됩니다.<br>\n <br>\n");
-  } else {
+  if (EVA_TEST_1 == ""  && EVA_TEST_2 == "" && EVA_TEST_3 == "" && TVPS4_TEST == "" && VMI_TEST == "" && DEM_TEST == "" && WACS_TEST == "" ){
     document.write("♣ "+Cus_Name+"님의 시기능발달평가결과 특이 사항은 없으며, 정기적인 평가는 권장됩니다.");
+
+  } else {
+    document.write("♣ "+Cus_Name+"님의 "+EVA_TEST_1+" "+EVA_TEST_2+" "+EVA_TEST_3+" "+TVPS4_TEST+" "+VMI_TEST+" "+DEM_TEST+" "+WACS_TEST+" 을 발달시키기 위하여 시기능훈련이 권장됩니다.<br>\n <br>\n");
   }
