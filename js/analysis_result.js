@@ -108,7 +108,7 @@ if (QOL_sum !== ""){
     var Eva_result1 = "항상성외편위";
   }
 } else {
-  var Eva_result1 = "";
+  var Eva_result1 = "NaN";
 }
 
 document.write("Eva_result1 : "+Eva_result1+"<br>\n");
