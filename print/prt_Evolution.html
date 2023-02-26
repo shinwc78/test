@@ -4,145 +4,10 @@
     <meta charset="utf-8">
     <title>양안시기능평가</title>
     <script type="text/javascript" src="../js/Evolution_getdata.js"></script>
-    <style media="screen">
-      /* ====== Evaluation =======*/
 
-.object{
-  width: 500;
-  height: 60;
-  background-color: #4682b4;
-  color: #ffffff;
-  font-size: 18px;
-  border: 1px solid rgb(6,30,115);
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-
-.object-title {
-  font-weight:bold;
-  font-size: 30;
-  text-align: center;
-}
-
-.Evaluation_bg {
-  border:5px;
-  border-radius: 10px 10px 10px 10px;
-  background-color:#d2d2d2;
-}
-
-.Evaluation_title{
-  height: 35px;
-  text-align: center;
-  background-color: #616161;
-  color:white;
-  font-size: 14px;
-  border: 2px solid black;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.Evaluation_item{
-  height: 35px;
-  text-align: center;
-  background-color: rgb(190,204,232);
-  color: rgb(28,55,109);
-  font-size: 14px;
-  font-weight: bold;
-  border: 2px solid black;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.Evaluation_result{
-  text-align: left;
-  font-size: 12px;
-  background-color: white;
-  border: 2px solid #d2d2d2;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  padding-left: 15px;
-}
-
-.Evaluation_button{
-  text-align: center;
-  font-size: 10px;
-  top:1px;
-  left:1px;
-  right: 0.5px;
-  bottom: 0.5px;
-  padding: 0.2em 0.1em;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-
-}
-
-.Evaluation_reference{
-  text-align: center;
-  font-size: 10px;
-  background-color: rgb(241,253,200);
-  border: 1px solid #d2d2d2;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.Evaluation_input{
-  text-align: center;
-  font-size: 10px;
-  top:1px;
-  left:1px;
-  right: 0.5px;
-  bottom: 0.5px;
-  padding: 0.2em 0.1em;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.Evaluation_sel{
-  text-align: center;
-  height: 20px;
-  font-size: 10px;
-  border: 2px solid black;
-  padding: 0.2em 0.1em;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.Evaluation_analy{
-  height: 30px;
-  text-align: center;
-  font-size: 12px;
-  background-color: rgb(219,254,250);
-  border: 1px solid #d2d2d2;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-
-    </style>
   </head>
   <body>
     <table>
-      <tr>
-        <td height="30">&nbsp;</td>
-      </tr>
       <tr class="Test_object object_Evalution_bg_color">
         <td>
           <table id="prt_Evollution">
@@ -151,7 +16,7 @@
                 <table>
                   <tr >
                     <td width="300">&nbsp;</td>
-                    <td class="object object-title" width="500" height="50" >양안시기능평가</td>
+                    <td style="background-color: #4682b4; color: #ffffff; font-size: 18px; border: 1px solid rgb(6,30,115); border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; font-weight:bold; font-size: 30; text-align: center;" width="500" height="50" >양안시기능평가</td>
                     <td width="300">&nbsp;</td>
                   </tr>
                   <tr>
@@ -162,32 +27,32 @@
             </tr>
             <tr>
               <td name="본문삽입구간">
-                <table name="Evaluation_bg" width="1195">
+                <table name="Evaluation_bg" width="100%">
                   <tr>
-                    <td width="200" class="Evaluation_title" height="35">평가항목</td>
-                    <td width="550" class="Evaluation_title">평가결과</td>
-                    <td width="150" class="Evaluation_title">기대값(이상값)</td>
-                    <td width="100" class="Evaluation_title">결과분석</td>
+                    <td width="15%" style="height:35px; text-align: center; background-color: #616161; color:white; font-size: 12px; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" >평가항목</td>
+                    <td width="50%" style="height:35px; text-align: center; background-color: #616161; color:white; font-size: 12px; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" >평가결과</td>
+                    <td width="15%" style="height:35px; text-align: center; background-color: #616161; color:white; font-size: 12px; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" >기대값(이상값)</td>
+                    <td width="15%" style="height:35px; text-align: center; background-color: #616161; color:white; font-size: 12px; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" >결과분석</td>
                   </tr>
                   <tr>
-                    <td class="Evaluation_item">우위안</td>
-                    <td id="MainEye" name="MainEye" class="Evaluation_result" ></td>
-                    <td class="Evaluation_reference">우세하게 작용하는 눈</td>
-                    <td class="Evaluation_analy">
+                    <td style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 12px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">우위안</td>
+                    <td id="MainEye" name="MainEye" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" ></td>
+                    <td style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">우세하게 작용하는 눈</td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <div id="result_MainEye" />
                     </td>
                   </tr>
                   <tr>
-                    <td class="Evaluation_item">동공간거리</td>
-                    <td class="Evaluation_result" id="PD"></td>
-                    <td class="Evaluation_reference">동공중심간 거리</td>
-                    <td class="Evaluation_analy">
+                    <td style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 12px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">동공간거리</td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" id="PD"></td>
+                    <td style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">동공중심간 거리</td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <div id="result_PD" />
                     </td>
                   </tr>
                   <tr>
-                    <td rowspan="2" class="Evaluation_item" id="sel_glass1"></td>
-                    <td class="Evaluation_result">
+                    <td rowspan="2" style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 12px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" id="sel_glass1"></td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td width="50">원거리 </td>
@@ -202,13 +67,13 @@
                         </tr>
                       </table>
                     </td>
-                    <td class="Evaluation_reference">1.0(0.9)</td>
-                    <td class="Evaluation_analy" name="result_Vision">
+                    <td style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">1.0(0.9)</td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" name="result_Vision">
                       <div id="result_DVision" />
                     </td>
                   </tr>
                   <tr>
-                    <td class="Evaluation_result">
+                    <td style="height: 25px; text-align: center; font-size: 12px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td width="50">근거리 </td>
@@ -223,12 +88,12 @@
                         </tr>
                       </table>
                     </td>
-                    <td class="Evaluation_reference">1.0(0.9)</td>
-                    <td class="Evaluation_analy" id="result_NVision"></td>
+                    <td style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">1.0(0.9)</td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" id="result_NVision"></td>
                   </tr>
                   <tr>
-                    <td rowspan="2" class="Evaluation_item">새로운 굴절력</td>
-                    <td class="Evaluation_result">
+                    <td rowspan="2" style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 12px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">새로운 굴절력</td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td width="50">OD : </td>
@@ -246,11 +111,11 @@
                         </tr>
                       </table>
                     </td>
-                    <td class="Evaluation_reference"></td>
-                    <td class="Evaluation_analy" name="result_RDiop"></td>
+                    <td style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;"></td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" name="result_RDiop"></td>
                   </tr>
                   <tr>
-                    <td class="Evaluation_result">
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td width="50">OS : </td>
@@ -268,12 +133,12 @@
                         </tr>
                       </table>
                     </td>
-                    <td class="Evaluation_reference"></td>
-                    <td class="Evaluation_analy" name="result_RDiop"></td>
+                    <td style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;"></td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" name="result_RDiop"></td>
                   </tr>
                   <tr>
-                    <td rowspan="2" class="Evaluation_item">새굴절력 교정시력</td>
-                    <td class="Evaluation_result">
+                    <td rowspan="2" style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 10px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">새굴절력 교정시력</td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td width="50">원거리 </td>
@@ -288,13 +153,13 @@
                         </tr>
                       </table>
                     </td>
-                    <td class="Evaluation_reference">1.0(0.9)</td>
-                    <td class="Evaluation_analy" name="result_Vision">
+                    <td style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">1.0(0.9)</td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" name="result_Vision">
                       <div id="result_DVision_new" />
                     </td>
                   </tr>
                   <tr>
-                    <td class="Evaluation_result">
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td width="50">근거리 </td>
@@ -309,20 +174,20 @@
                         </tr>
                       </table>
                     </td>
-                    <td class="Evaluation_reference">1.0(0.9)</td>
-                    <td class="Evaluation_analy" id="result_NVision_new"></td>
+                    <td style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">1.0(0.9)</td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" id="result_NVision_new"></td>
                   </tr>
                   <tr class="EvaItem_result">
-                    <td class="Evaluation_item">균형검사</td>
-                    <td class="Evaluation_result" id="Balance" >  </td>
-                    <td class="Evaluation_reference">균형(불균형)</td>
-                    <td class="Evaluation_analy">
+                    <td style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 10px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">균형검사</td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" id="Balance" >  </td>
+                    <td style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">균형(불균형)</td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <div id="result_Balance" />
                     </td>
                   </tr>
                   <tr class="EvaItem_result">
-                    <td class="Evaluation_item">W4D</td>
-                    <td class="Evaluation_result">
+                    <td style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 10px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">W4D</td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td> 원거리 : </td>
@@ -333,8 +198,8 @@
                         </tr>
                       </table>
                     </td>
-                    <td class="Evaluation_reference">4개</td>
-                    <td class="Evaluation_analy">
+                    <td style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">4개</td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td width="45">
@@ -349,8 +214,8 @@
                     </td>
                   </tr>
                   <tr class="EvaItem_result">
-                    <td class="Evaluation_item">차폐평가</td>
-                    <td class="Evaluation_result">
+                    <td style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 10px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">차폐평가</td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td> 원거리 : </td>
@@ -361,8 +226,8 @@
                         </tr>
                       </table>
                     </td>
-                    <td class="Evaluation_reference">정위</td>
-                    <td class="Evaluation_analy">
+                    <td style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">정위</td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td width="45">
@@ -377,8 +242,8 @@
                     </td>
                   </tr>
                   <tr>
-                    <td class="Evaluation_item">조절근점</td>
-                    <td class="Evaluation_result">
+                    <td style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 10px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">조절근점</td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                           <tr>
                             <td class="TD_Form"> OD : </td>
@@ -392,14 +257,14 @@
                           </tr>
                       </table>
                     </td>
-                    <td class="Evaluation_reference">
+                    <td style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <div id="accom_stand"></div>
                     </td>
-                    <td class="Evaluation_analy" id="result_accom"></td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" id="result_accom"></td>
                   </tr>
                   <tr>
-                    <td class="Evaluation_item">조절용이</td>
-                    <td class="Evaluation_result">
+                    <td style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 10px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">조절용이</td>
+                    <td style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tbody>
                           <tr>
@@ -418,8 +283,8 @@
                         </tbody>
                       </table>
                     </td>
-                    <td width="150" class="Evaluation_reference" id="AccomRev"></td>
-                    <td width="100" class="Evaluation_analy">
+                    <td width="150" style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" id="AccomRev"></td>
+                    <td width="100" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td width="45">
@@ -434,14 +299,14 @@
                     </td>
                   </tr>
                   <tr>
-                    <td width="200" class="Evaluation_item">눈모임근점</td>
-                    <td width="550" class="Evaluation_result" id="NVer"></td>
-                    <td width="150" class="Evaluation_reference">≤5(≥6)</td>
-                    <td width="100" class="Evaluation_analy" id="result_NVer"></td>
+                    <td width="200" style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 10px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">눈모임근점</td>
+                    <td width="550" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" id="NVer"></td>
+                    <td width="150" style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">≤5(≥6)</td>
+                    <td width="100" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" id="result_NVer"></td>
                   </tr>
                   <tr class="EvaItem_result">
-                    <td width="200" class="Evaluation_item">따라보기</td>
-                    <td width="550" class="Evaluation_result">
+                    <td width="200" style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 12px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">따라보기</td>
+                    <td width="550" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td> 안구움직임 : </td>
@@ -452,8 +317,8 @@
                         </tr>
                       </table>
                     </td>
-                    <td width="150" class="Evaluation_reference">Smooth&Full</td>
-                    <td width="100" class="Evaluation_analy">
+                    <td width="150" style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">Smooth&Full</td>
+                    <td width="100" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td width="45">
@@ -468,8 +333,8 @@
                     </td>
                   </tr>
                   <tr class="EvaItem_result">
-                    <td width="200" class="Evaluation_item">홱보기</td>
-                    <td width="550" class="Evaluation_result">
+                    <td width="200" style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 12px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">홱보기</td>
+                    <td width="550" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td> 안구움직임 : </td>
@@ -480,8 +345,8 @@
                         </tr>
                       </table>
                     </td>
-                    <td width="150" class="Evaluation_reference">Smooth&Full</td>
-                    <td width="100" class="Evaluation_analy">
+                    <td width="150" style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">Smooth&Full</td>
+                    <td width="100" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td width="45">
@@ -496,8 +361,8 @@
                     </td>
                   </tr>
                   <tr class="EvaItem_result">
-                    <td width="200" class="Evaluation_item">입체시</td>
-                    <td width="550" class="Evaluation_result">
+                    <td width="200" style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 12px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">입체시</td>
+                    <td width="550" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td>원거리 : </td>
@@ -508,8 +373,8 @@
                         </tr>
                       </table>
                     </td>
-                    <td width="150" class="Evaluation_reference">≤40</td>
-                    <td width="100" class="Evaluation_analy">
+                    <td width="150" style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">≤40</td>
+                    <td width="100" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td width="45">
@@ -524,8 +389,8 @@
                     </td>
                   </tr>
                   <tr class="EvaItem_result">
-                    <td width="200" class="Evaluation_item">동공반응</td>
-                    <td width="550" class="Evaluation_result">
+                    <td width="200" style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 12px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">동공반응</td>
+                    <td width="550" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td>축동반응 : </td>
@@ -533,12 +398,12 @@
                         </tr>
                       </table>
                     </td>
-                    <td width="150" class="Evaluation_reference">양호</td>
-                    <td width="100" class="Evaluation_analy" id="result_Pflex"></td>
+                    <td width="150" style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">양호</td>
+                    <td width="100" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" id="result_Pflex"></td>
                   </tr>
                   <tr class="EvaItem_result">
-                    <td width="200" class="Evaluation_item">원/근거리 수평안위</td>
-                    <td width="550" class="Evaluation_result">
+                    <td width="200" style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 12px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">원/근거리 수평안위</td>
+                    <td width="550" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td>평가도구 : </td>
@@ -554,8 +419,8 @@
                         </tr>
                       </table>
                     </td>
-                    <td width="150" class="Evaluation_reference">원거리 1BO~3BI <br>근거리 0~6BI</td>
-                    <td width="100" class="Evaluation_analy">
+                    <td width="150" style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">원거리 1BO~3BI <br>근거리 0~6BI</td>
+                    <td width="100" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td width="45">
@@ -570,8 +435,8 @@
                     </td>
                   </tr>
                   <tr class="EvaItem_result">
-                    <td width="200" class="Evaluation_item">원거리 양성(음성)융합력</td>
-                    <td width="550" class="Evaluation_result">
+                    <td width="200" style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 12px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">원거리 양성(음성)융합력</td>
+                    <td width="550" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td>평가도구 : </td>
@@ -602,8 +467,8 @@
                         </tr>
                       </table>
                     </td>
-                    <td width="150" class="Evaluation_reference">9/19/10 (≤5/11/6)<br>7/4(≤4/2)</td>
-                    <td width="100" class="Evaluation_analy">
+                    <td width="150" style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">9/19/10 (≤5/11/6)<br>7/4(≤4/2)</td>
+                    <td width="100" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td width="45">
@@ -617,8 +482,8 @@
                     </td>
                   </tr>
                   <tr class="EvaItem_result">
-                    <td width="200" class="Evaluation_item">근거리 양성(음성)융합력</td>
-                    <td width="550" class="Evaluation_result">
+                    <td width="200" style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 12px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">근거리 양성(음성)융합력</td>
+                    <td width="550" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td>평가도구 : </td>
@@ -651,8 +516,8 @@
                         </tr>
                       </table>
                     </td>
-                    <td width="150" class="Evaluation_reference">17/21/11 (≤12/15/4)<br>13/21/13(9/17/8)</td>
-                    <td width="100" class="Evaluation_analy">
+                    <td width="150" style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">17/21/11 (≤12/15/4)<br>13/21/13(9/17/8)</td>
+                    <td width="100" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td width="45">
@@ -666,8 +531,8 @@
                     </td>
                   </tr>
                   <tr class="EvaItem_result">
-                    <td width="200" class="Evaluation_item">원/근거리 수직안위</td>
-                    <td width="550" class="Evaluation_result">
+                    <td width="200" style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 12px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">원/근거리 수직안위</td>
+                    <td width="550" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td>평가도구 : </td>
@@ -683,8 +548,8 @@
                         </tr>
                       </table>
                     </td>
-                    <td width="150" class="Evaluation_reference">정위</td>
-                    <td width="100" class="Evaluation_analy">
+                    <td width="150" style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">정위</td>
+                    <td width="100" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td width="45">
@@ -699,8 +564,8 @@
                     </td>
                   </tr>
                   <tr class="EvaItem_result">
-                    <td width="200" class="Evaluation_item">원거리 수직융합력</td>
-                    <td width="550" class="Evaluation_result">
+                    <td width="200" style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 12px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">원거리 수직융합력</td>
+                    <td width="550" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td>평가도구 : </td>
@@ -756,8 +621,8 @@
                         </tr>
                       </table>
                     </td>
-                    <td width="150" class="Evaluation_reference">3~4 / 1.5~2</td>
-                    <td width="100" class="Evaluation_analy">
+                    <td width="150" style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">3~4 / 1.5~2</td>
+                    <td width="100" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td width="45">
@@ -771,8 +636,8 @@
                     </td>
                   </tr>
                   <tr class="EvaItem_result">
-                    <td width="200" class="Evaluation_item">근거리 수직융합력</td>
-                    <td width="550" class="Evaluation_result">
+                    <td width="200" style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 12px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">근거리 수직융합력</td>
+                    <td width="550" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td>평가도구 : </td>
@@ -828,8 +693,8 @@
                         </tr>
                       </table>
                     </td>
-                    <td width="150" class="Evaluation_reference">3~4 / 1.5~2</td>
-                    <td width="100" class="Evaluation_analy">
+                    <td width="150" style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">3~4 / 1.5~2</td>
+                    <td width="100" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td width="45">
@@ -843,20 +708,20 @@
                     </td>
                   </tr>
                   <tr class="EvaItem_result">
-                    <td width="200" class="Evaluation_item">버젼스용이</td>
-                    <td width="550" class="Evaluation_result">
+                    <td width="200" style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 12px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">버젼스용이</td>
+                    <td width="550" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td id="VerRev"></td>
                         </tr>
                       </table>
                     </td>
-                    <td width="150" class="Evaluation_reference">≥15cpm</td>
-                    <td width="100" class="Evaluation_analy" id="result_VerRev"></td>
+                    <td width="150" style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">≥15cpm</td>
+                    <td width="100" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" id="result_VerRev"></td>
                   </tr>
                   <tr class="EvaItem_result">
-                    <td width="200" class="Evaluation_item">Maddox 원거리</td>
-                    <td width="550" class="Evaluation_result">
+                    <td width="200" style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 12px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">Maddox 원거리</td>
+                    <td width="550" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td id="D_agree"></td>
@@ -874,8 +739,8 @@
                         </tr>
                       </table>
                     </td>
-                    <td width="150" class="Evaluation_reference">일치(불일치)</td>
-                    <td width="100" class="Evaluation_analy">
+                    <td width="150" style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">일치(불일치)</td>
+                    <td width="100" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td width="100px">
@@ -886,8 +751,8 @@
                     </td>
                   </tr>
                   <tr class="EvaItem_result">
-                    <td width="200" class="Evaluation_item">Maddox 근거리</td>
-                    <td width="550" class="Evaluation_result">
+                    <td width="200" style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 12px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">Maddox 근거리</td>
+                    <td width="550" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td id="N_agree"></td>
@@ -905,8 +770,8 @@
                         </tr>
                       </table>
                     </td>
-                    <td width="150" class="Evaluation_reference">일치(불일치)</td>
-                    <td width="100" class="Evaluation_analy">
+                    <td width="150" style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">일치(불일치)</td>
+                    <td width="100" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td width="100px">
@@ -917,20 +782,20 @@
                     </td>
                   </tr>
                   <tr class="EvaItem_result">
-                    <td width="200" class="Evaluation_item">황반부통합검사(M.I.T)</td>
-                    <td width="550" class="Evaluation_result">
+                    <td width="200" style="height: 25px; text-align: center; background-color: rgb(190,204,232); color: rgb(28,55,109); font-size: 12px; font-weight: bold; border: 2px solid black; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">황반부통합검사(M.I.T)</td>
+                    <td width="550" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                       <table>
                         <tr>
                           <td id="MIT" ></td>
                         </tr>
                       </table>
                     </td>
-                    <td width="150" class="Evaluation_reference">중심주시</td>
-                    <td width="100" class="Evaluation_analy" id="result_MIT"></td>
+                    <td width="150" style="text-align: center; font-size: 10px; background-color: rgb(241,253,200); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">중심주시</td>
+                    <td width="100" style="height: 25px; text-align: center; font-size: 10px; background-color: rgb(246,246,246); border: 1px solid #d2d2d2; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" id="result_MIT"></td>
                   </tr>
                   <tr>
                     <td>
-                      <button onclick="startPrint('prt_Evollution');">양안시기능평가 인쇄하기</button>
+                      <button onclick="return window.print();">프린트하기</button>
                     </td>
                   </tr>
                 </table>
@@ -950,7 +815,7 @@
                   // 동공간거리
                   document.getElementById('PD').innerHTML = PD+"mm";
                   document.getElementById("result_PD").innerText = PD+"mm";
-
+                  document.write(PD);
 
                   // 원거리 나안/교정시력
 
