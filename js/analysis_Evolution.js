@@ -277,6 +277,16 @@ if (CTest_D === "none") {
 
 // 조절근점
 var Accomage = 15 - (0.25 * ChAge);
+
+if (R_accom == "NaN"){
+  var R_accom = "";
+}
+if (L_accom == "NaN"){
+  var L_accom = "";
+}
+if (O_accom == "NaN"){
+  var O_accom = "";
+}
 if (R_accom == "" || L_accom == "" || O_accom == "" ){
 
 } else {
