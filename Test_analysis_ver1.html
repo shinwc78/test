@@ -552,7 +552,7 @@
                         if (TVPS_memory == "" || TVPS_memory == "NaN"){
 
                         } else {
-                          document.write("● 평가중 관찰사항으로 "+TVPS_memory+"<br>\n");
+                          document.write("● 관찰사항 : "+TVPS_memory+"<br>\n");
                         }
 
                        </script>
@@ -764,7 +764,7 @@
                         }
                       }
                     } else {
-                      document.write("● 평가중 관찰사항은 "+VMI_memory);
+                      document.write("● 관찰사항 : "+VMI_memory);
                       if (segment_VMI == "VMI17"){
                         if (segment_Motor == "Motor17"){
                           document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"VMI 17번 문항"+'</span>'+"과 "+'<span style="font-weight: bold; color: red;">'+"부가검사 Motor 17번 문항"+'</span>'+" 에서 "+'<span style="font-weight: bold; color: red;">'+"분절"+'</span>'+"이 관찰됨.<br>\n");
@@ -947,7 +947,7 @@
 
                                 } else {
                                   if (DEM_RATIO_PER <= 15 || DEM_RATIO_PER == '<1' ){
-
+                                    document.write("● "+'<span style="font-weight: bold; color: red;">'+"안구운동발달 유형이 II형 "+'</span>'+"으로 수직에 비해 조정된 수평시간이 커서 "+'<span style="font-weight: bold; color: red;">'+"안구운동이상"+'</span>'+"을 나타내는 유형임.<br>\n <br>\n");
                                   } else {
                                     document.write("● 안구운동발달 유형이 I형으로 조정된 수평시간과 수직시간이 정상으로 안구운동기능이 정상인 유형임.<br>\n <br>\n");
                                   }
@@ -958,7 +958,7 @@
                             if (DEM_memory == "" || DEM_memory == "NaN"){
 
                             } else {
-                              document.write("● 평가중 관찰사항으로 "+DEM_memory+"<br>\n");
+                              document.write("● 관찰사항 : "+DEM_memory+"<br>\n");
                             }
                            </script>
                         </td>
@@ -1153,17 +1153,17 @@
                                  document.write("● 또한 분석기준나이가 5세임을 감안한다면 연령이 같은 또래와 비교해"+'<span style="font-weight: bold; color: red;">'+" 매우 저조"+'</span>'+"함.<br>\n <br>\n");
                                }
                              } else if (WACS_T5_PER <= 50) {
-                               document.write("● 시각운동통합기술이 "+'<span style="font-weight: bold; color: blue;">'+WACS_T5_PER+"%"+'</span>'+"로 표준집단에 있는 연령이 같은 또래와 비교해 정상범위이나"+'<span style="font-weight: bold; color: blue;">'+" 다소 저조"+'</span>'+"함.<br>\n <br>\n");
+                               document.write("● 시각공간방향기술이 "+'<span style="font-weight: bold; color: blue;">'+WACS_T5_PER+"%"+'</span>'+"로 표준집단에 있는 연령이 같은 또래와 비교해 정상범위이나"+'<span style="font-weight: bold; color: blue;">'+" 다소 저조"+'</span>'+"함.<br>\n <br>\n");
                                if (ChAge >=6) {
                                document.write("● 단, 분석기준나이가 5세임을 감안한다면 연령이 같은 또래와 비교해"+'<span style="font-weight: bold; color: red;">'+" 매우 저조"+'</span>'+"함.<br>\n <br>\n");
                                }
                              } else if (WACS_T5_PER <= 84) {
-                               document.write("● 시각운동통합기술이 "+WACS_T5_PER+"% 로 표준집단에 있는 연령이 같은 또래와 비교해 정상범위로 양호함.<br>\n <br>\n");
+                               document.write("● 시각공간방향기술이 "+WACS_T5_PER+"% 로 표준집단에 있는 연령이 같은 또래와 비교해 정상범위로 양호함.<br>\n <br>\n");
                                if (ChAge >=6) {
                                document.write("● 단, 분석기준나이가 5세임을 감안한다면 "+'<span style="font-weight: bold; color: red;">'+" 정기적인 관찰이"+'</span>'+"요구됨.<br>\n <br>\n");
                                }
                              } else {
-                               document.write("● 시각운동통합기술이 "+WACS_T5_PER+"% 로 표준집단에 있는 연령이 같은 또래와 비교해 우수함.<br>\n <br>\n");
+                               document.write("● 시각공간방향기술이 "+WACS_T5_PER+"% 로 표준집단에 있는 연령이 같은 또래와 비교해 우수함.<br>\n <br>\n");
                              }
                                  var WACS_T1_ment = "물체식별"+"("+WACS_T1_PER+"%), ";
                                  var WACS_T2_ment = "물체설계"+"("+WACS_T2_PER+"%) ";
@@ -1179,7 +1179,7 @@
                                document.write("");
                              }
                            } else {
-                             document.write("● 평가중 관찰사항으로 "+WACS_memory);
+                             document.write("● 관찰사항 : "+WACS_memory);
                              if (reflex_WACS == "reflex" ){
                                document.write(" 특히 "+'<span style="font-weight: bold; color: red;">'+"LineWalk toe/heel on line과제"+'</span>'+"에서 "+'<span style="font-weight: bold; color: red;">'+"원시반사"+'</span>'+"가 관찰됨.<br>\n");
                              } else {
