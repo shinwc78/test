@@ -287,10 +287,15 @@ if (L_accom == "NaN"){
 if (O_accom == "NaN"){
   var O_accom = "";
 }
-if (R_accom == "" || L_accom == "" || O_accom == "" ){
+if (R_accom == "" && L_accom == "" && O_accom == "" ){
 
 } else {
-  if ((R_accom < Accomage) || (L_accom < Accomage) || (O_accom < Accomage) ) {
+  if (R_accom < Accomage) {
+    if (L_accom < Accomage) {
+      if (O_accom < Accomage) {
+
+      }
+    }
     document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력이 오른쪽 "+R_accom+"D, 왼쪽 "+L_accom+"D, 양안 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가됨.<br>\n<br>\n");
   } else {
     document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력이 오른쪽 "+R_accom+"D, 왼쪽 "+L_accom+"D, 양안 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 이상으로 양호하게 평가됨.<br>\n<br>\n");
@@ -770,14 +775,14 @@ if (ChAge <= 6) {
         if (NDever2 < 17) {
              document.write("● "+NVer_tool+"(으)로 평가한 근거리 수평음성융합력이 "+NDever1+" / "+NDever2+" / "+NDever3+" 로 "+'<span style="font-weight: bold; color: red;">'+"정상범위보다 불량"+'</span>'+"함.<br>\n<br>\n");
           } else if (NDever2 >= 17) {
-            if (N_BIBO === "BO") {
+
               if (Nectopic*2 > NDever2) {
                 document.write("● "+NVer_tool+"(으)로 평가한 근거리 수평음성융합력이 "+NDever1+" / "+NDever2+" / "+NDever3+" 로 "+'<span style="font-weight: bold; color: red;">'+"편위량의 2배보다 적어서 불량"+'</span>'+"함.<br>\n<br>\n");
               } else {
                 document.write("● "+NVer_tool+"(으)로 평가한 근거리 수평음성융합력이 "+NDever1+" / "+NDever2+" / "+NDever3+" 로 정상범위로 평가됨.<br>\n<br>\n");
             }
           }
-        }
+
       }
     } else {
       if (NConver2 < 15) {
@@ -799,6 +804,8 @@ if (ChAge <= 6) {
               } else {
                 document.write("또한, 수평음성융합력이 "+NDever1+" / "+NDever2+" / "+NDever3+" 로 정상범위로 평가됨.<br>\n<br>\n");
             }
+          } else {
+            document.write("또한, 수평음성융합력이 "+NDever1+" / "+NDever2+" / "+NDever3+" 로 정상범위로 평가됨.<br>\n<br>\n");
           }
         } else {
           document.write("<br>\n<br>\n");
