@@ -278,9 +278,14 @@ var DEM_memory = localStorage.getItem('DEM_memory');
 
 
 // <!-- ======= WACS ====== -->
-var WACS_RAW_T1 = parseInt(localStorage.getItem('WACS_RAW_T1'));
-var WACS_RAW_T2 = parseInt(localStorage.getItem('WACS_RAW_T2'));
-var WACS_RAW_T3 = parseInt(localStorage.getItem('WACS_RAW_T3'));
-var WACS_RAW_T4 = parseInt(localStorage.getItem('WACS_RAW_T4'));
+var WACS_RAW_T1 = localStorage.getItem('WACS_RAW_T1');
+if (WACS_RAW_T1 === null){
+  var WACS_RAW_T1 = "평가하지않음"
+} else {
+    var WACS_RAW_T1 = parseInt(WACS_RAW_T1);
+}
+var WACS_RAW_T2 = localStorage.getItem('WACS_RAW_T2');
+var WACS_RAW_T3 = localStorage.getItem('WACS_RAW_T3');
+var WACS_RAW_T4 = localStorage.getItem('WACS_RAW_T4');
 var WACS_memory = localStorage.getItem('WACS_memory');
 var reflex_WACS = localStorage.getItem('reflex_WACS');

@@ -690,27 +690,23 @@
 
   //마독스로드_원거리
   function D_agree(event) {
-    const D_agree = event.target.value;
-    if (D_agree == 'agree') {
+    const str_D_agree = event.target.value;
+    if (str_D_agree == 'agree') {
       document.getElementById('result_DMaddox').innerText = "(양호)";
-    } else if (D_agree == 'discord') {
+    } else if (str_D_agree == 'discord') {
       const DHor_maddox = document.getElementById('DHor_maddox').value;
       const DHor_BIBO = document.getElementById('DHor_BIBO').value;
       const DVer_maddox = document.getElementById('DVer_maddox').value;
       const DVer_BIBO = document.getElementById('DVer_BIBO').value;
       if ((DHor_maddox > 3 && DHor_BIBO == "BI") || (DHor_maddox > 1 && DHor_BIBO == "BO")){
-        if (DVer_maddox > 0 ) {
-          document.getElementById('result_DMaddox').innerText = "(불량)";
-        } else {
-          document.getElementById('result_DMaddox').innerText = "(불량)";
-        }
+        document.getElementById('result_DMaddox').innerText = "(불량)";
       } else {
-        if (DVer_maddox > 0 ) {
+        if (DVer_maddox >=0) {
           document.getElementById('result_DMaddox').innerText = "(불량)";
-        } else {
-          document.getElementById('result_DMaddox').innerText = "(양호)";
         }
       }
+    } else {
+      document.getElementById('result_DMaddox').innerText = "(참고)";
     }
   }
 
