@@ -632,13 +632,13 @@ if (CTest_D == "exo" || CTest_D == "eso" || CTest_N == "exo" || CTest_N == "eso"
 
 
   if (EVA_TEST_1 === ""  && EVA_TEST_2 === "" && EVA_TEST_3 === "" && TVPS4_TEST === "" && VMI_TEST === "" && DEM_TEST === "" && WACS_TEST === "" ){
-    document.write("♣ "+Cus_Name+"님의 시기능발달평가결과 특이사항은 없으나, 정기적인 시기능발달평가가 권장됩니다.");
+    document.write("♣ "+Cus_Name+"님의 시기능발달평가결과 특이사항은 없으나, 정기적인 시기능발달평가가 권장됩니다.<br>\n <br>\n");
 
   } else {
     document.write("♣ "+Cus_Name+"님의 "+EVA_TEST_1+" "+EVA_TEST_2+" "+EVA_TEST_3+" "+TVPS4_TEST+" "+VMI_TEST+" "+DEM_TEST+" "+WACS_TEST+" 을 발달시키기 위하여 시기능훈련이 권장됩니다.<br>\n <br>\n");
   }
 
-  
+
 
 
   document.write("※유의사항: 시력이나 굴절검사는 시기능발달평가에 포함되지 않고, 이에 평가비에도 포함되지 않습니다. <br>\n");
