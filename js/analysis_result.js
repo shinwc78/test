@@ -638,17 +638,7 @@ if (CTest_D == "exo" || CTest_D == "eso" || CTest_N == "exo" || CTest_N == "eso"
     document.write("♣ "+Cus_Name+"님의 "+EVA_TEST_1+" "+EVA_TEST_2+" "+EVA_TEST_3+" "+TVPS4_TEST+" "+VMI_TEST+" "+DEM_TEST+" "+WACS_TEST+" 을 발달시키기 위하여 시기능훈련이 권장됩니다.<br>\n <br>\n");
   }
 
-  document.write("@ Eva_result1 : "+Eva_result1+"<br>\n");
-  document.write("@ Eva_result2 : "+Eva_result2+"<br>\n");
-  document.write("@ Eva_result3 : "+Eva_result3+"<br>\n");
-  document.write("@ EVA_TEST_1 : "+EVA_TEST_1+"<br>\n");
-  document.write("@ EVA_TEST_2 : "+EVA_TEST_2+"<br>\n");
-  document.write("@ EVA_TEST_3 : "+EVA_TEST_3+"<br>\n");
-  document.write("@ TVPS4_TEST : "+TVPS4_TEST+"<br>\n");
-  document.write("@ VMI_TEST : "+VMI_TEST+"<br>\n");
-  document.write("@ DEM_TEST : "+DEM_TEST+"<br>\n");
-  document.write("@ WACS_TEST : "+WACS_TEST+"<br>\n");
-  document.write("@ WACS_RAW_T1 : "+WACS_RAW_T1+"<br>\n");
+  
 
 
   document.write("※유의사항: 시력이나 굴절검사는 시기능발달평가에 포함되지 않고, 이에 평가비에도 포함되지 않습니다. <br>\n");
