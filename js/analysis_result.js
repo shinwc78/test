@@ -131,7 +131,8 @@ if (QOL_sum !== ""){
 
 var Accomage = 15 - (0.25 * ChAge);
 if (R_accom === "" || R_accom === "NaN" || isNaN(R_accom) || L_accom === "" || L_accom === "NaN" || isNaN(L_accom)){
-
+  var Eva_result2 = "";
+  var EVA_TEST_2 = "";
 } else {
   if((R_accom <= Accomage-2) || (L_accom <= Accomage-2)){
       if(ChAge <= 6){
@@ -250,30 +251,32 @@ if (QOL_sum >= 20) {
 }
 
 
-if (Eva_result1 !== "" || Eva_result2 !== ""  || Eva_result3 !== "" ){
-  if (Eva_result1 === "NaN" || Eva_result1 === "undefined") {
-    if (Eva_result2 === "NaN" || Eva_result2 === "undefined") {
-      if (Eva_result3 === "NaN" || Eva_result3 === "undefined") {
+if (Eva_result1 === "" && Eva_result2 === ""  && Eva_result3 === "" ){
+  document.write("● 양안시기능평가결과 특이사항 없음.<br>\n <br>\n");
+} else {
+  if (Eva_result1 === "") {
+    if (Eva_result2 === "") {
+      if (Eva_result3 === "") {
         document.write("● 양안시기능평가결과 특이사항 없음.<br>\n <br>\n");
       } else {
         document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result3+'</span>'+"입니다.<br>\n <br>\n");
       }
     } else {
-      if (Eva_result3 == "NaN" || Eva_result3 == "undefined") {
+      if (Eva_result3 === "") {
         document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result2+'</span>'+"입니다.<br>\n <br>\n");
       } else {
         document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result2+" "+Eva_result3+'</span>'+"입니다.<br>\n <br>\n");
       }
     }
   } else {
-    if (Eva_result2 == "NaN" || Eva_result2 == "undefined") {
-      if (Eva_result3 == "NaN" || Eva_result3 == "undefined") {
+    if (Eva_result2 === "") {
+      if (Eva_result3 === "") {
         document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result1+'</span>'+"입니다.<br>\n <br>\n");
       } else {
         document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result1+" "+Eva_result3+'</span>'+"입니다.<br>\n <br>\n");
       }
     } else {
-      if (Eva_result3 == "NaN" || Eva_result3 == "undefined") {
+      if (Eva_result3 === "") {
         document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result1+" "+Eva_result2+'</span>'+"입니다.<br>\n <br>\n");
       } else {
         document.write("● 양안시기능평가 결과 "+'<span style="font-weight: bold; color: red;">'+Eva_result1+" "+Eva_result2+" "+Eva_result3+'</span>'+"입니다.<br>\n <br>\n");
@@ -398,8 +401,6 @@ if (Eva_result1 !== "" || Eva_result2 !== ""  || Eva_result3 !== "" ){
   } else {
     var EVA_TEST_3 = "";
   }
-} else {
-  document.write("● 양안시기능평가결과 특이사항 없음.<br>\n <br>\n");
 }
 
 // TVPS 종합결과
