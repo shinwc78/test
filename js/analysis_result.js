@@ -130,105 +130,109 @@ if (QOL_sum !== ""){
 
 
 var Accomage = 15 - (0.25 * ChAge);
+if (R_accom === "" || R_accom === "NaN" || isNaN(R_accom) || L_accom === "" || L_accom === "NaN" || isNaN(L_accom)){
 
-if((R_accom <= Accomage-2) || (L_accom <= Accomage-2)){
-    if(ChAge <= 6){
-      if ((Sel_AccomRev == 'chois') || (Sel_AccomRev == 'good')){
-        var Eva_result2 = "";
-        var EVA_TEST_2 = "";
-      } else if(Sel_AccomRev == 'bad2'){
+} else {
+  if((R_accom <= Accomage-2) || (L_accom <= Accomage-2)){
+      if(ChAge <= 6){
+        if ((Sel_AccomRev == 'chois') || (Sel_AccomRev == 'good')){
+          var Eva_result2 = "";
+          var EVA_TEST_2 = "";
+        } else if(Sel_AccomRev == 'bad2'){
+            var Eva_result2 = "조절부족/조절지속능력부족";
+        } else if (Sel_AccomRev == 'bad1'){
+            var Eva_result2 = "조절과다(조절경련)";
+        } else if (Sel_AccomRev == 'bad3'){
+          if((RAccom_Rev <= 3) || (LAccom_Rev <= 3)){
+            if (OUAccom_Rev <= 0.5) {
+              var Eva_result2 = "조절용이부족";
+            }
+          }
+        }
+      } else if (ChAge > 6 && ChAge <= 12) {
+        if ((Sel_AccomRev == 'chois') || (Sel_AccomRev == 'good')){
+          var Eva_result2 = "";
+          var EVA_TEST_2 = "";
+        } else if(Sel_AccomRev == 'bad2'){
           var Eva_result2 = "조절부족/조절지속능력부족";
-      } else if (Sel_AccomRev == 'bad1'){
+        } else if(Sel_AccomRev == 'bad1'){
           var Eva_result2 = "조절과다(조절경련)";
-      } else if (Sel_AccomRev == 'bad3'){
-        if((RAccom_Rev <= 3) || (LAccom_Rev <= 3)){
-          if (OUAccom_Rev <= 0.5) {
-            var Eva_result2 = "조절용이부족";
+        } else if (Sel_AccomRev == 'bad3'){
+          if((RAccom_Rev <= 4.5) || (LAccom_Rev <= 4.5)){
+            if (OUAccom_Rev <= 2.5) {
+              var Eva_result2 = "조절용이부족";
+            }
+          }
+        }
+      } else if (ChAge > 12 ) {
+        if ((Sel_AccomRev == 'chois') || (Sel_AccomRev == 'good')){
+          var Eva_result2 = "";
+          var EVA_TEST_2 = "";
+        } else if(Sel_AccomRev == 'bad2'){
+          var Eva_result2 = "조절부족/조절지속능력부족";
+        } else if(Sel_AccomRev == 'bad1'){
+          var Eva_result2 = "조절과다(조절경련)";
+        } else if (Sel_AccomRev == 'bad3'){
+          if((RAccom_Rev <= 6) || (LAccom_Rev <= 6)){
+            if (OUAccom_Rev <= 2.5) {
+              var Eva_result2 = "조절용이부족";
+            }
           }
         }
       }
-    } else if (ChAge > 6 && ChAge <= 12) {
-      if ((Sel_AccomRev == 'chois') || (Sel_AccomRev == 'good')){
-        var Eva_result2 = "";
-        var EVA_TEST_2 = "";
-      } else if(Sel_AccomRev == 'bad2'){
-        var Eva_result2 = "조절부족/조절지속능력부족";
-      } else if(Sel_AccomRev == 'bad1'){
-        var Eva_result2 = "조절과다(조절경련)";
-      } else if (Sel_AccomRev == 'bad3'){
-        if((RAccom_Rev <= 4.5) || (LAccom_Rev <= 4.5)){
-          if (OUAccom_Rev <= 2.5) {
-            var Eva_result2 = "조절용이부족";
+    } else {
+      if(ChAge <= 6){
+        if ((Sel_AccomRev == 'chois') || (Sel_AccomRev == 'good')){
+          var Eva_result2 = "";
+          var EVA_TEST_2 = "";
+        } else if(Sel_AccomRev == 'bad1'){
+          var Eva_result2 = "조절과다(조절경련)";
+        } else if (Sel_AccomRev == 'bad3'){
+          if((RAccom_Rev <= 3) || (LAccom_Rev <= 3)){
+            if (OUAccom_Rev <= 0.5) {
+              var Eva_result2 = "조절용이부족";
+            }
           }
+        } else {
+          var Eva_result2 = "";
+          var EVA_TEST_2 = "";
         }
-      }
-    } else if (ChAge > 12 ) {
-      if ((Sel_AccomRev == 'chois') || (Sel_AccomRev == 'good')){
-        var Eva_result2 = "";
-        var EVA_TEST_2 = "";
-      } else if(Sel_AccomRev == 'bad2'){
-        var Eva_result2 = "조절부족/조절지속능력부족";
-      } else if(Sel_AccomRev == 'bad1'){
-        var Eva_result2 = "조절과다(조절경련)";
-      } else if (Sel_AccomRev == 'bad3'){
-        if((RAccom_Rev <= 6) || (LAccom_Rev <= 6)){
-          if (OUAccom_Rev <= 2.5) {
-            var Eva_result2 = "조절용이부족";
+      } else if (ChAge >6  && ChAge <= 12) {
+        if ((Sel_AccomRev == 'chois') || (Sel_AccomRev == 'good')){
+          var Eva_result2 = "";
+          var EVA_TEST_2 = "";
+        } else if(Sel_AccomRev == 'bad1'){
+          var Eva_result2 = "조절과다(조절경련)";
+        } else if (Sel_AccomRev == 'bad3'){
+          if((RAccom_Rev <= 4.5) || (LAccom_Rev <= 4.5)){
+            if (OUAccom_Rev <= 2.5) {
+              var Eva_result2 = "조절용이부족";
+            }
           }
+        } else {
+          var Eva_result2 = "";
+          var EVA_TEST_2 = "";
         }
-      }
-    }
-  } else {
-    if(ChAge <= 6){
-      if ((Sel_AccomRev == 'chois') || (Sel_AccomRev == 'good')){
-        var Eva_result2 = "";
-        var EVA_TEST_2 = "";
-      } else if(Sel_AccomRev == 'bad1'){
-        var Eva_result2 = "조절과다(조절경련)";
-      } else if (Sel_AccomRev == 'bad3'){
-        if((RAccom_Rev <= 3) || (LAccom_Rev <= 3)){
-          if (OUAccom_Rev <= 0.5) {
-            var Eva_result2 = "조절용이부족";
+      } else if (ChAge > 12 && ChAge < 38) {
+        if ((Sel_AccomRev == 'chois') || (Sel_AccomRev == 'good')){
+          var Eva_result2 = "";
+          var EVA_TEST_2 = "";
+        } else if(Sel_AccomRev == 'bad1'){
+          var Eva_result2 = "조절과다(조절경련)";
+        } else if (Sel_AccomRev == 'bad3'){
+          if((RAccom_Rev <= 6) || (LAccom_Rev <= 6)){
+            if (OUAccom_Rev <= 2.5) {
+              var Eva_result2 = "조절용이부족";
+            }
           }
+        } else {
+          var Eva_result2 = "";
+          var EVA_TEST_2 = "";
         }
-      } else {
-        var Eva_result2 = "";
-        var EVA_TEST_2 = "";
-      }
-    } else if (ChAge >6  && ChAge <= 12) {
-      if ((Sel_AccomRev == 'chois') || (Sel_AccomRev == 'good')){
-        var Eva_result2 = "";
-        var EVA_TEST_2 = "";
-      } else if(Sel_AccomRev == 'bad1'){
-        var Eva_result2 = "조절과다(조절경련)";
-      } else if (Sel_AccomRev == 'bad3'){
-        if((RAccom_Rev <= 4.5) || (LAccom_Rev <= 4.5)){
-          if (OUAccom_Rev <= 2.5) {
-            var Eva_result2 = "조절용이부족";
-          }
-        }
-      } else {
-        var Eva_result2 = "";
-        var EVA_TEST_2 = "";
-      }
-    } else if (ChAge > 12 && ChAge < 38) {
-      if ((Sel_AccomRev == 'chois') || (Sel_AccomRev == 'good')){
-        var Eva_result2 = "";
-        var EVA_TEST_2 = "";
-      } else if(Sel_AccomRev == 'bad1'){
-        var Eva_result2 = "조절과다(조절경련)";
-      } else if (Sel_AccomRev == 'bad3'){
-        if((RAccom_Rev <= 6) || (LAccom_Rev <= 6)){
-          if (OUAccom_Rev <= 2.5) {
-            var Eva_result2 = "조절용이부족";
-          }
-        }
-      } else {
-        var Eva_result2 = "";
-        var EVA_TEST_2 = "";
       }
     }
   }
+
 
 
 if (QOL_sum >= 20) {
@@ -336,7 +340,7 @@ if (Eva_result1 !== "" || Eva_result2 !== ""  || Eva_result3 !== "" ){
       document.write('<span style="font-weight: bold; color: red;">'+"미세_항상성내편위"+'</span>'+"는 편위각이 10 미만으로 단안주시증후군이라 하기도 합니다. 3세이하에서 흔히 발생하고 편위각이 작아 종종 발견하지 못하기도 합니다. 흔히 약시를 동반할 위험이 높기 때문에 미세_항상성내편위가 의심되면 즉시 정밀검진을 받아야 합니다.  <br>\n <br>\n");
   } else if (Eva_result1 === "항상성내편위") {
       var EVA_TEST_1 = "안구협응기술과 융합력 ";
-      document.write('<span style="font-weight: bold; color: red;">'+"항상성내편위"+'</span>'+"는 대부분 학령기 이전에 발생하는데 일반적으로 2~3세 사이 흔하고, 주로 항상성입니다. 간헐성항상성내편위는 대부분의 경우 초기에 조절성 항상성내편위나 상쇄되지 않은 내사위와 관련되어 발생합니다. 간헐적 조절성 항상성내편위는 편위가 발생하는 시점에서 조절상태가 불안정하고, 교정하지 않으면 간헐성항상성내편위는 항상성 항상성내편위가 되는 경향이 있습니다.  <br>\n <br>\n");
+      document.write('<span style="font-weight: bold; color: red;">'+"항상성내편위"+'</span>'+"는 대부분 학령기 이전에 발생하는데 일반적으로 2~3세 사이 흔하고, 주로 항상성입니다. 간헐성내편위는 대부분의 경우 초기에 조절성내편위나 상쇄되지 않은 잠복성내편위와 관련되어 발생합니다. 간헐적 조절성내편위는 편위가 발생하는 시점에서 조절상태가 불안정하고, 교정하지 않으면 간헐성내편위는 항상성내편위가 되는 경향이 있습니다.  <br>\n <br>\n");
   } else if (Eva_result1 === "유아_항상성외편위") {
       var EVA_TEST_1 = "안구협응기술과 융합력 ";
       document.write('<span style="font-weight: bold; color: red;">'+"유아_항상성외편위"+'</span>'+"는 생후 6개월 이전에 발생하는 것으로, 유아_항상성내편위보다 발생률이 낮습니다. 대부분 편위각이 크고 항상성이기 때문에 정상 양안시발달을 심각하게 저해합니다. 또한 대부분의 경우 교대로 주시하는 교대성편위이기 때문에 약시가 드물게 발생합니다. <br>\n <br>\n");
@@ -626,13 +630,24 @@ if (CTest_D == "exo" || CTest_D == "eso" || CTest_N == "exo" || CTest_N == "eso"
 
 
 
-  if (EVA_TEST_1 == ""  && EVA_TEST_2 == "" && EVA_TEST_3 == "" && TVPS4_TEST == "" && VMI_TEST == "" && DEM_TEST == "" && WACS_TEST == "" ){
-    document.write("♣ "+Cus_Name+"님의 시기능발달평가결과 특이 사항은 없으며, 정기적인 평가는 권장됩니다.");
+  if (EVA_TEST_1 === ""  && EVA_TEST_2 === "" && EVA_TEST_3 === "" && TVPS4_TEST === "" && VMI_TEST === "" && DEM_TEST === "" && WACS_TEST === "" ){
+    document.write("♣ "+Cus_Name+"님의 시기능발달평가결과 특이사항은 없으나, 정기적인 시기능발달평가가 권장됩니다.");
 
   } else {
     document.write("♣ "+Cus_Name+"님의 "+EVA_TEST_1+" "+EVA_TEST_2+" "+EVA_TEST_3+" "+TVPS4_TEST+" "+VMI_TEST+" "+DEM_TEST+" "+WACS_TEST+" 을 발달시키기 위하여 시기능훈련이 권장됩니다.<br>\n <br>\n");
   }
 
-  
+  document.write("@ Eva_result1 : "+Eva_result1+"<br>\n");
+  document.write("@ Eva_result2 : "+Eva_result2+"<br>\n");
+  document.write("@ Eva_result3 : "+Eva_result3+"<br>\n");
+  document.write("@ EVA_TEST_1 : "+EVA_TEST_1+"<br>\n");
+  document.write("@ EVA_TEST_2 : "+EVA_TEST_2+"<br>\n");
+  document.write("@ EVA_TEST_3 : "+EVA_TEST_3+"<br>\n");
+  document.write("@ TVPS4_TEST : "+TVPS4_TEST+"<br>\n");
+  document.write("@ VMI_TEST : "+VMI_TEST+"<br>\n");
+  document.write("@ DEM_TEST : "+DEM_TEST+"<br>\n");
+  document.write("@ WACS_TEST : "+WACS_TEST+"<br>\n");
+  document.write("@ WACS_RAW_T1 : "+WACS_RAW_T1+"<br>\n");
+
 
   document.write("※유의사항: 시력이나 굴절검사는 시기능발달평가에 포함되지 않고, 이에 평가비에도 포함되지 않습니다. <br>\n");

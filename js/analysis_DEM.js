@@ -172,14 +172,17 @@ var T8_errors = [[0,1,2,3,4,5,6,7,8],['>77',61,43,26,13,6,2,1,'<1'],[111,104,97,
 
 // 조정된 수직데이터
 
-var ERR_VER = VER_ERR_S+VER_ERR_O+VER_ERR_A+VER_ERR_T;
+if (VER_ERR_S === "" || VER_ERR_S === "NaN" || isNaN(VER_ERR_S) || VER_ERR_O === "" || VER_ERR_O === "NaN" || isNaN(VER_ERR_O) || VER_ERR_A === "" || VER_ERR_A === "NaN" || isNaN(VER_ERR_A) || VER_ERR_T === "" || VER_ERR_T === "NaN" || isNaN(VER_ERR_T)){
+  var ERR_VER = ""
+} else {
+  var ERR_VER = VER_ERR_S+VER_ERR_O+VER_ERR_A+VER_ERR_T;
+}
 
-if (DEM_VER === "" || VER_ERR_S === "" || VER_ERR_O === "" || VER_ERR_A === "" || VER_ERR_T === "" || DEM_VER === "NaN" || VER_ERR_S === "NaN" || VER_ERR_O === "NaN" || VER_ERR_A === "NaN" || VER_ERR_T === "NaN") {
+if (DEM_VER === "" || DEM_VER === "NaN" || isNaN(DEM_VER)) {
   var DEM_VER = "평가하지 않음"
   var VER_Adj_time = "평가하지 않음";
   var DEM_VER_PER = "";
   var DEM_VER_STAND = "";
-  var ERR_VER = "";
 } else {
   var VER_Adj_time = (DEM_VER*(80/((80-VER_ERR_O)+VER_ERR_A))).toFixed(2);
   var Int_VER_Adj_time = parseInt(VER_Adj_time);
@@ -257,14 +260,17 @@ if (DEM_VER === "" || VER_ERR_S === "" || VER_ERR_O === "" || VER_ERR_A === "" |
 
 // 조정된 수평데이터
 
-var ERR_HOR = HOR_ERR_S + HOR_ERR_O + HOR_ERR_A + HOR_ERR_T;
+if (HOR_ERR_S === "" || HOR_ERR_S === "NaN" || isNaN(HOR_ERR_S) || HOR_ERR_O === "" || HOR_ERR_O === "NaN" || isNaN(HOR_ERR_O) || HOR_ERR_A === "" || HOR_ERR_A === "NaN" || isNaN(HOR_ERR_A) || HOR_ERR_T === "" || HOR_ERR_T === "NaN" || isNaN(HOR_ERR_T)){
+  var ERR_HOR = ""
+} else {
+  var ERR_HOR = HOR_ERR_S + HOR_ERR_O + HOR_ERR_A + HOR_ERR_T;
+}
 
-if (DEM_HOR === "" || HOR_ERR_S === "" || HOR_ERR_O === "" || HOR_ERR_A === "" || HOR_ERR_T === "" || DEM_HOR === "NaN" || HOR_ERR_S === "NaN" || HOR_ERR_O === "NaN" || HOR_ERR_A === "NaN" || HOR_ERR_T === "NaN"){
+if (DEM_HOR === "" || DEM_HOR === "NaN" || isNaN(DEM_HOR)){
   var DEM_VER = "평가하지 않음"
   var HOR_Adj_time = "평가하지 않음";
   var DEM_HOR_PER = "";
   var DEM_HOR_STAND = "";
-  var ERR_HOR = "";
 } else {
   var HOR_Adj_time = (DEM_HOR*(80/((80-HOR_ERR_O)+HOR_ERR_A))).toFixed(2);
   var Int_HOR_Adj_time = parseInt(HOR_Adj_time);
@@ -339,7 +345,12 @@ if (DEM_HOR === "" || HOR_ERR_S === "" || HOR_ERR_O === "" || HOR_ERR_A === "" |
 }
 
 // 조정된 오류데이터
-var DEM_ERR = ERR_VER + ERR_HOR;
+
+if (ERR_VER === "" || ERR_HOR === ""){
+  var DEM_ERR = ""
+} else {
+  var DEM_ERR = ERR_VER + ERR_HOR;
+}
 
 if (DEM_ERR === "" || DEM_ERR === "NaN") {
   var DEM_ERR_PER = "";

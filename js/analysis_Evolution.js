@@ -278,27 +278,124 @@ if (CTest_D === "none") {
 // 조절근점
 var Accomage = 15 - (0.25 * ChAge);
 
-if (R_accom == "NaN"){
+if (R_accom === "NaN" || R_accom === "" || isNaN(R_accom)){
   var R_accom = "";
 }
-if (L_accom == "NaN"){
+if (L_accom === "NaN" || L_accom === "" || isNaN(L_accom)){
   var L_accom = "";
 }
-if (O_accom == "NaN"){
+if (O_accom === "NaN" || O_accom === "" || isNaN(O_accom)){
   var O_accom = "";
 }
-if (R_accom == "" && L_accom == "" && O_accom == "" ){
+if (R_accom === ""){
+  if (L_accom === ""){
+    if (O_accom === ""){
 
-} else {
-  if (R_accom < Accomage) {
-    if (L_accom < Accomage) {
+    } else {    // OD,OS 값이 없고 OU값만 있을떼
       if (O_accom < Accomage) {
-
+        document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 양안 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가됨.<br>\n<br>\n");
+      } else {
+        document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 양안 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 이상으로 양호하게 평가됨.<br>\n<br>\n");
+      }
+      if (ChAge > 38) {
+        document.write("단, 38세 이후는 수정체경화로 조절능력이 현저히 저하되어 가까운 곳에 초점을 맞추기 어려운 초기노안이 예상됨.<br>\n<br>\n");
       }
     }
-    document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력이 오른쪽 "+R_accom+"D, 왼쪽 "+L_accom+"D, 양안 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가됨.<br>\n<br>\n");
-  } else {
-    document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력이 오른쪽 "+R_accom+"D, 왼쪽 "+L_accom+"D, 양안 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 이상으로 양호하게 평가됨.<br>\n<br>\n");
+  } else {  // OD값이 없고 OS값이 있을떼
+    if (L_accom < Accomage){
+      if (O_accom === ""){
+        document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 왼쪽이 "+L_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가됨.<br>\n<br>\n");
+      } else {
+        if (O_accom < Accomage) {
+          document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 왼쪽이 "+L_accom+"D, 양안 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가됨.<br>\n<br>\n");
+        } else {
+          document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 왼쪽 "+L_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하고, 양안은 "+O_accom+"D로 양호하게 평가됨.<br>\n<br>\n");
+        }
+      }
+    } else {
+      if (O_accom === ""){
+        document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 왼쪽이 "+L_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 이상으로 양호하게 평가됨.<br>\n<br>\n");
+      } else {
+        if (O_accom < Accomage) {
+          document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 왼쪽이 "+L_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 이상으로 양호하게 평가되었으나, 양안이 "+O_accom+"D로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가됨.<br>\n<br>\n");
+        } else {
+          document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 왼쪽 "+L_accom+"D, 양안 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 이상으로 양호하게 평가됨.<br>\n<br>\n");
+        }
+      }
+    }
+    if (ChAge > 38) {
+      document.write("단, 38세 이후는 수정체경화로 조절능력이 현저히 저하되어 가까운 곳에 초점을 맞추기 어려운 초기노안이 예상됨.<br>\n<br>\n");
+    }
+  }
+} else {
+  if (R_accom < Accomage){
+    if (L_accom === ""){
+      if (O_accom === ""){
+        document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 오른쪽이 "+R_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가됨.<br>\n<br>\n");
+      } else {    // OD값이 최소조절력보다 작고, OU 값이 있고 OS값만 없을떼
+        if (O_accom < Accomage) {
+          document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 오른쪽이 "+R_accom+"D, 양안 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가됨.<br>\n<br>\n");
+        } else {
+          document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 오른쪽이 "+R_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하고, 양안은 "+O_accom+"D로 양호하게 평가됨.<br>\n<br>\n");
+        }
+      }
+    } else {  // OD값이 최소조절력보다 적고, OS값이 있을떼
+      if (L_accom < Accomage){
+        if (O_accom === ""){
+          document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 오른쪽이 "+R_accom+"D, 왼쪽이 "+L_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가됨.<br>\n<br>\n");
+        } else {
+          if (O_accom < Accomage) {
+            document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 오른쪽이 "+R_accom+"D, 왼쪽이 "+L_accom+"D, 양안 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가됨.<br>\n<br>\n");
+          } else {
+            document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 오른쪽이 "+R_accom+"D, 왼쪽 "+L_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하고, 양안은 "+O_accom+"D로 양호하게 평가됨.<br>\n<br>\n");
+          }
+        }
+      } else {  // OD값이 최소조절력보다 적고, OS값이 정상일때
+        if (O_accom === ""){
+          document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 오른쪽이 "+R_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되고, 왼쪽은 "+L_accom+"D로 양호하게 평가됨.<br>\n<br>\n");
+        } else {
+          if (O_accom < Accomage) {
+            document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 왼쪽이 "+L_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 이상으로 양호하게 평가되었으나, 오른쪽이 "+R_accom+"D, 양안이 "+O_accom+"D로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가됨.<br>\n<br>\n");
+          } else {
+            document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 오른쪽이 "+R_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가되고, 왼쪽 "+L_accom+"D, 양안 "+O_accom+"D로 양호하게 평가됨.<br>\n<br>\n");
+          }
+        }
+      }
+    }
+  }  else {  // OD값이 정상일때
+    if (L_accom === ""){
+      if (O_accom === ""){
+        document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 오른쪽이 "+R_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 양호하게 평가됨.<br>\n<br>\n");
+      } else {    // OD값이 정상, OS값이 없고, OU 값이 있을때
+        if (O_accom < Accomage) {
+          document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 오른쪽이 "+R_accom+"D로 양호하지만, 양안이 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가됨.<br>\n<br>\n");
+        } else {
+          document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 오른쪽이 "+R_accom+"D, 양안 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 양호하게 평가됨.<br>\n<br>\n");
+        }
+      }
+    } else {  // OD값이 정상이고, OS값이 있을떼
+      if (L_accom < Accomage){
+        if (O_accom === ""){
+          document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 오른쪽이 "+R_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 양호하게 평가되었으나, 왼쪽이 "+L_accom+"D로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가됨.<br>\n<br>\n");
+        } else {
+          if (O_accom < Accomage) {
+            document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 오른쪽이 "+R_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 양호하게 평가되었으나, 왼쪽이 "+L_accom+"D, 양안 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가됨.<br>\n<br>\n");
+          } else {
+            document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 오른쪽이 "+R_accom+"D, 양안 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 보다 양호하게 평가되었으나, 왼쪽이 "+L_accom+"D로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가됨.<br>\n<br>\n");
+          }
+        }
+      } else {  // OD,OS값이 정상일때
+        if (O_accom === ""){
+          document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 오른쪽이 "+R_accom+"D, 왼쪽이 "+L_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 이상으로 양호하게 평가됨.<br>\n<br>\n");
+        } else {
+          if (O_accom < Accomage) {
+            document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력중 오른쪽이 "+R_accom+"D, 왼쪽이 "+L_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 이상으로 양호하게 평가되었으나, 양안이 "+O_accom+"D로 "+'<span style="font-weight: bold; color: red;">'+"불량"+'</span>'+"하게 평가됨.<br>\n<br>\n");
+          } else {
+            document.write("● 가까운 거리의 사물을 선명하게 만들수 있는 조절능력이 오른쪽 "+R_accom+"D, 왼쪽 "+L_accom+"D, 양안 "+O_accom+"D로 "+ChAge+"세의 최소조절력 "+Accomage+"D 이상으로 양호하게 평가됨.<br>\n<br>\n");
+          }
+        }
+      }
+    }
   }
   if (ChAge > 38) {
     document.write("단, 38세 이후는 수정체경화로 조절능력이 현저히 저하되어 가까운 곳에 초점을 맞추기 어려운 초기노안이 예상됨.<br>\n<br>\n");
@@ -376,7 +473,7 @@ if (ChAge <= 6) {
   }
 
   // 눈모임근점
-  if (NVer == "" || NVer == "NaN"){
+  if (NVer === "" || NVer === "NaN" || isNaN(NVer)){
 
   } else {
     if (NVer < 6) {
@@ -814,7 +911,7 @@ if (ChAge <= 6) {
 
 
       //버전스용이
-      if (VerRev == ""){
+      if (VerRev === "" || VerRev === "NaN" || isNaN(VerRev)){
 
       } else {
       if (VerRev >= 15) {
@@ -825,8 +922,8 @@ if (ChAge <= 6) {
     }
 
     // 원거리Maddox
-    if (D_agree == "" || D_agree == "NaN"){
-      if (N_agree == "" || N_agree == "NaN"){
+    if (D_agree === "" || D_agree === "NaN" || isNaN(D_agree)){
+      if (N_agree === "" || N_agree === "NaN" || isNaN(N_agree)){
 
       } else {
         if(N_agree == "agree") {

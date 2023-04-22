@@ -103,8 +103,8 @@ if (ChAge < 4) {
 }
 
 // 물체식별 표준점수, 백분위수
-if (WACS_RAW_T1 === "평가하지않음"){
- 
+if (WACS_RAW_T1 === "" || WACS_RAW_T1 === "NaN" || isNaN(WACS_RAW_T1)){
+ var WACS_RAW_T1 = "평가하지 않음";
  var WACS_T1_PER = "-";
  var WACS_T1_STAND = "-";
 } else {
@@ -113,8 +113,8 @@ if (WACS_RAW_T1 === "평가하지않음"){
 }
 
 // 물체설계 표준점수, 백분위수
-if (WACS_RAW_T2){
-   var WACS_RAW_T2 = "null";
+if (WACS_RAW_T2 === "" || WACS_RAW_T2 === "NaN" || isNaN(WACS_RAW_T2)){
+ var WACS_RAW_T2 = "평가하지 않음";
    var WACS_T2_PER = "-";
    var WACS_T2_STAND = "-";
  } else {
@@ -124,8 +124,8 @@ if (WACS_RAW_T2){
 
 
 // 그림설계 표준점수, 백분위수
-if (WACS_RAW_T3 === ""){
-   var WACS_RAW_T3 = "empty";
+if (WACS_RAW_T3 === "" || WACS_RAW_T3 === "NaN" || isNaN(WACS_RAW_T3)){
+ var WACS_RAW_T3 = "평가하지 않음";
    var WACS_T3_PER = "-";
    var WACS_T3_STAND = "-";
  } else {
@@ -135,8 +135,8 @@ if (WACS_RAW_T3 === ""){
 
 
 // 일반움직임 표준점수, 백분위수
-if (WACS_RAW_T4 === "NaN"){
-   var WACS_RAW_T4 = "평가하지 않음";
+if (WACS_RAW_T4 === "" || WACS_RAW_T4 === "NaN" || isNaN(WACS_RAW_T4)){
+ var WACS_RAW_T4 = "평가하지 않음";
    var WACS_T4_PER = "-";
    var WACS_T4_STAND = "-";
  } else {

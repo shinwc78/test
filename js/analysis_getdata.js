@@ -278,11 +278,11 @@ var DEM_memory = localStorage.getItem('DEM_memory');
 
 
 // <!-- ======= WACS ====== -->
-var WACS_RAW_T1 = localStorage.getItem('WACS_RAW_T1');
-if (WACS_RAW_T1 === null){
+var D_WACS_RAW_T1 = localStorage.getItem('WACS_RAW_T1');
+if (D_WACS_RAW_T1 === null){
   var WACS_RAW_T1 = "평가하지않음"
 } else {
-    var WACS_RAW_T1 = parseInt(WACS_RAW_T1);
+    var WACS_RAW_T1 = parseInt(D_WACS_RAW_T1);
 }
 var WACS_RAW_T2 = localStorage.getItem('WACS_RAW_T2');
 var WACS_RAW_T3 = localStorage.getItem('WACS_RAW_T3');

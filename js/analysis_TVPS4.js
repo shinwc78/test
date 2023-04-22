@@ -161,7 +161,7 @@ if (ChAge < 5) {
 
 // 척도점수 , 백분위점수, 등가나이환산
 
-if (RAW_SCORE_DIS === "" || RAW_SCORE_DIS == "NaN") {
+if (RAW_SCORE_DIS === "" || RAW_SCORE_DIS == "NaN"  || isNaN(RAW_SCORE_DIS)) {
   var RAW_SCORE_DIS = "평가하지 않음";
   var scaled_DIS = "";
   var percentile_DIS = "";
@@ -173,7 +173,7 @@ if (RAW_SCORE_DIS === "" || RAW_SCORE_DIS == "NaN") {
 }
 
 
-if (RAW_SCORE_MEM === "" || RAW_SCORE_MEM == "NaN") {
+if (RAW_SCORE_MEM === "" || RAW_SCORE_MEM == "NaN" || isNaN(RAW_SCORE_MEM)) {
   var RAW_SCORE_MEM = "평가하지 않음";
   var scaled_MEM = "";
   var percentile_MEM = "";
@@ -185,7 +185,7 @@ if (RAW_SCORE_MEM === "" || RAW_SCORE_MEM == "NaN") {
   }
 
 
-if (RAW_SCORE_SPA === "" || RAW_SCORE_SPA == "NaN") {
+if (RAW_SCORE_SPA === "" || RAW_SCORE_SPA == "NaN" || isNaN(RAW_SCORE_SPA)) {
   var RAW_SCORE_SPA = "평가하지 않음";
   var scaled_SPA = "";
   var percentile_SPA = "";
@@ -197,7 +197,7 @@ if (RAW_SCORE_SPA === "" || RAW_SCORE_SPA == "NaN") {
   }
 
 
-if (RAW_SCORE_CON === "" || RAW_SCORE_CON == "NaN") {
+if (RAW_SCORE_CON === "" || RAW_SCORE_CON == "NaN" || isNaN(RAW_SCORE_CON)) {
   var RAW_SCORE_CON = "평가하지 않음";
   var scaled_CON = "";
   var percentile_CON = "";
@@ -209,7 +209,7 @@ if (RAW_SCORE_CON === "" || RAW_SCORE_CON == "NaN") {
   }
 
 
-if (RAW_SCORE_SEQ === "" || RAW_SCORE_SEQ == "NaN") {
+if (RAW_SCORE_SEQ === "" || RAW_SCORE_SEQ == "NaN" || isNaN(RAW_SCORE_SEQ)) {
   var RAW_SCORE_SEQ = "평가하지 않음";
   var scaled_SEQ = "";
   var percentile_SEQ = "";
@@ -221,7 +221,7 @@ if (RAW_SCORE_SEQ === "" || RAW_SCORE_SEQ == "NaN") {
   }
 
 
-if (RAW_SCORE_FGR === "" || RAW_SCORE_FGR == "NaN") {
+if (RAW_SCORE_FGR === "" || RAW_SCORE_FGR == "NaN" || isNaN(RAW_SCORE_FGR)) {
   var RAW_SCORE_FGR = "평가하지 않음";
   var scaled_FGR = "";
   var percentile_FGR = "";
@@ -233,7 +233,7 @@ if (RAW_SCORE_FGR === "" || RAW_SCORE_FGR == "NaN") {
   }
 
 
-if (RAW_SCORE_CLO === "" || RAW_SCORE_CLO == "NaN") {
+if (RAW_SCORE_CLO === "" || RAW_SCORE_CLO == "NaN" || isNaN(RAW_SCORE_CLO)) {
   var RAW_SCORE_CLO = "평가하지 않음";
   var scaled_CLO = "";
   var percentile_CLO = "";
